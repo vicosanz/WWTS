@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsEtiquetaRezago" targetNamespace="http://tempuri.org/dsEtiquetaRezago.xsd" xmlns:mstns="http://tempuri.org/dsEtiquetaRezago.xsd" xmlns="http://tempuri.org/dsEtiquetaRezago.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsEtiquetaRezago" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsEtiquetaRezago" msprop:Generator_DataSetName="dsEtiquetaRezago">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vwEtiquetaRezago" msprop:Generator_UserTableName="vwEtiquetaRezago" msprop:Generator_RowDeletedName="vwEtiquetaRezagoRowDeleted" msprop:Generator_TableClassName="vwEtiquetaRezagoDataTable" msprop:Generator_RowChangedName="vwEtiquetaRezagoRowChanged" msprop:Generator_RowClassName="vwEtiquetaRezagoRow" msprop:Generator_RowChangingName="vwEtiquetaRezagoRowChanging" msprop:Generator_RowEvArgName="vwEtiquetaRezagoRowChangeEvent" msprop:Generator_RowEvHandlerName="vwEtiquetaRezagoRowChangeEventHandler" msprop:Generator_TablePropName="vwEtiquetaRezago" msprop:Generator_TableVarName="tablevwEtiquetaRezago" msprop:Generator_RowDeletingName="vwEtiquetaRezagoRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Hacienda" msprop:Generator_UserColumnName="Hacienda" msprop:Generator_ColumnPropNameInRow="Hacienda" msprop:Generator_ColumnVarNameInTable="columnHacienda" msprop:Generator_ColumnPropNameInTable="HaciendaColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Zafra" msprop:Generator_UserColumnName="Zafra" msprop:Generator_ColumnPropNameInRow="Zafra" msprop:Generator_ColumnVarNameInTable="columnZafra" msprop:Generator_ColumnPropNameInTable="ZafraColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Numero" msprop:Generator_UserColumnName="Numero" msprop:Generator_ColumnPropNameInRow="Numero" msprop:Generator_ColumnVarNameInTable="columnNumero" msprop:Generator_ColumnPropNameInTable="NumeroColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSlisfaltasmes" targetNamespace="http://tempuri.org/DSlisfaltasmes.xsd" xmlns:mstns="http://tempuri.org/DSlisfaltasmes.xsd" xmlns="http://tempuri.org/DSlisfaltasmes.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSlisfaltasmes" msdata:IsDataSet="true" msdata:Locale="en-US" msprop:Generator_UserDSName="DSlisfaltasmes" msprop:Generator_DataSetName="DSlisfaltasmes">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="v_alerta" msprop:Generator_UserTableName="v_alerta" msprop:Generator_RowDeletedName="v_alertaRowDeleted" msprop:Generator_RowChangedName="v_alertaRowChanged" msprop:Generator_RowClassName="v_alertaRow" msprop:Generator_RowChangingName="v_alertaRowChanging" msprop:Generator_RowEvArgName="v_alertaRowChangeEvent" msprop:Generator_RowEvHandlerName="v_alertaRowChangeEventHandler" msprop:Generator_TableClassName="v_alertaDataTable" msprop:Generator_TableVarName="tablev_alerta" msprop:Generator_RowDeletingName="v_alertaRowDeleting" msprop:Generator_TablePropName="v_alerta">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TipCon_descripcion" msprop:Generator_UserColumnName="TipCon_descripcion" msprop:Generator_ColumnPropNameInRow="TipCon_descripcion" msprop:Generator_ColumnVarNameInTable="columnTipCon_descripcion" msprop:Generator_ColumnPropNameInTable="TipCon_descripcionColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NombreCompleto" msprop:Generator_UserColumnName="NombreCompleto" msprop:Generator_ColumnPropNameInRow="NombreCompleto" msprop:Generator_ColumnVarNameInTable="columnNombreCompleto" msprop:Generator_ColumnPropNameInTable="NombreCompletoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Entida_Codigo" msprop:Generator_UserColumnName="Entida_Codigo" msprop:Generator_ColumnPropNameInRow="Entida_Codigo" msprop:Generator_ColumnVarNameInTable="columnper_codigo" msprop:Generator_ColumnPropNameInTable="per_codigoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="cedula" msprop:Generator_UserColumnName="cedula" msprop:Generator_ColumnPropNameInRow="cedula" msprop:Generator_ColumnVarNameInTable="columncedula" msprop:Generator_ColumnPropNameInTable="cedulaColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DiaAsi_fecha" msprop:Generator_UserColumnName="DiaAsi_fecha" msprop:Generator_ColumnPropNameInRow="DiaAsi_fecha" msprop:Generator_ColumnVarNameInTable="columnDiaAsi_fecha" msprop:Generator_ColumnPropNameInTable="DiaAsi_fechaColumn" type="xs:date" minOccurs="0" />
+              <xs:element name="tipofalta" msprop:Generator_UserColumnName="tipofalta" msprop:Generator_ColumnVarNameInTable="columntipofalta" msprop:Generator_ColumnPropNameInRow="tipofalta" msprop:Generator_ColumnPropNameInTable="tipofaltaColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

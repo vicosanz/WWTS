@@ -1,0 +1,690 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CABE86F0-1D38-4626-9CFD-07C602F98B8B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>WWTS.Siembra.Modulo.Inicializacion</StartupObject>
+    <RootNamespace>WWTS.Siembra.Modulo</RootNamespace>
+    <AssemblyName>WWTS.Siembra.Modulo</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>WWTS.Siembra.Modulo.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>WWTS.Siembra.Modulo.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>Off</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\Debug\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\Release\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Office.Interop.Word.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=3.0.6.0, Culture=neutral, PublicKeyToken=5cded1a1a0a7b481, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\DockPanelSuite.3.0.6\lib\net40\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Busquedas\CtlBuscaBloqueFermentacion.Designer.vb">
+      <DependentUpon>CtlBuscaBloqueFermentacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Busquedas\CtlBuscaBloqueFermentacion.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Busquedas\CtlBuscaCajasRezago.Designer.vb">
+      <DependentUpon>CtlBuscaCajasRezago.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Busquedas\CtlBuscaCajasRezago.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Busquedas\CtlBuscaTarjetaEnsZaf.Designer.vb">
+      <DependentUpon>CtlBuscaTarjetaEnsZaf.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Busquedas\CtlBuscaTarjetaEnsZaf.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Inicializacion.vb" />
+    <Compile Include="Loader.vb" />
+    <Compile Include="Mantenimientos\CtlBodega.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\CtlClaseHoja.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\CtlColorHoja.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\CtlCorte.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\CtlCuarto.Designer.vb">
+      <DependentUpon>CtlCuarto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\CtlCuarto.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\CtlDestino.Designer.vb">
+      <DependentUpon>CtlDestino.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\CtlDestino.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\CtlEmbarque.Designer.vb">
+      <DependentUpon>CtlEmbarque.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\CtlEmbarque.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\CtlHacienda.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\CtlHorno.Designer.vb">
+      <DependentUpon>CtlHorno.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\CtlHorno.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\CtlLote.Designer.vb">
+      <DependentUpon>CtlLote.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\CtlLote.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\CtlPropietario.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\CtlSeccionHorno.Designer.vb">
+      <DependentUpon>CtlSeccionHorno.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\CtlSeccionHorno.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\CtlSemilla.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\CtlTerreno.Designer.vb">
+      <DependentUpon>CtlTerreno.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\CtlTerreno.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\CtlZafra.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmBodega.Designer.vb">
+      <DependentUpon>FrmBodega.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmBodega.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmClaseHoja.Designer.vb">
+      <DependentUpon>FrmClaseHoja.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmClaseHoja.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmColorHoja.Designer.vb">
+      <DependentUpon>FrmColorHoja.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmColorHoja.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmCorte.Designer.vb">
+      <DependentUpon>FrmCorte.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmCorte.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmCuarto.Designer.vb">
+      <DependentUpon>FrmCuarto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmCuarto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmDestino.Designer.vb">
+      <DependentUpon>FrmDestino.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmDestino.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmEmbarque.Designer.vb">
+      <DependentUpon>FrmEmbarque.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmEmbarque.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmHacienda.Designer.vb">
+      <DependentUpon>FrmHacienda.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmHacienda.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmHorno.Designer.vb">
+      <DependentUpon>FrmHorno.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmHorno.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmLote.Designer.vb">
+      <DependentUpon>FrmLote.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmLote.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmPropietario.Designer.vb">
+      <DependentUpon>FrmPropietario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmPropietario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmSeccionHorno.Designer.vb">
+      <DependentUpon>FrmSeccionHorno.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmSeccionHorno.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmSemilla.Designer.vb">
+      <DependentUpon>FrmSemilla.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmSemilla.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmTerreno.Designer.vb">
+      <DependentUpon>FrmTerreno.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmTerreno.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmZafra.Designer.vb">
+      <DependentUpon>FrmZafra.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmZafra.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\FrmConfiguracion.Designer.vb">
+      <DependentUpon>FrmConfiguracion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\FrmConfiguracion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\FrmEnsarteZafadura.Designer.vb">
+      <DependentUpon>FrmEnsarteZafadura.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\FrmEnsarteZafadura.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\FrmFermentacion.Designer.vb">
+      <DependentUpon>FrmFermentacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\FrmFermentacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\FrmRezago.Designer.vb">
+      <DependentUpon>FrmRezago.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\FrmRezago.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Reportes\crpDisponibilidadCujes1.vb">
+      <DependentUpon>crpDisponibilidadCujes.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reportes\crpEtiquetaRezago1.vb">
+      <DependentUpon>crpEtiquetaRezago.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reportes\crpListaEmpaque1.vb">
+      <DependentUpon>crpListaEmpaque.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reportes\crpSaldoCujesLbs1.vb">
+      <DependentUpon>crpSaldoCujesLbs.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reportes\crpTabacoFermentacion1.vb">
+      <DependentUpon>crpTabacoFermentacion.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reportes\crpTabacoZafado1.vb">
+      <DependentUpon>crpTabacoZafado.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reportes\DSdispocujes1.Designer.vb">
+      <DependentUpon>DSdispocujes.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reportes\dsEtiquetaRezago1.Designer.vb">
+      <DependentUpon>dsEtiquetaRezago.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reportes\DSListaEmpaque1.Designer.vb">
+      <DependentUpon>DSListaEmpaque.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reportes\DSSaldoCujes1.Designer.vb">
+      <DependentUpon>DSSaldoCujes.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reportes\DSTabacoFermentacion1.Designer.vb">
+      <DependentUpon>DSTabacoFermentacion.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="SubModulos\CtlBloque.Designer.vb">
+      <DependentUpon>CtlBloque.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SubModulos\CtlBloque.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubModulos\CtlInvCajas.Designer.vb">
+      <DependentUpon>CtlInvCajas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SubModulos\CtlInvCajas.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubModulos\CtlListaEmbarque.Designer.vb">
+      <DependentUpon>CtlListaEmbarque.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SubModulos\CtlListaEmbarque.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubModulos\CtlTarjEnsarte.Designer.vb">
+      <DependentUpon>CtlTarjEnsarte.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SubModulos\CtlTarjEnsarte.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubModulos\FrmBloqueMov.Designer.vb">
+      <DependentUpon>FrmBloqueMov.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SubModulos\FrmBloqueMov.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Busquedas\CtlBuscaBloqueFermentacion.resx">
+      <DependentUpon>CtlBuscaBloqueFermentacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Busquedas\CtlBuscaCajasRezago.resx">
+      <DependentUpon>CtlBuscaCajasRezago.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Busquedas\CtlBuscaTarjetaEnsZaf.resx">
+      <DependentUpon>CtlBuscaTarjetaEnsZaf.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\CtlCuarto.resx">
+      <DependentUpon>CtlCuarto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\CtlDestino.resx">
+      <DependentUpon>CtlDestino.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\CtlEmbarque.resx">
+      <DependentUpon>CtlEmbarque.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\CtlHorno.resx">
+      <DependentUpon>CtlHorno.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\CtlLote.resx">
+      <DependentUpon>CtlLote.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\CtlSeccionHorno.resx">
+      <DependentUpon>CtlSeccionHorno.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\CtlTerreno.resx">
+      <DependentUpon>CtlTerreno.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmBodega.resx">
+      <DependentUpon>FrmBodega.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmClaseHoja.resx">
+      <DependentUpon>FrmClaseHoja.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmColorHoja.resx">
+      <DependentUpon>FrmColorHoja.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmCorte.resx">
+      <DependentUpon>FrmCorte.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmCuarto.resx">
+      <DependentUpon>FrmCuarto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmDestino.resx">
+      <DependentUpon>FrmDestino.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmEmbarque.resx">
+      <DependentUpon>FrmEmbarque.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmHacienda.resx">
+      <DependentUpon>FrmHacienda.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmHorno.resx">
+      <DependentUpon>FrmHorno.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmLote.resx">
+      <DependentUpon>FrmLote.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmPropietario.resx">
+      <DependentUpon>FrmPropietario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmSeccionHorno.resx">
+      <DependentUpon>FrmSeccionHorno.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmSemilla.resx">
+      <DependentUpon>FrmSemilla.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmTerreno.resx">
+      <DependentUpon>FrmTerreno.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmZafra.resx">
+      <DependentUpon>FrmZafra.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\FrmConfiguracion.resx">
+      <DependentUpon>FrmConfiguracion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\FrmEnsarteZafadura.resx">
+      <DependentUpon>FrmEnsarteZafadura.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\FrmFermentacion.resx">
+      <DependentUpon>FrmFermentacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\crpDisponibilidadCujes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpDisponibilidadCujes1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\crpEtiquetaRezago.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpEtiquetaRezago1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\crpListaEmpaque.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpListaEmpaque1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\crpSaldoCujesLbs.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpSaldoCujesLbs1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\crpTabacoFermentacion.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpTabacoFermentacion1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\crpTabacoZafado.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpTabacoZafado1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubModulos\CtlBloque.resx">
+      <DependentUpon>CtlBloque.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubModulos\CtlInvCajas.resx">
+      <DependentUpon>CtlInvCajas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubModulos\CtlListaEmbarque.resx">
+      <DependentUpon>CtlListaEmbarque.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubModulos\CtlTarjEnsarte.resx">
+      <DependentUpon>CtlTarjEnsarte.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubModulos\FrmBloqueMov.resx">
+      <DependentUpon>FrmBloqueMov.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Reportes\DSdispocujes.xsc">
+      <DependentUpon>DSdispocujes.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DSdispocujes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSdispocujes1.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Reportes\DSdispocujes.xss">
+      <DependentUpon>DSdispocujes.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DSdispocujes.xsx">
+      <DependentUpon>DSdispocujes.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\dsEtiquetaRezago.xsc">
+      <DependentUpon>dsEtiquetaRezago.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\dsEtiquetaRezago.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsEtiquetaRezago1.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Reportes\dsEtiquetaRezago.xss">
+      <DependentUpon>dsEtiquetaRezago.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DSListaEmpaque.xsc">
+      <DependentUpon>DSListaEmpaque.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DSListaEmpaque.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSListaEmpaque1.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Reportes\DSListaEmpaque.xss">
+      <DependentUpon>DSListaEmpaque.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DSListaEmpaque.xsx">
+      <DependentUpon>DSListaEmpaque.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DSSaldoCujes.xsc">
+      <DependentUpon>DSSaldoCujes.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DSSaldoCujes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSSaldoCujes1.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Reportes\DSSaldoCujes.xss">
+      <DependentUpon>DSSaldoCujes.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DSSaldoCujes.xsx">
+      <DependentUpon>DSSaldoCujes.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DSTabacoFermentacion.xsc">
+      <DependentUpon>DSTabacoFermentacion.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DSTabacoFermentacion.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSTabacoFermentacion1.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Reportes\DSTabacoFermentacion.xss">
+      <DependentUpon>DSTabacoFermentacion.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DSTabacoFermentacion.xsx">
+      <DependentUpon>DSTabacoFermentacion.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\abrir.ico" />
+    <None Include="Resources\eliminar.ico" />
+    <None Include="Resources\nuevo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\ICA3\Infoware.Consola.Base\Infoware.Consola.Base.csproj">
+      <Project>{69c85426-e02a-4af6-894c-9ce05ebbc66e}</Project>
+      <Name>Infoware.Consola.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ICA3\Infoware.Controles.Base\Infoware.Controles.Base.vbproj">
+      <Project>{c81d0a59-f9b2-450b-a59d-5aef7ae898c1}</Project>
+      <Name>Infoware.Controles.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ICA3\Infoware.Datos\Infoware.Datos.vbproj">
+      <Project>{fa50218a-1fd3-4739-87eb-4e77591ee0a2}</Project>
+      <Name>Infoware.Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ICA3\Infoware.Reglas.General\Infoware.Reglas.General.vbproj">
+      <Project>{fedde9a5-923f-47f7-b7ac-63beaa34e7f8}</Project>
+      <Name>Infoware.Reglas.General</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ICA3\Infoware.Reglas\Infoware.Reglas.vbproj">
+      <Project>{8365b169-5835-4cc6-b9f3-91dd27ae4e1a}</Project>
+      <Name>Infoware.Reglas</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ICA3\Infoware.Reporteador\Infoware.Reporteador.vbproj">
+      <Project>{127297a9-3e7c-47ed-91bc-d29b8e1f9d7d}</Project>
+      <Name>Infoware.Reporteador</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ICA3\Infoware.Reportes\Infoware.Reportes.vbproj">
+      <Project>{288345c5-9fd4-4ac9-a9d1-d42bc9ad3316}</Project>
+      <Name>Infoware.Reportes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\General\WWTS.General\WWTS.General.Controles\WWTS.General.Controles.vbproj">
+      <Project>{b3f0a363-382f-4cdd-97a7-9df3a4bf0b5a}</Project>
+      <Name>WWTS.General.Controles</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\General\WWTS.General\WWTS.General.Modulo\WWTS.General.Modulo.vbproj">
+      <Project>{b5137a08-f8db-4741-b474-39a437533daf}</Project>
+      <Name>WWTS.General.Modulo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\General\WWTS.General\WWTS.General.Reglas\WWTS.General.Reglas.vbproj">
+      <Project>{6f7c7749-44bd-42c0-9ef8-cacf87184cdf}</Project>
+      <Name>WWTS.General.Reglas</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WWTS.Siembra.Reglas\WWTS.Siembra.Reglas.vbproj">
+      <Project>{b6348e9d-0c68-4215-92ab-3e488c32829f}</Project>
+      <Name>WWTS.Siembra.Reglas</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save16.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSlistadoxseccion" targetNamespace="http://www.tempuri.org/DSlistadofirmas.xsd" xmlns:mstns="http://www.tempuri.org/DSlistadofirmas.xsd" xmlns="http://www.tempuri.org/DSlistadofirmas.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSlistadoxseccion" msdata:IsDataSet="true" msdata:Locale="es-EC" msprop:Generator_UserDSName="DSlistadoxseccion" msprop:Generator_DataSetName="DSlistadoxseccion">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="v_resumenperiodo" msprop:Generator_UserTableName="v_resumenperiodo" msprop:Generator_RowDeletedName="v_resumenperiodoRowDeleted" msprop:Generator_TableClassName="v_resumenperiodoDataTable" msprop:Generator_RowChangedName="v_resumenperiodoRowChanged" msprop:Generator_RowClassName="v_resumenperiodoRow" msprop:Generator_RowChangingName="v_resumenperiodoRowChanging" msprop:Generator_RowEvArgName="v_resumenperiodoRowChangeEvent" msprop:Generator_RowEvHandlerName="v_resumenperiodoRowChangeEventHandler" msprop:Generator_TablePropName="v_resumenperiodo" msprop:Generator_TableVarName="tablev_resumenperiodo" msprop:Generator_RowDeletingName="v_resumenperiodoRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sec_descripcion" msprop:Generator_UserColumnName="sec_descripcion" msprop:Generator_ColumnPropNameInRow="sec_descripcion" msprop:Generator_ColumnVarNameInTable="columnsec_descripcion" msprop:Generator_ColumnPropNameInTable="sec_descripcionColumn" type="xs:string" />
+              <xs:element name="contador" msprop:Generator_UserColumnName="contador" msprop:Generator_ColumnPropNameInRow="contador" msprop:Generator_ColumnVarNameInTable="columncontador" msprop:Generator_ColumnPropNameInTable="contadorColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Asiste_diario" msprop:Generator_UserColumnName="Asiste_diario" msprop:Generator_ColumnPropNameInRow="Asiste_diario" msprop:Generator_ColumnVarNameInTable="columnAsiste_diario" msprop:Generator_ColumnPropNameInTable="Asiste_diarioColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Asiste_diainteg" msprop:Generator_UserColumnName="Asiste_diainteg" msprop:Generator_ColumnPropNameInRow="Asiste_diainteg" msprop:Generator_ColumnVarNameInTable="columnAsiste_diainteg" msprop:Generator_ColumnPropNameInTable="Asiste_diaintegColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Asiste_hlv" msprop:Generator_UserColumnName="Asiste_hlv" msprop:Generator_ColumnPropNameInRow="Asiste_hlv" msprop:Generator_ColumnVarNameInTable="columnAsiste_hlv" msprop:Generator_ColumnPropNameInTable="Asiste_hlvColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Asiste_hsdf" msprop:Generator_UserColumnName="Asiste_hsdf" msprop:Generator_ColumnPropNameInRow="Asiste_hsdf" msprop:Generator_ColumnVarNameInTable="columnAsiste_hsdf" msprop:Generator_ColumnPropNameInTable="Asiste_hsdfColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Asiste_htrab" msprop:Generator_UserColumnName="Asiste_htrab" msprop:Generator_ColumnPropNameInRow="Asiste_htrab" msprop:Generator_ColumnVarNameInTable="columnAsiste_htrab" msprop:Generator_ColumnPropNameInTable="Asiste_htrabColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Asiste_smb" msprop:Generator_UserColumnName="Asiste_smb" msprop:Generator_ColumnPropNameInRow="Asiste_smb" msprop:Generator_ColumnVarNameInTable="columnAsiste_smb" msprop:Generator_ColumnPropNameInTable="Asiste_smbColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Asiste_slv" msprop:Generator_UserColumnName="Asiste_slv" msprop:Generator_ColumnPropNameInRow="Asiste_slv" msprop:Generator_ColumnVarNameInTable="columnAsiste_slv" msprop:Generator_ColumnPropNameInTable="Asiste_slvColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Asiste_ssdf" msprop:Generator_UserColumnName="Asiste_ssdf" msprop:Generator_ColumnPropNameInRow="Asiste_ssdf" msprop:Generator_ColumnVarNameInTable="columnAsiste_ssdf" msprop:Generator_ColumnPropNameInTable="Asiste_ssdfColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Asiste_ics" msprop:Generator_UserColumnName="Asiste_ics" msprop:Generator_ColumnPropNameInRow="Asiste_ics" msprop:Generator_ColumnVarNameInTable="columnAsiste_ics" msprop:Generator_ColumnPropNameInTable="Asiste_icsColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Asiste_adicionalp" msprop:Generator_UserColumnName="Asiste_adicionalp" msprop:Generator_ColumnPropNameInRow="Asiste_adicionalp" msprop:Generator_ColumnVarNameInTable="columnAsiste_adicionalp" msprop:Generator_ColumnPropNameInTable="Asiste_adicionalpColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Asiste_transpp" msprop:Generator_UserColumnName="Asiste_transpp" msprop:Generator_ColumnPropNameInRow="Asiste_transpp" msprop:Generator_ColumnVarNameInTable="columnAsiste_transpp" msprop:Generator_ColumnPropNameInTable="Asiste_transppColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Asiste_iess" msprop:Generator_UserColumnName="Asiste_iess" msprop:Generator_ColumnPropNameInRow="Asiste_iess" msprop:Generator_ColumnVarNameInTable="columnAsiste_iess" msprop:Generator_ColumnPropNameInTable="Asiste_iessColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Asiste_prestamo" msprop:Generator_UserColumnName="Asiste_prestamo" msprop:Generator_ColumnPropNameInRow="Asiste_prestamo" msprop:Generator_ColumnVarNameInTable="columnAsiste_prestamo" msprop:Generator_ColumnPropNameInTable="Asiste_prestamoColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Asiste_multa" msprop:Generator_UserColumnName="Asiste_multa" msprop:Generator_ColumnPropNameInRow="Asiste_multa" msprop:Generator_ColumnVarNameInTable="columnAsiste_multa" msprop:Generator_ColumnPropNameInTable="Asiste_multaColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Asiste_d3pag" msprop:Generator_UserColumnName="Asiste_d3pag" msprop:Generator_ColumnPropNameInRow="Asiste_d3pag" msprop:Generator_ColumnVarNameInTable="columnAsiste_d3pag" msprop:Generator_ColumnPropNameInTable="Asiste_d3pagColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Asiste_d4pag" msprop:Generator_UserColumnName="Asiste_d4pag" msprop:Generator_ColumnPropNameInRow="Asiste_d4pag" msprop:Generator_ColumnVarNameInTable="columnAsiste_d4pag" msprop:Generator_ColumnPropNameInTable="Asiste_d4pagColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Asiste_vacpag" msprop:Generator_UserColumnName="Asiste_vacpag" msprop:Generator_ColumnPropNameInRow="Asiste_vacpag" msprop:Generator_ColumnVarNameInTable="columnAsiste_vacpag" msprop:Generator_ColumnPropNameInTable="Asiste_vacpagColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

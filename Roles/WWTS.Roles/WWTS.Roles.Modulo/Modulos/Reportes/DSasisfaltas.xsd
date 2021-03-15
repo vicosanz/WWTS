@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="DSasisfaltas" targetNamespace="http://tempuri.org/DSasisfaltas.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/DSasisfaltas.xsd" xmlns:mstns="http://tempuri.org/DSasisfaltas.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="DSasisfaltas" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="vw_asisfaltas">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Entida_Codigo" type="xs:string" minOccurs="0" />
+							<xs:element name="cedula" type="xs:string" minOccurs="0" />
+							<xs:element name="nombrecompleto" type="xs:string" minOccurs="0" />
+							<xs:element name="diaest1" type="xs:string" minOccurs="0" />
+							<xs:element name="diaasis1" type="xs:boolean" minOccurs="0" />
+							<xs:element name="diajor1" type="xs:string" minOccurs="0" />
+							<xs:element name="diaest2" type="xs:string" minOccurs="0" />
+							<xs:element name="diaasis2" type="xs:boolean" minOccurs="0" />
+							<xs:element name="diajor2" type="xs:string" minOccurs="0" />
+							<xs:element name="diaest3" type="xs:string" minOccurs="0" />
+							<xs:element name="diaasis3" type="xs:boolean" minOccurs="0" />
+							<xs:element name="diajor3" type="xs:string" minOccurs="0" />
+							<xs:element name="diaest4" type="xs:string" minOccurs="0" />
+							<xs:element name="diaasis4" type="xs:boolean" minOccurs="0" />
+							<xs:element name="diajor4" type="xs:string" minOccurs="0" />
+							<xs:element name="diaest5" type="xs:string" minOccurs="0" />
+							<xs:element name="diaasis5" type="xs:boolean" minOccurs="0" />
+							<xs:element name="diajor5" type="xs:string" minOccurs="0" />
+							<xs:element name="diaest6" type="xs:string" minOccurs="0" />
+							<xs:element name="diaasis6" type="xs:boolean" minOccurs="0" />
+							<xs:element name="diajor6" type="xs:string" minOccurs="0" />
+							<xs:element name="diaest7" type="xs:string" minOccurs="0" />
+							<xs:element name="diaasis7" type="xs:boolean" minOccurs="0" />
+							<xs:element name="diajor7" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

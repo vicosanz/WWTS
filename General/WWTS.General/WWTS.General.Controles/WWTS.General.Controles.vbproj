@@ -1,0 +1,633 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B3F0A363-382F-4CDD-97A7-9DF3A4BF0B5A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>WWTS.General.Controles</RootNamespace>
+    <AssemblyName>WWTS.General.Controles</AssemblyName>
+    <MyType>Windows</MyType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>WWTS.Controles.General.xml</DocumentationFile>
+    <DefineConstants>_MYFORMS=True</DefineConstants>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>WWTS.Controles.General.xml</DocumentationFile>
+    <DefineConstants>_MYFORMS=True</DefineConstants>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=3.0.6.0, Culture=neutral, PublicKeyToken=5cded1a1a0a7b481, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\DockPanelSuite.3.0.6\lib\net40\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controles\ComboBoxConexionOtros.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\ComboBoxEmpresa.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\ComboBoxRegistroContable.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\ComboBoxSucursal.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\ComboBoxUsuario.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\CtlEmpleadoModificado.Designer.vb">
+      <DependentUpon>CtlEmpleadoModificado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtlEmpleadoModificado.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\CtlEmpleadoOriginal.Designer.vb">
+      <DependentUpon>CtlEmpleadoOriginal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtlEmpleadoOriginal.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\CtlCuentaBancaria.Designer.vb">
+      <DependentUpon>CtlCuentaBancaria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtlCuentaBancaria.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\CtlEmpleado.Designer.vb">
+      <DependentUpon>CtlEmpleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtlEmpleado.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\CtlUbicacion.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\FrmCarga.Designer.vb">
+      <DependentUpon>FrmCarga.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\FrmCarga.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entidad\CtlBuscaReclutamiento.Designer.vb">
+      <DependentUpon>CtlBuscaReclutamiento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\CtlBuscaReclutamiento.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Entidad\CtlBuscaCliente.Designer.vb">
+      <DependentUpon>CtlBuscaCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\CtlBuscaCliente.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Entidad\CtlBuscaEmpleado.Designer.vb">
+      <DependentUpon>CtlBuscaEmpleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\CtlBuscaEmpleado.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Entidad\CtlBuscaEntidad2.Designer.vb">
+      <DependentUpon>CtlBuscaEntidad2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\CtlBuscaEntidad2.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Entidad\CtlBuscaProveedor.Designer.vb">
+      <DependentUpon>CtlBuscaProveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\CtlBuscaProveedor.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Entidad\CtlDireccion.Designer.vb">
+      <DependentUpon>CtlDireccion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\CtlDireccion.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Entidad\CtlEmail.Designer.vb">
+      <DependentUpon>CtlEmail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\CtlEmail.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Entidad\CtlEntidadJuridica.Designer.vb">
+      <DependentUpon>CtlEntidadJuridica.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\CtlEntidadJuridica.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Entidad\CtlEntidadLugar.Designer.vb">
+      <DependentUpon>CtlEntidadLugar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\CtlEntidadLugar.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Entidad\CtlEntidadNatural.Designer.vb">
+      <DependentUpon>CtlEntidadNatural.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\CtlEntidadNatural.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Entidad\CtlIdentificacion.Designer.vb">
+      <DependentUpon>CtlIdentificacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\CtlIdentificacion.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Entidad\CtlPersona.Designer.vb">
+      <DependentUpon>CtlPersona.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\CtlPersona.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Entidad\CtlTelefono.Designer.vb">
+      <DependentUpon>CtlTelefono.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\CtlTelefono.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\CtlAreaSeleccion.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\CtlCargoSeleccion.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmMantenimientoSeleccionDetalle.Designer.vb">
+      <DependentUpon>FrmMantenimientoSeleccionDetalle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmMantenimientoSeleccionDetalle.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\CtlSeleccion.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmTest.Designer.vb">
+      <DependentUpon>FrmTest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmTest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmAplicacion.Designer.vb">
+      <DependentUpon>FrmAplicacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmAplicacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmListaClientes.designer.vb">
+      <DependentUpon>FrmListaClientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmListaClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmListaEmpleados.designer.vb">
+      <DependentUpon>FrmListaEmpleados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmListaEmpleados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmListaParametroDets.designer.vb">
+      <DependentUpon>FrmListaParametroDets.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmListaParametroDets.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmListaPersonas.designer.vb">
+      <DependentUpon>FrmListaPersonas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmListaPersonas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmListaProveedores.designer.vb">
+      <DependentUpon>FrmListaProveedores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmListaProveedores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmMantenimientoCliente.designer.vb">
+      <DependentUpon>FrmMantenimientoCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmMantenimientoCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmMantenimientoEmpleado.designer.vb">
+      <DependentUpon>FrmMantenimientoEmpleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmMantenimientoEmpleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmMantenimientoEmpresa.designer.vb">
+      <DependentUpon>FrmMantenimientoEmpresa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmMantenimientoEmpresa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmMantenimientoParametroDet.Designer.vb">
+      <DependentUpon>FrmMantenimientoParametroDet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmMantenimientoParametroDet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmMantenimientoPersona.Designer.vb">
+      <DependentUpon>FrmMantenimientoPersona.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmMantenimientoPersona.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmMantenimientoProveedor.designer.vb">
+      <DependentUpon>FrmMantenimientoProveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmMantenimientoProveedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmMantenimientoSucursal.designer.vb">
+      <DependentUpon>FrmMantenimientoSucursal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmMantenimientoSucursal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmListaReclutamiento.designer.vb">
+      <DependentUpon>FrmListaReclutamiento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmListaReclutamiento.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parametros\ComboBoxParametro.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Parametros\ComboBoxParametroDet.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Parametros\ComboBoxParametroDetImagen.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Parametros\CtlAdjunto.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Parametros\FrmParametroDet.Designer.vb">
+      <DependentUpon>FrmParametroDet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Parametros\FrmParametroDet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parametros\FrmParametroDetFile.designer.vb">
+      <DependentUpon>FrmParametroDetFile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Parametros\FrmParametroDetFile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parametros\FrmParametroDetImagen.designer.vb">
+      <DependentUpon>FrmParametroDetImagen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Parametros\FrmParametroDetImagen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controles\ComboBoxConexionOtros.resx">
+      <DependentUpon>ComboBoxConexionOtros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ComboBoxRegistroContable.resx">
+      <DependentUpon>ComboBoxRegistroContable.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ComboBoxSucursal.resx">
+      <DependentUpon>ComboBoxSucursal.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ComboBoxUsuario.resx">
+      <DependentUpon>ComboBoxUsuario.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\CtlEmpleadoModificado.resx">
+      <DependentUpon>CtlEmpleadoModificado.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\CtlEmpleadoOriginal.resx">
+      <DependentUpon>CtlEmpleadoOriginal.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\CtlCuentaBancaria.resx">
+      <DependentUpon>CtlCuentaBancaria.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\CtlEmpleado.resx">
+      <DependentUpon>CtlEmpleado.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\FrmCarga.resx">
+      <DependentUpon>FrmCarga.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entidad\CtlBuscaReclutamiento.resx">
+      <DependentUpon>CtlBuscaReclutamiento.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entidad\CtlBuscaCliente.resx">
+      <DependentUpon>CtlBuscaCliente.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entidad\CtlBuscaEmpleado.resx">
+      <DependentUpon>CtlBuscaEmpleado.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entidad\CtlBuscaEntidad2.resx">
+      <DependentUpon>CtlBuscaEntidad2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entidad\CtlBuscaProveedor.resx">
+      <DependentUpon>CtlBuscaProveedor.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entidad\CtlDireccion.resx">
+      <DependentUpon>CtlDireccion.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entidad\CtlEmail.resx">
+      <DependentUpon>CtlEmail.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entidad\CtlEntidadJuridica.resx">
+      <DependentUpon>CtlEntidadJuridica.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entidad\CtlEntidadLugar.resx">
+      <DependentUpon>CtlEntidadLugar.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entidad\CtlEntidadNatural.resx">
+      <DependentUpon>CtlEntidadNatural.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entidad\CtlIdentificacion.resx">
+      <DependentUpon>CtlIdentificacion.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entidad\CtlPersona.resx">
+      <DependentUpon>CtlPersona.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entidad\CtlTelefono.resx">
+      <DependentUpon>CtlTelefono.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmMantenimientoSeleccionDetalle.resx">
+      <DependentUpon>FrmMantenimientoSeleccionDetalle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmTest.resx">
+      <DependentUpon>FrmTest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmAplicacion.resx">
+      <DependentUpon>FrmAplicacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmListaClientes.resx">
+      <DependentUpon>FrmListaClientes.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmListaEmpleados.resx">
+      <DependentUpon>FrmListaEmpleados.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmListaParametroDets.resx">
+      <DependentUpon>FrmListaParametroDets.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmListaPersonas.resx">
+      <DependentUpon>FrmListaPersonas.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmListaProveedores.resx">
+      <DependentUpon>FrmListaProveedores.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmMantenimientoCliente.resx">
+      <DependentUpon>FrmMantenimientoCliente.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmMantenimientoEmpleado.resx">
+      <DependentUpon>FrmMantenimientoEmpleado.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmMantenimientoEmpresa.resx">
+      <DependentUpon>FrmMantenimientoEmpresa.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmMantenimientoParametroDet.resx">
+      <DependentUpon>FrmMantenimientoParametroDet.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmMantenimientoPersona.resx">
+      <DependentUpon>FrmMantenimientoPersona.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmMantenimientoProveedor.resx">
+      <DependentUpon>FrmMantenimientoProveedor.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmMantenimientoSucursal.resx">
+      <DependentUpon>FrmMantenimientoSucursal.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmListaReclutamiento.resx">
+      <DependentUpon>FrmListaReclutamiento.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parametros\FrmParametroDet.resx">
+      <DependentUpon>FrmParametroDet.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parametros\FrmParametroDetFile.resx">
+      <DependentUpon>FrmParametroDetFile.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parametros\FrmParametroDetImagen.resx">
+      <DependentUpon>FrmParametroDetImagen.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\abrir.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eliminar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adjunto.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adjunto1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\ICA3\Infoware.Consola.Base\Infoware.Consola.Base.csproj">
+      <Project>{69c85426-e02a-4af6-894c-9ce05ebbc66e}</Project>
+      <Name>Infoware.Consola.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ICA3\Infoware.Controles.Base\Infoware.Controles.Base.vbproj">
+      <Project>{c81d0a59-f9b2-450b-a59d-5aef7ae898c1}</Project>
+      <Name>Infoware.Controles.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ICA3\Infoware.Controles.General\Infoware.Controles.General.vbproj">
+      <Project>{39712c5d-86ab-49b9-b9a8-b55be19c43d5}</Project>
+      <Name>Infoware.Controles.General</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ICA3\Infoware.Datos\Infoware.Datos.vbproj">
+      <Project>{fa50218a-1fd3-4739-87eb-4e77591ee0a2}</Project>
+      <Name>Infoware.Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ICA3\Infoware.Reglas.General\Infoware.Reglas.General.vbproj">
+      <Project>{fedde9a5-923f-47f7-b7ac-63beaa34e7f8}</Project>
+      <Name>Infoware.Reglas.General</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ICA3\Infoware.Reglas\Infoware.Reglas.vbproj">
+      <Project>{8365b169-5835-4cc6-b9f3-91dd27ae4e1a}</Project>
+      <Name>Infoware.Reglas</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\WWTS.Aplicacion\WWTS.Aplicacion.Controles\WWTS.Aplicacion.Controles.vbproj">
+      <Project>{6bde14a6-64b8-41d0-a651-f32a8877cbd0}</Project>
+      <Name>WWTS.Aplicacion.Controles</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WWTS.General.Reglas\WWTS.General.Reglas.vbproj">
+      <Project>{6F7C7749-44BD-42C0-9EF8-CACF87184CDF}</Project>
+      <Name>WWTS.General.Reglas</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WIA">
+      <Guid>{94A0E92D-43C0-494E-AC29-FD45948A5221}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

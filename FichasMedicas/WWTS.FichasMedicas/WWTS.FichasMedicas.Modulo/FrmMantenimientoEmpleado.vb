@@ -1,0 +1,195 @@
+Imports Infoware.Datos
+Imports Infoware.Reglas
+Imports Infoware.Reglas.General
+Imports WWTS.General.Reglas
+Imports WWTS.Roles.Reglas
+Imports Infoware.Consola.Base
+Imports CrystalDecisions.Shared
+Imports System.Data.SqlClient
+Imports System.Drawing.Printing
+
+Public Class FrmMantenimientoEmpleado
+  Implements IOpcion
+
+#Region "Parametros"
+  Public Property Empleados() As BindingSource
+    Get
+      Return MyBase.ListBindingSource
+    End Get
+    Set(ByVal value As BindingSource)
+      MyBase.ListBindingSource = value
+      llenar_datos()
+    End Set
+  End Property
+
+  Private mEmpleado As Empleado = Nothing
+  Public Property Empleado() As Empleado
+    Get
+      Return mEmpleado
+    End Get
+    Set(ByVal value As Empleado)
+      mEmpleado = value
+      'If MyBase.ListBindingSource.DataSource Is Nothing Then
+      Dim _Empleados As New EmpleadoList
+      _Empleados.Add(mEmpleado)
+      'MyBase.ListBindingSource.DataSource = GetType(WWTS.General.Reglas.Empleado)
+      MyBase.ListBindingSource.DataSource = _Empleados
+      'Me.CtlContrato1.Enabled = True
+      'End If
+      'llenar_datos()
+    End Set
+  End Property
+
+  Sub llenar_datos()
+    If Sistema Is Nothing Then
+      Exit Sub
+    End If
+
+    mEmpleado = Empleados.Current
+    Me.CtlContrato1.Empleado = mEmpleado
+    'Me.CtlContrato1.HeaderStrip1.Enabled = True
+  End Sub
+
+  Sub mapear_datos()
+    If Sistema Is Nothing Then
+      Exit Sub
+    End If
+
+  End Sub
+#End Region
+
+#Region "Cerrar y Cancelar"
+  Private Sub FrmMantenimientoEmpleado_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
+    'Cancelar_Nuevo()
+  End Sub
+
+  Private Function Cancelar_Nuevo() As Boolean
+    Dim _esnuevo As Boolean = mEmpleado.EsNuevo
+    If _esnuevo AndAlso Empleados.Current IsNot Nothing Then
+      Empleados.RemoveCurrent()
+    End If
+    Return _esnuevo
+  End Function
+#End Region
+
+#Region "Empleados eventos"
+  Private Sub FrmMantenimientoEmpleado_CrearNuevo(ByVal sender As Object, ByVal e As System.ComponentModel.AddingNewEventArgs) Handles Me.CrearNuevo
+    Dim _Empleado As Empleado = New Empleado(Sistema.OperadorDatos, True)
+    Me.ListBindingSource.Add(_Empleado)
+    e.NewObject = _Empleado
+  End Sub
+
+  Private Sub FrmMantenimientoEmpleado_Actualizar(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Actualizar
+    llenar_datos()
+  End Sub
+#End Region
+
+#Region "Guardar y Eliminar"
+  Private Sub FrmMantenimientoEmpleado_Guardar(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles Me.Guardar
+    e.Cancel = Not Guardar_datos()
+  End Sub
+
+  Private Function Guardar_datos() As Boolean
+    Try
+      mapear_datos()
+      Dim _esnuevo As Boolean = mEmpleado.EsNuevo
+      If mEmpleado.Guardar() Then
+        Auditoria.Registrar_Auditoria(Restriccion, IIf(_esnuevo, Enumerados.enumTipoAccion.Adicion, Enumerados.enumTipoAccion.Modificacion), mEmpleado.NombreCompleto)
+
+        If _esnuevo Then
+          mEmpleado.Recargar()
+          Me.CtlBuscaEmpleados1.Empleado = mEmpleado
+        End If
+        Return True
+      End If
+    Catch ex As Exception
+      MsgBox("No se puede guardar Empleado" & Environment.NewLine & ex.Message & Environment.NewLine & Sistema.OperadorDatos.MsgError, MsgBoxStyle.Critical, "Error")
+    End Try
+    Return False
+  End Function
+
+  Private Sub FrmMantenimientoEmpleado_Eliminar(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Eliminar
+    If Empleados.Current IsNot Nothing AndAlso mEmpleado.Eliminar() Then
+      Empleados.RemoveCurrent()
+      Me.CtlBuscaEmpleados1.Empleado = Nothing
+      Me.CtlContrato1.Empleado = Nothing
+    Else
+      'Empleados.CancelEdit()
+      MsgBox("No se puede eliminar Empleado" & Environment.NewLine & Sistema.OperadorDatos.MsgError, MsgBoxStyle.Critical, "Error")
+    End If
+  End Sub
+#End Region
+
+#Region "Mover"
+  Private Sub FrmMantenimientoEmpleado_Primero(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles Me.Primero
+    e.Cancel = Cancelar_Nuevo()
+  End Sub
+
+  Private Sub FrmMantenimientoEmpleado_Siguiente(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles Me.Siguiente
+    e.Cancel = Cancelar_Nuevo()
+  End Sub
+
+  Private Sub FrmMantenimientoEmpleado_Ultimo(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles Me.Ultimo
+    e.Cancel = Cancelar_Nuevo()
+  End Sub
+
+  Private Sub FrmMantenimientoEmpleado_Anterior(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles Me.Anterior
+    e.Cancel = Cancelar_Nuevo()
+  End Sub
+#End Region
+
+  Private Sub FrmMantenimientoMovimientoInventario_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
+    Me.ListBindingSource = Nothing
+  End Sub
+
+  Private Sub CtlBuscaEmpleados1_CambioEmpleado(ByVal sender As Object, ByVal e As EventArgs) Handles CtlBuscaEmpleados1.CambioEmpleado
+    Recargar_Empleado()
+  End Sub
+
+  Sub Recargar_Empleado()
+    Me.Empleado = Me.CtlBuscaEmpleados1.Empleado
+  End Sub
+
+#Region "New"
+  Public Sub New(ByVal _Sistema As Sistema, ByVal _Restriccion As Restriccion)
+    ' This call is required by the Windows Form Designer.
+    InitializeComponent()
+
+    ' Add any initialization after the InitializeComponent() call.
+    InitSistema(_Sistema, _Restriccion)
+  End Sub
+
+  Public Sub New(ByVal _Sistema As Sistema, ByVal _OpcionActual As Enumerados.EnumOpciones)
+    Me.New(_Sistema, _Sistema.Restricciones.Buscar(_OpcionActual))
+  End Sub
+
+  Private Sub FrmMantenimientoEmpleado_Inicializar(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Inicializar
+    Me.PuedeMover = False
+    Me.PuedeGuardar = True
+    Me.PuedeNuevo = True
+    Me.PuedeEliminar = True
+    ToolStripManager.Merge(Me.ToolStrip2, Me.ToolStrip1)
+    ToolStripManager.Merge(Me.MenuStrip2, Me.MenuStrip1)
+    Me.ToolStrip2.Visible = False
+    Me.MenuStrip2.Visible = False
+
+    MyBase.Tabla = "Empleados"
+    Me.CtlBuscaEmpleados1.Usuario = Sistema.Usuario
+    Me.CtlBuscaEmpleados1.Op = Sistema.OperadorDatos
+    Me.CtlContrato1.Usuario = Sistema.Usuario
+    Me.CtlContrato1.Op = Sistema.OperadorDatos
+  End Sub
+#End Region
+
+  Private Sub ListadoEmpleadoDiscapacidadToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ListadoEmpleadoDiscapacidadToolStripMenuItem.Click
+    Dim f As New Infoware.Reporteador.FrmLista(Sistema, Enumerados.EnumOpciones.ReportesRoles) With {
+      .Reporte = New Infoware.Reporteador.Reporte(Sistema.OperadorDatos, "REPR_Roles$Empleados_con_discapacidad"),
+      .Valores = New Object() {Sistema.Usuario.Usuari_Codigo}
+    }
+    f.ShowDialog()
+  End Sub
+
+  Private Sub CtlEmpleado1_Load(sender As System.Object, e As System.EventArgs)
+
+  End Sub
+End Class

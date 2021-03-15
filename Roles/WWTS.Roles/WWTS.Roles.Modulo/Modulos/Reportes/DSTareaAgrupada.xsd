@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSTareaAgrupada" targetNamespace="http://tempuri.org/DSTareaAgrupada.xsd" xmlns:mstns="http://tempuri.org/DSTareaAgrupada.xsd" xmlns="http://tempuri.org/DSTareaAgrupada.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="rolnetfranceyConnectionString1" IsAppSettingsProperty="True" Modifier="Assembly" Name="rolnetfranceyConnectionString1 (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WWTS.Roles.Modulo.MySettings.GlobalReference.Default.rolnetfranceyConnectionString1" Provider="System.Data.SqlClient">
+          </Connection>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSTareaAgrupada" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DSTareaAgrupada" msprop:Generator_DataSetName="DSTareaAgrupada">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vw_tareag" msprop:Generator_UserTableName="vw_tareag" msprop:Generator_RowDeletedName="vw_tareagRowDeleted" msprop:Generator_RowChangedName="vw_tareagRowChanged" msprop:Generator_RowClassName="vw_tareagRow" msprop:Generator_RowChangingName="vw_tareagRowChanging" msprop:Generator_RowEvArgName="vw_tareagRowChangeEvent" msprop:Generator_RowEvHandlerName="vw_tareagRowChangeEventHandler" msprop:Generator_TableClassName="vw_tareagDataTable" msprop:Generator_TableVarName="tablevw_tareag" msprop:Generator_RowDeletingName="vw_tareagRowDeleting" msprop:Generator_TablePropName="vw_tareag">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sec_descripcion" msprop:Generator_UserColumnName="sec_descripcion" msprop:Generator_ColumnPropNameInRow="sec_descripcion" msprop:Generator_ColumnVarNameInTable="columnsec_descripcion" msprop:Generator_ColumnPropNameInTable="sec_descripcionColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="18" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="lab_descripcion" msprop:Generator_UserColumnName="lab_descripcion" msprop:Generator_ColumnPropNameInRow="lab_descripcion" msprop:Generator_ColumnVarNameInTable="columnlab_descripcion" msprop:Generator_ColumnPropNameInTable="lab_descripcionColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="contador" msprop:Generator_UserColumnName="contador" msprop:Generator_ColumnPropNameInRow="contador" msprop:Generator_ColumnVarNameInTable="columncontador" msprop:Generator_ColumnPropNameInTable="contadorColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="tareat" msprop:Generator_UserColumnName="tareat" msprop:Generator_ColumnPropNameInRow="tareat" msprop:Generator_ColumnVarNameInTable="columntareat" msprop:Generator_ColumnPropNameInTable="tareatColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="labort" msprop:Generator_UserColumnName="labort" msprop:Generator_ColumnPropNameInRow="labort" msprop:Generator_ColumnVarNameInTable="columnlabort" msprop:Generator_ColumnPropNameInTable="labortColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="horast" msprop:Generator_UserColumnName="horast" msprop:Generator_ColumnPropNameInRow="horast" msprop:Generator_ColumnVarNameInTable="columnhorast" msprop:Generator_ColumnPropNameInTable="horastColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="costot" msprop:Generator_UserColumnName="costot" msprop:Generator_ColumnPropNameInRow="costot" msprop:Generator_ColumnVarNameInTable="columncostot" msprop:Generator_ColumnPropNameInTable="costotColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

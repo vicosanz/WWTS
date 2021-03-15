@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSTabacoFermentacion" targetNamespace="http://tempuri.org/DSTabacoFermentacion.xsd" xmlns:mstns="http://tempuri.org/DSTabacoFermentacion.xsd" xmlns="http://tempuri.org/DSTabacoFermentacion.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSTabacoFermentacion" msdata:IsDataSet="true" msdata:Locale="en-US" msprop:Generator_DataSetName="DSTabacoFermentacion" msprop:Generator_UserDSName="DSTabacoFermentacion">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vw_bloques" msprop:Generator_TableClassName="vw_bloquesDataTable" msprop:Generator_TableVarName="tablevw_bloques" msprop:Generator_TablePropName="vw_bloques" msprop:Generator_RowDeletingName="vw_bloquesRowDeleting" msprop:Generator_RowChangingName="vw_bloquesRowChanging" msprop:Generator_RowEvHandlerName="vw_bloquesRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_bloquesRowDeleted" msprop:Generator_UserTableName="vw_bloques" msprop:Generator_RowChangedName="vw_bloquesRowChanged" msprop:Generator_RowEvArgName="vw_bloquesRowChangeEvent" msprop:Generator_RowClassName="vw_bloquesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="hac_nombre" msprop:Generator_ColumnVarNameInTable="columnhac_nombre" msprop:Generator_ColumnPropNameInRow="hac_nombre" msprop:Generator_ColumnPropNameInTable="hac_nombreColumn" msprop:Generator_UserColumnName="hac_nombre" type="xs:string" minOccurs="0" />
+              <xs:element name="sem_nombre" msprop:Generator_ColumnVarNameInTable="columnsem_nombre" msprop:Generator_ColumnPropNameInRow="sem_nombre" msprop:Generator_ColumnPropNameInTable="sem_nombreColumn" msprop:Generator_UserColumnName="sem_nombre" type="xs:string" minOccurs="0" />
+              <xs:element name="cor_nombre" msprop:Generator_ColumnVarNameInTable="columncor_nombre" msprop:Generator_ColumnPropNameInRow="cor_nombre" msprop:Generator_ColumnPropNameInTable="cor_nombreColumn" msprop:Generator_UserColumnName="cor_nombre" type="xs:string" minOccurs="0" />
+              <xs:element name="cto_descripcion" msprop:Generator_ColumnVarNameInTable="columncto_descripcion" msprop:Generator_ColumnPropNameInRow="cto_descripcion" msprop:Generator_ColumnPropNameInTable="cto_descripcionColumn" msprop:Generator_UserColumnName="cto_descripcion" type="xs:string" minOccurs="0" />
+              <xs:element name="libras" msprop:Generator_ColumnVarNameInTable="columnlibras" msprop:Generator_ColumnPropNameInRow="libras" msprop:Generator_ColumnPropNameInTable="librasColumn" msprop:Generator_UserColumnName="libras" type="xs:decimal" minOccurs="0" />
+              <xs:element name="numcajas" msprop:Generator_ColumnVarNameInTable="columnnumcajas" msprop:Generator_ColumnPropNameInRow="numcajas" msprop:Generator_ColumnPropNameInTable="numcajasColumn" msprop:Generator_UserColumnName="numcajas" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,152 @@
+﻿Imports System.Windows.Forms
+Imports Infoware.Consola.Base
+Imports WWTS.General.Reglas
+Imports System.IO
+
+Public Class Inicializacion
+  Implements Infoware.Consola.Base.IAplicacion
+
+  Public Shared Sub Main()
+    'ejecutar ica
+    Dim RutaICA As String = LeerClave()
+
+    If Not My.Computer.FileSystem.FileExists(RutaICA) Then
+      If MsgBox("No se pudo encontrar ICA3, ¿Desea encontrarlo usted mismo?", MsgBoxStyle.YesNo, "Pregunta") = MsgBoxResult.Yes Then
+        Dim ofd As New OpenFileDialog With {
+          .Filter = "ICA (ICA3.exe)|ICA3.exe|Todos los archivos (*.*)|*.*"
+        }
+
+        If ofd.ShowDialog = DialogResult.OK Then
+          RutaICA = ofd.FileName
+          GuardarClave(RutaICA)
+          My.Settings.Save()
+        Else
+          End
+        End If
+      Else
+        MsgBox("Debe instalar el Infoware.Consola.Adminitrator antes de poder utilizar el sistema", MsgBoxStyle.Exclamation, "Información")
+        End
+      End If
+    End If
+
+    Dim mProcess As Process
+    mProcess = New Process
+    mProcess.StartInfo.FileName = RutaICA
+    mProcess.StartInfo.Arguments = String.Format("""{0}""", Reflection.Assembly.GetExecutingAssembly.Location)
+    'mProcess.StartInfo.WindowStyle = ProcessWindowStyle.Maximized
+    mProcess.EnableRaisingEvents = False
+
+    mProcess.Start()
+    End
+    'mProcess.WaitForExit()
+    'Do
+    '  If Not mProcess.HasExited Then
+    '  End If
+    'Loop While Not mProcess.WaitForExit(1000)
+  End Sub
+
+  Public Shared Sub GuardarClave(ByVal valor As String)
+    Dim mDirectorioRaiz = System.IO.Path.Combine(My.Computer.FileSystem.SpecialDirectories.MyDocuments, "ICA3")
+    Dim mDirectorioConfig = System.IO.Path.Combine(mDirectorioRaiz, "Configuracion")
+
+    My.Computer.FileSystem.CreateDirectory(mDirectorioRaiz)
+    My.Computer.FileSystem.CreateDirectory(mDirectorioConfig)
+
+    Dim configFile As String
+    configFile = Path.Combine(mDirectorioConfig, "Link.config")
+
+    My.Computer.FileSystem.WriteAllText(configFile, valor, False)
+  End Sub
+
+  Public Shared Function LeerClave() As String
+    Dim mDirectorioRaiz = System.IO.Path.Combine(My.Computer.FileSystem.SpecialDirectories.MyDocuments, "ICA3")
+    Dim mDirectorioConfig = System.IO.Path.Combine(mDirectorioRaiz, "Configuracion")
+
+    My.Computer.FileSystem.CreateDirectory(mDirectorioRaiz)
+    My.Computer.FileSystem.CreateDirectory(mDirectorioConfig)
+
+    Dim configFile As String
+    configFile = Path.Combine(mDirectorioConfig, "Link.config")
+
+    Dim result As String = ""
+    Try
+      result = My.Computer.FileSystem.ReadAllText(configFile)
+    Catch ex As Exception
+
+    End Try
+
+    Return result
+  End Function
+
+  Public Function Validacion(ByVal _Usuario As Infoware.Reglas.General.Usuario) As Boolean Implements Infoware.Consola.Base.IAplicacion.Validacion
+    Dim _parametrodet As New Infoware.Reglas.General.ParametroDet(_Usuario.OperadorDatos, 5, 1)
+    If Not _parametrodet.Pardet_Descripcion = "Domus" And Not _parametrodet.Pardet_Descripcion = "SalesManager" Then
+      MsgBox("Base de datos no compatible con esta aplicación")
+      Return False
+    End If
+    _parametrodet = New Infoware.Reglas.General.ParametroDet(_Usuario.OperadorDatos, 1, 1)
+    If Not _parametrodet.Pardet_DatoStr1 >= "1.0" Then
+      MsgBox("Versión de base de datos debe actualizarse")
+      Return False
+    End If
+    Return True
+  End Function
+
+  'Public Sub CargarListaModulos(ByVal _Principal As Infoware.Consola.Base.FrmPrincipal) Implements Infoware.Consola.Base.IAplicacion.CargarListaModulos
+  '  If _Principal.Sistema.Usuario.Restricciones.Rango(1000, 1050) Then
+  '    _Principal.LeftSpine1.Items.Add(_Principal.CrearBotonModulo("Fidelización", My.Resources.Resources.Empresa.ToBitmap, New IAplicacion.DelegadoCargarModulos(AddressOf CargarModulo)))
+  '  End If
+  'End Sub
+
+  'Public Sub CargarModulo(ByVal _Principal As Infoware.Consola.Base.FrmPrincipal)
+  '  _Principal.Text = "Fidelización"
+  '  Dim f As New FrmMenuFidelizacion(_Principal.Sistema)
+  '  _Principal.Cargar_IModulo(f)
+  'End Sub
+
+  'Public Function CargarListaNuevos() As System.Collections.Generic.List(Of Infoware.Consola.Base.OpcionNuevo) Implements Infoware.Consola.Base.IAplicacion.CargarListaNuevos
+  '  Dim result As New List(Of OpcionNuevo)
+  '  result.Add(New OpcionNuevo("Afiliado", My.Resources.Empresa.ToBitmap, New Infoware.Consola.Base.OpcionNuevo.DelegadoCargarOpcion(AddressOf NuevoAfiliado), WWTS.General.Reglas.Enumerados.EnumOpciones.ListadoAfiliados))
+
+  '  Return result
+  'End Function
+
+  'Sub NuevoAfiliado(ByVal _Sistema As Sistema)
+  '  Dim f As New FrmMantenimientoAfiliado(_Sistema, WWTS.General.Reglas.Enumerados.EnumOpciones.ListadoAfiliados)
+  '  f.Afiliado = New WWTS.Fidelizacion.Reglas.Afiliado(_Sistema.OperadorDatos, True)
+  '  f.ShowDialog()
+  'End Sub
+
+  'Public Function CargarListaBuscar() As System.Collections.Generic.List(Of Infoware.Consola.Base.OpcionBuscar) Implements Infoware.Consola.Base.IAplicacion.CargarListaBuscar
+  '  Dim result As New List(Of OpcionBuscar)
+  '  result.Add(New OpcionBuscar("Afiliados", New Infoware.Consola.Base.OpcionBuscar.DelegadoCargarOpcion(AddressOf BuscarAfiliado), WWTS.General.Reglas.Enumerados.EnumOpciones.ListadoAfiliados))
+
+  '  result.Add(New OpcionBuscar("Premios", New Infoware.Consola.Base.OpcionBuscar.DelegadoCargarOpcion(AddressOf BuscarPremio), WWTS.General.Reglas.Enumerados.EnumOpciones.Premios))
+
+  '  Return result
+  'End Function
+
+  'Sub BuscarAfiliado(ByVal _Sistema As Sistema, ByVal _Texto As String)
+  '  Dim f As New FrmListaAfiliados(_Sistema, WWTS.General.Reglas.Enumerados.EnumOpciones.ListadoAfiliados, False)
+
+  '  f.Filtro = _Texto
+  '  f.ShowDialog()
+  'End Sub
+
+  'Sub BuscarPremio(ByVal _Sistema As Sistema, ByVal _Texto As String)
+  '  Dim f As New FrmListaItems(_Sistema, WWTS.General.Reglas.Enumerados.EnumOpciones.Premios, False, Nothing)
+
+  '  f.Filtro = _Texto
+  '  f.ShowDialog()
+  'End Sub
+
+  Public Function CargarListaGrupoOpciones(ByVal _Sistema As Infoware.Consola.Base.Sistema) As System.Collections.Generic.List(Of Infoware.Consola.Base.GrupoOpcion) Implements Infoware.Consola.Base.IAplicacion.CargarListaGrupoOpciones
+    Dim _grupos As New List(Of GrupoOpcion)
+
+    If _Sistema.Usuario.Restricciones.porModulo(Enumerados.EnumModulos.FichasMedicas) Then
+      _grupos.AddRange(New Loader().CargarModuloFichasMedicas(_Sistema))
+    End If
+
+    Return _grupos
+  End Function
+End Class

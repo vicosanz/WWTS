@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSprovisiones" targetNamespace="http://www.tempuri.org/DSprovisiones.xsd" xmlns:mstns="http://www.tempuri.org/DSprovisiones.xsd" xmlns="http://www.tempuri.org/DSprovisiones.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSprovisiones" msdata:IsDataSet="true" msdata:Locale="es-EC" msprop:Generator_DataSetName="DSprovisiones" msprop:Generator_UserDSName="DSprovisiones">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="v_Provisiones" msprop:Generator_TableClassName="v_ProvisionesDataTable" msprop:Generator_TableVarName="tablev_Provisiones" msprop:Generator_RowChangedName="v_ProvisionesRowChanged" msprop:Generator_TablePropName="v_Provisiones" msprop:Generator_RowDeletingName="v_ProvisionesRowDeleting" msprop:Generator_RowChangingName="v_ProvisionesRowChanging" msprop:Generator_RowEvHandlerName="v_ProvisionesRowChangeEventHandler" msprop:Generator_RowDeletedName="v_ProvisionesRowDeleted" msprop:Generator_RowClassName="v_ProvisionesRow" msprop:Generator_UserTableName="v_Provisiones" msprop:Generator_RowEvArgName="v_ProvisionesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ban_codigo" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="ban_codigo" msprop:Generator_ColumnVarNameInTable="columnban_codigo" msprop:Generator_ColumnPropNameInTable="ban_codigoColumn" msprop:Generator_UserColumnName="ban_codigo" type="xs:string" minOccurs="0" />
+              <xs:element name="bct_numcta" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="bct_numcta" msprop:Generator_ColumnVarNameInTable="columnbct_numcta" msprop:Generator_ColumnPropNameInTable="bct_numctaColumn" msprop:Generator_UserColumnName="bct_numcta" type="xs:string" minOccurs="0" />
+              <xs:element name="pgv_motivo" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="pgv_motivo" msprop:Generator_ColumnVarNameInTable="columnpgv_motivo" msprop:Generator_ColumnPropNameInTable="pgv_motivoColumn" msprop:Generator_UserColumnName="pgv_motivo" type="xs:string" minOccurs="0" />
+              <xs:element name="tcn_codigo" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="tcn_codigo" msprop:Generator_ColumnVarNameInTable="columntcn_codigo" msprop:Generator_ColumnPropNameInTable="tcn_codigoColumn" msprop:Generator_UserColumnName="tcn_codigo" type="xs:string" minOccurs="0" />
+              <xs:element name="tcn_descripcion" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="tcn_descripcion" msprop:Generator_ColumnVarNameInTable="columntcn_descripcion" msprop:Generator_ColumnPropNameInTable="tcn_descripcionColumn" msprop:Generator_UserColumnName="tcn_descripcion" type="xs:string" minOccurs="0" />
+              <xs:element name="pgv_valor" msprop:nullValue="0" msprop:Generator_ColumnPropNameInRow="pgv_valor" msprop:Generator_ColumnVarNameInTable="columnpgv_valor" msprop:Generator_ColumnPropNameInTable="pgv_valorColumn" msprop:Generator_UserColumnName="pgv_valor" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

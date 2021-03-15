@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSSaldoCujes" targetNamespace="http://tempuri.org/DSSaldoCujes.xsd" xmlns:mstns="http://tempuri.org/DSSaldoCujes.xsd" xmlns="http://tempuri.org/DSSaldoCujes.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSSaldoCujes" msdata:IsDataSet="true" msdata:Locale="en-US" msprop:Generator_DataSetName="DSSaldoCujes" msprop:Generator_UserDSName="DSSaldoCujes">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vw_saldocujes" msprop:Generator_TableClassName="vw_saldocujesDataTable" msprop:Generator_TableVarName="tablevw_saldocujes" msprop:Generator_TablePropName="vw_saldocujes" msprop:Generator_RowDeletingName="vw_saldocujesRowDeleting" msprop:Generator_RowChangingName="vw_saldocujesRowChanging" msprop:Generator_RowEvHandlerName="vw_saldocujesRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_saldocujesRowDeleted" msprop:Generator_UserTableName="vw_saldocujes" msprop:Generator_RowChangedName="vw_saldocujesRowChanged" msprop:Generator_RowEvArgName="vw_saldocujesRowChangeEvent" msprop:Generator_RowClassName="vw_saldocujesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sem_nombre" msprop:Generator_ColumnVarNameInTable="columnsem_nombre" msprop:Generator_ColumnPropNameInRow="sem_nombre" msprop:Generator_ColumnPropNameInTable="sem_nombreColumn" msprop:Generator_UserColumnName="sem_nombre" type="xs:string" />
+              <xs:element name="trr_codigo" msdata:Caption="xxx" msprop:Generator_ColumnVarNameInTable="columntrr_codigo" msprop:Generator_ColumnPropNameInRow="trr_codigo" msprop:Generator_ColumnPropNameInTable="trr_codigoColumn" msprop:Generator_UserColumnName="trr_codigo" type="xs:string" />
+              <xs:element name="lot_codigo" msprop:Generator_ColumnVarNameInTable="columnlot_codigo" msprop:Generator_ColumnPropNameInRow="lot_codigo" msprop:Generator_ColumnPropNameInTable="lot_codigoColumn" msprop:Generator_UserColumnName="lot_codigo" type="xs:int" />
+              <xs:element name="cor_nombre" msprop:Generator_ColumnVarNameInTable="columncor_nombre" msprop:Generator_ColumnPropNameInRow="cor_nombre" msprop:Generator_ColumnPropNameInTable="cor_nombreColumn" msprop:Generator_UserColumnName="cor_nombre" type="xs:string" />
+              <xs:element name="cujes" msprop:Generator_ColumnVarNameInTable="columncujes" msprop:Generator_ColumnPropNameInRow="cujes" msprop:Generator_ColumnPropNameInTable="cujesColumn" msprop:Generator_UserColumnName="cujes" type="xs:int" minOccurs="0" />
+              <xs:element name="promrealcujeslbs" msprop:Generator_ColumnVarNameInTable="columnpromrealcujeslbs" msprop:Generator_ColumnPropNameInRow="promrealcujeslbs" msprop:Generator_ColumnPropNameInTable="promrealcujeslbsColumn" msprop:Generator_UserColumnName="promrealcujeslbs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="promcujeslbs" msprop:Generator_ColumnVarNameInTable="columnpromcujeslbs" msprop:Generator_ColumnPropNameInRow="promcujeslbs" msprop:Generator_ColumnPropNameInTable="promcujeslbsColumn" msprop:Generator_UserColumnName="promcujeslbs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="cujeslbs" msprop:Generator_ColumnVarNameInTable="columncujeslbs" msprop:Generator_ColumnPropNameInRow="cujeslbs" msprop:Generator_ColumnPropNameInTable="cujeslbsColumn" msprop:Generator_UserColumnName="cujeslbs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="areautilizada" msprop:Generator_ColumnVarNameInTable="columnareautilizada" msprop:Generator_ColumnPropNameInRow="areautilizada" msprop:Generator_ColumnPropNameInTable="areautilizadaColumn" msprop:Generator_UserColumnName="areautilizada" type="xs:decimal" minOccurs="0" />
+              <xs:element name="terrutilizado" msprop:Generator_ColumnVarNameInTable="columnterrutilizado" msprop:Generator_ColumnPropNameInRow="terrutilizado" msprop:Generator_ColumnPropNameInTable="terrutilizadoColumn" msprop:Generator_UserColumnName="terrutilizado" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PromLbsHa" msprop:Generator_ColumnVarNameInTable="columnPromLbsHa" msprop:Generator_ColumnPropNameInRow="PromLbsHa" msprop:Generator_ColumnPropNameInTable="PromLbsHaColumn" msprop:Generator_UserColumnName="PromLbsHa" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

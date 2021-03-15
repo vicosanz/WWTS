@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{01E84104-277E-4AEB-A5F4-85A404990B5C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>WWTS.Roles.Reglas</RootNamespace>
+    <AssemblyName>WWTS.Roles.Reglas</AssemblyName>
+    <MyType>Windows</MyType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>WWTS.Roles.Reglas.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>WWTS.Roles.Reglas.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\ICA\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\ICA\Microsoft.Office.Interop.Word.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Database\AdicSueldo.vb" />
+    <Compile Include="Database\Asistencia.vb" />
+    <Compile Include="Database\Beneficio.vb" />
+    <Compile Include="Database\AsistenciaDet.vb" />
+    <Compile Include="Database\Conciliacion.vb" />
+    <Compile Include="Database\DiaAsistenciaWeb.vb" />
+    <Compile Include="Database\GastosPersonales.vb" />
+    <Compile Include="Database\RubrosxCentroCosto.vb" />
+    <Compile Include="Database\RubroxBeneficio.vb" />
+    <Compile Include="Database\LotePagoVarioDetalle.vb" />
+    <Compile Include="Database\DetalleModeloLabor.vb" />
+    <Compile Include="Database\DiaAsistencia.vb" />
+    <Compile Include="Database\Feriado.vb" />
+    <Compile Include="Database\ImpuestoRenta.vb" />
+    <Compile Include="Database\Liquidacion.vb" />
+    <Compile Include="Database\LlamadaAtencion.vb" />
+    <Compile Include="Database\LotePago.vb" />
+    <Compile Include="Database\Prestamo.vb" />
+    <Compile Include="Database\PrestamoDet.vb" />
+    <Compile Include="Database\RegistroIESS.vb" />
+    <Compile Include="Database\PatronoxUsuario.vb" />
+    <Compile Include="Database\SueldoMensual.vb" />
+    <Compile Include="Database\Tarea.vb" />
+    <Compile Include="Database\TestxArea.vb" />
+    <Compile Include="Database\Provision.vb" />
+    <Compile Include="Excel\Beneficio.vb" />
+    <Compile Include="Excel\Contrato.vb" />
+    <Compile Include="Excel\ImpuestoRenta.vb" />
+    <Compile Include="Excel\Licencia.vb" />
+    <Compile Include="Excel\Empleado.vb" />
+    <Compile Include="Excel\LiquidacionHaberes.vb" />
+    <Compile Include="Excel\LlamadaAtencion.vb" />
+    <Compile Include="Excel\Vacacion.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Reglas\AcumSueldo.vb" />
+    <Compile Include="Reglas\AdicSueldo.vb" />
+    <Compile Include="Reglas\Asistencia.vb" />
+    <Compile Include="Reglas\Beneficio.vb" />
+    <Compile Include="Reglas\AsistenciaDet.vb" />
+    <Compile Include="Reglas\Conciliacion.vb" />
+    <Compile Include="Reglas\RubrosxCentroCosto.vb" />
+    <Compile Include="Reglas\GastosPersonales.vb" />
+    <Compile Include="Reglas\RubroxBeneficio.vb" />
+    <Compile Include="Reglas\LotePagoVarioDetalle.vb" />
+    <Compile Include="Reglas\DetalleModeloLabor.vb" />
+    <Compile Include="Reglas\DiaAsistencia.vb" />
+    <Compile Include="Reglas\DiaAsistenciaWeb.vb" />
+    <Compile Include="Reglas\Feriado.vb" />
+    <Compile Include="Reglas\IESS.vb" />
+    <Compile Include="Reglas\ImpuestoRenta.vb" />
+    <Compile Include="Reglas\Liquidacion.vb" />
+    <Compile Include="Reglas\LlamadaAtencion.vb" />
+    <Compile Include="Reglas\LotePago.vb" />
+    <Compile Include="Reglas\Prestamo.vb" />
+    <Compile Include="Reglas\PrestamoDet.vb" />
+    <Compile Include="Reglas\RegistroIESS.vb" />
+    <Compile Include="Reglas\PatronoxUsuario.vb" />
+    <Compile Include="Reglas\SueldoMensual.vb" />
+    <Compile Include="Reglas\Tarea.vb" />
+    <Compile Include="Reglas\TestxArea.vb" />
+    <Compile Include="Reglas\Provision.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources1.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\General\WWTS.General\WWTS.General.Reglas\WWTS.General.Reglas.vbproj">
+      <Project>{6f7c7749-44bd-42c0-9ef8-cacf87184cdf}</Project>
+      <Name>WWTS.General.Reglas</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ICA3\Infoware.Datos\Infoware.Datos.vbproj">
+      <Project>{fa50218a-1fd3-4739-87eb-4e77591ee0a2}</Project>
+      <Name>Infoware.Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ICA3\Infoware.Reglas.General\Infoware.Reglas.General.vbproj">
+      <Project>{fedde9a5-923f-47f7-b7ac-63beaa34e7f8}</Project>
+      <Name>Infoware.Reglas.General</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ICA3\Infoware.Reglas\Infoware.Reglas.vbproj">
+      <Project>{8365b169-5835-4cc6-b9f3-91dd27ae4e1a}</Project>
+      <Name>Infoware.Reglas</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ICA3\Infoware.Reportes\Infoware.Reportes.vbproj">
+      <Project>{288345c5-9fd4-4ac9-a9d1-d42bc9ad3316}</Project>
+      <Name>Infoware.Reportes</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

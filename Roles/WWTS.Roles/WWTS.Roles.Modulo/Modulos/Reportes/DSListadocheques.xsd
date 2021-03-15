@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSListadocheques" targetNamespace="http://tempuri.org/DSListadocheques.xsd" xmlns:mstns="http://tempuri.org/DSListadocheques.xsd" xmlns="http://tempuri.org/DSListadocheques.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSListadocheques" msdata:IsDataSet="true" msdata:Locale="en-US" msprop:Generator_DataSetName="DSListadocheques" msprop:Generator_UserDSName="DSListadocheques">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="v_listadocheques" msprop:Generator_TableClassName="v_listadochequesDataTable" msprop:Generator_TableVarName="tablev_listadocheques" msprop:Generator_TablePropName="v_listadocheques" msprop:Generator_RowDeletingName="v_listadochequesRowDeleting" msprop:Generator_RowChangingName="v_listadochequesRowChanging" msprop:Generator_RowEvHandlerName="v_listadochequesRowChangeEventHandler" msprop:Generator_RowDeletedName="v_listadochequesRowDeleted" msprop:Generator_UserTableName="v_listadocheques" msprop:Generator_RowChangedName="v_listadochequesRowChanged" msprop:Generator_RowEvArgName="v_listadochequesRowChangeEvent" msprop:Generator_RowClassName="v_listadochequesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="chq_numero" msprop:Generator_ColumnVarNameInTable="columnchq_numero" msprop:Generator_ColumnPropNameInRow="chq_numero" msprop:Generator_ColumnPropNameInTable="chq_numeroColumn" msprop:Generator_UserColumnName="chq_numero" type="xs:int" minOccurs="0" />
+              <xs:element name="chv_anulado" msprop:Generator_ColumnVarNameInTable="columnchv_anulado" msprop:Generator_ColumnPropNameInRow="chv_anulado" msprop:Generator_ColumnPropNameInTable="chv_anuladoColumn" msprop:Generator_UserColumnName="chv_anulado" type="xs:boolean" minOccurs="0" />
+              <xs:element name="beneficiario" msprop:Generator_ColumnVarNameInTable="columnbeneficiario" msprop:Generator_ColumnPropNameInRow="beneficiario" msprop:Generator_ColumnPropNameInTable="beneficiarioColumn" msprop:Generator_UserColumnName="beneficiario" type="xs:string" minOccurs="0" />
+              <xs:element name="per_cedula" msprop:Generator_ColumnVarNameInTable="columnper_cedula" msprop:Generator_ColumnPropNameInRow="per_cedula" msprop:Generator_ColumnPropNameInTable="per_cedulaColumn" msprop:Generator_UserColumnName="per_cedula" type="xs:string" minOccurs="0" />
+              <xs:element name="per_codigo" msprop:Generator_ColumnVarNameInTable="columnper_codigo" msprop:Generator_ColumnPropNameInRow="per_codigo" msprop:Generator_ColumnPropNameInTable="per_codigoColumn" msprop:Generator_UserColumnName="per_codigo" type="xs:string" minOccurs="0" />
+              <xs:element name="pgv_valor" msprop:Generator_ColumnVarNameInTable="columnpgv_valor" msprop:Generator_ColumnPropNameInRow="pgv_valor" msprop:Generator_ColumnPropNameInTable="pgv_valorColumn" msprop:Generator_UserColumnName="pgv_valor" type="xs:decimal" minOccurs="0" />
+              <xs:element name="pgv_motivo" msprop:Generator_ColumnVarNameInTable="columnpgv_motivo" msprop:Generator_ColumnPropNameInRow="pgv_motivo" msprop:Generator_ColumnPropNameInTable="pgv_motivoColumn" msprop:Generator_UserColumnName="pgv_motivo" type="xs:string" minOccurs="0" />
+              <xs:element name="pgv_observacion" msprop:Generator_ColumnVarNameInTable="columnpgv_observacion" msprop:Generator_ColumnPropNameInRow="pgv_observacion" msprop:Generator_ColumnPropNameInTable="pgv_observacionColumn" msprop:Generator_UserColumnName="pgv_observacion" type="xs:string" minOccurs="0" />
+              <xs:element name="pgv_fecha" msprop:Generator_ColumnVarNameInTable="columnpgv_fecha" msprop:Generator_ColumnPropNameInRow="pgv_fecha" msprop:Generator_ColumnPropNameInTable="pgv_fechaColumn" msprop:Generator_UserColumnName="pgv_fecha" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ban_codigo" msprop:Generator_ColumnVarNameInTable="columnban_codigo" msprop:Generator_ColumnPropNameInRow="ban_codigo" msprop:Generator_ColumnPropNameInTable="ban_codigoColumn" msprop:Generator_UserColumnName="ban_codigo" type="xs:string" minOccurs="0" />
+              <xs:element name="bct_numcta" msprop:Generator_ColumnVarNameInTable="columnbct_numcta" msprop:Generator_ColumnPropNameInRow="bct_numcta" msprop:Generator_ColumnPropNameInTable="bct_numctaColumn" msprop:Generator_UserColumnName="bct_numcta" type="xs:string" minOccurs="0" />
+              <xs:element name="prd_fecdesde" msprop:Generator_ColumnVarNameInTable="columnprd_fecdesde" msprop:Generator_ColumnPropNameInRow="prd_fecdesde" msprop:Generator_ColumnPropNameInTable="prd_fecdesdeColumn" msprop:Generator_UserColumnName="prd_fecdesde" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

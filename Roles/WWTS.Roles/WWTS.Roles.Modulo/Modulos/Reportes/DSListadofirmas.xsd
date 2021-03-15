@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSlistadofirmas" targetNamespace="http://tempuri.org/DSlistadofirmas.xsd" xmlns:mstns="http://tempuri.org/DSlistadofirmas.xsd" xmlns="http://tempuri.org/DSlistadofirmas.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="DomusConnectionString" IsAppSettingsProperty="True" Modifier="Assembly" Name="DomusConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WWTS.Roles.Modulo.MySettings.GlobalReference.Default.DomusConnectionString" Provider="System.Data.SqlClient">
+          </Connection>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSlistadofirmas" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DSlistadofirmas" msprop:Generator_DataSetName="DSlistadofirmas">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="v_resumenperiodo" msprop:Generator_UserTableName="v_resumenperiodo" msprop:Generator_RowDeletedName="v_resumenperiodoRowDeleted" msprop:Generator_RowChangedName="v_resumenperiodoRowChanged" msprop:Generator_RowClassName="v_resumenperiodoRow" msprop:Generator_RowChangingName="v_resumenperiodoRowChanging" msprop:Generator_RowEvArgName="v_resumenperiodoRowChangeEvent" msprop:Generator_RowEvHandlerName="v_resumenperiodoRowChangeEventHandler" msprop:Generator_TableClassName="v_resumenperiodoDataTable" msprop:Generator_TableVarName="tablev_resumenperiodo" msprop:Generator_RowDeletingName="v_resumenperiodoRowDeleting" msprop:Generator_TablePropName="v_resumenperiodo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Entida_Codigo" msprop:Generator_UserColumnName="Entida_Codigo" msprop:Generator_ColumnVarNameInTable="columnEntida_Codigo" msprop:Generator_ColumnPropNameInRow="Entida_Codigo" msprop:Generator_ColumnPropNameInTable="Entida_CodigoColumn" type="xs:int" />
+              <xs:element name="Entnat_Apellidopaterno" msprop:Generator_UserColumnName="Entnat_Apellidopaterno" msprop:Generator_ColumnVarNameInTable="columnEntnat_Apellidopaterno" msprop:Generator_ColumnPropNameInRow="Entnat_Apellidopaterno" msprop:Generator_ColumnPropNameInTable="Entnat_ApellidopaternoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Entnat_Apellidomaterno" msprop:Generator_UserColumnName="Entnat_Apellidomaterno" msprop:Generator_ColumnVarNameInTable="columnEntnat_Apellidomaterno" msprop:Generator_ColumnPropNameInRow="Entnat_Apellidomaterno" msprop:Generator_ColumnPropNameInTable="Entnat_ApellidomaternoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Entnat_Nombres" msprop:Generator_UserColumnName="Entnat_Nombres" msprop:Generator_ColumnVarNameInTable="columnEntnat_Nombres" msprop:Generator_ColumnPropNameInRow="Entnat_Nombres" msprop:Generator_ColumnPropNameInTable="Entnat_NombresColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Asiste_Diario" msprop:Generator_UserColumnName="Asiste_Diario" msprop:Generator_ColumnVarNameInTable="columnAsiste_Diario" msprop:Generator_ColumnPropNameInRow="Asiste_Diario" msprop:Generator_ColumnPropNameInTable="Asiste_DiarioColumn" type="xs:decimal" />
+              <xs:element name="Asiste_DiasIntegrales" msprop:Generator_UserColumnName="Asiste_DiasIntegrales" msprop:Generator_ColumnVarNameInTable="columnAsiste_DiasIntegrales" msprop:Generator_ColumnPropNameInRow="Asiste_DiasIntegrales" msprop:Generator_ColumnPropNameInTable="Asiste_DiasIntegralesColumn" type="xs:decimal" />
+              <xs:element name="Asiste_H25" msprop:Generator_UserColumnName="Asiste_H25" msprop:Generator_ColumnVarNameInTable="columnAsiste_H25" msprop:Generator_ColumnPropNameInRow="Asiste_H25" msprop:Generator_ColumnPropNameInTable="Asiste_H25Column" type="xs:int" />
+              <xs:element name="Asiste_H50" msprop:Generator_UserColumnName="Asiste_H50" msprop:Generator_ColumnVarNameInTable="columnAsiste_H50" msprop:Generator_ColumnPropNameInRow="Asiste_H50" msprop:Generator_ColumnPropNameInTable="Asiste_H50Column" type="xs:int" />
+              <xs:element name="Asiste_H100" msprop:Generator_UserColumnName="Asiste_H100" msprop:Generator_ColumnVarNameInTable="columnAsiste_H100" msprop:Generator_ColumnPropNameInRow="Asiste_H100" msprop:Generator_ColumnPropNameInTable="Asiste_H100Column" type="xs:int" />
+              <xs:element name="Asiste_H0" msprop:Generator_UserColumnName="Asiste_H0" msprop:Generator_ColumnVarNameInTable="columnAsiste_H0" msprop:Generator_ColumnPropNameInRow="Asiste_H0" msprop:Generator_ColumnPropNameInTable="Asiste_H0Column" type="xs:int" />
+              <xs:element name="Asiste_S0" msprop:Generator_UserColumnName="Asiste_S0" msprop:Generator_ColumnVarNameInTable="columnAsiste_S0" msprop:Generator_ColumnPropNameInRow="Asiste_S0" msprop:Generator_ColumnPropNameInTable="Asiste_S0Column" type="xs:decimal" />
+              <xs:element name="Asiste_SubMatEnf" msprop:Generator_UserColumnName="Asiste_SubMatEnf" msprop:Generator_ColumnVarNameInTable="columnAsiste_SubMatEnf" msprop:Generator_ColumnPropNameInRow="Asiste_SubMatEnf" msprop:Generator_ColumnPropNameInTable="Asiste_SubMatEnfColumn" type="xs:decimal" />
+              <xs:element name="Asiste_PorcSubMatEnf" msprop:Generator_UserColumnName="Asiste_PorcSubMatEnf" msprop:Generator_ColumnVarNameInTable="columnAsiste_PorcSubMatEnf" msprop:Generator_ColumnPropNameInRow="Asiste_PorcSubMatEnf" msprop:Generator_ColumnPropNameInTable="Asiste_PorcSubMatEnfColumn" type="xs:decimal" />
+              <xs:element name="Asiste_S25" msprop:Generator_UserColumnName="Asiste_S25" msprop:Generator_ColumnVarNameInTable="columnAsiste_S25" msprop:Generator_ColumnPropNameInRow="Asiste_S25" msprop:Generator_ColumnPropNameInTable="Asiste_S25Column" type="xs:decimal" />
+              <xs:element name="Asiste_S50" msprop:Generator_UserColumnName="Asiste_S50" msprop:Generator_ColumnVarNameInTable="columnAsiste_S50" msprop:Generator_ColumnPropNameInRow="Asiste_S50" msprop:Generator_ColumnPropNameInTable="Asiste_S50Column" type="xs:decimal" />
+              <xs:element name="Asiste_S100" msprop:Generator_UserColumnName="Asiste_S100" msprop:Generator_ColumnVarNameInTable="columnAsiste_S100" msprop:Generator_ColumnPropNameInRow="Asiste_S100" msprop:Generator_ColumnPropNameInTable="Asiste_S100Column" type="xs:decimal" />
+              <xs:element name="Asiste_ICS" msprop:Generator_UserColumnName="Asiste_ICS" msprop:Generator_ColumnVarNameInTable="columnAsiste_ICS" msprop:Generator_ColumnPropNameInRow="Asiste_ICS" msprop:Generator_ColumnPropNameInTable="Asiste_ICSColumn" type="xs:decimal" />
+              <xs:element name="Asiste_AdicionalP" msprop:Generator_UserColumnName="Asiste_AdicionalP" msprop:Generator_ColumnVarNameInTable="columnAsiste_AdicionalP" msprop:Generator_ColumnPropNameInRow="Asiste_AdicionalP" msprop:Generator_ColumnPropNameInTable="Asiste_AdicionalPColumn" type="xs:decimal" />
+              <xs:element name="Asiste_TranspP" msprop:Generator_UserColumnName="Asiste_TranspP" msprop:Generator_ColumnVarNameInTable="columnAsiste_TranspP" msprop:Generator_ColumnPropNameInRow="Asiste_TranspP" msprop:Generator_ColumnPropNameInTable="Asiste_TranspPColumn" type="xs:decimal" />
+              <xs:element name="Asiste_IESS" msprop:Generator_UserColumnName="Asiste_IESS" msprop:Generator_ColumnVarNameInTable="columnAsiste_IESS" msprop:Generator_ColumnPropNameInRow="Asiste_IESS" msprop:Generator_ColumnPropNameInTable="Asiste_IESSColumn" type="xs:decimal" />
+              <xs:element name="Asiste_Prestamo" msprop:Generator_UserColumnName="Asiste_Prestamo" msprop:Generator_ColumnVarNameInTable="columnAsiste_Prestamo" msprop:Generator_ColumnPropNameInRow="Asiste_Prestamo" msprop:Generator_ColumnPropNameInTable="Asiste_PrestamoColumn" type="xs:decimal" />
+              <xs:element name="Asiste_Multa" msprop:Generator_UserColumnName="Asiste_Multa" msprop:Generator_ColumnVarNameInTable="columnAsiste_Multa" msprop:Generator_ColumnPropNameInRow="Asiste_Multa" msprop:Generator_ColumnPropNameInTable="Asiste_MultaColumn" type="xs:decimal" />
+              <xs:element name="Asiste_SueldoPagar" msprop:Generator_UserColumnName="Asiste_SueldoPagar" msprop:Generator_ColumnVarNameInTable="columnAsiste_SueldoPagar" msprop:Generator_ColumnPropNameInRow="Asiste_SueldoPagar" msprop:Generator_ColumnPropNameInTable="Asiste_SueldoPagarColumn" type="xs:decimal" />
+              <xs:element name="PerPag_FechaDesde" msprop:Generator_UserColumnName="PerPag_FechaDesde" msprop:Generator_ColumnVarNameInTable="columnPerPag_FechaDesde" msprop:Generator_ColumnPropNameInRow="PerPag_FechaDesde" msprop:Generator_ColumnPropNameInTable="PerPag_FechaDesdeColumn" type="xs:dateTime" />
+              <xs:element name="PerPag_FechaHasta" msprop:Generator_UserColumnName="PerPag_FechaHasta" msprop:Generator_ColumnVarNameInTable="columnPerPag_FechaHasta" msprop:Generator_ColumnPropNameInRow="PerPag_FechaHasta" msprop:Generator_ColumnPropNameInTable="PerPag_FechaHastaColumn" type="xs:dateTime" />
+              <xs:element name="Pardet_Seccion" msprop:Generator_UserColumnName="Pardet_Seccion" msprop:Generator_ColumnVarNameInTable="columnPardet_Seccion" msprop:Generator_ColumnPropNameInRow="Pardet_Seccion" msprop:Generator_ColumnPropNameInTable="Pardet_SeccionColumn" type="xs:int" />
+              <xs:element name="Patron_Codigo" msprop:Generator_UserColumnName="Patron_Codigo" msprop:Generator_ColumnVarNameInTable="columnPatron_Codigo" msprop:Generator_ColumnPropNameInRow="Patron_Codigo" msprop:Generator_ColumnPropNameInTable="Patron_CodigoColumn" type="xs:int" />
+              <xs:element name="Contra_Secuencia" msprop:Generator_UserColumnName="Contra_Secuencia" msprop:Generator_ColumnVarNameInTable="columnContra_Secuencia" msprop:Generator_ColumnPropNameInRow="Contra_Secuencia" msprop:Generator_ColumnPropNameInTable="Contra_SecuenciaColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="TipCon_Codigo" msprop:Generator_UserColumnName="TipCon_Codigo" msprop:Generator_ColumnVarNameInTable="columnTipCon_Codigo" msprop:Generator_ColumnPropNameInRow="TipCon_Codigo" msprop:Generator_ColumnPropNameInTable="TipCon_CodigoColumn" type="xs:int" />
+              <xs:element name="Asiste_D3Pag" msprop:Generator_UserColumnName="Asiste_D3Pag" msprop:Generator_ColumnVarNameInTable="columnAsiste_D3Pag" msprop:Generator_ColumnPropNameInRow="Asiste_D3Pag" msprop:Generator_ColumnPropNameInTable="Asiste_D3PagColumn" type="xs:decimal" />
+              <xs:element name="Asiste_D4Pag" msprop:Generator_UserColumnName="Asiste_D4Pag" msprop:Generator_ColumnVarNameInTable="columnAsiste_D4Pag" msprop:Generator_ColumnPropNameInRow="Asiste_D4Pag" msprop:Generator_ColumnPropNameInTable="Asiste_D4PagColumn" type="xs:decimal" />
+              <xs:element name="Asiste_SueldoBase" msprop:Generator_UserColumnName="Asiste_SueldoBase" msprop:Generator_ColumnVarNameInTable="columnAsiste_SueldoBase" msprop:Generator_ColumnPropNameInRow="Asiste_SueldoBase" msprop:Generator_ColumnPropNameInTable="Asiste_SueldoBaseColumn" type="xs:decimal" />
+              <xs:element name="Asiste_PorcentajeIESS" msprop:Generator_UserColumnName="Asiste_PorcentajeIESS" msprop:Generator_ColumnVarNameInTable="columnAsiste_PorcentajeIESS" msprop:Generator_ColumnPropNameInRow="Asiste_PorcentajeIESS" msprop:Generator_ColumnPropNameInTable="Asiste_PorcentajeIESSColumn" type="xs:decimal" />
+              <xs:element name="Asiste_Dias" msprop:Generator_UserColumnName="Asiste_Dias" msprop:Generator_ColumnVarNameInTable="columnAsiste_Dias" msprop:Generator_ColumnPropNameInRow="Asiste_Dias" msprop:Generator_ColumnPropNameInTable="Asiste_DiasColumn" type="xs:decimal" />
+              <xs:element name="Asiste_DiasVac" msprop:Generator_UserColumnName="Asiste_DiasVac" msprop:Generator_ColumnVarNameInTable="columnAsiste_DiasVac" msprop:Generator_ColumnPropNameInRow="Asiste_DiasVac" msprop:Generator_ColumnPropNameInTable="Asiste_DiasVacColumn" type="xs:int" />
+              <xs:element name="Asiste_VacPag" msprop:Generator_UserColumnName="Asiste_VacPag" msprop:Generator_ColumnVarNameInTable="columnAsiste_VacPag" msprop:Generator_ColumnPropNameInRow="Asiste_VacPag" msprop:Generator_ColumnPropNameInTable="Asiste_VacPagColumn" type="xs:decimal" />
+              <xs:element name="Asiste_esParteLiq" msprop:Generator_UserColumnName="Asiste_esParteLiq" msprop:Generator_ColumnVarNameInTable="columnAsiste_esParteLiq" msprop:Generator_ColumnPropNameInRow="Asiste_esParteLiq" msprop:Generator_ColumnPropNameInTable="Asiste_esParteLiqColumn" type="xs:boolean" />
+              <xs:element name="Asiste_PrestamoQuirog" msprop:Generator_UserColumnName="Asiste_PrestamoQuirog" msprop:Generator_ColumnVarNameInTable="columnAsiste_PrestamoQuirog" msprop:Generator_ColumnPropNameInRow="Asiste_PrestamoQuirog" msprop:Generator_ColumnPropNameInTable="Asiste_PrestamoQuirogColumn" type="xs:decimal" />
+              <xs:element name="Asiste_ImpuestoRenta" msprop:Generator_UserColumnName="Asiste_ImpuestoRenta" msprop:Generator_ColumnVarNameInTable="columnAsiste_ImpuestoRenta" msprop:Generator_ColumnPropNameInRow="Asiste_ImpuestoRenta" msprop:Generator_ColumnPropNameInTable="Asiste_ImpuestoRentaColumn" type="xs:decimal" />
+              <xs:element name="Sexo" msprop:Generator_UserColumnName="Sexo" msprop:Generator_ColumnVarNameInTable="columnSexo" msprop:Generator_ColumnPropNameInRow="Sexo" msprop:Generator_ColumnPropNameInTable="SexoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cedula" msprop:Generator_UserColumnName="Cedula" msprop:Generator_ColumnVarNameInTable="columnCedula" msprop:Generator_ColumnPropNameInRow="Cedula" msprop:Generator_ColumnPropNameInTable="CedulaColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Asiste_AdicionalMensual" msprop:Generator_UserColumnName="Asiste_AdicionalMensual" msprop:Generator_ColumnVarNameInTable="columnAsiste_AdicionalMensual" msprop:Generator_ColumnPropNameInRow="Asiste_AdicionalMensual" msprop:Generator_ColumnPropNameInTable="Asiste_AdicionalMensualColumn" type="xs:decimal" />
+              <xs:element name="Asiste_TransporteMensual" msprop:Generator_UserColumnName="Asiste_TransporteMensual" msprop:Generator_ColumnVarNameInTable="columnAsiste_TransporteMensual" msprop:Generator_ColumnPropNameInRow="Asiste_TransporteMensual" msprop:Generator_ColumnPropNameInTable="Asiste_TransporteMensualColumn" type="xs:decimal" />
+              <xs:element name="Asiste_ICSMensual" msprop:Generator_UserColumnName="Asiste_ICSMensual" msprop:Generator_ColumnVarNameInTable="columnAsiste_ICSMensual" msprop:Generator_ColumnPropNameInRow="Asiste_ICSMensual" msprop:Generator_ColumnPropNameInTable="Asiste_ICSMensualColumn" type="xs:decimal" />
+              <xs:element name="Asiste_ValHExhora25" msprop:Generator_UserColumnName="Asiste_ValHExhora25" msprop:Generator_ColumnVarNameInTable="columnAsiste_ValHExhora25" msprop:Generator_ColumnPropNameInRow="Asiste_ValHExhora25" msprop:Generator_ColumnPropNameInTable="Asiste_ValHExhora25Column" type="xs:decimal" />
+              <xs:element name="Asiste_ValHExhora50" msprop:Generator_UserColumnName="Asiste_ValHExhora50" msprop:Generator_ColumnVarNameInTable="columnAsiste_ValHExhora50" msprop:Generator_ColumnPropNameInRow="Asiste_ValHExhora50" msprop:Generator_ColumnPropNameInTable="Asiste_ValHExhora50Column" type="xs:decimal" />
+              <xs:element name="Asiste_ValHExhora100" msprop:Generator_UserColumnName="Asiste_ValHExhora100" msprop:Generator_ColumnVarNameInTable="columnAsiste_ValHExhora100" msprop:Generator_ColumnPropNameInRow="Asiste_ValHExhora100" msprop:Generator_ColumnPropNameInTable="Asiste_ValHExhora100Column" type="xs:decimal" />
+              <xs:element name="Asiste_DescontarPrestamo" msprop:Generator_UserColumnName="Asiste_DescontarPrestamo" msprop:Generator_ColumnVarNameInTable="columnAsiste_DescontarPrestamo" msprop:Generator_ColumnPropNameInRow="Asiste_DescontarPrestamo" msprop:Generator_ColumnPropNameInTable="Asiste_DescontarPrestamoColumn" type="xs:boolean" />
+              <xs:element name="Asiste_DescontarPrestQuirog" msprop:Generator_UserColumnName="Asiste_DescontarPrestQuirog" msprop:Generator_ColumnVarNameInTable="columnAsiste_DescontarPrestQuirog" msprop:Generator_ColumnPropNameInRow="Asiste_DescontarPrestQuirog" msprop:Generator_ColumnPropNameInTable="Asiste_DescontarPrestQuirogColumn" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

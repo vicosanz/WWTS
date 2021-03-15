@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSSolicPrestamo" targetNamespace="http://tempuri.org/DSSolicPrestamo.xsd" xmlns:mstns="http://tempuri.org/DSSolicPrestamo.xsd" xmlns="http://tempuri.org/DSSolicPrestamo.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSSolicPrestamo" msdata:IsDataSet="true" msdata:Locale="en-US" msprop:Generator_DataSetName="DSSolicPrestamo" msprop:Generator_UserDSName="DSSolicPrestamo">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="v_solicprestamo" msprop:Generator_TableClassName="v_solicprestamoDataTable" msprop:Generator_TableVarName="tablev_solicprestamo" msprop:Generator_RowChangedName="v_solicprestamoRowChanged" msprop:Generator_TablePropName="v_solicprestamo" msprop:Generator_RowDeletingName="v_solicprestamoRowDeleting" msprop:Generator_RowChangingName="v_solicprestamoRowChanging" msprop:Generator_RowEvHandlerName="v_solicprestamoRowChangeEventHandler" msprop:Generator_RowDeletedName="v_solicprestamoRowDeleted" msprop:Generator_RowClassName="v_solicprestamoRow" msprop:Generator_UserTableName="v_solicprestamo" msprop:Generator_RowEvArgName="v_solicprestamoRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="numsolic" msprop:Generator_ColumnVarNameInTable="columnnumsolic" msprop:Generator_ColumnPropNameInRow="numsolic" msprop:Generator_ColumnPropNameInTable="numsolicColumn" msprop:Generator_UserColumnName="numsolic" type="xs:string" />
+              <xs:element name="fechasolic" msprop:Generator_ColumnVarNameInTable="columnfechasolic" msprop:Generator_ColumnPropNameInRow="fechasolic" msprop:Generator_ColumnPropNameInTable="fechasolicColumn" msprop:Generator_UserColumnName="fechasolic" type="xs:date" minOccurs="0" />
+              <xs:element name="per_codigo" msprop:Generator_ColumnVarNameInTable="columnper_codigo" msprop:Generator_ColumnPropNameInRow="per_codigo" msprop:Generator_ColumnPropNameInTable="per_codigoColumn" msprop:Generator_UserColumnName="per_codigo" type="xs:string" minOccurs="0" />
+              <xs:element name="per_cedula" msprop:Generator_ColumnVarNameInTable="columnper_cedula" msprop:Generator_ColumnPropNameInRow="per_cedula" msprop:Generator_ColumnPropNameInTable="per_cedulaColumn" msprop:Generator_UserColumnName="per_cedula" type="xs:string" minOccurs="0" />
+              <xs:element name="per_nombre" msprop:Generator_ColumnVarNameInTable="columnper_nombre" msprop:Generator_ColumnPropNameInRow="per_nombre" msprop:Generator_ColumnPropNameInTable="per_nombreColumn" msprop:Generator_UserColumnName="per_nombre" type="xs:string" minOccurs="0" />
+              <xs:element name="sec_descripcion" msprop:Generator_ColumnVarNameInTable="columnsec_descripcion" msprop:Generator_ColumnPropNameInRow="sec_descripcion" msprop:Generator_ColumnPropNameInTable="sec_descripcionColumn" msprop:Generator_UserColumnName="sec_descripcion" type="xs:string" minOccurs="0" />
+              <xs:element name="valorsolic" msprop:Generator_ColumnVarNameInTable="columnvalorsolic" msprop:Generator_ColumnPropNameInRow="valorsolic" msprop:Generator_ColumnPropNameInTable="valorsolicColumn" msprop:Generator_UserColumnName="valorsolic" type="xs:decimal" minOccurs="0" />
+              <xs:element name="valorcuota" msprop:Generator_ColumnVarNameInTable="columnvalorcuota" msprop:Generator_ColumnPropNameInRow="valorcuota" msprop:Generator_ColumnPropNameInTable="valorcuotaColumn" msprop:Generator_UserColumnName="valorcuota" type="xs:decimal" minOccurs="0" />
+              <xs:element name="motivo" msprop:Generator_ColumnVarNameInTable="columnmotivo" msprop:Generator_ColumnPropNameInRow="motivo" msprop:Generator_ColumnPropNameInTable="motivoColumn" msprop:Generator_UserColumnName="motivo" type="xs:string" minOccurs="0" />
+              <xs:element name="prs_codigo" msprop:Generator_ColumnVarNameInTable="columnprs_codigo" msprop:Generator_ColumnPropNameInRow="prs_codigo" msprop:Generator_ColumnPropNameInTable="prs_codigoColumn" msprop:Generator_UserColumnName="prs_codigo" type="xs:string" minOccurs="0" />
+              <xs:element name="valorprestado" msprop:Generator_ColumnVarNameInTable="columnvalorprestado" msprop:Generator_ColumnPropNameInRow="valorprestado" msprop:Generator_ColumnPropNameInTable="valorprestadoColumn" msprop:Generator_UserColumnName="valorprestado" type="xs:decimal" minOccurs="0" />
+              <xs:element name="saldoprestamo" msprop:Generator_ColumnVarNameInTable="columnsaldoprestamo" msprop:Generator_ColumnPropNameInRow="saldoprestamo" msprop:Generator_ColumnPropNameInTable="saldoprestamoColumn" msprop:Generator_UserColumnName="saldoprestamo" type="xs:decimal" minOccurs="0" />
+              <xs:element name="motivoprs" msprop:Generator_ColumnVarNameInTable="columnmotivoprs" msprop:Generator_ColumnPropNameInRow="motivoprs" msprop:Generator_ColumnPropNameInTable="motivoprsColumn" msprop:Generator_UserColumnName="motivoprs" type="xs:string" minOccurs="0" />
+              <xs:element name="fechapago" msprop:Generator_ColumnVarNameInTable="columnfechapago" msprop:Generator_ColumnPropNameInRow="fechapago" msprop:Generator_ColumnPropNameInTable="fechapagoColumn" msprop:Generator_UserColumnName="fechapago" type="xs:date" minOccurs="0" />
+              <xs:element name="tipo" msprop:Generator_ColumnVarNameInTable="columntipo" msprop:Generator_ColumnPropNameInRow="tipo" msprop:Generator_ColumnPropNameInTable="tipoColumn" msprop:Generator_UserColumnName="tipo" type="xs:string" minOccurs="0" />
+              <xs:element name="fechaprestamo" msprop:Generator_ColumnVarNameInTable="columnfechaprestamo" msprop:Generator_ColumnPropNameInRow="fechaprestamo" msprop:Generator_ColumnPropNameInTable="fechaprestamoColumn" msprop:Generator_UserColumnName="fechaprestamo" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="cuotaquincena" msprop:Generator_ColumnVarNameInTable="columncuotaquincena" msprop:Generator_ColumnPropNameInRow="cuotaquincena" msprop:Generator_ColumnPropNameInTable="cuotaquincenaColumn" msprop:Generator_UserColumnName="cuotaquincena" type="xs:decimal" minOccurs="0" />
+              <xs:element name="cuotafinmes" msprop:Generator_ColumnVarNameInTable="columncuotafinmes" msprop:Generator_ColumnPropNameInRow="cuotafinmes" msprop:Generator_ColumnPropNameInTable="cuotafinmesColumn" msprop:Generator_UserColumnName="cuotafinmes" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="key1">
+      <xs:selector xpath=".//mstns:v_solicprestamo" />
+      <xs:field xpath="mstns:numsolic" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

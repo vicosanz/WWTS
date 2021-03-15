@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\squirrel.windows.2.0.1\build\squirrel.windows.props" Condition="Exists('..\packages\squirrel.windows.2.0.1\build\squirrel.windows.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C6C3C61D-DE03-4247-BE26-DCAC976F10F0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ICA3</RootNamespace>
+    <AssemblyName>ICA3</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>https://raw.githubusercontent.com/vicosanz/ica3/master/ica3/ica3/publish/</InstallUrl>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>15184D510329D5973B184986B99BA179498E33E5</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ICA3_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DeltaCompressionDotNet, Version=1.1.0.0, Culture=neutral, PublicKeyToken=1d14d6e5194e7f4a, processorArchitecture=MSIL">
+      <HintPath>..\packages\DeltaCompressionDotNet.1.1.0\lib\net20\DeltaCompressionDotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="DeltaCompressionDotNet.MsDelta, Version=1.1.0.0, Culture=neutral, PublicKeyToken=46b2138a390abf55, processorArchitecture=MSIL">
+      <HintPath>..\packages\DeltaCompressionDotNet.1.1.0\lib\net20\DeltaCompressionDotNet.MsDelta.dll</HintPath>
+    </Reference>
+    <Reference Include="DeltaCompressionDotNet.PatchApi, Version=1.1.0.0, Culture=neutral, PublicKeyToken=3e8888ee913ed789, processorArchitecture=MSIL">
+      <HintPath>..\packages\DeltaCompressionDotNet.1.1.0\lib\net20\DeltaCompressionDotNet.PatchApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil, Version=0.11.2.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mono.Cecil.0.11.2\lib\net40\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Mdb, Version=0.11.2.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mono.Cecil.0.11.2\lib\net40\Mono.Cecil.Mdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Pdb, Version=0.11.2.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mono.Cecil.0.11.2\lib\net40\Mono.Cecil.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Rocks, Version=0.11.2.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mono.Cecil.0.11.2\lib\net40\Mono.Cecil.Rocks.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGet.Squirrel, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\squirrel.windows.2.0.1\lib\Net45\NuGet.Squirrel.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpCompress, Version=0.17.1.0, Culture=neutral, PublicKeyToken=afb0a02973931d96, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpCompress.0.17.1\lib\net45\SharpCompress.dll</HintPath>
+    </Reference>
+    <Reference Include="Squirrel, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\squirrel.windows.2.0.1\lib\Net45\Squirrel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=3.0.6.0, Culture=neutral, PublicKeyToken=5cded1a1a0a7b481, processorArchitecture=MSIL">
+      <HintPath>..\packages\DockPanelSuite.3.0.6\lib\net40\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="WeifenLuo.WinFormsUI.Docking.ThemeVS2015, Version=3.0.6.0, Culture=neutral, PublicKeyToken=5cded1a1a0a7b481, processorArchitecture=MSIL">
+      <HintPath>..\packages\DockPanelSuite.ThemeVS2015.3.0.6\lib\net40\WeifenLuo.WinFormsUI.Docking.ThemeVS2015.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Formas\FrmSistemas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\FrmSistemas.Designer.cs">
+      <DependentUpon>FrmSistemas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas\FrmCambiarContrasena.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\FrmCambiarContrasena.Designer.cs">
+      <DependentUpon>FrmCambiarContrasena.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas\FrmSistemasLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\FrmSistemasLogin.Designer.cs">
+      <DependentUpon>FrmSistemasLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Toolboxes\ToolBoxReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Toolboxes\ToolBoxReportes.Designer.cs">
+      <DependentUpon>ToolBoxReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Toolboxes\ToolBoxSistemas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Toolboxes\ToolBoxSistemas.Designer.cs">
+      <DependentUpon>ToolBoxSistemas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Toolboxes\ToolBoxModulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Toolboxes\ToolBoxModulos.Designer.cs">
+      <DependentUpon>ToolBoxModulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Toolboxes\ToolBoxFavoritos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Toolboxes\ToolBoxFavoritos.Designer.cs">
+      <DependentUpon>ToolBoxFavoritos.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Formas\FrmSistemas.resx">
+      <DependentUpon>FrmSistemas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\FrmCambiarContrasena.resx">
+      <DependentUpon>FrmCambiarContrasena.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\FrmSistemasLogin.resx">
+      <DependentUpon>FrmSistemasLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Toolboxes\ToolBoxReportes.resx">
+      <DependentUpon>ToolBoxReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Toolboxes\ToolBoxSistemas.resx">
+      <DependentUpon>ToolBoxSistemas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Toolboxes\ToolBoxModulos.resx">
+      <DependentUpon>ToolBoxModulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Toolboxes\ToolBoxFavoritos.resx">
+      <DependentUpon>ToolBoxFavoritos.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ICA3_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\databaseadd.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\databaseedit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\databaseremove.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\db.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disconnect.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\empty.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favorites.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Infoware.Consola.Base\Infoware.Consola.Base.csproj">
+      <Project>{69c85426-e02a-4af6-894c-9ce05ebbc66e}</Project>
+      <Name>Infoware.Consola.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infoware.Controles.Base\Infoware.Controles.Base.vbproj">
+      <Project>{c81d0a59-f9b2-450b-a59d-5aef7ae898c1}</Project>
+      <Name>Infoware.Controles.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infoware.Controles.General\Infoware.Controles.General.vbproj">
+      <Project>{39712c5d-86ab-49b9-b9a8-b55be19c43d5}</Project>
+      <Name>Infoware.Controles.General</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infoware.Datos\Infoware.Datos.vbproj">
+      <Project>{FA50218A-1FD3-4739-87EB-4E77591EE0A2}</Project>
+      <Name>Infoware.Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infoware.Reglas.General\Infoware.Reglas.General.vbproj">
+      <Project>{FEDDE9A5-923F-47F7-B7AC-63BEAA34E7F8}</Project>
+      <Name>Infoware.Reglas.General</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infoware.Reglas\Infoware.Reglas.vbproj">
+      <Project>{8365B169-5835-4CC6-B9F3-91DD27AE4E1A}</Project>
+      <Name>Infoware.Reglas</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\db.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favorites.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\integra.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ica3icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\squirrel.windows.2.0.1\build\squirrel.windows.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\squirrel.windows.2.0.1\build\squirrel.windows.props'))" />
+  </Target>
+</Project>

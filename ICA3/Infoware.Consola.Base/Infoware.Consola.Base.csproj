@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{69C85426-E02A-4AF6-894C-9CE05EBBC66E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Infoware.Consola.Base</RootNamespace>
+    <AssemblyName>Infoware.Consola.Base</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Outlook, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Outlook.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Outlook.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=3.0.6.0, Culture=neutral, PublicKeyToken=5cded1a1a0a7b481, processorArchitecture=MSIL">
+      <HintPath>..\packages\DockPanelSuite.3.0.6\lib\net40\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="WeifenLuo.WinFormsUI.Docking.ThemeVS2015, Version=3.0.6.0, Culture=neutral, PublicKeyToken=5cded1a1a0a7b481, processorArchitecture=MSIL">
+      <HintPath>..\packages\DockPanelSuite.ThemeVS2015.3.0.6\lib\net40\WeifenLuo.WinFormsUI.Docking.ThemeVS2015.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataGridViewAutoDiscover.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EnumSalida.cs" />
+    <Compile Include="FrmAyuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAyuda.Designer.cs">
+      <DependentUpon>FrmAyuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDialogoBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDialogoBase.Designer.cs">
+      <DependentUpon>FrmDialogoBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFormaBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFormaBase.Designer.cs">
+      <DependentUpon>FrmFormaBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBaseMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBaseMain.Designer.cs">
+      <DependentUpon>FormBaseMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBaseToolbox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBaseToolbox.Designer.cs">
+      <DependentUpon>FormBaseToolbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAcercade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAcercade.Designer.cs">
+      <DependentUpon>FrmAcercade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmListaBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmListaBase.Designer.cs">
+      <DependentUpon>FrmListaBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMantenimientoBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMantenimientoBase.Designer.cs">
+      <DependentUpon>FrmMantenimientoBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMantenimientoSimpleBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMantenimientoSimpleBase.Designer.cs">
+      <DependentUpon>FrmMantenimientoSimpleBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmListaSimpleBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmListaSimpleBase.Designer.cs">
+      <DependentUpon>FrmListaSimpleBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReporteBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReporteBase.Designer.cs">
+      <DependentUpon>FrmReporteBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GrupoOpcion.cs" />
+    <Compile Include="HeaderStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IAplicacion.cs" />
+    <Compile Include="IOpcion.cs" />
+    <Compile Include="ISistema.cs" />
+    <Compile Include="ISupportsEdit.cs" />
+    <Compile Include="MenuEditarHelper.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MenuEditarHelper.Designer.cs">
+      <DependentUpon>MenuEditarHelper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Opcion.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema.cs" />
+    <Compile Include="StructExcel.cs" />
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FormBaseMain.resx">
+      <DependentUpon>FormBaseMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBaseToolbox.resx">
+      <DependentUpon>FormBaseToolbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAcercade.resx">
+      <DependentUpon>FrmAcercade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAyuda.resx">
+      <DependentUpon>FrmAyuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDialogoBase.resx">
+      <DependentUpon>FrmDialogoBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFormaBase.resx">
+      <DependentUpon>FrmFormaBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmListaBase.resx">
+      <DependentUpon>FrmListaBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMantenimientoBase.resx">
+      <DependentUpon>FrmMantenimientoBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMantenimientoSimpleBase.resx">
+      <DependentUpon>FrmMantenimientoSimpleBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmListaSimpleBase.resx">
+      <DependentUpon>FrmListaSimpleBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReporteBase.resx">
+      <DependentUpon>FrmReporteBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuEditarHelper.resx">
+      <DependentUpon>MenuEditarHelper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Infoware.Controles.Base\Infoware.Controles.Base.vbproj">
+      <Project>{c81d0a59-f9b2-450b-a59d-5aef7ae898c1}</Project>
+      <Name>Infoware.Controles.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infoware.Datos\Infoware.Datos.vbproj">
+      <Project>{fa50218a-1fd3-4739-87eb-4e77591ee0a2}</Project>
+      <Name>Infoware.Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infoware.Reglas.General\Infoware.Reglas.General.vbproj">
+      <Project>{fedde9a5-923f-47f7-b7ac-63beaa34e7f8}</Project>
+      <Name>Infoware.Reglas.General</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infoware.Reglas\Infoware.Reglas.vbproj">
+      <Project>{8365b169-5835-4cc6-b9f3-91dd27ae4e1a}</Project>
+      <Name>Infoware.Reglas</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infoware.Reportes\Infoware.Reportes.vbproj">
+      <Project>{288345c5-9fd4-4ac9-a9d1-d42bc9ad3316}</Project>
+      <Name>Infoware.Reportes</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\docword.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\format.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fullscreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\post.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveandnew.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\acrobat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrowfirst.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrowlast.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attach.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\connect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\docexcel.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

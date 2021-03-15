@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6F7C7749-44BD-42C0-9EF8-CACF87184CDF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>WWTS.General.Reglas</RootNamespace>
+    <AssemblyName>WWTS.General.Reglas</AssemblyName>
+    <MyType>Windows</MyType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>WWTS.General.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>WWTS.General.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Office.Interop.Word.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Database\AplicacionEmpleado.vb" />
+    <Compile Include="Database\Area.vb" />
+    <Compile Include="Database\BeneficiosSociales.vb" />
+    <Compile Include="Database\BeneficiosSocialesLotePago.vb" />
+    <Compile Include="Database\Bodega.vb" />
+    <Compile Include="Database\CargasxEmpleado.vb" />
+    <Compile Include="Database\Cargo.vb" />
+    <Compile Include="Database\Cheque.vb" />
+    <Compile Include="Database\Cliente.vb" />
+    <Compile Include="Database\Componente.vb" />
+    <Compile Include="Database\Compra.vb" />
+    <Compile Include="Database\ConfigRoles.vb" />
+    <Compile Include="Database\Contrato.vb" />
+    <Compile Include="Database\ChequeDetalle.vb" />
+    <Compile Include="Database\TipoContratoFormato.vb" />
+    <Compile Include="Database\CuentaBancaria.vb" />
+    <Compile Include="Database\CuentaContable.vb" />
+    <Compile Include="Database\Empleado.vb" />
+    <Compile Include="Database\Empresa.vb" />
+    <Compile Include="Database\Entidad.vb" />
+    <Compile Include="Database\EntidadDatos.vb" />
+    <Compile Include="Database\EntidadDireccion.vb" />
+    <Compile Include="Database\EntidadIdentificacion.vb" />
+    <Compile Include="Database\EntidadJuridica.vb" />
+    <Compile Include="Database\EntidadLugar.vb" />
+    <Compile Include="Database\EntidadNatural.vb" />
+    <Compile Include="Database\Item.vb" />
+    <Compile Include="Database\ItemxBodega.vb" />
+    <Compile Include="Database\ItemxTipoPrecio.vb" />
+    <Compile Include="Database\Labor.vb" />
+    <Compile Include="Database\Licencia.vb" />
+    <Compile Include="Database\MovimientoBancario.vb" />
+    <Compile Include="Database\MovimientoContable.vb" />
+    <Compile Include="Database\MovimientoContableDet.vb" />
+    <Compile Include="Database\MovimientoInventario.vb" />
+    <Compile Include="Database\MovimientoInventarioDet.vb" />
+    <Compile Include="Database\MovimientoInventarioDetSerie.vb" />
+    <Compile Include="Database\PagosDet.vb" />
+    <Compile Include="Database\Patrono.vb" />
+    <Compile Include="Database\PeriodoPago.vb" />
+    <Compile Include="Database\Proveedor.vb" />
+    <Compile Include="Database\RegistroContable.vb" />
+    <Compile Include="Database\Rubro.vb" />
+    <Compile Include="Database\RubroDet.vb" />
+    <Compile Include="Database\Seleccion.vb" />
+    <Compile Include="Database\SeleccionDet.vb" />
+    <Compile Include="Database\SeleccionTest.vb" />
+    <Compile Include="Database\Sucursal.vb" />
+    <Compile Include="Database\TipoContrato.vb" />
+    <Compile Include="Database\TipoMovimientoCompraVenta.vb" />
+    <Compile Include="Database\TipoMovimientoInventario.vb" />
+    <Compile Include="Database\TipoPagoxTipoPrecio.vb" />
+    <Compile Include="Database\UnidadMedidaConversion.vb" />
+    <Compile Include="Database\Venta.vb" />
+    <Compile Include="Enumerados.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Reglas\AplicacionEmpleado.vb" />
+    <Compile Include="Reglas\Area.vb" />
+    <Compile Include="Reglas\AsientosAutomaticos.vb" />
+    <Compile Include="Reglas\BeneficiosSociales.vb" />
+    <Compile Include="Reglas\BeneficiosSocialesLotePago.vb" />
+    <Compile Include="Reglas\Bodega.vb" />
+    <Compile Include="Reglas\CargasxEmpleado.vb" />
+    <Compile Include="Reglas\Cargo.vb" />
+    <Compile Include="Reglas\Cheque.vb" />
+    <Compile Include="Reglas\Cliente.vb" />
+    <Compile Include="Reglas\Componente.vb" />
+    <Compile Include="Reglas\Compra.vb" />
+    <Compile Include="Reglas\ConfigRoles.vb" />
+    <Compile Include="Reglas\Contrato.vb" />
+    <Compile Include="Reglas\ChequeDetalle.vb" />
+    <Compile Include="Reglas\TipoContrato.vb" />
+    <Compile Include="Reglas\TipoContratoFormato.vb" />
+    <Compile Include="Reglas\CuentaBancaria.vb" />
+    <Compile Include="Reglas\CuentaBancariaRegCtb.vb" />
+    <Compile Include="Reglas\CuentaContable.vb" />
+    <Compile Include="Reglas\Empleado.vb" />
+    <Compile Include="Reglas\Empresa.vb" />
+    <Compile Include="Reglas\Entidad.vb" />
+    <Compile Include="Reglas\EntidadDatos.vb" />
+    <Compile Include="Reglas\EntidadDireccion.vb" />
+    <Compile Include="Reglas\EntidadIdentificacion.vb" />
+    <Compile Include="Reglas\EntidadJuridica.vb" />
+    <Compile Include="Reglas\EntidadLugar.vb" />
+    <Compile Include="Reglas\EntidadNatural.vb" />
+    <Compile Include="Reglas\Item.vb" />
+    <Compile Include="Reglas\ItemxBodega.vb" />
+    <Compile Include="Reglas\ItemxTipoPrecio.vb" />
+    <Compile Include="Reglas\Labor.vb" />
+    <Compile Include="Reglas\Licencia.vb" />
+    <Compile Include="Reglas\MovimientoBancario.vb" />
+    <Compile Include="Reglas\MovimientoContable.vb" />
+    <Compile Include="Reglas\MovimientoContableDet.vb" />
+    <Compile Include="Reglas\MovimientoInventario.vb" />
+    <Compile Include="Reglas\MovimientoInventarioDet.vb" />
+    <Compile Include="Reglas\MovimientoInventarioDetSerie.vb" />
+    <Compile Include="Reglas\PagosDet.vb" />
+    <Compile Include="Reglas\Rubro.vb" />
+    <Compile Include="Reglas\RubroDet.vb" />
+    <Compile Include="Reglas\Seleccion.vb" />
+    <Compile Include="Reglas\SeleccionDet.vb" />
+    <Compile Include="Reglas\SeleccionTest.vb" />
+    <Compile Include="Reglas\TipoMovimientoCompraVenta.vb" />
+    <Compile Include="Reglas\TipoMovimientoInventario.vb" />
+    <Compile Include="Reglas\UnidadMedidaConversion.vb" />
+    <Compile Include="Reglas\Venta.vb" />
+    <Compile Include="Reglas\WWTSParametro.vb" />
+    <Compile Include="Reglas\WWTSParametroDet.vb" />
+    <Compile Include="Reglas\Patrono.vb" />
+    <Compile Include="Reglas\PeriodoPago.vb" />
+    <Compile Include="Reglas\Proveedor.vb" />
+    <Compile Include="Reglas\RegistroContable.vb" />
+    <Compile Include="Reglas\Sucursal.vb" />
+    <Compile Include="Reglas\TipoPagoxTipoPrecio.vb" />
+    <Compile Include="Reglas\WWTSUsuario.vb" />
+    <Compile Include="Utilerias.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\Elemento emergente bloqueado de Windows XP.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_document16_h.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\ICA3\Infoware.Datos\Infoware.Datos.vbproj">
+      <Project>{fa50218a-1fd3-4739-87eb-4e77591ee0a2}</Project>
+      <Name>Infoware.Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ICA3\Infoware.Reglas.General\Infoware.Reglas.General.vbproj">
+      <Project>{fedde9a5-923f-47f7-b7ac-63beaa34e7f8}</Project>
+      <Name>Infoware.Reglas.General</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ICA3\Infoware.Reglas\Infoware.Reglas.vbproj">
+      <Project>{8365b169-5835-4cc6-b9f3-91dd27ae4e1a}</Project>
+      <Name>Infoware.Reglas</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ICA3\Infoware.Reportes\Infoware.Reportes.vbproj">
+      <Project>{288345c5-9fd4-4ac9-a9d1-d42bc9ad3316}</Project>
+      <Name>Infoware.Reportes</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
