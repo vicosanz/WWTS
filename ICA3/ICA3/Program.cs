@@ -15,39 +15,25 @@ namespace ICA3
         [STAThread]
         static void Main()
         {
-            CheckForUpdatesAsync();
+            CheckForUpdates();
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormMain());
         }
 
-        private static void CheckForUpdatesAsync()
+        private static void CheckForUpdates()
         {
-#if DEBUG
-#else
-            //UpdateInfo updateInfo = null;
             try
             {
                 using (var mgr = UpdateManager.GitHubUpdateManager("https://github.com/vicosanz/ICA3Installer"))
                 {
-                    //updateInfo = mgr.Result.CheckForUpdate().ConfigureAwait(false);
-                    //Mostrarmensaje($"Nueva versión detectada. Instalando en segundo plano versión {updateInfo.FutureReleaseEntry.Version}.");
                     mgr.Result.UpdateApp().ConfigureAwait(false);
-                    //Mostrarmensaje($"Aplicación actualizada a la versión {updateInfo.FutureReleaseEntry.Version}. Por favor reinicie el programa para continuar.");
                 }
             }
             catch (Exception)
             {
-                //if (updateInfo is null)
-                //{
-                //}
-                //else
-                //{
-                //    Mostrarmensaje($"ERROR actualizando a la versión {updateInfo.FutureReleaseEntry.Version}. {ex.Message}");
-                //}
             }
-#endif
         }
     }
 }

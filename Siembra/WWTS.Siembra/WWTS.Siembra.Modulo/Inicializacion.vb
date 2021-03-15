@@ -2,13 +2,14 @@
 Imports Infoware.Consola.Base
 Imports WWTS.General.Reglas
 Imports System.IO
-
-
+Imports System.Threading.Tasks
+Imports Squirrel
 
 Public Class Inicializacion
   Implements Infoware.Consola.Base.IAplicacion
 
   Public Shared Sub Main()
+    CheckForUpdates().Wait()
     'ejecutar ica
     Dim RutaICA As String = LeerClave()
 
@@ -45,6 +46,16 @@ Public Class Inicializacion
     '  End If
     'Loop While Not mProcess.WaitForExit(1000)
   End Sub
+
+  Private Shared Async Function CheckForUpdates() As Task
+    Try
+      Using mgr As UpdateManager = Await UpdateManager.GitHubUpdateManager("https://github.com/vicosanz/SiembraInstaller")
+        Await mgr.UpdateApp()
+      End Using
+    Catch ex As Exception
+
+    End Try
+  End Function
 
   Public Shared Sub GuardarClave(ByVal valor As String)
     Dim mDirectorioRaiz = System.IO.Path.Combine(My.Computer.FileSystem.SpecialDirectories.MyDocuments, "ICA3")

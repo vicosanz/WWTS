@@ -151,18 +151,18 @@
   <data name="nuevo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nuevo.ico;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="PrevioIcono" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAY5JREFUOE+d081L
-        AkEUAPD1T+hYhzoERV77OHUo8JBBt+4RRkSQ4U0SunaJOkSRKQWZWCiF5kdroa0WRAoRFXXoEEkWCUFY
-        Wbvrvnqz7NK6OxANPIZh5v1m3uyOKZK5AaamiaLICILACDzPtDXXM+3mRlPtGnWMAK15g4fQabVBYDej
-        20QFdtJXVGBxg4Xk8aWMRDhjJLh/TgUW1hPQ1T+ihmEZgXieCghiFRBRIEPAFzkxBO4fSsByOfBsRkkE
-        4xkoFEv6Mla3szoAF2Jy+E2A0KMc/nyRINe3BS2yspXSAf4YR5Kfq/LUE1QJopxEU8qSP6kD5nwxFUAE
-        A0E8hdM1rz0BXtDvhheHwMEnwKkkJ2OPAJMuw+TUDB2QJAneKzxgCRNnHwTBUJJd3ijYx8fowBcvwstr
-        BXIXdxBOZAmCu2JgssMxBGvOOmNA+d5KP+sJw17qiJRjn3bDwOAocF4LQMWtRTABf9W/hLWjFcpsA0Fc
-        tm76+6C+vJ+J4b4WgmAp/0bMTXVg6ekFNrQM3y3xMcC3lb+tAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABgklEQVQ4T52SvUtCURjG/RdcW9oKmqup
+        ocAhg7b2CCMiyHCThNaWqCGKTClIxUQx/O5aaGpBpSGRfQwNoWSREISV5dcT59xz1dvVkH7wcDnwPj/e
+        c7gyd/QOv+MMpWDjkjB7znBxk4bsL0ihFUb7EfqUKlg90daSvfA1G5eyZuYQPEnxEnekucR+cMnGpazu
+        BNA/MlkLq4ix+hNsXEqpXKESQcQqYkzuUzYuJv2YAxeJw7DrpbH7o8hkc1LJljPGKnXIICm73ktwPPGx
+        JLJUcnufEUs2bSFWq2PxRWj5pcKfn1GhEmETVuVZtwT5qQaWTb6aQAg5ky20uhWxgDxQI+ThiODwCziv
+        8mXyJQJZOI+5+cXWgmq1io9CkV5hNvlJJSRCWWf0Qj0z3VrwXSzj9a2A+NUDXIEYlZCiUNZoxrGtlTcX
+        kG9jlgwu7IeO6XXUC3qMjk0hYlQABb1YQobJr9pOlL3dyHMdVKJTDYg3aZeJ4S4qIVv8W9LTKYdicAic
+        YwM/QN9CSPM2ALQAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="eliminar" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -191,5 +191,8 @@
   </data>
   <data name="cuentas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cuentas.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rolesicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rolesicon.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

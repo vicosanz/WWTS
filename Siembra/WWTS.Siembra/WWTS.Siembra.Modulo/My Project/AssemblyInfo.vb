@@ -9,8 +9,8 @@ Imports System.Runtime.InteropServices
 ' Review the values of the assembly attributes
 
 <Assembly: AssemblyTitle("WWTS.Siembra.Modulo")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("")> 
+<Assembly: AssemblyDescription("")>
+<Assembly: AssemblyCompany("Infoware Soluciones")>
 <Assembly: AssemblyProduct("WWTS.Siembra.Modulo")> 
 <Assembly: AssemblyCopyright("Copyright ©  2015")> 
 <Assembly: AssemblyTrademark("")> 
@@ -18,7 +18,7 @@ Imports System.Runtime.InteropServices
 <Assembly: ComVisible(False)>
 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("6d144935-3111-4f3e-b419-461df3e2eef8")> 
+<Assembly: Guid("6d144935-3111-4f3e-b419-461df3e2eef8")>
 
 ' Version information for an assembly consists of the following four values:
 '
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("1.0.0.0")> 
-<Assembly: AssemblyFileVersion("1.0.0.0")> 
+<Assembly: AssemblyVersion("1.0.0")>
+<Assembly: AssemblyFileVersion("1.0.0")>
