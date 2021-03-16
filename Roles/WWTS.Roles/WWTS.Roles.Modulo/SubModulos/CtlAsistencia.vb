@@ -1009,7 +1009,7 @@ Public Class CtlAsistencia
     If mContrato Is Nothing Then
       Exit Sub
     End If
-    Dim f As New FrmModeloLabor(Sistema, Enumerados.EnumOpciones.Personal)
+    Dim f As New WWTS.Roles.Controles.FrmModeloLabor(Sistema, Enumerados.EnumOpciones.Personal)
     f.Direccion = IMantenimiento.Accion.Modificacion
     f.ModeloLabor = mContrato.Cargo.PardetModeloLabor
     f.ShowDialog()

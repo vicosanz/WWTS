@@ -39,9 +39,9 @@ Partial Class FrmPagos
     Me.btnlotepago = New Infoware.Controles.Base.ButtonStd()
     Me.Panel3 = New System.Windows.Forms.Panel()
     Me.btnnuevolote = New Infoware.Controles.Base.ButtonStd()
-    Me.CtlLotePago2 = New WWTS.Roles.Modulo.CtlLotePago()
+    Me.CtlLotePago2 = New CtlLotePago()
     Me.Label10 = New System.Windows.Forms.Label()
-    Me.CtlPatrono2 = New WWTS.Roles.Modulo.CtlPatrono()
+    Me.CtlPatrono2 = New WWTS.Roles.Controles.CtlPatrono()
     Me.Label1 = New System.Windows.Forms.Label()
     Me.TabPage5 = New System.Windows.Forms.TabPage()
     Me.TabControl3 = New System.Windows.Forms.TabControl()
@@ -61,9 +61,9 @@ Partial Class FrmPagos
     Me.Label6 = New System.Windows.Forms.Label()
     Me.pnlseltipocontrato = New System.Windows.Forms.Panel()
     Me.pnltipocontrato = New System.Windows.Forms.Panel()
-    Me.CtlTipoContrato1 = New WWTS.Roles.Modulo.CtlTipoContrato()
+    Me.CtlTipoContrato1 = New WWTS.Roles.Controles.CtlTipoContrato()
     Me.chktipocontrato = New System.Windows.Forms.CheckBox()
-    Me.CtlPatrono1 = New WWTS.Roles.Modulo.CtlPatrono()
+    Me.CtlPatrono1 = New WWTS.Roles.Controles.CtlPatrono()
     Me.Label8 = New System.Windows.Forms.Label()
     Me.pnlgroupconcepto = New System.Windows.Forms.Panel()
     Me.pnlconcepto = New System.Windows.Forms.Panel()
@@ -85,7 +85,7 @@ Partial Class FrmPagos
     Me.btnmostrarprov = New Infoware.Controles.Base.ButtonStd()
     Me.Panel4 = New System.Windows.Forms.Panel()
     Me.Panel7 = New System.Windows.Forms.Panel()
-    Me.CtlPatronoProv = New WWTS.Roles.Modulo.CtlPatrono()
+    Me.CtlPatronoProv = New WWTS.Roles.Controles.CtlPatrono()
     Me.Label11 = New System.Windows.Forms.Label()
     Me.dtfechastaprov = New System.Windows.Forms.DateTimePicker()
     Me.dtfecdesdeprov = New System.Windows.Forms.DateTimePicker()
@@ -1127,8 +1127,8 @@ Partial Class FrmPagos
   Friend WithEvents HeaderStrip2 As Infoware.Consola.Base.HeaderStrip
   Friend WithEvents ToolStripLabel2 As System.Windows.Forms.ToolStripLabel
   Friend WithEvents crvlistadocheques As CrystalDecisions.Windows.Forms.CrystalReportViewer
-  Friend WithEvents CtlPatrono1 As CtlPatrono
-  Friend WithEvents CtlTipoContrato1 As CtlTipoContrato
+  Friend WithEvents CtlPatrono1 As WWTS.Roles.Controles.CtlPatrono
+  Friend WithEvents CtlTipoContrato1 As WWTS.Roles.Controles.CtlTipoContrato
   Friend WithEvents ProvisionCollectionBindingSource As System.Windows.Forms.BindingSource
   Friend WithEvents PrvfechaDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
   Friend WithEvents PrvobservacionDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -1138,7 +1138,7 @@ Partial Class FrmPagos
   Friend WithEvents mnuPagoCheque As System.Windows.Forms.ToolStripMenuItem
   Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
   Friend WithEvents mnulistapagos As System.Windows.Forms.ToolStripMenuItem
-  Friend WithEvents CtlPatrono2 As WWTS.Roles.Modulo.CtlPatrono
+  Friend WithEvents CtlPatrono2 As WWTS.Roles.Controles.CtlPatrono
   Friend WithEvents Label1 As System.Windows.Forms.Label
   Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
   Friend WithEvents tabprovisiones As System.Windows.Forms.TabControl
@@ -1149,7 +1149,7 @@ Partial Class FrmPagos
   Friend WithEvents btnmostrarprov As Infoware.Controles.Base.ButtonStd
   Friend WithEvents Panel4 As System.Windows.Forms.Panel
   Friend WithEvents Panel7 As System.Windows.Forms.Panel
-  Friend WithEvents CtlPatronoProv As WWTS.Roles.Modulo.CtlPatrono
+  Friend WithEvents CtlPatronoProv As WWTS.Roles.Controles.CtlPatrono
   Friend WithEvents Label11 As System.Windows.Forms.Label
   Friend WithEvents dtfechastaprov As System.Windows.Forms.DateTimePicker
   Friend WithEvents dtfecdesdeprov As System.Windows.Forms.DateTimePicker

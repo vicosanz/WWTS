@@ -27,7 +27,7 @@ Partial Class CtlBuscaEmpleadosPeriodo
     Me.chksolograbados = New System.Windows.Forms.CheckBox()
     Me.chktodos = New System.Windows.Forms.CheckBox()
     Me.pnltipocontrato = New System.Windows.Forms.Panel()
-    Me.CtlTipoContrato1 = New WWTS.Roles.Modulo.CtlTipoContrato()
+    Me.CtlTipoContrato1 = New WWTS.Roles.Controles.CtlTipoContrato()
     Me.chksolotipocontrato = New System.Windows.Forms.CheckBox()
     Me.btnbuscar = New Infoware.Controles.Base.ButtonStd()
     Me.Label42 = New System.Windows.Forms.Label()
@@ -60,8 +60,8 @@ Partial Class CtlBuscaEmpleadosPeriodo
     Me.pnlpersactsec = New System.Windows.Forms.Panel()
     Me.CtlSeccion1 = New WWTS.General.Controles.ComboBoxParametroDet()
     Me.rdopersactsec = New System.Windows.Forms.RadioButton()
-    Me.CtlPeriodo1 = New WWTS.Roles.Modulo.CtlPeriodo()
-    Me.CtlPatrono1 = New WWTS.Roles.Modulo.CtlPatrono()
+    Me.CtlPeriodo1 = New CtlPeriodo()
+    Me.CtlPatrono1 = New WWTS.Roles.Controles.CtlPatrono()
     Me.lblstatus = New System.Windows.Forms.Label()
     Me.HeaderStrip2.SuspendLayout()
     Me.pnltipocontrato.SuspendLayout()
@@ -596,7 +596,7 @@ Partial Class CtlBuscaEmpleadosPeriodo
   Friend WithEvents chksolograbados As System.Windows.Forms.CheckBox
   Friend WithEvents chktodos As System.Windows.Forms.CheckBox
   Friend WithEvents pnltipocontrato As System.Windows.Forms.Panel
-  Friend WithEvents CtlTipoContrato1 As CtlTipoContrato
+  Friend WithEvents CtlTipoContrato1 As WWTS.Roles.Controles.CtlTipoContrato
   Friend WithEvents chksolotipocontrato As System.Windows.Forms.CheckBox
   Friend WithEvents btnbuscar As Infoware.Controles.Base.ButtonStd
   Friend WithEvents Label42 As System.Windows.Forms.Label
@@ -606,7 +606,7 @@ Partial Class CtlBuscaEmpleadosPeriodo
   Friend WithEvents pnlpersac As System.Windows.Forms.Panel
   Friend WithEvents lblstatus As System.Windows.Forms.Label
   Friend WithEvents CtlPeriodo1 As CtlPeriodo
-  Friend WithEvents CtlPatrono1 As CtlPatrono
+  Friend WithEvents CtlPatrono1 As WWTS.Roles.Controles.CtlPatrono
   Friend WithEvents ContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
   Friend WithEvents mnugenerar As System.Windows.Forms.ToolStripMenuItem
   Friend WithEvents ListBindingSource As System.Windows.Forms.BindingSource

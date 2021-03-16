@@ -27,8 +27,8 @@ Partial Class FrmFormato
     Me.Label2 = New System.Windows.Forms.Label()
     Me.Label3 = New System.Windows.Forms.Label()
     Me.btnEjecutar = New Infoware.Controles.Base.ButtonStd()
-    Me.CtlPeriodo1 = New WWTS.Roles.Modulo.CtlPeriodo()
-    Me.CtlPatrono1 = New WWTS.Roles.Modulo.CtlPatrono()
+    Me.CtlPeriodo1 = New CtlPeriodo()
+    Me.CtlPatrono1 = New WWTS.Roles.Controles.CtlPatrono()
     Me.SuspendLayout()
     '
     'ComboBoxTipo
@@ -133,11 +133,11 @@ Partial Class FrmFormato
     Me.PerformLayout()
 
   End Sub
-  Friend WithEvents CtlPatrono1 As WWTS.Roles.Modulo.CtlPatrono
+  Friend WithEvents CtlPatrono1 As WWTS.Roles.Controles.CtlPatrono
   Friend WithEvents ComboBoxTipo As WWTS.General.Controles.ComboBoxParametroDet
   Friend WithEvents Label1 As System.Windows.Forms.Label
   Friend WithEvents Label2 As System.Windows.Forms.Label
   Friend WithEvents Label3 As System.Windows.Forms.Label
   Friend WithEvents btnEjecutar As Infoware.Controles.Base.ButtonStd
-  Friend WithEvents CtlPeriodo1 As WWTS.Roles.Modulo.CtlPeriodo
+  Friend WithEvents CtlPeriodo1 As CtlPeriodo
 End Class

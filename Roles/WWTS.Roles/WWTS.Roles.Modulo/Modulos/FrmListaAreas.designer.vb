@@ -99,7 +99,7 @@ Partial Class FrmListaAreas
     '
     'btnreporte
     '
-    Me.btnreporte.Image = Global.WWTS.Roles.Modulo.My.Resources.Resources.report
+    Me.btnreporte.Image = My.Resources.Resources.report
     Me.btnreporte.Location = New System.Drawing.Point(535, 12)
     Me.btnreporte.Name = "btnreporte"
     Me.btnreporte.Size = New System.Drawing.Size(99, 23)

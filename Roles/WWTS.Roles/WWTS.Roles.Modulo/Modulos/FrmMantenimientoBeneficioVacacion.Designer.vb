@@ -41,7 +41,7 @@ Partial Class FrmMantenimientoBeneficioVacacion
     Me.dtfechahastagocevaca = New System.Windows.Forms.DateTimePicker()
     Me.Label5 = New System.Windows.Forms.Label()
     Me.dtfechadesdegocevaca = New System.Windows.Forms.DateTimePicker()
-    Me.CtlPeriodo1 = New WWTS.Roles.Modulo.CtlPeriodo()
+    Me.CtlPeriodo1 = New CtlPeriodo()
     Me.PnlGoceVacaciones.SuspendLayout()
     Me.SuspendLayout()
     '
@@ -319,7 +319,7 @@ Partial Class FrmMantenimientoBeneficioVacacion
   Friend WithEvents txtValorFinal As Infoware.Controles.Base.TextBoxCalculator
   Friend WithEvents txtObservacion As Infoware.Controles.Base.TextBoxStd
   Friend WithEvents Label9 As System.Windows.Forms.Label
-  Friend WithEvents CtlPeriodo1 As WWTS.Roles.Modulo.CtlPeriodo
+  Friend WithEvents CtlPeriodo1 As CtlPeriodo
   Friend WithEvents checkgocevacaciones As Infoware.Controles.Base.CheckBoxStd
   Friend WithEvents PnlGoceVacaciones As System.Windows.Forms.Panel
   Friend WithEvents Label3 As System.Windows.Forms.Label

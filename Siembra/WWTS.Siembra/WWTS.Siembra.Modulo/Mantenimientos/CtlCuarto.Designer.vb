@@ -20,7 +20,7 @@ Partial Class CtlCuarto
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
     Me.components = New System.ComponentModel.Container
-    Me.CtlTerreno1 = New WWTS.Siembra.Modulo.CtlTerreno
+    Me.CtlTerreno1 = New CtlTerreno
     Me.lstCuarto = New System.Windows.Forms.ListBox
     Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
     Me.mnunuevo = New System.Windows.Forms.ToolStripMenuItem
@@ -101,7 +101,7 @@ Partial Class CtlCuarto
     Me.ResumeLayout(False)
 
   End Sub
-  Friend WithEvents CtlTerreno1 As WWTS.Siembra.Modulo.CtlTerreno
+  Friend WithEvents CtlTerreno1 As CtlTerreno
   Friend WithEvents lstCuarto As System.Windows.Forms.ListBox
   Friend WithEvents ContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
   Friend WithEvents mnunuevo As System.Windows.Forms.ToolStripMenuItem

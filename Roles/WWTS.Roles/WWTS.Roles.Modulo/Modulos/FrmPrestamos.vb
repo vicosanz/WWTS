@@ -187,9 +187,10 @@ Public Class FrmPrestamos
     End If
 
     Dim _parametro As New WWTSParametroDet(Sistema.OperadorDatos, Enumerados.EnumParametros.Rubro, Enumerados.enumRubro.NoDefinidoEnContrato)
-    Dim f As New FrmRubro(Sistema, Enumerados.EnumOpciones.Personal)
-    f.Parametro = _parametro
-    f.Rubro = BSrubro.Current
+    Dim f As New WWTS.Roles.Controles.FrmRubro(Sistema, Enumerados.EnumOpciones.Personal) With {
+      .Parametro = _parametro,
+      .Rubro = BSrubro.Current
+    }
     f.ShowDialog()
     buscar_rubro()
   End Sub
@@ -199,9 +200,10 @@ Public Class FrmPrestamos
     Dim _rubro As Rubro = New Rubro(Sistema.OperadorDatos, True)
     _rubro.Contrato = Contrato
 
-    Dim f As New FrmRubro(Sistema, Enumerados.EnumOpciones.Personal)
-    f.Parametro = _parametro
-    f.Rubro = _rubro
+    Dim f As New WWTS.Roles.Controles.FrmRubro(Sistema, Enumerados.EnumOpciones.Personal) With {
+      .Parametro = _parametro,
+      .Rubro = _rubro
+    }
     f.ShowDialog()
     buscar_rubro()
   End Sub

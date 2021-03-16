@@ -24,8 +24,8 @@ Partial Class FrmMantenimientoEmpleado
     Me.components = New System.ComponentModel.Container()
     Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMantenimientoEmpleado))
     Me.Pnlcuerpo = New System.Windows.Forms.Panel()
-    Me.CtlContrato1 = New WWTS.FichasMedicas.Modulo.CtlContratoFichasMedicas()
-    Me.CtlBuscaEmpleados1 = New WWTS.Roles.Modulo.CtlBuscaEmpleados()
+    Me.CtlContrato1 = New CtlContratoFichasMedicas()
+    Me.CtlBuscaEmpleados1 = New WWTS.Roles.Controles.CtlBuscaEmpleados()
     Me.HeaderStrip1 = New Infoware.Consola.Base.HeaderStrip()
     Me.ToolStriptitulo = New System.Windows.Forms.ToolStripLabel()
     Me.ToolStrip2 = New System.Windows.Forms.ToolStrip()
@@ -165,7 +165,7 @@ Partial Class FrmMantenimientoEmpleado
 
   End Sub
   Friend WithEvents Pnlcuerpo As System.Windows.Forms.Panel
-  Friend WithEvents CtlBuscaEmpleados1 As WWTS.Roles.Modulo.CtlBuscaEmpleados
+  Friend WithEvents CtlBuscaEmpleados1 As WWTS.Roles.Controles.CtlBuscaEmpleados
   Friend WithEvents CtlContrato1 As CtlContratoFichasMedicas
   Friend WithEvents ToolStrip2 As System.Windows.Forms.ToolStrip
   Friend WithEvents HeaderStrip1 As Infoware.Consola.Base.HeaderStrip

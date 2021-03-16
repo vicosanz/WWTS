@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ICA3.Toolboxes;
+using Infoware.Consola.Base;
 using Squirrel;
 using WeifenLuo.WinFormsUI.Docking;
 
@@ -17,14 +18,13 @@ namespace ICA3
 {
     public partial class FormMain : Infoware.Consola.Base.FormBaseMain
     {
-
         private ToolBoxSistemas mToolBoxSistemas;
         private ToolBoxModulos mToolBoxModulos;
         private ToolBoxFavoritos mToolBoxFavoritos;
         private ToolBoxReportes mToolBoxReportes;
 
         private DeserializeDockContent m_deserializeDockContent;
-        private string configFile;
+        private string dockPanelConfigFile;
 
         #region Themes
         private void EnableVSRenderer(VisualStudioToolStripExtender.VsVersion version, ThemeBase theme)
@@ -37,28 +37,22 @@ namespace ICA3
         #endregion
 
         #region Init
-        private string mDirectorioRaiz;
-        private string mDirectorioConfig;
         public FormMain()
         {
             InitializeComponent();
 
-            //CheckForUpdatesAsync();
+            CheckForUpdatesAsync().ConfigureAwait(false);
             Assembly asm = Assembly.GetExecutingAssembly();
             string ApplicationTitle = ((AssemblyTitleAttribute)asm.GetCustomAttributes(typeof(AssemblyTitleAttribute), false)[0]).Title;
             if (string.IsNullOrWhiteSpace(ApplicationTitle))
             {
                 ApplicationTitle = Path.GetFileNameWithoutExtension(Assembly.GetExecutingAssembly().FullName);
             }
-            mDirectorioRaiz = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), ApplicationTitle);
-            mDirectorioConfig = Path.Combine(mDirectorioRaiz, "Configuracion");
-            Directory.CreateDirectory(mDirectorioRaiz);
-            Directory.CreateDirectory(mDirectorioConfig);
-            configFile = Path.Combine(mDirectorioConfig, "Link.config");
+            string mDirectorioConfig = ICA3Helper.GetDirectorioConfig();
 
-            if (LeerClave() != Assembly.GetExecutingAssembly().Location)
+            if (ICA3Helper.LeerClave() != Assembly.GetExecutingAssembly().Location)
             {
-                GuardarClave(Assembly.GetExecutingAssembly().Location);
+                ICA3Helper.GuardarClave(Assembly.GetExecutingAssembly().Location);
             }
 
             vsToolStripExtender1.DefaultRenderer = _toolStripProfessionalRenderer;
@@ -81,7 +75,7 @@ namespace ICA3
             mToolBoxModulos.CambioFavoritos += MToolBoxModulos_CambioFavoritos;
             mToolBoxFavoritos.CambioFavoritos += MToolBoxFavoritos_CambioFavoritos;
 
-            OnPantallaCompleta += new EventHandler<bool>(this.PantallaCompletaToogle);
+            OnPantallaCompleta += new EventHandler<bool>(PantallaCompletaToogle);
             menuStrip1.Visible = false;
             ViewToolStripMenuItem.DropDownItems.Add(toolStripMenuItemSep);
             ViewToolStripMenuItem.DropDownItems.Add(barrasOtrasVentanasToolStripMenuItem);
@@ -92,13 +86,13 @@ namespace ICA3
 
             m_deserializeDockContent = new DeserializeDockContent(GetContentFromPersistString);
 
-            configFile = Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), "DockPanel.config");
+            dockPanelConfigFile = Path.Combine(mDirectorioConfig, "DockPanel.config");
 
             try
             {
-                if (File.Exists(configFile))
+                if (File.Exists(dockPanelConfigFile))
                 {
-                    MainDockPanel.LoadFromXml(configFile, m_deserializeDockContent);
+                    MainDockPanel.LoadFromXml(dockPanelConfigFile, m_deserializeDockContent);
                 }
                 else
                 {
@@ -111,34 +105,36 @@ namespace ICA3
             }
         }
 
-        private void CheckForUpdatesAsync()
+        private async Task CheckForUpdatesAsync()
         {
-
-            //UpdateInfo updateInfo = null;
+            UpdateInfo updateInfo = null;
             try
             {
-                using (var mgr = UpdateManager.GitHubUpdateManager("https://github.com/vicosanz/ICA3Installer"))
+                using (var mgr = await UpdateManager.GitHubUpdateManager("https://github.com/vicosanz/ICA3Installer"))
                 {
-                    //updateInfo = await mgr.Result.CheckForUpdate();
-                    //Mostrarmensaje($"Nueva versión detectada. Instalando en segundo plano versión {updateInfo.FutureReleaseEntry.Version}.");
-                    mgr.Result.UpdateApp().ConfigureAwait(false);
-                    //Mostrarmensaje($"Aplicación actualizada a la versión {updateInfo.FutureReleaseEntry.Version}. Por favor reinicie el programa para continuar.");
+                    updateInfo = await mgr.CheckForUpdate();
+                    if (updateInfo.ReleasesToApply.Any())
+                    {
+                        Mostrarmensaje($"Nueva versión detectada. Instalando en segundo plano versión {updateInfo.FutureReleaseEntry.Version}.");
+                    }
+                    await mgr.UpdateApp();
+                    Mostrarmensaje($"Aplicación actualizada a la versión {updateInfo.FutureReleaseEntry.Version}. Por favor reinicie el programa para continuar.");
                 }
             }
             catch (Exception ex)
             {
-                //if (updateInfo is null)
-                //{
+                if (updateInfo is null)
+                {
                     Mostrarmensaje($"No se puede revisar las actualizaciones. {ex.Message}");
-                //}
-                //else
-                //{
-                //    Mostrarmensaje($"ERROR actualizando a la versión {updateInfo.FutureReleaseEntry.Version}. {ex.Message}");
-                //}
+                }
+                else
+                {
+                    Mostrarmensaje($"ERROR actualizando a la versión {updateInfo.FutureReleaseEntry.Version}. {ex.Message}");
+                }
             }
         }
 
-            private void MToolBoxFavoritos_CambioFavoritos(object sender, EventArgs e)
+        private void MToolBoxFavoritos_CambioFavoritos(object sender, EventArgs e)
         {
             mToolBoxFavoritos.AgregarSistema(mToolBoxFavoritos.SistemaActual, true);
         }
@@ -148,9 +144,9 @@ namespace ICA3
             mToolBoxFavoritos.AgregarSistema(mToolBoxModulos.SistemaActual, true);
         }
 
-        private void MToolBoxModulos_MensajeError(object sender, EventArgs e)
+        private void MToolBoxModulos_MensajeError(object sender, string e)
         {
-            Mostrarmensaje(((Infoware.Datos.OperadorDatos)sender).MsgError);
+            Mostrarmensaje(e);
         }
 
         private void Mostrarmensaje(string msgError)
@@ -181,24 +177,6 @@ namespace ICA3
             mToolBoxModulos.AgregarSistema(mToolBoxSistemas.SistemaSeleccionado);
             mToolBoxFavoritos.AgregarSistema(mToolBoxSistemas.SistemaSeleccionado, false);
             mToolBoxReportes.AgregarSistema(mToolBoxSistemas.SistemaSeleccionado);
-        }
-
-        private void GuardarClave(string location)
-        {
-            File.WriteAllText(configFile, location);
-        }
-
-        private string LeerClave()
-        {
-            string result = "";
-            try
-            {
-                result = File.ReadAllText(configFile);
-            }
-            catch (Exception)
-            {
-            }
-            return result;
         }
 
         private void ResetLayout()
@@ -374,7 +352,7 @@ namespace ICA3
             ModulosVisible(true);
             SistemasVisible(true);
 
-            MainDockPanel.SaveAsXml(configFile);
+            MainDockPanel.SaveAsXml(dockPanelConfigFile);
             CloseAllDocuments();
         }
 

@@ -58,8 +58,8 @@ Partial Class FrmLiquidacion
     Me.Label5 = New System.Windows.Forms.Label()
     Me.cbomotivosalida = New WWTS.General.Controles.ComboBoxParametroDet()
     Me.cbotipoliquidacion = New WWTS.General.Controles.ComboBoxParametroDet()
-    Me.CtlBuscaEmpleados1 = New WWTS.Roles.Modulo.CtlBuscaEmpleados()
-    Me.ComboBoxLoteLiquidacion1 = New WWTS.Roles.Modulo.ComboBoxLoteLiquidacion()
+    Me.CtlBuscaEmpleados1 = New WWTS.Roles.Controles.CtlBuscaEmpleados()
+    Me.ComboBoxLoteLiquidacion1 = New ComboBoxLoteLiquidacion()
     CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
     Me.Pnlcuerpo.SuspendLayout()
     Me.Panel1.SuspendLayout()
@@ -307,7 +307,7 @@ Partial Class FrmLiquidacion
     '
     'btncerrar
     '
-    Me.btncerrar.Image = Global.WWTS.Roles.Modulo.My.Resources.Resources.save16
+    Me.btncerrar.Image = My.Resources.Resources.save
     Me.btncerrar.ImageTransparentColor = System.Drawing.Color.Magenta
     Me.btncerrar.Name = "btncerrar"
     Me.btncerrar.Size = New System.Drawing.Size(252, 23)
@@ -316,7 +316,7 @@ Partial Class FrmLiquidacion
     'ToolStripSplitButton1
     '
     Me.ToolStripSplitButton1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReporteLiquidacionToolStripMenuItem, Me.MedioDeAprobacionToolStripMenuItem})
-    Me.ToolStripSplitButton1.Image = Global.WWTS.Roles.Modulo.My.Resources.Resources.print
+    Me.ToolStripSplitButton1.Image = My.Resources.Resources.print
     Me.ToolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta
     Me.ToolStripSplitButton1.Name = "ToolStripSplitButton1"
     Me.ToolStripSplitButton1.Size = New System.Drawing.Size(97, 23)
@@ -517,7 +517,7 @@ Partial Class FrmLiquidacion
   Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
   Friend WithEvents btncerrar As System.Windows.Forms.ToolStripButton
   Friend WithEvents btncalcular As System.Windows.Forms.ToolStripButton
-  Friend WithEvents CtlBuscaEmpleados1 As WWTS.Roles.Modulo.CtlBuscaEmpleados
+  Friend WithEvents CtlBuscaEmpleados1 As WWTS.Roles.Controles.CtlBuscaEmpleados
   Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
   Friend WithEvents btnReporte As System.Windows.Forms.ToolStripDropDownButton
   Friend WithEvents LiquidacionToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
@@ -526,5 +526,5 @@ Partial Class FrmLiquidacion
   Friend WithEvents MedioDeAprobacionToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
   Friend WithEvents ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
   Friend WithEvents Label5 As System.Windows.Forms.Label
-  Friend WithEvents ComboBoxLoteLiquidacion1 As WWTS.Roles.Modulo.ComboBoxLoteLiquidacion
+  Friend WithEvents ComboBoxLoteLiquidacion1 As ComboBoxLoteLiquidacion
 End Class

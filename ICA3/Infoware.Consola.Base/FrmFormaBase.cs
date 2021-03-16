@@ -66,6 +66,10 @@ namespace Infoware.Consola.Base
         {
             try
             {
+                if (MainMenuStrip is null)
+                {
+                    return;
+                }
                 MainMenuStrip.Visible = !(Parent is MdiClient);
             }
             catch (Exception)

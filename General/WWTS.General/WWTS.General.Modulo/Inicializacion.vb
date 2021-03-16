@@ -3,9 +3,10 @@ Imports Infoware.Consola.Base
 Imports WWTS.General.Controles
 Imports Infoware.Reglas.General
 Imports WWTS.General.Reglas
+Imports System.Threading.Tasks
 
 Public Class Inicializacion
-  Implements Infoware.Consola.Base.IAplicacion
+  Implements IAplicacion
 
   Public Function Validacion(ByVal _Usuario As Infoware.Reglas.General.Usuario) As Boolean Implements Infoware.Consola.Base.IAplicacion.Validacion
     'MsgBox("Todo ok")
@@ -104,5 +105,11 @@ Public Class Inicializacion
     End If
 
     Return _grupos
+  End Function
+
+  Public Event ActualizacionesMensaje As EventHandler(Of String) Implements IAplicacion.ActualizacionesMensaje
+
+  Public Function ComprobarActualizaciones() As Task(Of Boolean) Implements IAplicacion.ComprobarActualizaciones
+    Return Task.FromResult(False)
   End Function
 End Class

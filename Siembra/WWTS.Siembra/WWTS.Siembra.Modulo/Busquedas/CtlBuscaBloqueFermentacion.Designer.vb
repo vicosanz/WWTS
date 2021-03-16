@@ -32,11 +32,11 @@ Partial Class CtlBuscaBloqueFermentacion
     Me.Label5 = New System.Windows.Forms.Label
     Me.chknumerobloque = New System.Windows.Forms.CheckBox
     Me.pnlsolocorte = New System.Windows.Forms.Panel
-    Me.CtlCorte1 = New WWTS.Siembra.Modulo.CtlCorte
+    Me.CtlCorte1 = New CtlCorte
     Me.Panel12 = New System.Windows.Forms.Panel
     Me.chksolocorte = New System.Windows.Forms.CheckBox
     Me.pnlsolosemilla = New System.Windows.Forms.Panel
-    Me.CtlSemilla1 = New WWTS.Siembra.Modulo.CtlSemilla
+    Me.CtlSemilla1 = New CtlSemilla
     Me.Panel5 = New System.Windows.Forms.Panel
     Me.chksolosemilla = New System.Windows.Forms.CheckBox
     Me.pnlfechatipomov = New System.Windows.Forms.Panel
@@ -48,14 +48,14 @@ Partial Class CtlBuscaBloqueFermentacion
     Me.Panel11 = New System.Windows.Forms.Panel
     Me.chkfechatipomov = New System.Windows.Forms.CheckBox
     Me.pnlsololote = New System.Windows.Forms.Panel
-    Me.CtlLote1 = New WWTS.Siembra.Modulo.CtlLote
+    Me.CtlLote1 = New CtlLote
     Me.Panel2 = New System.Windows.Forms.Panel
     Me.chksololote = New System.Windows.Forms.CheckBox
     Me.pnlsolofinca = New System.Windows.Forms.Panel
-    Me.CtlTerreno1 = New WWTS.Siembra.Modulo.CtlTerreno
+    Me.CtlTerreno1 = New CtlTerreno
     Me.Panel16 = New System.Windows.Forms.Panel
     Me.chksolofinca = New System.Windows.Forms.CheckBox
-    Me.CtlZafra1 = New WWTS.Siembra.Modulo.CtlZafra
+    Me.CtlZafra1 = New CtlZafra
     Me.Label1 = New System.Windows.Forms.Label
     Me.tvbloques = New System.Windows.Forms.TreeView
     Me.Panel7 = New System.Windows.Forms.Panel
@@ -635,7 +635,7 @@ Partial Class CtlBuscaBloqueFermentacion
   Friend WithEvents Label5 As System.Windows.Forms.Label
   Friend WithEvents chknumerobloque As System.Windows.Forms.CheckBox
   Friend WithEvents pnlsolocorte As System.Windows.Forms.Panel
-  Friend WithEvents CtlCorte1 As WWTS.Siembra.Modulo.CtlCorte
+  Friend WithEvents CtlCorte1 As CtlCorte
   Friend WithEvents Panel12 As System.Windows.Forms.Panel
   Friend WithEvents chksolocorte As System.Windows.Forms.CheckBox
   Friend WithEvents pnlsolosemilla As System.Windows.Forms.Panel
@@ -655,11 +655,11 @@ Partial Class CtlBuscaBloqueFermentacion
   Friend WithEvents pnlsolofinca As System.Windows.Forms.Panel
   Friend WithEvents Panel16 As System.Windows.Forms.Panel
   Friend WithEvents chksolofinca As System.Windows.Forms.CheckBox
-  Friend WithEvents CtlZafra1 As WWTS.Siembra.Modulo.CtlZafra
+  Friend WithEvents CtlZafra1 As CtlZafra
   Friend WithEvents Label1 As System.Windows.Forms.Label
-  Friend WithEvents CtlTerreno1 As WWTS.Siembra.Modulo.CtlTerreno
-  Friend WithEvents CtlLote1 As WWTS.Siembra.Modulo.CtlLote
-  Friend WithEvents CtlSemilla1 As WWTS.Siembra.Modulo.CtlSemilla
+  Friend WithEvents CtlTerreno1 As CtlTerreno
+  Friend WithEvents CtlLote1 As CtlLote
+  Friend WithEvents CtlSemilla1 As CtlSemilla
   Friend WithEvents tvbloques As System.Windows.Forms.TreeView
   Friend WithEvents Panel7 As System.Windows.Forms.Panel
   Friend WithEvents chktodos As System.Windows.Forms.CheckBox

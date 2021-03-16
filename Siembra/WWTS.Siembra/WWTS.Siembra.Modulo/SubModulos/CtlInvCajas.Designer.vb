@@ -24,7 +24,7 @@ Partial Class CtlInvCajas
     Me.Panel1 = New System.Windows.Forms.Panel
     Me.GroupBox2 = New System.Windows.Forms.GroupBox
     Me.pn1 = New System.Windows.Forms.Panel
-    Me.CtlZafra1 = New WWTS.Siembra.Modulo.CtlZafra
+    Me.CtlZafra1 = New CtlZafra
     Me.Label14 = New System.Windows.Forms.Label
     Me.txtNumEmp = New System.Windows.Forms.TextBox
     Me.Label1 = New System.Windows.Forms.Label
@@ -44,13 +44,13 @@ Partial Class CtlInvCajas
     Me.btnguardar = New System.Windows.Forms.ToolStripButton
     Me.groupbox1 = New System.Windows.Forms.GroupBox
     Me.pnlcolor = New System.Windows.Forms.Panel
-    Me.CtlColorHoja1 = New WWTS.Siembra.Modulo.CtlColorHoja
+    Me.CtlColorHoja1 = New CtlColorHoja
     Me.Label4 = New System.Windows.Forms.Label
-    Me.CtlTerreno1 = New WWTS.Siembra.Modulo.CtlTerreno
-    Me.CtlBodega1 = New WWTS.Siembra.Modulo.CtlBodega
-    Me.CtlSemilla1 = New WWTS.Siembra.Modulo.CtlSemilla
-    Me.CtlCorte1 = New WWTS.Siembra.Modulo.CtlCorte
-    Me.CtlClaseHoja1 = New WWTS.Siembra.Modulo.CtlClaseHoja
+    Me.CtlTerreno1 = New CtlTerreno
+    Me.CtlBodega1 = New CtlBodega
+    Me.CtlSemilla1 = New CtlSemilla
+    Me.CtlCorte1 = New CtlCorte
+    Me.CtlClaseHoja1 = New CtlClaseHoja
     Me.Label11 = New System.Windows.Forms.Label
     Me.Label8 = New System.Windows.Forms.Label
     Me.Label13 = New System.Windows.Forms.Label
@@ -617,21 +617,21 @@ Partial Class CtlInvCajas
   Friend WithEvents btnnuevo As System.Windows.Forms.ToolStripButton
   Friend WithEvents btneli As System.Windows.Forms.ToolStripButton
   Friend WithEvents btnguardar As System.Windows.Forms.ToolStripButton
-  Friend WithEvents CtlZafra1 As WWTS.Siembra.Modulo.CtlZafra
+  Friend WithEvents CtlZafra1 As CtlZafra
   Friend WithEvents groupbox1 As System.Windows.Forms.GroupBox
   Friend WithEvents pnlcolor As System.Windows.Forms.Panel
   Friend WithEvents Label4 As System.Windows.Forms.Label
-  Friend WithEvents CtlTerreno1 As WWTS.Siembra.Modulo.CtlTerreno
-  Friend WithEvents CtlBodega1 As WWTS.Siembra.Modulo.CtlBodega
-  Friend WithEvents CtlSemilla1 As WWTS.Siembra.Modulo.CtlSemilla
-  Friend WithEvents CtlCorte1 As WWTS.Siembra.Modulo.CtlCorte
-  Friend WithEvents CtlClaseHoja1 As WWTS.Siembra.Modulo.CtlClaseHoja
+  Friend WithEvents CtlTerreno1 As CtlTerreno
+  Friend WithEvents CtlBodega1 As CtlBodega
+  Friend WithEvents CtlSemilla1 As CtlSemilla
+  Friend WithEvents CtlCorte1 As CtlCorte
+  Friend WithEvents CtlClaseHoja1 As CtlClaseHoja
   Friend WithEvents Label11 As System.Windows.Forms.Label
   Friend WithEvents Label8 As System.Windows.Forms.Label
   Friend WithEvents Label13 As System.Windows.Forms.Label
   Friend WithEvents Label9 As System.Windows.Forms.Label
   Friend WithEvents Label10 As System.Windows.Forms.Label
-  Friend WithEvents CtlColorHoja1 As WWTS.Siembra.Modulo.CtlColorHoja
+  Friend WithEvents CtlColorHoja1 As CtlColorHoja
   Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
   Friend WithEvents Label15 As System.Windows.Forms.Label
   Friend WithEvents Label5 As System.Windows.Forms.Label

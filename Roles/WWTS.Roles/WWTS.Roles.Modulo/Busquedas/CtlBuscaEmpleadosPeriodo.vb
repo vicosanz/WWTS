@@ -492,18 +492,6 @@ Public Class CtlBuscaEmpleadosPeriodo
     ajustarpnlpersact()
   End Sub
 
-  Private Sub CtlTipoContrato1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CtlTipoContrato1.SelectedIndexChanged
-
-  End Sub
-
-  Private Sub tvEmpleados_CellEndEdit(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles tvEmpleados.CellEndEdit
-
-  End Sub
-
-  Private Sub tvEmpleados_CellLeave(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles tvEmpleados.CellLeave
-
-  End Sub
-
   Private Sub tvEmpleados_CellMouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles tvEmpleados.CellMouseUp
     Me.tvEmpleados.EndEdit()
     Me.tvEmpleados.EndEdit()

@@ -25,18 +25,18 @@ Partial Class FrmRezago
     Me.TabPage1 = New System.Windows.Forms.TabPage()
     Me.TabControl2 = New System.Windows.Forms.TabControl()
     Me.TabPage3 = New System.Windows.Forms.TabPage()
-    Me.CtlInvCajas1 = New WWTS.Siembra.Modulo.CtlInvCajas()
+    Me.CtlInvCajas1 = New CtlInvCajas()
     Me.TabPage4 = New System.Windows.Forms.TabPage()
-    Me.CtlListaEmbarque1 = New WWTS.Siembra.Modulo.CtlListaEmbarque()
+    Me.CtlListaEmbarque1 = New CtlListaEmbarque()
     Me.Panel3 = New System.Windows.Forms.Panel()
     Me.btnanadiraemb = New System.Windows.Forms.Button()
     Me.btnremoverdeemb = New System.Windows.Forms.Button()
-    Me.CtlBuscaCajasRezago1 = New WWTS.Siembra.Modulo.CtlBuscaCajasRezago()
+    Me.CtlBuscaCajasRezago1 = New CtlBuscaCajasRezago()
     Me.TabPage2 = New System.Windows.Forms.TabPage()
     Me.crvlistaempaque = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
     Me.Panel2 = New System.Windows.Forms.Panel()
-    Me.CtlHacienda1 = New WWTS.Siembra.Modulo.CtlHacienda()
-    Me.CtlZafra1 = New WWTS.Siembra.Modulo.CtlZafra()
+    Me.CtlHacienda1 = New CtlHacienda()
+    Me.CtlZafra1 = New CtlZafra()
     Me.chkzafra = New System.Windows.Forms.CheckBox()
     Me.chkponersigla = New System.Windows.Forms.CheckBox()
     Me.Label4 = New System.Windows.Forms.Label()
@@ -404,14 +404,14 @@ Partial Class FrmRezago
   Friend WithEvents ToolStripLabel1 As System.Windows.Forms.ToolStripLabel
   Friend WithEvents TabControl2 As System.Windows.Forms.TabControl
   Friend WithEvents TabPage3 As System.Windows.Forms.TabPage
-  Friend WithEvents CtlInvCajas1 As WWTS.Siembra.Modulo.CtlInvCajas
+  Friend WithEvents CtlInvCajas1 As CtlInvCajas
   Friend WithEvents TabPage4 As System.Windows.Forms.TabPage
-  Friend WithEvents CtlBuscaCajasRezago1 As WWTS.Siembra.Modulo.CtlBuscaCajasRezago
+  Friend WithEvents CtlBuscaCajasRezago1 As CtlBuscaCajasRezago
   Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
   Friend WithEvents crvlistaempaque As CrystalDecisions.Windows.Forms.CrystalReportViewer
   Friend WithEvents Panel2 As System.Windows.Forms.Panel
-  Friend WithEvents CtlHacienda1 As WWTS.Siembra.Modulo.CtlHacienda
-  Friend WithEvents CtlZafra1 As WWTS.Siembra.Modulo.CtlZafra
+  Friend WithEvents CtlHacienda1 As CtlHacienda
+  Friend WithEvents CtlZafra1 As CtlZafra
   Friend WithEvents chkponersigla As System.Windows.Forms.CheckBox
   Friend WithEvents Label4 As System.Windows.Forms.Label
   Friend WithEvents numdesde As System.Windows.Forms.NumericUpDown
@@ -419,7 +419,7 @@ Partial Class FrmRezago
   Friend WithEvents numhasta As System.Windows.Forms.NumericUpDown
   Friend WithEvents btnmostraretiq As System.Windows.Forms.Button
   Friend WithEvents btnlistaempaque As System.Windows.Forms.Button
-  Friend WithEvents CtlListaEmbarque1 As WWTS.Siembra.Modulo.CtlListaEmbarque
+  Friend WithEvents CtlListaEmbarque1 As CtlListaEmbarque
   Friend WithEvents Panel3 As System.Windows.Forms.Panel
   Friend WithEvents btnanadiraemb As System.Windows.Forms.Button
   Friend WithEvents btnremoverdeemb As System.Windows.Forms.Button

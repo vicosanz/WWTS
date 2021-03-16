@@ -1,0 +1,453 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DFC6BF50-6A1F-40DF-8DB7-A4D56F9BB525}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>WWTS.Roles.Controles</RootNamespace>
+    <AssemblyName>WWTS.Roles.Controles</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>WWTS.Roles.Controles.xml</DocumentationFile>
+    <DefineConstants>_MYFORMS=True</DefineConstants>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>WWTS.Roles.Controles.xml</DocumentationFile>
+    <DefineConstants>_MYFORMS=True</DefineConstants>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=3.0.6.0, Culture=neutral, PublicKeyToken=5cded1a1a0a7b481, processorArchitecture=MSIL">
+      <HintPath>..\..\..\FichasMedicas\packages\DockPanelSuite.3.0.6\lib\net40\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Busquedas\CtlBuscaEmpleados.designer.vb">
+      <DependentUpon>CtlBuscaEmpleados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Busquedas\CtlBuscaEmpleados.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\CtlBeneficiosSociales.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmInputBoxDate.designer.vb">
+      <DependentUpon>FrmInputBoxDate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmInputBoxDate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\CtlArea.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\CtlCargo.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\CtlContrato.designer.vb">
+      <DependentUpon>CtlContrato.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\CtlContrato.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\CtlDetalleModeloLabor.designer.vb">
+      <DependentUpon>CtlDetalleModeloLabor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\CtlDetalleModeloLabor.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\CtlModeloLabor.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\CtlPatrono.designer.vb">
+      <DependentUpon>CtlPatrono.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\CtlPatrono.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\CtlPatronoCombo.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\CtlPeriodoVacacion.designer.vb">
+      <DependentUpon>CtlPeriodoVacacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\CtlPeriodoVacacion.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\CtlTarea.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\CtlTipoContrato.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmLlamadoAtencion.designer.vb">
+      <DependentUpon>FrmLlamadoAtencion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmLlamadoAtencion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmMantenimientoArea.designer.vb">
+      <DependentUpon>FrmMantenimientoArea.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmMantenimientoArea.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmMantenimientoCargo.designer.vb">
+      <DependentUpon>FrmMantenimientoCargo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmMantenimientoCargo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmMantenimientoContrato.designer.vb">
+      <DependentUpon>FrmMantenimientoContrato.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmMantenimientoContrato.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmMantenimientoLicencia.Designer.vb">
+      <DependentUpon>FrmMantenimientoLicencia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmMantenimientoLicencia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmMantenimientoSeleccion.designer.vb">
+      <DependentUpon>FrmMantenimientoSeleccion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmMantenimientoSeleccion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmMantenimientoVacacion.designer.vb">
+      <DependentUpon>FrmMantenimientoVacacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmMantenimientoVacacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmModeloLabor.designer.vb">
+      <DependentUpon>FrmModeloLabor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmModeloLabor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmPatrono.designer.vb">
+      <DependentUpon>FrmPatrono.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmPatrono.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmRubro.designer.vb">
+      <DependentUpon>FrmRubro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmRubro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmSolicPrestamo.Designer.vb">
+      <DependentUpon>FrmSolicPrestamo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmSolicPrestamo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmTarea.designer.vb">
+      <DependentUpon>FrmTarea.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmTarea.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmTipoContrato.designer.vb">
+      <DependentUpon>FrmTipoContrato.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmTipoContrato.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmTipoContratoFormato.designer.vb">
+      <DependentUpon>FrmTipoContratoFormato.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FrmTipoContratoFormato.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Reportes\crpEtiquetas.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crpEtiquetas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\crpSolicPrestamo1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crpSolicPrestamo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\DSetiquetas.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSetiquetas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\DSSolicPrestamo.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSSolicPrestamo.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Busquedas\CtlBuscaEmpleados.resx">
+      <DependentUpon>CtlBuscaEmpleados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmInputBoxDate.resx">
+      <DependentUpon>FrmInputBoxDate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\CtlContrato.resx">
+      <DependentUpon>CtlContrato.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\CtlDetalleModeloLabor.resx">
+      <DependentUpon>CtlDetalleModeloLabor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\CtlPatrono.resx">
+      <DependentUpon>CtlPatrono.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\CtlPeriodoVacacion.resx">
+      <DependentUpon>CtlPeriodoVacacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmLlamadoAtencion.resx">
+      <DependentUpon>FrmLlamadoAtencion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmMantenimientoArea.resx">
+      <DependentUpon>FrmMantenimientoArea.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmMantenimientoCargo.resx">
+      <DependentUpon>FrmMantenimientoCargo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmMantenimientoContrato.resx">
+      <DependentUpon>FrmMantenimientoContrato.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmMantenimientoLicencia.resx">
+      <DependentUpon>FrmMantenimientoLicencia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmMantenimientoSeleccion.resx">
+      <DependentUpon>FrmMantenimientoSeleccion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmMantenimientoVacacion.resx">
+      <DependentUpon>FrmMantenimientoVacacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmModeloLabor.resx">
+      <DependentUpon>FrmModeloLabor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmPatrono.resx">
+      <DependentUpon>FrmPatrono.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmRubro.resx">
+      <DependentUpon>FrmRubro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmRubroDet.resx" />
+    <EmbeddedResource Include="Mantenimientos\FrmSolicPrestamo.resx">
+      <DependentUpon>FrmSolicPrestamo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmTarea.resx">
+      <DependentUpon>FrmTarea.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmTipoContrato.resx">
+      <DependentUpon>FrmTipoContrato.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FrmTipoContratoFormato.resx">
+      <DependentUpon>FrmTipoContratoFormato.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\crpSolicPrestamo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpSolicPrestamo1.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <EmbeddedResource Include="Reportes\crpEtiquetas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpEtiquetas.vb</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Reportes\DSetiquetas.xsc">
+      <DependentUpon>DSetiquetas.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DSetiquetas.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSetiquetas.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Reportes\DSetiquetas.xss">
+      <DependentUpon>DSetiquetas.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\General\WWTS.General\WWTS.General.Controles\WWTS.General.Controles.vbproj">
+      <Project>{b3f0a363-382f-4cdd-97a7-9df3a4bf0b5a}</Project>
+      <Name>WWTS.General.Controles</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\General\WWTS.General\WWTS.General.Modulo\WWTS.General.Modulo.vbproj">
+      <Project>{b5137a08-f8db-4741-b474-39a437533daf}</Project>
+      <Name>WWTS.General.Modulo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\General\WWTS.General\WWTS.General.Reglas\WWTS.General.Reglas.vbproj">
+      <Project>{6f7c7749-44bd-42c0-9ef8-cacf87184cdf}</Project>
+      <Name>WWTS.General.Reglas</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ICA3\Infoware.Consola.Base\Infoware.Consola.Base.csproj">
+      <Project>{69c85426-e02a-4af6-894c-9ce05ebbc66e}</Project>
+      <Name>Infoware.Consola.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ICA3\Infoware.Controles.Base\Infoware.Controles.Base.vbproj">
+      <Project>{c81d0a59-f9b2-450b-a59d-5aef7ae898c1}</Project>
+      <Name>Infoware.Controles.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ICA3\Infoware.Controles.General\Infoware.Controles.General.vbproj">
+      <Project>{39712c5d-86ab-49b9-b9a8-b55be19c43d5}</Project>
+      <Name>Infoware.Controles.General</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ICA3\Infoware.Datos\Infoware.Datos.vbproj">
+      <Project>{fa50218a-1fd3-4739-87eb-4e77591ee0a2}</Project>
+      <Name>Infoware.Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ICA3\Infoware.Reglas.General\Infoware.Reglas.General.vbproj">
+      <Project>{fedde9a5-923f-47f7-b7ac-63beaa34e7f8}</Project>
+      <Name>Infoware.Reglas.General</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ICA3\Infoware.Reglas\Infoware.Reglas.vbproj">
+      <Project>{8365b169-5835-4cc6-b9f3-91dd27ae4e1a}</Project>
+      <Name>Infoware.Reglas</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ICA3\Infoware.Reporteador\Infoware.Reporteador.vbproj">
+      <Project>{127297a9-3e7c-47ed-91bc-d29b8e1f9d7d}</Project>
+      <Name>Infoware.Reporteador</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ICA3\Infoware.Reportes\Infoware.Reportes.vbproj">
+      <Project>{288345c5-9fd4-4ac9-a9d1-d42bc9ad3316}</Project>
+      <Name>Infoware.Reportes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WWTS.Roles.Reglas\WWTS.Roles.Reglas.vbproj">
+      <Project>{01e84104-277e-4aeb-a5f4-85a404990b5c}</Project>
+      <Name>WWTS.Roles.Reglas</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Reportes\DSSolicPrestamo.xsc">
+      <DependentUpon>DSSolicPrestamo.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DSSolicPrestamo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSSolicPrestamo.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Reportes\DSSolicPrestamo.xss">
+      <DependentUpon>DSSolicPrestamo.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\docword.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\docexcel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\post.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

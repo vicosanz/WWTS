@@ -67,21 +67,21 @@ Partial Class CtlLabor
     '
     'mnunuevo
     '
-    Me.mnunuevo.Image = My.Resources.Resources.nuevo
+    Me.mnunuevo.Image = My.Resources.Resources._new
     Me.mnunuevo.Name = "mnunuevo"
     Me.mnunuevo.Size = New System.Drawing.Size(132, 22)
     Me.mnunuevo.Text = "&Nuevo"
     '
     'mnumodificar
     '
-    Me.mnumodificar.Image = My.Resources.Resources.abrir
+    Me.mnumodificar.Image = My.Resources.Resources.open
     Me.mnumodificar.Name = "mnumodificar"
     Me.mnumodificar.Size = New System.Drawing.Size(132, 22)
     Me.mnumodificar.Text = "&Modificar"
     '
     'mnueliminar
     '
-    Me.mnueliminar.Image = Global.WWTS.Roles.Modulo.My.Resources.Resources.eliminar
+    Me.mnueliminar.Image = My.Resources.Resources.eliminar
     Me.mnueliminar.Name = "mnueliminar"
     Me.mnueliminar.Size = New System.Drawing.Size(132, 22)
     Me.mnueliminar.Text = "&Eliminar"

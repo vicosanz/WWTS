@@ -35,27 +35,27 @@ Partial Class CtlBuscaCajasRezago
     Me.Panel19 = New System.Windows.Forms.Panel
     Me.chksolocajasembarcadas = New System.Windows.Forms.CheckBox
     Me.pnlsolofinca = New System.Windows.Forms.Panel
-    Me.CtlTerreno1 = New WWTS.Siembra.Modulo.CtlTerreno
+    Me.CtlTerreno1 = New CtlTerreno
     Me.Panel16 = New System.Windows.Forms.Panel
     Me.chksolofinca = New System.Windows.Forms.CheckBox
     Me.pnlsolocorte = New System.Windows.Forms.Panel
-    Me.CtlCorte1 = New WWTS.Siembra.Modulo.CtlCorte
+    Me.CtlCorte1 = New CtlCorte
     Me.Panel12 = New System.Windows.Forms.Panel
     Me.chksolocorte = New System.Windows.Forms.CheckBox
     Me.pnlsolobodega = New System.Windows.Forms.Panel
-    Me.CtlBodega1 = New WWTS.Siembra.Modulo.CtlBodega
+    Me.CtlBodega1 = New CtlBodega
     Me.Panel8 = New System.Windows.Forms.Panel
     Me.chksolobodega = New System.Windows.Forms.CheckBox
     Me.pnlsolosemilla = New System.Windows.Forms.Panel
-    Me.CtlSemilla1 = New WWTS.Siembra.Modulo.CtlSemilla
+    Me.CtlSemilla1 = New CtlSemilla
     Me.Panel5 = New System.Windows.Forms.Panel
     Me.chksolosemilla = New System.Windows.Forms.CheckBox
     Me.pnlsolocolor = New System.Windows.Forms.Panel
-    Me.CtlColorHoja1 = New WWTS.Siembra.Modulo.CtlColorHoja
+    Me.CtlColorHoja1 = New CtlColorHoja
     Me.Panel2 = New System.Windows.Forms.Panel
     Me.chksolocolor = New System.Windows.Forms.CheckBox
     Me.pnlsoloclase = New System.Windows.Forms.Panel
-    Me.CtlClaseHoja1 = New WWTS.Siembra.Modulo.CtlClaseHoja
+    Me.CtlClaseHoja1 = New CtlClaseHoja
     Me.chknoestaclase = New System.Windows.Forms.CheckBox
     Me.Panel3 = New System.Windows.Forms.Panel
     Me.chksoloclase = New System.Windows.Forms.CheckBox
@@ -66,7 +66,7 @@ Partial Class CtlBuscaCajasRezago
     Me.Label43 = New System.Windows.Forms.Label
     Me.Panel11 = New System.Windows.Forms.Panel
     Me.chkfechaempaque = New System.Windows.Forms.CheckBox
-    Me.CtlZafra1 = New WWTS.Siembra.Modulo.CtlZafra
+    Me.CtlZafra1 = New CtlZafra
     Me.Label1 = New System.Windows.Forms.Label
     Me.pnltipotabaco = New System.Windows.Forms.Panel
     Me.rdotabnatural = New System.Windows.Forms.RadioButton
@@ -858,22 +858,22 @@ Partial Class CtlBuscaCajasRezago
   Friend WithEvents pnltipotabaco As System.Windows.Forms.Panel
   Friend WithEvents rdotabnatural As System.Windows.Forms.RadioButton
   Friend WithEvents rdotabcandela As System.Windows.Forms.RadioButton
-  Friend WithEvents CtlZafra1 As WWTS.Siembra.Modulo.CtlZafra
+  Friend WithEvents CtlZafra1 As CtlZafra
   Friend WithEvents Label1 As System.Windows.Forms.Label
   Friend WithEvents txthasta As Infoware.Controles.Base.TextBoxCalculator
   Friend WithEvents txtdesde As Infoware.Controles.Base.TextBoxCalculator
-  Friend WithEvents CtlTerreno1 As WWTS.Siembra.Modulo.CtlTerreno
-  Friend WithEvents CtlCorte1 As WWTS.Siembra.Modulo.CtlCorte
-  Friend WithEvents CtlBodega1 As WWTS.Siembra.Modulo.CtlBodega
-  Friend WithEvents CtlSemilla1 As WWTS.Siembra.Modulo.CtlSemilla
+  Friend WithEvents CtlTerreno1 As CtlTerreno
+  Friend WithEvents CtlCorte1 As CtlCorte
+  Friend WithEvents CtlBodega1 As CtlBodega
+  Friend WithEvents CtlSemilla1 As CtlSemilla
   Friend WithEvents tvcajas As System.Windows.Forms.TreeView
   Friend WithEvents Panel7 As System.Windows.Forms.Panel
   Friend WithEvents chktodos As System.Windows.Forms.CheckBox
   Friend WithEvents btnbuscar As System.Windows.Forms.Button
   Friend WithEvents btnexportar As System.Windows.Forms.Button
   Friend WithEvents lblstatus As System.Windows.Forms.Label
-  Friend WithEvents CtlColorHoja1 As WWTS.Siembra.Modulo.CtlColorHoja
-  Friend WithEvents CtlClaseHoja1 As WWTS.Siembra.Modulo.CtlClaseHoja
+  Friend WithEvents CtlColorHoja1 As CtlColorHoja
+  Friend WithEvents CtlClaseHoja1 As CtlClaseHoja
   Friend WithEvents ContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
   Friend WithEvents SeleccionarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
   Friend WithEvents mnu25 As System.Windows.Forms.ToolStripMenuItem

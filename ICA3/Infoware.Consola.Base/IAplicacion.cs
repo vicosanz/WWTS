@@ -12,5 +12,9 @@ namespace Infoware.Consola.Base
         bool Validacion(Usuario _Usuario);
 
         List<GrupoOpcion> CargarListaGrupoOpciones(Sistema _Sistema);
+
+        event EventHandler<string> ActualizacionesMensaje;
+
+        Task<bool> ComprobarActualizaciones();
     }
 }

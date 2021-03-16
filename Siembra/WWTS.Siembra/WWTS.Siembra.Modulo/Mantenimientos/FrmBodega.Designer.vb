@@ -27,7 +27,7 @@ Partial Class FrmBodega
     Me.Label3 = New System.Windows.Forms.Label
     Me.txtubicacion = New Infoware.Controles.Base.TextBoxStd
     Me.Label4 = New System.Windows.Forms.Label
-    Me.CtlTerreno1 = New WWTS.Siembra.Modulo.CtlTerreno
+    Me.CtlTerreno1 = New CtlTerreno
     Me.SuspendLayout()
     '
     'txtcodigo
@@ -130,6 +130,6 @@ Partial Class FrmBodega
   Friend WithEvents Label3 As System.Windows.Forms.Label
   Friend WithEvents txtubicacion As Infoware.Controles.Base.TextBoxStd
   Friend WithEvents Label4 As System.Windows.Forms.Label
-  Friend WithEvents CtlTerreno1 As WWTS.Siembra.Modulo.CtlTerreno
+  Friend WithEvents CtlTerreno1 As CtlTerreno
 
 End Class

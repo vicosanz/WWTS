@@ -45,7 +45,7 @@ Partial Class CtlListaEmbarque
     Me.ColumnHeader16 = New System.Windows.Forms.ColumnHeader
     Me.Panel1 = New System.Windows.Forms.Panel
     Me.btnexportar = New System.Windows.Forms.Button
-    Me.CtlEmbarque1 = New WWTS.Siembra.Modulo.CtlEmbarque
+    Me.CtlEmbarque1 = New CtlEmbarque
     Me.Panel2.SuspendLayout()
     Me.Panel1.SuspendLayout()
     Me.SuspendLayout()
@@ -272,6 +272,6 @@ Partial Class CtlListaEmbarque
   Friend WithEvents ColumnHeader16 As System.Windows.Forms.ColumnHeader
   Friend WithEvents Panel1 As System.Windows.Forms.Panel
   Friend WithEvents btnexportar As System.Windows.Forms.Button
-  Friend WithEvents CtlEmbarque1 As WWTS.Siembra.Modulo.CtlEmbarque
+  Friend WithEvents CtlEmbarque1 As CtlEmbarque
 
 End Class

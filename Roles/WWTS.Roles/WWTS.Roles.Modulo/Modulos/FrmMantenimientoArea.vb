@@ -199,7 +199,7 @@ Public Class FrmMantenimientoArea
     Dim _Cargo As New Cargo(Sistema.OperadorDatos, True)
     _Cargo.Area = mArea
 
-    Dim f As New FrmMantenimientoCargo(Sistema, Enumerados.EnumOpciones.AreasCargos)
+    Dim f As New WWTS.Roles.Controles.FrmMantenimientoCargo(Sistema, Enumerados.EnumOpciones.AreasCargos)
     f.Cargo = _Cargo
     f.ShowDialog()
 
@@ -227,7 +227,7 @@ Public Class FrmMantenimientoArea
     If BindingSource2.Current Is Nothing Then
       Exit Sub
     End If
-    Dim f As New FrmMantenimientoCargo(Sistema, Enumerados.EnumOpciones.AreasCargos)
+    Dim f As New WWTS.Roles.Controles.FrmMantenimientoCargo(Sistema, Enumerados.EnumOpciones.AreasCargos)
     f.Cargo = BindingSource2.Current
     f.ShowDialog()
     RefrescarListaCargos()

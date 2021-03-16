@@ -183,7 +183,7 @@ Partial Class CtlAsistencia
     'btnexcel
     '
     Me.btnexcel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-    Me.btnexcel.Image = Global.WWTS.Roles.Modulo.My.Resources.Resources.docexcel
+    Me.btnexcel.Image = My.Resources.Resources.docexcel
     Me.btnexcel.ImageTransparentColor = System.Drawing.Color.Magenta
     Me.btnexcel.Name = "btnexcel"
     Me.btnexcel.Size = New System.Drawing.Size(23, 18)
@@ -209,7 +209,7 @@ Partial Class CtlAsistencia
     '
     'btnguardar
     '
-    Me.btnguardar.Image = Global.WWTS.Roles.Modulo.My.Resources.Resources.save16
+    Me.btnguardar.Image = My.Resources.Resources.save
     Me.btnguardar.ImageTransparentColor = System.Drawing.Color.Magenta
     Me.btnguardar.Name = "btnguardar"
     Me.btnguardar.Size = New System.Drawing.Size(123, 18)
@@ -218,7 +218,7 @@ Partial Class CtlAsistencia
     'btneliminar
     '
     Me.btneliminar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-    Me.btneliminar.Image = Global.WWTS.Roles.Modulo.My.Resources.Resources.eliminar
+    Me.btneliminar.Image = My.Resources.Resources.eliminar
     Me.btneliminar.ImageTransparentColor = System.Drawing.Color.Magenta
     Me.btneliminar.Name = "btneliminar"
     Me.btneliminar.Size = New System.Drawing.Size(23, 18)
@@ -231,7 +231,7 @@ Partial Class CtlAsistencia
     '
     'btnCambiarArea
     '
-    Me.btnCambiarArea.Image = Global.WWTS.Roles.Modulo.My.Resources.Resources.APROBAR
+    Me.btnCambiarArea.Image = My.Resources.Resources.APROBAR
     Me.btnCambiarArea.ImageTransparentColor = System.Drawing.Color.Magenta
     Me.btnCambiarArea.Name = "btnCambiarArea"
     Me.btnCambiarArea.Size = New System.Drawing.Size(99, 18)
@@ -239,7 +239,7 @@ Partial Class CtlAsistencia
     '
     'btnCambiarLote
     '
-    Me.btnCambiarLote.Image = Global.WWTS.Roles.Modulo.My.Resources.Resources.APROBAR
+    Me.btnCambiarLote.Image = My.Resources.Resources.APROBAR
     Me.btnCambiarLote.ImageTransparentColor = System.Drawing.Color.Magenta
     Me.btnCambiarLote.Name = "btnCambiarLote"
     Me.btnCambiarLote.Size = New System.Drawing.Size(98, 18)
@@ -252,7 +252,7 @@ Partial Class CtlAsistencia
     '
     'btnModeloLabor
     '
-    Me.btnModeloLabor.Image = Global.WWTS.Roles.Modulo.My.Resources.Resources.abrir
+    Me.btnModeloLabor.Image = My.Resources.Resources.open
     Me.btnModeloLabor.ImageTransparentColor = System.Drawing.Color.Magenta
     Me.btnModeloLabor.Name = "btnModeloLabor"
     Me.btnModeloLabor.Size = New System.Drawing.Size(114, 18)

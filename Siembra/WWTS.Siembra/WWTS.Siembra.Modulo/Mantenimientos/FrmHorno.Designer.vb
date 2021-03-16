@@ -27,7 +27,7 @@ Partial Class FrmHorno
     Me.Label5 = New System.Windows.Forms.Label
     Me.txtcodigo = New Infoware.Controles.Base.TextBoxStd
     Me.txtnombre = New Infoware.Controles.Base.TextBoxStd
-    Me.CtlTerreno1 = New WWTS.Siembra.Modulo.CtlTerreno
+    Me.CtlTerreno1 = New CtlTerreno
     Me.txtnumaposentos = New Infoware.Controles.Base.TextBoxCalculator
     Me.txtcujes = New Infoware.Controles.Base.TextBoxCalculator
     Me.SuspendLayout()
@@ -157,7 +157,7 @@ Partial Class FrmHorno
   Friend WithEvents Label5 As System.Windows.Forms.Label
   Friend WithEvents txtcodigo As Infoware.Controles.Base.TextBoxStd
   Friend WithEvents txtnombre As Infoware.Controles.Base.TextBoxStd
-  Friend WithEvents CtlTerreno1 As WWTS.Siembra.Modulo.CtlTerreno
+  Friend WithEvents CtlTerreno1 As CtlTerreno
   Friend WithEvents txtnumaposentos As Infoware.Controles.Base.TextBoxCalculator
   Friend WithEvents txtcujes As Infoware.Controles.Base.TextBoxCalculator
 

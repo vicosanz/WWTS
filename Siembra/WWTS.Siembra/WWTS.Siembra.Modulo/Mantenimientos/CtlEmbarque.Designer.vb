@@ -20,7 +20,7 @@ Partial Class CtlEmbarque
   <System.Diagnostics.DebuggerStepThrough()> _
   Private Sub InitializeComponent()
     Me.components = New System.ComponentModel.Container
-    Me.CtlZafra1 = New WWTS.Siembra.Modulo.CtlZafra
+    Me.CtlZafra1 = New CtlZafra
     Me.lstEmbarque = New System.Windows.Forms.ListBox
     Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
     Me.mnunuevo = New System.Windows.Forms.ToolStripMenuItem
@@ -106,7 +106,7 @@ Partial Class CtlEmbarque
     Me.ResumeLayout(False)
 
   End Sub
-  Friend WithEvents CtlZafra1 As WWTS.Siembra.Modulo.CtlZafra
+  Friend WithEvents CtlZafra1 As CtlZafra
   Friend WithEvents lstEmbarque As System.Windows.Forms.ListBox
   Friend WithEvents ContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
   Friend WithEvents mnunuevo As System.Windows.Forms.ToolStripMenuItem

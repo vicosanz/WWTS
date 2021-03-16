@@ -24,7 +24,7 @@ Partial Class CtlTarjEnsarte
     Me.Panel1 = New System.Windows.Forms.Panel()
     Me.GroupBox2 = New System.Windows.Forms.GroupBox()
     Me.pn1 = New System.Windows.Forms.Panel()
-    Me.CtlZafra1 = New WWTS.Siembra.Modulo.CtlZafra()
+    Me.CtlZafra1 = New CtlZafra()
     Me.Label14 = New System.Windows.Forms.Label()
     Me.txtNumEns = New System.Windows.Forms.TextBox()
     Me.Label1 = New System.Windows.Forms.Label()
@@ -44,10 +44,10 @@ Partial Class CtlTarjEnsarte
     Me.txtcujesnat = New Infoware.Controles.Base.TextBoxCalculator()
     Me.Label2 = New System.Windows.Forms.Label()
     Me.Label4 = New System.Windows.Forms.Label()
-    Me.CtlSeccionHorno1 = New WWTS.Siembra.Modulo.CtlSeccionHorno()
-    Me.CtlCorte1 = New WWTS.Siembra.Modulo.CtlCorte()
-    Me.CtlSemilla1 = New WWTS.Siembra.Modulo.CtlSemilla()
-    Me.CtlLote1 = New WWTS.Siembra.Modulo.CtlLote()
+    Me.CtlSeccionHorno1 = New CtlSeccionHorno()
+    Me.CtlCorte1 = New CtlCorte()
+    Me.CtlSemilla1 = New CtlSemilla()
+    Me.CtlLote1 = New CtlLote()
     Me.chkestazafada = New System.Windows.Forms.CheckBox()
     Me.Label13 = New System.Windows.Forms.Label()
     Me.Label5 = New System.Windows.Forms.Label()
@@ -241,7 +241,7 @@ Partial Class CtlTarjEnsarte
     'btnnuevo
     '
     Me.btnnuevo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-    Me.btnnuevo.Image = Global.WWTS.Siembra.Modulo.My.Resources.Resources.nuevo
+    Me.btnnuevo.Image = My.Resources.Resources.nuevo
     Me.btnnuevo.ImageTransparentColor = System.Drawing.Color.Magenta
     Me.btnnuevo.Name = "btnnuevo"
     Me.btnnuevo.Size = New System.Drawing.Size(23, 22)
@@ -250,7 +250,7 @@ Partial Class CtlTarjEnsarte
     'btneli
     '
     Me.btneli.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-    Me.btneli.Image = Global.WWTS.Siembra.Modulo.My.Resources.Resources.eliminar
+    Me.btneli.Image = My.Resources.Resources.eliminar
     Me.btneli.ImageTransparentColor = System.Drawing.Color.White
     Me.btneli.Name = "btneli"
     Me.btneli.Size = New System.Drawing.Size(23, 22)
@@ -259,7 +259,7 @@ Partial Class CtlTarjEnsarte
     'btnguardar
     '
     Me.btnguardar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-    Me.btnguardar.Image = Global.WWTS.Siembra.Modulo.My.Resources.Resources.save16
+    Me.btnguardar.Image = My.Resources.Resources.save16
     Me.btnguardar.ImageTransparentColor = System.Drawing.Color.Magenta
     Me.btnguardar.Name = "btnguardar"
     Me.btnguardar.Size = New System.Drawing.Size(23, 22)
@@ -678,15 +678,15 @@ Partial Class CtlTarjEnsarte
   Friend WithEvents Label3 As System.Windows.Forms.Label
   Friend WithEvents nuevo As System.Windows.Forms.PictureBox
   Friend WithEvents grabar As System.Windows.Forms.PictureBox
-  Friend WithEvents CtlZafra1 As WWTS.Siembra.Modulo.CtlZafra
+  Friend WithEvents CtlZafra1 As CtlZafra
   Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
   Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
   Friend WithEvents Label2 As System.Windows.Forms.Label
   Friend WithEvents Label4 As System.Windows.Forms.Label
-  Friend WithEvents CtlSeccionHorno1 As WWTS.Siembra.Modulo.CtlSeccionHorno
-  Friend WithEvents CtlCorte1 As WWTS.Siembra.Modulo.CtlCorte
-  Friend WithEvents CtlSemilla1 As WWTS.Siembra.Modulo.CtlSemilla
-  Friend WithEvents CtlLote1 As WWTS.Siembra.Modulo.CtlLote
+  Friend WithEvents CtlSeccionHorno1 As CtlSeccionHorno
+  Friend WithEvents CtlCorte1 As CtlCorte
+  Friend WithEvents CtlSemilla1 As CtlSemilla
+  Friend WithEvents CtlLote1 As CtlLote
   Friend WithEvents chkestazafada As System.Windows.Forms.CheckBox
   Friend WithEvents Label13 As System.Windows.Forms.Label
   Friend WithEvents Label5 As System.Windows.Forms.Label

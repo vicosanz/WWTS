@@ -75,7 +75,7 @@ Partial Class FrmBeneficiosSociales
     Me.bsUtilidad = New System.Windows.Forms.BindingSource(Me.components)
     Me.DataGridViewTextBoxColumn70 = New System.Windows.Forms.DataGridViewTextBoxColumn()
     Me.Panel1 = New System.Windows.Forms.Panel()
-    Me.CtlPatronoCombo1 = New WWTS.Roles.Modulo.CtlPatronoCombo()
+    Me.CtlPatronoCombo1 = New WWTS.Roles.Controles.CtlPatronoCombo()
     Me.txtUtiBonoCargas = New Infoware.Controles.Base.TextBoxCalculator()
     Me.txtUtiBono = New Infoware.Controles.Base.TextBoxCalculator()
     Me.txtMinimoUtilidad = New Infoware.Controles.Base.TextBoxCalculator()
@@ -110,7 +110,7 @@ Partial Class FrmBeneficiosSociales
     Me.Label13 = New System.Windows.Forms.Label()
     Me.btnconsbenacum = New Infoware.Controles.Base.ButtonStd()
     Me.Label4 = New System.Windows.Forms.Label()
-    Me.CtlBuscaEmpleados1 = New WWTS.Roles.Modulo.CtlBuscaEmpleados()
+    Me.CtlBuscaEmpleados1 = New WWTS.Roles.Controles.CtlBuscaEmpleados()
     Me.TabPage5 = New System.Windows.Forms.TabPage()
     Me.Panel4 = New System.Windows.Forms.Panel()
     Me.Panel5 = New System.Windows.Forms.Panel()
@@ -123,8 +123,8 @@ Partial Class FrmBeneficiosSociales
     Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
     Me.btnLiquidarVacaciones = New System.Windows.Forms.ToolStripButton()
     Me.btnimprimirvacacion = New System.Windows.Forms.ToolStripButton()
-    Me.CtlPeriodoVacacion1 = New WWTS.Roles.Modulo.CtlPeriodoVacacion()
-    Me.CtlBuscaEmpleados2 = New WWTS.Roles.Modulo.CtlBuscaEmpleados()
+    Me.CtlPeriodoVacacion1 = New CtlPeriodoVacacion()
+    Me.CtlBuscaEmpleados2 = New WWTS.Roles.Controles.CtlBuscaEmpleados()
     Me.HeaderStrip1 = New Infoware.Consola.Base.HeaderStrip()
     Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
     Me.DataGridViewTextBoxColumn55 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -340,7 +340,7 @@ Partial Class FrmBeneficiosSociales
     'btnExcel
     '
     Me.btnExcel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-    Me.btnExcel.Image = Global.WWTS.Roles.Modulo.My.Resources.Resources.docexcel
+    Me.btnExcel.Image = My.Resources.Resources.docexcel
     Me.btnExcel.ImageTransparentColor = System.Drawing.Color.Magenta
     Me.btnExcel.Name = "btnExcel"
     Me.btnExcel.Size = New System.Drawing.Size(23, 23)
@@ -353,7 +353,7 @@ Partial Class FrmBeneficiosSociales
     '
     'btncerrar
     '
-    Me.btncerrar.Image = Global.WWTS.Roles.Modulo.My.Resources.Resources.save16
+    Me.btncerrar.Image = My.Resources.Resources.save
     Me.btncerrar.ImageTransparentColor = System.Drawing.Color.Magenta
     Me.btncerrar.Name = "btncerrar"
     Me.btncerrar.Size = New System.Drawing.Size(285, 23)
@@ -1205,7 +1205,7 @@ Partial Class FrmBeneficiosSociales
     '
     'btnLiquidarVacaciones
     '
-    Me.btnLiquidarVacaciones.Image = Global.WWTS.Roles.Modulo.My.Resources.Resources.save16
+    Me.btnLiquidarVacaciones.Image = My.Resources.Resources.save
     Me.btnLiquidarVacaciones.ImageTransparentColor = System.Drawing.Color.Magenta
     Me.btnLiquidarVacaciones.Name = "btnLiquidarVacaciones"
     Me.btnLiquidarVacaciones.Size = New System.Drawing.Size(146, 23)
@@ -1213,7 +1213,7 @@ Partial Class FrmBeneficiosSociales
     '
     'btnimprimirvacacion
     '
-    Me.btnimprimirvacacion.Image = Global.WWTS.Roles.Modulo.My.Resources.Resources.print
+    Me.btnimprimirvacacion.Image = My.Resources.Resources.print
     Me.btnimprimirvacacion.ImageTransparentColor = System.Drawing.Color.Magenta
     Me.btnimprimirvacacion.Name = "btnimprimirvacacion"
     Me.btnimprimirvacacion.Size = New System.Drawing.Size(145, 23)
@@ -1721,7 +1721,7 @@ Partial Class FrmBeneficiosSociales
   Friend WithEvents btncalcularuti As Infoware.Controles.Base.ButtonStd
   Friend WithEvents DataGridViewUti As Infoware.Consola.Base.DataGridViewAutoDiscover
   Friend WithEvents TabPage5 As System.Windows.Forms.TabPage
-  Friend WithEvents CtlPeriodoVacacion1 As WWTS.Roles.Modulo.CtlPeriodoVacacion
+  Friend WithEvents CtlPeriodoVacacion1 As CtlPeriodoVacacion
   Friend WithEvents DataGridViewVacaDetalle As Infoware.Consola.Base.DataGridViewAutoDiscover
   Friend WithEvents bsperiodovacacion As System.Windows.Forms.BindingSource
   Friend WithEvents tbotros As System.Windows.Forms.TabPage
@@ -1742,7 +1742,7 @@ Partial Class FrmBeneficiosSociales
   Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
   Friend WithEvents btnReporte As System.Windows.Forms.ToolStripDropDownButton
   Friend WithEvents BeneficioToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-  Friend WithEvents CtlPatronoCombo1 As WWTS.Roles.Modulo.CtlPatronoCombo
+  Friend WithEvents CtlPatronoCombo1 As WWTS.Roles.Controles.CtlPatronoCombo
   Friend WithEvents Label1 As System.Windows.Forms.Label
   Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
   Friend WithEvents btnLiquidarVacaciones As System.Windows.Forms.ToolStripButton
@@ -1786,14 +1786,14 @@ Partial Class FrmBeneficiosSociales
   Friend WithEvents DataGridViewTextBoxColumn36 As System.Windows.Forms.DataGridViewTextBoxColumn
   Friend WithEvents ToolStripMenuItem1 As System.Windows.Forms.ToolStripSeparator
   Friend WithEvents PersonalAdicionalParaUtilidadesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-  Friend WithEvents CtlBuscaEmpleados1 As WWTS.Roles.Modulo.CtlBuscaEmpleados
+  Friend WithEvents CtlBuscaEmpleados1 As WWTS.Roles.Controles.CtlBuscaEmpleados
   Friend WithEvents DataGridViewTextBoxColumn37 As System.Windows.Forms.DataGridViewTextBoxColumn
   Friend WithEvents DataGridViewTextBoxColumn38 As System.Windows.Forms.DataGridViewTextBoxColumn
   Friend WithEvents DataGridViewTextBoxColumn39 As System.Windows.Forms.DataGridViewTextBoxColumn
   Friend WithEvents DataGridViewTextBoxColumn40 As System.Windows.Forms.DataGridViewTextBoxColumn
   Friend WithEvents DataGridViewTextBoxColumn41 As System.Windows.Forms.DataGridViewTextBoxColumn
   Friend WithEvents DataGridViewTextBoxColumn42 As System.Windows.Forms.DataGridViewTextBoxColumn
-  Friend WithEvents CtlBuscaEmpleados2 As WWTS.Roles.Modulo.CtlBuscaEmpleados
+  Friend WithEvents CtlBuscaEmpleados2 As WWTS.Roles.Controles.CtlBuscaEmpleados
   Friend WithEvents txtMinimoUtilidad As Infoware.Controles.Base.TextBoxCalculator
   Friend WithEvents Label3 As System.Windows.Forms.Label
   Friend WithEvents DataGridViewTextBoxColumn43 As System.Windows.Forms.DataGridViewTextBoxColumn

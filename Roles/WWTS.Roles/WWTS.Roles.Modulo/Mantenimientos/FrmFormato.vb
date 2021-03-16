@@ -57,6 +57,6 @@ Public Class FrmFormato
   End Sub
 
   Private Sub btnEjecutar_Click(sender As System.Object, e As System.EventArgs) Handles btnEjecutar.Click
-    Roles.Reglas.ExcelReporte.ImpuestoRenta.Imprimir_Formato(CtlPatrono1.Patrono, CtlPeriodo1.PeriodoPago, ComboBoxTipo.ParametroDet)
+    ExcelReporte.ImpuestoRenta.Imprimir_Formato(CtlPatrono1.Patrono, CtlPeriodo1.PeriodoPago, ComboBoxTipo.ParametroDet)
   End Sub
 End Class

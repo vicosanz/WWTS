@@ -48,15 +48,15 @@ Partial Class CtlBuscaTarjetaEnsZaf
     Me.Label5 = New System.Windows.Forms.Label
     Me.chknumerozafada = New System.Windows.Forms.CheckBox
     Me.pnlsolocorte = New System.Windows.Forms.Panel
-    Me.CtlCorte1 = New WWTS.Siembra.Modulo.CtlCorte
+    Me.CtlCorte1 = New CtlCorte
     Me.Panel12 = New System.Windows.Forms.Panel
     Me.chksolocorte = New System.Windows.Forms.CheckBox
     Me.pnlsolosemilla = New System.Windows.Forms.Panel
-    Me.CtlSemilla1 = New WWTS.Siembra.Modulo.CtlSemilla
+    Me.CtlSemilla1 = New CtlSemilla
     Me.Panel5 = New System.Windows.Forms.Panel
     Me.chksolosemilla = New System.Windows.Forms.CheckBox
     Me.pnlsolohorno = New System.Windows.Forms.Panel
-    Me.CtlSeccionHorno1 = New WWTS.Siembra.Modulo.CtlSeccionHorno
+    Me.CtlSeccionHorno1 = New CtlSeccionHorno
     Me.Panel3 = New System.Windows.Forms.Panel
     Me.chksolohornosec = New System.Windows.Forms.CheckBox
     Me.pnlfechaensarte = New System.Windows.Forms.Panel
@@ -67,14 +67,14 @@ Partial Class CtlBuscaTarjetaEnsZaf
     Me.Panel11 = New System.Windows.Forms.Panel
     Me.chkfechaensarte = New System.Windows.Forms.CheckBox
     Me.pnlsololote = New System.Windows.Forms.Panel
-    Me.CtlLote1 = New WWTS.Siembra.Modulo.CtlLote
+    Me.CtlLote1 = New CtlLote
     Me.Panel2 = New System.Windows.Forms.Panel
     Me.chksololote = New System.Windows.Forms.CheckBox
     Me.pnlsolofinca = New System.Windows.Forms.Panel
-    Me.CtlTerreno1 = New WWTS.Siembra.Modulo.CtlTerreno
+    Me.CtlTerreno1 = New CtlTerreno
     Me.Panel16 = New System.Windows.Forms.Panel
     Me.chksolofinca = New System.Windows.Forms.CheckBox
-    Me.CtlZafra1 = New WWTS.Siembra.Modulo.CtlZafra
+    Me.CtlZafra1 = New CtlZafra
     Me.Label1 = New System.Windows.Forms.Label
     Me.lblstatus = New System.Windows.Forms.Label
     Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
@@ -820,11 +820,11 @@ Partial Class CtlBuscaTarjetaEnsZaf
   Friend WithEvents Label5 As System.Windows.Forms.Label
   Friend WithEvents chknumerozafada As System.Windows.Forms.CheckBox
   Friend WithEvents pnlsolocorte As System.Windows.Forms.Panel
-  Friend WithEvents CtlCorte1 As WWTS.Siembra.Modulo.CtlCorte
+  Friend WithEvents CtlCorte1 As CtlCorte
   Friend WithEvents Panel12 As System.Windows.Forms.Panel
   Friend WithEvents chksolocorte As System.Windows.Forms.CheckBox
   Friend WithEvents pnlsolosemilla As System.Windows.Forms.Panel
-  Friend WithEvents CtlSemilla1 As WWTS.Siembra.Modulo.CtlSemilla
+  Friend WithEvents CtlSemilla1 As CtlSemilla
   Friend WithEvents Panel5 As System.Windows.Forms.Panel
   Friend WithEvents chksolosemilla As System.Windows.Forms.CheckBox
   Friend WithEvents pnlsolohorno As System.Windows.Forms.Panel
@@ -838,17 +838,17 @@ Partial Class CtlBuscaTarjetaEnsZaf
   Friend WithEvents Panel11 As System.Windows.Forms.Panel
   Friend WithEvents chkfechaensarte As System.Windows.Forms.CheckBox
   Friend WithEvents pnlsololote As System.Windows.Forms.Panel
-  Friend WithEvents CtlLote1 As WWTS.Siembra.Modulo.CtlLote
+  Friend WithEvents CtlLote1 As CtlLote
   Friend WithEvents Panel2 As System.Windows.Forms.Panel
   Friend WithEvents chksololote As System.Windows.Forms.CheckBox
   Friend WithEvents pnlsolofinca As System.Windows.Forms.Panel
-  Friend WithEvents CtlTerreno1 As WWTS.Siembra.Modulo.CtlTerreno
+  Friend WithEvents CtlTerreno1 As CtlTerreno
   Friend WithEvents Panel16 As System.Windows.Forms.Panel
   Friend WithEvents chksolofinca As System.Windows.Forms.CheckBox
-  Friend WithEvents CtlZafra1 As WWTS.Siembra.Modulo.CtlZafra
+  Friend WithEvents CtlZafra1 As CtlZafra
   Friend WithEvents Label1 As System.Windows.Forms.Label
   Friend WithEvents lblstatus As System.Windows.Forms.Label
-  Friend WithEvents CtlSeccionHorno1 As WWTS.Siembra.Modulo.CtlSeccionHorno
+  Friend WithEvents CtlSeccionHorno1 As CtlSeccionHorno
   Friend WithEvents ContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
   Friend WithEvents SeleccionarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
   Friend WithEvents mnu25 As System.Windows.Forms.ToolStripMenuItem

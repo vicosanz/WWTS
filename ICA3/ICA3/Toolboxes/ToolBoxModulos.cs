@@ -71,6 +71,8 @@ namespace ICA3.Toolboxes
                 _node.ImageIndex = 0;
                 _node.SelectedImageIndex = 0;
                 TreeNode _primeraopcion = null;
+                _Sistema.SistemaObjeto.ActualizacionesMensaje += SistemaObjeto_ActualizacionesMensaje;
+                _Sistema.SistemaObjeto.ComprobarActualizaciones().ConfigureAwait(false);
                 List<GrupoOpcion> _grupoopciones = _Sistema.SistemaObjeto.CargarListaGrupoOpciones(_Sistema);
                 foreach(GrupoOpcion _grupoopcion in _grupoopciones)
                 {
@@ -151,6 +153,11 @@ namespace ICA3.Toolboxes
             }
         }
 
+        private void SistemaObjeto_ActualizacionesMensaje(object sender, string e)
+        {
+            MensajeError?.Invoke(this, e);
+        }
+
         private void EjecutarOpcion()
         {
             if (!(treeView1.SelectedNode.Tag is Opcion))
@@ -160,7 +167,7 @@ namespace ICA3.Toolboxes
             Opcion _opcion = (Opcion)treeView1.SelectedNode.Tag;
             bool _existe = false;
 
-            if (DockPanel.DocumentStyle == WeifenLuo.WinFormsUI.Docking.DocumentStyle.SystemMdi)
+            if (DockPanel.DocumentStyle == DocumentStyle.SystemMdi)
             {
                 foreach (Form forma in MdiChildren)
                 {
@@ -239,10 +246,10 @@ namespace ICA3.Toolboxes
             DockPanel.ResumeLayout(true, true);
         }
 
-        public event EventHandler MensajeError;
+        public event EventHandler<string> MensajeError;
         private void CapturarError(object sender, Infoware.Datos.OperadorDatosErrorEventArgs e)
         {
-            MensajeError?.Invoke(this, null);
+            MensajeError?.Invoke(this, e.Message);
         }
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)

@@ -577,7 +577,7 @@ Public Class FrmLiquidacion
       Exit Sub
     End If
 
-    Roles.Reglas.ExcelReporte.LiquidacionHaberes.Imprimir_Liquidacion(Contrato, BSRubroDet.DataSource, Sistema.UsuarioString)
+    ExcelReporte.LiquidacionHaberes.Imprimir_Liquidacion(Contrato, BSRubroDet.DataSource, Sistema.UsuarioString)
   End Sub
 
   Private Sub MedioDeAprobacionToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles MedioDeAprobacionToolStripMenuItem.Click
@@ -586,7 +586,7 @@ Public Class FrmLiquidacion
       Exit Sub
     End If
 
-    Roles.Reglas.ExcelReporte.LiquidacionHaberes.Imprimir_MedioAprobacion(Contrato, BSRubroDet.DataSource, Sistema.UsuarioString)
+    ExcelReporte.LiquidacionHaberes.Imprimir_MedioAprobacion(Contrato, BSRubroDet.DataSource, Sistema.UsuarioString)
   End Sub
 
   Private Sub DataGridView1_CellFormatting(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellFormattingEventArgs) Handles dgdetliq.CellFormatting

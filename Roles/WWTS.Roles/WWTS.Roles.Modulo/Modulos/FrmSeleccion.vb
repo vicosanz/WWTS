@@ -58,8 +58,9 @@ Public Class FrmSeleccion
       Exit Sub
     End If
 
-    Dim f As New FrmMantenimientoSeleccion(Sistema, Restriccion)
-    f.Seleccions = ListBindingSource
+    Dim f As New WWTS.Roles.Controles.FrmMantenimientoSeleccion(Sistema, Restriccion) With {
+      .Seleccions = ListBindingSource
+    }
     f.ShowDialog()
     If ListBindingSource.Count <= 1 Then
       RefrescarLista()

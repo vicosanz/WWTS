@@ -52,11 +52,11 @@ Partial Class FrmEnsarteZafadura
     Me.Label2 = New System.Windows.Forms.Label()
     Me.HeaderStrip1 = New Infoware.Consola.Base.HeaderStrip()
     Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
-    Me.CtlTarjEnsarte1 = New WWTS.Siembra.Modulo.CtlTarjEnsarte()
-    Me.CtlBuscaTarjetaEnsZaf1 = New WWTS.Siembra.Modulo.CtlBuscaTarjetaEnsZaf()
-    Me.CtlZafra1 = New WWTS.Siembra.Modulo.CtlZafra()
-    Me.CtlZafra2 = New WWTS.Siembra.Modulo.CtlZafra()
-    Me.CtlZafra3 = New WWTS.Siembra.Modulo.CtlZafra()
+    Me.CtlTarjEnsarte1 = New CtlTarjEnsarte()
+    Me.CtlBuscaTarjetaEnsZaf1 = New CtlBuscaTarjetaEnsZaf()
+    Me.CtlZafra1 = New CtlZafra()
+    Me.CtlZafra2 = New CtlZafra()
+    Me.CtlZafra3 = New CtlZafra()
     CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
     Me.PnlCuerpo.SuspendLayout()
     Me.TabControl1.SuspendLayout()
@@ -564,17 +564,17 @@ Partial Class FrmEnsarteZafadura
   Friend WithEvents PnlCuerpo As System.Windows.Forms.Panel
   Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
   Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
-  Friend WithEvents CtlBuscaTarjetaEnsZaf1 As WWTS.Siembra.Modulo.CtlBuscaTarjetaEnsZaf
+  Friend WithEvents CtlBuscaTarjetaEnsZaf1 As CtlBuscaTarjetaEnsZaf
   Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
   Friend WithEvents TabPage3 As System.Windows.Forms.TabPage
   Friend WithEvents TabPage4 As System.Windows.Forms.TabPage
   Friend WithEvents HeaderStrip1 As Infoware.Consola.Base.HeaderStrip
   Friend WithEvents ToolStripLabel1 As System.Windows.Forms.ToolStripLabel
-  Friend WithEvents CtlTarjEnsarte1 As WWTS.Siembra.Modulo.CtlTarjEnsarte
+  Friend WithEvents CtlTarjEnsarte1 As CtlTarjEnsarte
   Friend WithEvents Panel1 As System.Windows.Forms.Panel
   Friend WithEvents rdotabcand As System.Windows.Forms.RadioButton
   Friend WithEvents rdotabnat As System.Windows.Forms.RadioButton
-  Friend WithEvents CtlZafra1 As WWTS.Siembra.Modulo.CtlZafra
+  Friend WithEvents CtlZafra1 As CtlZafra
   Friend WithEvents dtcortadoensal As System.Windows.Forms.DateTimePicker
   Friend WithEvents chkcortadoensal As System.Windows.Forms.CheckBox
   Friend WithEvents btnmostrarsaldo As System.Windows.Forms.Button
@@ -582,7 +582,7 @@ Partial Class FrmEnsarteZafadura
   Friend WithEvents crvsaldocujes As CrystalDecisions.Windows.Forms.CrystalReportViewer
   Friend WithEvents crvdispo As CrystalDecisions.Windows.Forms.CrystalReportViewer
   Friend WithEvents Panel3 As System.Windows.Forms.Panel
-  Friend WithEvents CtlZafra2 As WWTS.Siembra.Modulo.CtlZafra
+  Friend WithEvents CtlZafra2 As CtlZafra
   Friend WithEvents dtfechastadispo As System.Windows.Forms.DateTimePicker
   Friend WithEvents chkhastadispo As System.Windows.Forms.CheckBox
   Friend WithEvents btnmostrardispo As System.Windows.Forms.Button
@@ -591,7 +591,7 @@ Partial Class FrmEnsarteZafadura
   Friend WithEvents Panel2 As System.Windows.Forms.Panel
   Friend WithEvents rdotabcandzaf As System.Windows.Forms.RadioButton
   Friend WithEvents rdotabnatzaf As System.Windows.Forms.RadioButton
-  Friend WithEvents CtlZafra3 As WWTS.Siembra.Modulo.CtlZafra
+  Friend WithEvents CtlZafra3 As CtlZafra
   Friend WithEvents dtcortadozafal As System.Windows.Forms.DateTimePicker
   Friend WithEvents chkcortadozafal As System.Windows.Forms.CheckBox
   Friend WithEvents btnmostrarzaf As System.Windows.Forms.Button

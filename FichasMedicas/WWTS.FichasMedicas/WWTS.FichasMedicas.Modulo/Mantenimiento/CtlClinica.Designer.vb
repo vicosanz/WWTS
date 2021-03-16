@@ -85,7 +85,7 @@ Partial Class CtlClinica
 
   End Sub
 
-  Friend WithEvents ComboBoxParametroDetClinica As General.Controles.ComboBoxParametroDet
+  Friend WithEvents ComboBoxParametroDetClinica As WWTS.General.Controles.ComboBoxParametroDet
   Friend WithEvents Label1 As Label
   Friend WithEvents Label2 As Label
   Friend WithEvents Ficha_ArchivoNum As TextBox

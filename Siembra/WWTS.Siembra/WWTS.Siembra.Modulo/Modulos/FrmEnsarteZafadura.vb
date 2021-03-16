@@ -186,7 +186,7 @@ Public Class FrmEnsarteZafadura
 
   Private Sub btnmostrardispo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnmostrardispo.Click
     Try
-      Dim info As ReportClass
+      Dim info As ReportDocument
       info = New crpDisponibilidadCujes
       info.DataDefinition.FormulaFields("Titulo").Text = "'Reporte de Disponibilidad de Cujes - " & "Zafra " & Me.CtlZafra2.Zafra.Zaf_descripcion & "'"
       If Me.chkhastadispo.Checked Then

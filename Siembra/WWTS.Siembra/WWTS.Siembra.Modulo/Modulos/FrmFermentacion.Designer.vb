@@ -23,12 +23,12 @@ Partial Class FrmFermentacion
     Me.PnlCuerpo = New System.Windows.Forms.Panel()
     Me.TabControl1 = New System.Windows.Forms.TabControl()
     Me.TabPage1 = New System.Windows.Forms.TabPage()
-    Me.CtlBloque1 = New WWTS.Siembra.Modulo.CtlBloque()
-    Me.CtlBuscaBloqueFermentacion1 = New WWTS.Siembra.Modulo.CtlBuscaBloqueFermentacion()
+    Me.CtlBloque1 = New CtlBloque()
+    Me.CtlBuscaBloqueFermentacion1 = New CtlBuscaBloqueFermentacion()
     Me.TabPage2 = New System.Windows.Forms.TabPage()
     Me.crvsaldocujes = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
     Me.Panel2 = New System.Windows.Forms.Panel()
-    Me.CtlZafra1 = New WWTS.Siembra.Modulo.CtlZafra()
+    Me.CtlZafra1 = New CtlZafra()
     Me.dtcortadoensal = New System.Windows.Forms.DateTimePicker()
     Me.chkcortadoensal = New System.Windows.Forms.CheckBox()
     Me.btnmostrarsaldo = New System.Windows.Forms.Button()
@@ -256,14 +256,14 @@ Partial Class FrmFermentacion
   Friend WithEvents PnlCuerpo As System.Windows.Forms.Panel
   Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
   Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
-  Friend WithEvents CtlBuscaBloqueFermentacion1 As WWTS.Siembra.Modulo.CtlBuscaBloqueFermentacion
+  Friend WithEvents CtlBuscaBloqueFermentacion1 As CtlBuscaBloqueFermentacion
   Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
   Friend WithEvents HeaderStrip1 As Infoware.Consola.Base.HeaderStrip
   Friend WithEvents ToolStripLabel1 As System.Windows.Forms.ToolStripLabel
-  Friend WithEvents CtlBloque1 As WWTS.Siembra.Modulo.CtlBloque
+  Friend WithEvents CtlBloque1 As CtlBloque
   Friend WithEvents crvsaldocujes As CrystalDecisions.Windows.Forms.CrystalReportViewer
   Friend WithEvents Panel2 As System.Windows.Forms.Panel
-  Friend WithEvents CtlZafra1 As WWTS.Siembra.Modulo.CtlZafra
+  Friend WithEvents CtlZafra1 As CtlZafra
   Friend WithEvents dtcortadoensal As System.Windows.Forms.DateTimePicker
   Friend WithEvents chkcortadoensal As System.Windows.Forms.CheckBox
   Friend WithEvents btnmostrarsaldo As System.Windows.Forms.Button

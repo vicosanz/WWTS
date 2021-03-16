@@ -20,7 +20,7 @@ Partial Class CtlSeccionHorno
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
     Me.components = New System.ComponentModel.Container
-    Me.CtlHorno1 = New WWTS.Siembra.Modulo.CtlHorno
+    Me.CtlHorno1 = New CtlHorno
     Me.lstseccionhorno = New System.Windows.Forms.ComboBox
     Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
     Me.mnunuevo = New System.Windows.Forms.ToolStripMenuItem
@@ -103,7 +103,7 @@ Partial Class CtlSeccionHorno
     Me.ResumeLayout(False)
 
   End Sub
-  Friend WithEvents CtlHorno1 As WWTS.Siembra.Modulo.CtlHorno
+  Friend WithEvents CtlHorno1 As CtlHorno
   Friend WithEvents lstseccionhorno As System.Windows.Forms.ComboBox
   Friend WithEvents ContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
   Friend WithEvents mnunuevo As System.Windows.Forms.ToolStripMenuItem

@@ -23,8 +23,8 @@ Partial Class FrmAsistencias
     Me.Pnlcuerpo = New System.Windows.Forms.Panel()
     Me.TabControl1 = New System.Windows.Forms.TabControl()
     Me.TabPage1 = New System.Windows.Forms.TabPage()
-    Me.CtlAsistencia1 = New WWTS.Roles.Modulo.CtlAsistencia()
-    Me.CtlBuscaEmpleadosPeriodo1 = New WWTS.Roles.Modulo.CtlBuscaEmpleadosMarcacion()
+    Me.CtlAsistencia1 = New CtlAsistencia()
+    Me.CtlBuscaEmpleadosPeriodo1 = New CtlBuscaEmpleadosMarcacion()
     Me.HeaderStrip1 = New Infoware.Consola.Base.HeaderStrip()
     Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
     Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
@@ -173,7 +173,7 @@ Partial Class FrmAsistencias
   Friend WithEvents CtlBuscaEmpleadosPeriodo1 As CtlBuscaEmpleadosMarcacion
   Friend WithEvents HeaderStrip1 As Infoware.Consola.Base.HeaderStrip
   Friend WithEvents ToolStripLabel1 As System.Windows.Forms.ToolStripLabel
-  Friend WithEvents CtlAsistencia1 As WWTS.Roles.Modulo.CtlAsistencia
+  Friend WithEvents CtlAsistencia1 As CtlAsistencia
   Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
   Friend WithEvents btnReporte As System.Windows.Forms.ToolStripDropDownButton
   Friend WithEvents ListadoTomaAsistenciaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem

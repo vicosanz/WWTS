@@ -6,12 +6,11 @@ Imports Squirrel
 Imports System.Threading.Tasks
 
 Public Class Inicializacion
-  Implements Infoware.Consola.Base.IAplicacion
+  Implements IAplicacion
 
   Public Shared Sub Main()
-    CheckForUpdates().Wait()
     'ejecutar ica
-    Dim RutaICA As String = LeerClave()
+    Dim RutaICA As String = ICA3Helper.LeerClave()
 
     If Not My.Computer.FileSystem.FileExists(RutaICA) Then
       If MsgBox("No se pudo encontrar ICA3, ¿Desea encontrarlo usted mismo?", MsgBoxStyle.YesNo, "Pregunta") = MsgBoxResult.Yes Then
@@ -21,7 +20,7 @@ Public Class Inicializacion
 
         If ofd.ShowDialog = DialogResult.OK Then
           RutaICA = ofd.FileName
-          GuardarClave(RutaICA)
+          ICA3Helper.GuardarClave(RutaICA)
           My.Settings.Save()
         Else
           End
@@ -47,49 +46,6 @@ Public Class Inicializacion
     '  End If
     'Loop While Not mProcess.WaitForExit(1000)
   End Sub
-
-  Private Shared Async Function CheckForUpdates() As Task
-    Try
-      Using mgr As UpdateManager = Await UpdateManager.GitHubUpdateManager("https://github.com/vicosanz/FichasMedicasInstaller")
-        Await mgr.UpdateApp()
-      End Using
-    Catch ex As Exception
-
-    End Try
-  End Function
-
-  Public Shared Sub GuardarClave(ByVal valor As String)
-    Dim mDirectorioRaiz = System.IO.Path.Combine(My.Computer.FileSystem.SpecialDirectories.MyDocuments, "ICA3")
-    Dim mDirectorioConfig = System.IO.Path.Combine(mDirectorioRaiz, "Configuracion")
-
-    My.Computer.FileSystem.CreateDirectory(mDirectorioRaiz)
-    My.Computer.FileSystem.CreateDirectory(mDirectorioConfig)
-
-    Dim configFile As String
-    configFile = Path.Combine(mDirectorioConfig, "Link.config")
-
-    My.Computer.FileSystem.WriteAllText(configFile, valor, False)
-  End Sub
-
-  Public Shared Function LeerClave() As String
-    Dim mDirectorioRaiz = System.IO.Path.Combine(My.Computer.FileSystem.SpecialDirectories.MyDocuments, "ICA3")
-    Dim mDirectorioConfig = System.IO.Path.Combine(mDirectorioRaiz, "Configuracion")
-
-    My.Computer.FileSystem.CreateDirectory(mDirectorioRaiz)
-    My.Computer.FileSystem.CreateDirectory(mDirectorioConfig)
-
-    Dim configFile As String
-    configFile = Path.Combine(mDirectorioConfig, "Link.config")
-
-    Dim result As String = ""
-    Try
-      result = My.Computer.FileSystem.ReadAllText(configFile)
-    Catch ex As Exception
-
-    End Try
-
-    Return result
-  End Function
 
   Public Function Validacion(ByVal _Usuario As Infoware.Reglas.General.Usuario) As Boolean Implements Infoware.Consola.Base.IAplicacion.Validacion
     Dim _parametrodet As New Infoware.Reglas.General.ParametroDet(_Usuario.OperadorDatos, 5, 1)
@@ -161,5 +117,27 @@ Public Class Inicializacion
     End If
 
     Return _grupos
+  End Function
+
+  Public Event ActualizacionesMensaje As EventHandler(Of String) Implements IAplicacion.ActualizacionesMensaje
+
+  Public Async Function ComprobarActualizaciones() As Task(Of Boolean) Implements IAplicacion.ComprobarActualizaciones
+    Dim _updateInfo As UpdateInfo = Nothing
+    Dim result As Boolean = False
+    Try
+      RaiseEvent ActualizacionesMensaje(Me, "Comprobando actualizaciones...")
+
+      Using mgr As UpdateManager = Await UpdateManager.GitHubUpdateManager("https://github.com/vicosanz/FichasMedicasInstaller")
+        _updateInfo = Await mgr.CheckForUpdate()
+        If _updateInfo.ReleasesToApply.Any() Then
+          RaiseEvent ActualizacionesMensaje(Me, "Existen actualizaciones por aplicar")
+          result = True
+        End If
+        Await mgr.UpdateApp()
+      End Using
+    Catch ex As Exception
+      RaiseEvent ActualizacionesMensaje(Me, ex.Message)
+    End Try
+    Return result
   End Function
 End Class

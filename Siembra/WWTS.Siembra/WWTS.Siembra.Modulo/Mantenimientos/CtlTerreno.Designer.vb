@@ -20,7 +20,7 @@ Partial Class CtlTerreno
   <System.Diagnostics.DebuggerStepThrough()> _
   Private Sub InitializeComponent()
     Me.components = New System.ComponentModel.Container
-    Me.CtlHacienda1 = New WWTS.Siembra.Modulo.CtlHacienda
+    Me.CtlHacienda1 = New CtlHacienda
     Me.lstterreno = New System.Windows.Forms.ListBox
     Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
     Me.mnunuevo = New System.Windows.Forms.ToolStripMenuItem
@@ -107,7 +107,7 @@ Partial Class CtlTerreno
     Me.ResumeLayout(False)
 
   End Sub
-  Friend WithEvents CtlHacienda1 As WWTS.Siembra.Modulo.CtlHacienda
+  Friend WithEvents CtlHacienda1 As CtlHacienda
   Friend WithEvents lstterreno As System.Windows.Forms.ListBox
   Friend WithEvents ContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
   Friend WithEvents mnumodificar As System.Windows.Forms.ToolStripMenuItem

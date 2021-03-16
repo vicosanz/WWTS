@@ -31,7 +31,7 @@ Partial Class FrmPagoVario
     Me.rdosincodigo = New System.Windows.Forms.RadioButton()
     Me.Label5 = New System.Windows.Forms.Label()
     Me.txtvalor = New Infoware.Controles.Base.TextBoxCalculator()
-    Me.CtlBuscaEmpleado1 = New WWTS.Roles.Modulo.CtlBuscaEmpleado()
+    Me.CtlBuscaEmpleado1 = New CtlBuscaEmpleado()
     Me.chkmostrarenprovisiones = New System.Windows.Forms.CheckBox()
     CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
     Me.SuspendLayout()

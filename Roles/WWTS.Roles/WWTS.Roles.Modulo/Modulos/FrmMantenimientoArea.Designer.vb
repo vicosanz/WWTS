@@ -181,7 +181,7 @@ Partial Class FrmMantenimientoArea
     'btnnuevocargo
     '
     Me.btnnuevocargo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-    Me.btnnuevocargo.Image = Global.WWTS.Roles.Modulo.My.Resources.Resources.nuevo
+    Me.btnnuevocargo.Image = My.Resources.Resources._new
     Me.btnnuevocargo.ImageTransparentColor = System.Drawing.Color.Magenta
     Me.btnnuevocargo.Name = "btnnuevocargo"
     Me.btnnuevocargo.Size = New System.Drawing.Size(23, 18)
@@ -190,7 +190,7 @@ Partial Class FrmMantenimientoArea
     'btnmodificarcargo
     '
     Me.btnmodificarcargo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-    Me.btnmodificarcargo.Image = Global.WWTS.Roles.Modulo.My.Resources.Resources.abrir
+    Me.btnmodificarcargo.Image = My.Resources.Resources.open
     Me.btnmodificarcargo.ImageTransparentColor = System.Drawing.Color.Magenta
     Me.btnmodificarcargo.Name = "btnmodificarcargo"
     Me.btnmodificarcargo.Size = New System.Drawing.Size(23, 18)
@@ -199,7 +199,7 @@ Partial Class FrmMantenimientoArea
     'btneliminarcargo
     '
     Me.btneliminarcargo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-    Me.btneliminarcargo.Image = Global.WWTS.Roles.Modulo.My.Resources.Resources.eliminar
+    Me.btneliminarcargo.Image = My.Resources.Resources.eliminar
     Me.btneliminarcargo.ImageTransparentColor = System.Drawing.Color.Magenta
     Me.btneliminarcargo.Name = "btneliminarcargo"
     Me.btneliminarcargo.Size = New System.Drawing.Size(23, 18)

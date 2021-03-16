@@ -21,7 +21,7 @@ Partial Class FrmBloqueMov
   Private Sub InitializeComponent()
     Me.dtfecmov = New System.Windows.Forms.DateTimePicker
     Me.pnldestino = New System.Windows.Forms.Panel
-    Me.CtlCuarto2 = New WWTS.Siembra.Modulo.CtlCuarto
+    Me.CtlCuarto2 = New CtlCuarto
     Me.Label5 = New System.Windows.Forms.Label
     Me.cbotipomov = New System.Windows.Forms.ComboBox
     Me.Label2 = New System.Windows.Forms.Label
@@ -31,7 +31,7 @@ Partial Class FrmBloqueMov
     Me.Label6 = New System.Windows.Forms.Label
     Me.txtnumcajas = New Infoware.Controles.Base.TextBoxCalculator
     Me.txtcantlibras = New Infoware.Controles.Base.TextBoxCalculator
-    Me.CtlCuarto1 = New WWTS.Siembra.Modulo.CtlCuarto
+    Me.CtlCuarto1 = New CtlCuarto
     Me.pnldestino.SuspendLayout()
     Me.SuspendLayout()
     '
@@ -202,7 +202,7 @@ Partial Class FrmBloqueMov
   Friend WithEvents Label6 As System.Windows.Forms.Label
   Friend WithEvents txtnumcajas As Infoware.Controles.Base.TextBoxCalculator
   Friend WithEvents txtcantlibras As Infoware.Controles.Base.TextBoxCalculator
-  Friend WithEvents CtlCuarto2 As WWTS.Siembra.Modulo.CtlCuarto
-  Friend WithEvents CtlCuarto1 As WWTS.Siembra.Modulo.CtlCuarto
+  Friend WithEvents CtlCuarto2 As CtlCuarto
+  Friend WithEvents CtlCuarto1 As CtlCuarto
 
 End Class

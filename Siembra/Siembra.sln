@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.1433
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31105.61
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WWTS.Siembra.Reglas", "WWTS.Siembra\WWTS.Siembra.Reglas\WWTS.Siembra.Reglas.vbproj", "{B6348E9D-0C68-4215-92AB-3E488C32829F}"
 EndProject
@@ -23,7 +23,7 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Infoware.Controles.General"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infoware.Consola.Base", "..\ICA3\Infoware.Consola.Base\Infoware.Consola.Base.csproj", "{69C85426-E02A-4AF6-894C-9CE05EBBC66E}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WWTS.Siembra.Modulo", "WWTS.Siembra\WWTS.Siembra.Modulo\WWTS.Siembra.Modulo.vbproj", "{CABE86F0-1D38-4626-9CFD-07C602F98B8B}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Siembra", "WWTS.Siembra\WWTS.Siembra.Modulo\Siembra.vbproj", "{CABE86F0-1D38-4626-9CFD-07C602F98B8B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "General", "General", "{82E5A76F-9935-4684-8A04-E022F90C532A}"
 EndProject

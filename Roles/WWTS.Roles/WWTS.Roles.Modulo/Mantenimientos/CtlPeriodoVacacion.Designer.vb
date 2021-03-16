@@ -67,7 +67,7 @@ Partial Class CtlPeriodoVacacion
     'btnnuevovacacion
     '
     Me.btnnuevovacacion.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-    Me.btnnuevovacacion.Image = Global.WWTS.Roles.Modulo.My.Resources.Resources.nuevo
+    Me.btnnuevovacacion.Image = My.Resources.Resources._new
     Me.btnnuevovacacion.ImageTransparentColor = System.Drawing.Color.Magenta
     Me.btnnuevovacacion.Name = "btnnuevovacacion"
     Me.btnnuevovacacion.Size = New System.Drawing.Size(23, 18)
@@ -76,7 +76,7 @@ Partial Class CtlPeriodoVacacion
     'btnabrirvacacion
     '
     Me.btnabrirvacacion.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-    Me.btnabrirvacacion.Image = Global.WWTS.Roles.Modulo.My.Resources.Resources.abrir
+    Me.btnabrirvacacion.Image = My.Resources.Resources.open
     Me.btnabrirvacacion.ImageTransparentColor = System.Drawing.Color.Magenta
     Me.btnabrirvacacion.Name = "btnabrirvacacion"
     Me.btnabrirvacacion.Size = New System.Drawing.Size(23, 18)
@@ -85,7 +85,7 @@ Partial Class CtlPeriodoVacacion
     'btneliminarvacacion
     '
     Me.btneliminarvacacion.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-    Me.btneliminarvacacion.Image = Global.WWTS.Roles.Modulo.My.Resources.Resources.eliminar
+    Me.btneliminarvacacion.Image = My.Resources.Resources.eliminar
     Me.btneliminarvacacion.ImageTransparentColor = System.Drawing.Color.Magenta
     Me.btneliminarvacacion.Name = "btneliminarvacacion"
     Me.btneliminarvacacion.Size = New System.Drawing.Size(23, 18)

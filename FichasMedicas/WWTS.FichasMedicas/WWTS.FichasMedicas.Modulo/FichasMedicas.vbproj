@@ -1,0 +1,565 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\packages\squirrel.windows.2.0.1\build\squirrel.windows.props" Condition="Exists('..\..\packages\squirrel.windows.2.0.1\build\squirrel.windows.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0BEEF6E2-B1F6-4FF4-935A-FE69A3AA1CE5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Sub Main</StartupObject>
+    <RootNamespace>FichasMedicas</RootNamespace>
+    <AssemblyName>FichasMedicas</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>\\nas\usershares\vicosanz\documents\Dropbox\fuentes\Domus2\WWTS\WWTS.FichasMedicas\Publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <WebPage>publish.htm</WebPage>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>FichasMedicas.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>FichasMedicas.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>A746D0889010D656169809F0574965B13F5AF904</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>WWTS.FichasMedicas.Modulo_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\fichasmedicasicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DeltaCompressionDotNet, Version=1.1.0.0, Culture=neutral, PublicKeyToken=1d14d6e5194e7f4a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\DeltaCompressionDotNet.1.1.0\lib\net20\DeltaCompressionDotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="DeltaCompressionDotNet.MsDelta, Version=1.1.0.0, Culture=neutral, PublicKeyToken=46b2138a390abf55, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\DeltaCompressionDotNet.1.1.0\lib\net20\DeltaCompressionDotNet.MsDelta.dll</HintPath>
+    </Reference>
+    <Reference Include="DeltaCompressionDotNet.PatchApi, Version=1.1.0.0, Culture=neutral, PublicKeyToken=3e8888ee913ed789, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\DeltaCompressionDotNet.1.1.0\lib\net20\DeltaCompressionDotNet.PatchApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Mono.Cecil, Version=0.11.2.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Mono.Cecil.0.11.2\lib\net40\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Mdb, Version=0.11.2.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Mono.Cecil.0.11.2\lib\net40\Mono.Cecil.Mdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Pdb, Version=0.11.2.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Mono.Cecil.0.11.2\lib\net40\Mono.Cecil.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Rocks, Version=0.11.2.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Mono.Cecil.0.11.2\lib\net40\Mono.Cecil.Rocks.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGet.Squirrel, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\squirrel.windows.2.0.1\lib\Net45\NuGet.Squirrel.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Serilog.2.10.0\lib\net46\Serilog.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Sinks.File, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Serilog.Sinks.File.4.1.0\lib\net45\Serilog.Sinks.File.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpCompress, Version=0.17.1.0, Culture=neutral, PublicKeyToken=afb0a02973931d96, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SharpCompress.0.17.1\lib\net45\SharpCompress.dll</HintPath>
+    </Reference>
+    <Reference Include="Squirrel, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\squirrel.windows.2.0.1\lib\Net45\Squirrel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=3.0.6.0, Culture=neutral, PublicKeyToken=5cded1a1a0a7b481, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\DockPanelSuite.3.0.6\lib\net40\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CtlContratoFichasMedicas.Designer.vb">
+      <DependentUpon>CtlContratoFichasMedicas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CtlContratoFichasMedicas.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrmMantenimientoEmpleado.Designer.vb">
+      <DependentUpon>FrmMantenimientoEmpleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMantenimientoEmpleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicializacion.vb" />
+    <Compile Include="Loader.vb" />
+    <Compile Include="Mantenimiento\CtlAccidentesTrabajo.Designer.vb">
+      <DependentUpon>CtlAccidentesTrabajo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlAccidentesTrabajo.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlActividadesFactoresRiesgo.Designer.vb">
+      <DependentUpon>CtlActividadesFactoresRiesgo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlActividadesFactoresRiesgo.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlEvaluacionMedicaRetiro.Designer.vb">
+      <DependentUpon>CtlEvaluacionMedicaRetiro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlEvaluacionMedicaRetiro.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlAptitudMedica.Designer.vb">
+      <DependentUpon>CtlAptitudMedica.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlAptitudMedica.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlClinica.Designer.vb">
+      <DependentUpon>CtlClinica.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlClinica.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlDiagnostico.Designer.vb">
+      <DependentUpon>CtlDiagnostico.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlDiagnostico.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlRecomendacionesTratamientos.Designer.vb">
+      <DependentUpon>CtlRecomendacionesTratamientos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlRecomendacionesTratamientos.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlAntecedentesFamiliares.Designer.vb">
+      <DependentUpon>CtlAntecedentesFamiliares.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlAntecedentesFamiliares.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlAntecedentesGinecoobstetricos.Designer.vb">
+      <DependentUpon>CtlAntecedentesGinecoobstetricos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlAntecedentesGinecoobstetricos.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlAntecedentesReprodMasculinos.Designer.vb">
+      <DependentUpon>CtlAntecedentesReprodMasculinos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlAntecedentesReprodMasculinos.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlActividadesExtraLaborales.Designer.vb">
+      <DependentUpon>CtlActividadesExtraLaborales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlActividadesExtraLaborales.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlExamenFisicoRegional.Designer.vb">
+      <DependentUpon>CtlExamenFisicoRegional.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlExamenFisicoRegional.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlFactoresRiesgoTrabajoActual.Designer.vb">
+      <DependentUpon>CtlFactoresRiesgoTrabajoActual.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlFactoresRiesgoTrabajoActual.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlFactorRiesgoTrabajoActual.Designer.vb">
+      <DependentUpon>CtlFactorRiesgoTrabajoActual.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlFactorRiesgoTrabajoActual.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlAntecedentesTrabajosAnteriores.Designer.vb">
+      <DependentUpon>CtlAntecedentesTrabajosAnteriores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlAntecedentesTrabajosAnteriores.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlConstantesVitales.Designer.vb">
+      <DependentUpon>CtlConstantesVitales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlConstantesVitales.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlDatosUsuario.Designer.vb">
+      <DependentUpon>CtlDatosUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlDatosUsuario.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlCausaSalida.Designer.vb">
+      <DependentUpon>CtlCausaSalida.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlCausaSalida.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlAntecedentesPersonales.Designer.vb">
+      <DependentUpon>CtlAntecedentesPersonales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlAntecedentesPersonales.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlEnfermedadActual.Designer.vb">
+      <DependentUpon>CtlEnfermedadActual.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlEnfermedadActual.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlAntecedentesTrabajoAnterior.Designer.vb">
+      <DependentUpon>CtlAntecedentesTrabajoAnterior.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlAntecedentesTrabajoAnterior.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlHabitosToxicos.Designer.vb">
+      <DependentUpon>CtlHabitosToxicos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlHabitosToxicos.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlMotivoConsulta.Designer.vb">
+      <DependentUpon>CtlMotivoConsulta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlMotivoConsulta.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlResultadosExamenes.Designer.vb">
+      <DependentUpon>CtlResultadosExamenes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlResultadosExamenes.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlRevisionOrganosSistemas.Designer.vb">
+      <DependentUpon>CtlRevisionOrganosSistemas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CtlRevisionOrganosSistemas.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\FrmMantenimientoFichaMedica.Designer.vb">
+      <DependentUpon>FrmMantenimientoFichaMedica.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\FrmMantenimientoFichaMedica.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CtlContratoFichasMedicas.resx">
+      <DependentUpon>CtlContratoFichasMedicas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMantenimientoEmpleado.resx">
+      <DependentUpon>FrmMantenimientoEmpleado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\CtlAccidentesTrabajo.resx">
+      <DependentUpon>CtlAccidentesTrabajo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\CtlActividadesFactoresRiesgo.resx">
+      <DependentUpon>CtlActividadesFactoresRiesgo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\CtlEvaluacionMedicaRetiro.resx">
+      <DependentUpon>CtlEvaluacionMedicaRetiro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\CtlAptitudMedica.resx">
+      <DependentUpon>CtlAptitudMedica.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\CtlClinica.resx">
+      <DependentUpon>CtlClinica.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\CtlDiagnostico.resx">
+      <DependentUpon>CtlDiagnostico.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\CtlRecomendacionesTratamientos.resx">
+      <DependentUpon>CtlRecomendacionesTratamientos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\CtlAntecedentesFamiliares.resx">
+      <DependentUpon>CtlAntecedentesFamiliares.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\CtlAntecedentesGinecoobstetricos.resx">
+      <DependentUpon>CtlAntecedentesGinecoobstetricos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\CtlAntecedentesReprodMasculinos.resx">
+      <DependentUpon>CtlAntecedentesReprodMasculinos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\CtlActividadesExtraLaborales.resx">
+      <DependentUpon>CtlActividadesExtraLaborales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\CtlExamenFisicoRegional.resx">
+      <DependentUpon>CtlExamenFisicoRegional.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\CtlFactoresRiesgoTrabajoActual.resx">
+      <DependentUpon>CtlFactoresRiesgoTrabajoActual.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\CtlFactorRiesgoTrabajoActual.resx">
+      <DependentUpon>CtlFactorRiesgoTrabajoActual.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\CtlAntecedentesTrabajosAnteriores.resx">
+      <DependentUpon>CtlAntecedentesTrabajosAnteriores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\CtlConstantesVitales.resx">
+      <DependentUpon>CtlConstantesVitales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\CtlDatosUsuario.resx">
+      <DependentUpon>CtlDatosUsuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\CtlCausaSalida.resx">
+      <DependentUpon>CtlCausaSalida.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\CtlAntecedentesPersonales.resx">
+      <DependentUpon>CtlAntecedentesPersonales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\CtlEnfermedadActual.resx">
+      <DependentUpon>CtlEnfermedadActual.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\CtlAntecedentesTrabajoAnterior.resx">
+      <DependentUpon>CtlAntecedentesTrabajoAnterior.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\CtlHabitosToxicos.resx">
+      <DependentUpon>CtlHabitosToxicos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\CtlMotivoConsulta.resx">
+      <DependentUpon>CtlMotivoConsulta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\CtlResultadosExamenes.resx">
+      <DependentUpon>CtlResultadosExamenes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\CtlRevisionOrganosSistemas.resx">
+      <DependentUpon>CtlRevisionOrganosSistemas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\FrmMantenimientoFichaMedica.resx">
+      <DependentUpon>FrmMantenimientoFichaMedica.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abrir.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\APROBAR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerraricono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doc excel.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eliminar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Foto1.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\ICA3\Infoware.Consola.Base\Infoware.Consola.Base.csproj">
+      <Project>{69c85426-e02a-4af6-894c-9ce05ebbc66e}</Project>
+      <Name>Infoware.Consola.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ICA3\Infoware.Controles.Base\Infoware.Controles.Base.vbproj">
+      <Project>{c81d0a59-f9b2-450b-a59d-5aef7ae898c1}</Project>
+      <Name>Infoware.Controles.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ICA3\Infoware.Controles.General\Infoware.Controles.General.vbproj">
+      <Project>{39712c5d-86ab-49b9-b9a8-b55be19c43d5}</Project>
+      <Name>Infoware.Controles.General</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ICA3\Infoware.Datos\Infoware.Datos.vbproj">
+      <Project>{fa50218a-1fd3-4739-87eb-4e77591ee0a2}</Project>
+      <Name>Infoware.Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ICA3\Infoware.Reglas.General\Infoware.Reglas.General.vbproj">
+      <Project>{fedde9a5-923f-47f7-b7ac-63beaa34e7f8}</Project>
+      <Name>Infoware.Reglas.General</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ICA3\Infoware.Reglas\Infoware.Reglas.vbproj">
+      <Project>{8365b169-5835-4cc6-b9f3-91dd27ae4e1a}</Project>
+      <Name>Infoware.Reglas</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ICA3\Infoware.Reporteador\Infoware.Reporteador.vbproj">
+      <Project>{127297a9-3e7c-47ed-91bc-d29b8e1f9d7d}</Project>
+      <Name>Infoware.Reporteador</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ICA3\Infoware.Reportes\Infoware.Reportes.vbproj">
+      <Project>{288345c5-9fd4-4ac9-a9d1-d42bc9ad3316}</Project>
+      <Name>Infoware.Reportes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\General\WWTS.General\WWTS.General.Controles\WWTS.General.Controles.vbproj">
+      <Project>{b3f0a363-382f-4cdd-97a7-9df3a4bf0b5a}</Project>
+      <Name>WWTS.General.Controles</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\General\WWTS.General\WWTS.General.Modulo\WWTS.General.Modulo.vbproj">
+      <Project>{b5137a08-f8db-4741-b474-39a437533daf}</Project>
+      <Name>WWTS.General.Modulo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\General\WWTS.General\WWTS.General.Reglas\WWTS.General.Reglas.vbproj">
+      <Project>{6f7c7749-44bd-42c0-9ef8-cacf87184cdf}</Project>
+      <Name>WWTS.General.Reglas</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Roles\WWTS.Roles\WWTS.Roles.Controles\WWTS.Roles.Controles.vbproj">
+      <Project>{dfc6bf50-6a1f-40df-8db7-a4d56f9bb525}</Project>
+      <Name>WWTS.Roles.Controles</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Roles\WWTS.Roles\WWTS.Roles.Reglas\WWTS.Roles.Reglas.vbproj">
+      <Project>{01e84104-277e-4aeb-a5f4-85a404990b5c}</Project>
+      <Name>WWTS.Roles.Reglas</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WWTS.FichasMedicas.Reglas\WWTS.FichasMedicas.Reglas.vbproj">
+      <Project>{90da84a9-754c-4c3f-b50f-d91347978e17}</Project>
+      <Name>WWTS.FichasMedicas.Reglas</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fichasmedicas.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fichasmedicasicon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\squirrel.windows.2.0.1\build\squirrel.windows.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\squirrel.windows.2.0.1\build\squirrel.windows.props'))" />
+  </Target>
+</Project>

@@ -24,9 +24,9 @@ Partial Class FrmMantenimientoEmpleado
     Me.components = New System.ComponentModel.Container()
     Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMantenimientoEmpleado))
     Me.Pnlcuerpo = New System.Windows.Forms.Panel()
-    Me.CtlContrato1 = New WWTS.Roles.Modulo.CtlContrato()
+    Me.CtlContrato1 = New WWTS.Roles.Controles.CtlContrato()
     Me.CtlEmpleado1 = New WWTS.General.Controles.CtlEmpleado()
-    Me.CtlBuscaEmpleados1 = New WWTS.Roles.Modulo.CtlBuscaEmpleados()
+    Me.CtlBuscaEmpleados1 = New WWTS.Roles.Controles.CtlBuscaEmpleados()
     Me.HeaderStrip1 = New Infoware.Consola.Base.HeaderStrip()
     Me.ToolStriptitulo = New System.Windows.Forms.ToolStripLabel()
     Me.ToolStrip2 = New System.Windows.Forms.ToolStrip()
@@ -121,7 +121,7 @@ Partial Class FrmMantenimientoEmpleado
     '
     'btnhojadevida
     '
-    Me.btnhojadevida.Image = Global.WWTS.Roles.Modulo.My.Resources.Resources.PrevioIcono
+    Me.btnhojadevida.Image = My.Resources.Resources.printpreview
     Me.btnhojadevida.ImageTransparentColor = System.Drawing.Color.Magenta
     Me.btnhojadevida.Name = "btnhojadevida"
     Me.btnhojadevida.Size = New System.Drawing.Size(93, 22)
@@ -181,9 +181,9 @@ Partial Class FrmMantenimientoEmpleado
 
   End Sub
   Friend WithEvents Pnlcuerpo As System.Windows.Forms.Panel
-  Friend WithEvents CtlBuscaEmpleados1 As WWTS.Roles.Modulo.CtlBuscaEmpleados
+  Friend WithEvents CtlBuscaEmpleados1 As WWTS.Roles.Controles.CtlBuscaEmpleados
   Friend WithEvents CtlEmpleado1 As CtlEmpleado
-  Friend WithEvents CtlContrato1 As WWTS.Roles.Modulo.CtlContrato
+  Friend WithEvents CtlContrato1 As WWTS.Roles.Controles.CtlContrato
   Friend WithEvents ToolStrip2 As System.Windows.Forms.ToolStrip
   Friend WithEvents btnhojadevida As System.Windows.Forms.ToolStripButton
   Friend WithEvents HeaderStrip1 As Infoware.Consola.Base.HeaderStrip

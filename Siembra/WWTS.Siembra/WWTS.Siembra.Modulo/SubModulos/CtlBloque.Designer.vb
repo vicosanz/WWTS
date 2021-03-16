@@ -41,7 +41,7 @@ Partial Class CtlBloque
     Me.btnmodificar = New System.Windows.Forms.ToolStripButton
     Me.btneliminar = New System.Windows.Forms.ToolStripButton
     Me.pn1 = New System.Windows.Forms.Panel
-    Me.CtlZafra1 = New WWTS.Siembra.Modulo.CtlZafra
+    Me.CtlZafra1 = New CtlZafra
     Me.Label14 = New System.Windows.Forms.Label
     Me.txtNumBloque = New System.Windows.Forms.TextBox
     Me.Label1 = New System.Windows.Forms.Label
@@ -57,9 +57,9 @@ Partial Class CtlBloque
     Me.nuevo = New System.Windows.Forms.PictureBox
     Me.Panel4 = New System.Windows.Forms.Panel
     Me.GroupBox1 = New System.Windows.Forms.GroupBox
-    Me.CtlSemilla1 = New WWTS.Siembra.Modulo.CtlSemilla
-    Me.CtlLote1 = New WWTS.Siembra.Modulo.CtlLote
-    Me.CtlCorte1 = New WWTS.Siembra.Modulo.CtlCorte
+    Me.CtlSemilla1 = New CtlSemilla
+    Me.CtlLote1 = New CtlLote
+    Me.CtlCorte1 = New CtlCorte
     Me.Label2 = New System.Windows.Forms.Label
     Me.ElementoListBindingSource = New System.Windows.Forms.BindingSource(Me.components)
     Me.BloqueMovCollectionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -583,8 +583,8 @@ Partial Class CtlBloque
   End Sub
   Friend WithEvents rdoroto As System.Windows.Forms.RadioButton
   Friend WithEvents rdosano As System.Windows.Forms.RadioButton
-  Friend WithEvents CtlSemilla1 As WWTS.Siembra.Modulo.CtlSemilla
-  Friend WithEvents CtlCorte1 As WWTS.Siembra.Modulo.CtlCorte
+  Friend WithEvents CtlSemilla1 As CtlSemilla
+  Friend WithEvents CtlCorte1 As CtlCorte
   Friend WithEvents txtobservaciones As System.Windows.Forms.TextBox
   Friend WithEvents Panel2 As System.Windows.Forms.Panel
   Friend WithEvents rdopintado As System.Windows.Forms.RadioButton
@@ -595,7 +595,7 @@ Partial Class CtlBloque
   Friend WithEvents Label4 As System.Windows.Forms.Label
   Friend WithEvents grpmovimientos As System.Windows.Forms.GroupBox
   Friend WithEvents pn1 As System.Windows.Forms.Panel
-  Friend WithEvents CtlZafra1 As WWTS.Siembra.Modulo.CtlZafra
+  Friend WithEvents CtlZafra1 As CtlZafra
   Friend WithEvents Label14 As System.Windows.Forms.Label
   Friend WithEvents txtNumBloque As System.Windows.Forms.TextBox
   Friend WithEvents Label1 As System.Windows.Forms.Label
@@ -604,7 +604,7 @@ Partial Class CtlBloque
   Friend WithEvents grabar As System.Windows.Forms.PictureBox
   Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
   Friend WithEvents nuevo As System.Windows.Forms.PictureBox
-  Friend WithEvents CtlLote1 As WWTS.Siembra.Modulo.CtlLote
+  Friend WithEvents CtlLote1 As CtlLote
   Friend WithEvents dgmovimientos As System.Windows.Forms.DataGridView
   Friend WithEvents ToolStrip As System.Windows.Forms.ToolStrip
   Friend WithEvents btnanadir As System.Windows.Forms.ToolStripButton

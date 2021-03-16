@@ -1,9 +1,7 @@
 ﻿Imports Infoware.Datos
 Imports Infoware.Reglas.General
 Imports Infoware.Consola.Base
-Imports WWTS.Roles.Reglas
 Imports WWTS.General.Reglas
-Imports WWTS.Roles.Modulo
 Imports WWTS.FichasMedicas.Reglas
 
 Public Class CtlContratoFichasMedicas
@@ -504,7 +502,7 @@ Public Class CtlContratoFichasMedicas
       Dim contratos As New ContratoList
       contratos.Add(ContratoSeleccionado)
       'Roles.Reglas.ExcelReporte.ContratoReporte.Imprimir_contratos(contratos)
-      General.Reglas.Utilerias.CombinarCorrespondencia(ContratoSeleccionado, TipoContratoFormato.ObtenerFormato(ContratoSeleccionado.Tipocontrato, Enumerados.enumFormatoxTipoContrato.Contrato))
+      Utilerias.CombinarCorrespondencia(ContratoSeleccionado, TipoContratoFormato.ObtenerFormato(ContratoSeleccionado.Tipocontrato, Enumerados.enumFormatoxTipoContrato.Contrato))
       Auditoria.Registrar_Auditoria(Restriccion, Enumerados.enumTipoAccion.Impresion, String.Format("Imprimió contrato de {0}", ContratoSeleccionado.Empleado.NombreCompleto))
     End If
   End Sub
@@ -549,7 +547,7 @@ Public Class CtlContratoFichasMedicas
   Private Sub LnkSeleccion_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs)
     Dim _sistema As Sistema = CType(Me.ParentForm, FrmFormaBase).Sistema
     Dim _seleccion As Seleccion = New Seleccion(mOp, Selecc_Codigo)
-    Dim f As New FrmMantenimientoSeleccion(_sistema, Enumerados.EnumOpciones.Personal)
+    Dim f As New WWTS.Roles.Controles.FrmMantenimientoSeleccion(_sistema, Enumerados.EnumOpciones.Personal)
     f.ModoenContrato = True
     f.Seleccion = _seleccion
     f.ShowDialog()
@@ -611,7 +609,7 @@ Public Class CtlContratoFichasMedicas
       Dim contratos As New ContratoList
       contratos.Add(ContratoSeleccionado)
       'Roles.Reglas.ExcelReporte.ContratoReporte.Imprimir_contratos(contratos)
-      General.Reglas.Utilerias.CombinarCorrespondencia(ContratoSeleccionado, TipoContratoFormato.ObtenerFormato(ContratoSeleccionado.Tipocontrato, Enumerados.enumFormatoxTipoContrato.AperturaCuenta))
+      Utilerias.CombinarCorrespondencia(ContratoSeleccionado, TipoContratoFormato.ObtenerFormato(ContratoSeleccionado.Tipocontrato, Enumerados.enumFormatoxTipoContrato.AperturaCuenta))
       Auditoria.Registrar_Auditoria(Restriccion, Enumerados.enumTipoAccion.Impresion, String.Format("Imprimió apertura cuenta bancaria de {0}", ContratoSeleccionado.Empleado.NombreCompleto))
     End If
   End Sub
@@ -629,7 +627,7 @@ Public Class CtlContratoFichasMedicas
       Dim contratos As New ContratoList
       contratos.Add(ContratoSeleccionado)
       'Roles.Reglas.ExcelReporte.ContratoReporte.Imprimir_contratos(contratos)
-      General.Reglas.Utilerias.CombinarCorrespondencia(ContratoSeleccionado, TipoContratoFormato.ObtenerFormato(ContratoSeleccionado.Tipocontrato, Enumerados.enumFormatoxTipoContrato.Renuncia))
+      Utilerias.CombinarCorrespondencia(ContratoSeleccionado, TipoContratoFormato.ObtenerFormato(ContratoSeleccionado.Tipocontrato, Enumerados.enumFormatoxTipoContrato.Renuncia))
       Auditoria.Registrar_Auditoria(Restriccion, Enumerados.enumTipoAccion.Impresion, String.Format("Imprimió renuncia de {0}", ContratoSeleccionado.Empleado.NombreCompleto))
     End If
   End Sub

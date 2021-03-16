@@ -27,8 +27,9 @@ Public Class CtlPeriodoVacacion
     Dim _vacacion As BeneficiosSociales = New BeneficiosSociales(_sistema.OperadorDatos, True, Now.Date, Now.Date)
     _vacacion.Contrato = Contrato
     _vacacion.BenSoc_Dias = 15
-    Dim f As New FrmMantenimientoVacacion(_sistema, Enumerados.EnumOpciones.Personal)
-    f.Vacacion = _vacacion
+    Dim f As New WWTS.Roles.Controles.FrmMantenimientoVacacion(_sistema, Enumerados.EnumOpciones.Personal) With {
+      .Vacacion = _vacacion
+    }
     f.ShowDialog()
     mostrar_vacacion()
   End Sub
@@ -38,8 +39,9 @@ Public Class CtlPeriodoVacacion
       Exit Sub
     End If
     Dim _sistema As Sistema = CType(Me.ParentForm, FrmFormaBase).Sistema
-    Dim f As New FrmMantenimientoVacacion(_sistema, Enumerados.EnumOpciones.Personal)
-    f.Vacacion = BSperiodo.Current
+    Dim f As New WWTS.Roles.Controles.FrmMantenimientoVacacion(_sistema, Enumerados.EnumOpciones.Personal) With {
+      .Vacacion = BSperiodo.Current
+    }
     f.ShowDialog()
     mostrar_vacacion()
   End Sub

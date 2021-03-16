@@ -56,7 +56,7 @@ Partial Class FrmPrestamos
     Me.btnelirubro = New System.Windows.Forms.ToolStripButton()
     Me.btnabrirrubro = New System.Windows.Forms.ToolStripButton()
     Me.btnnuevorubro = New System.Windows.Forms.ToolStripButton()
-    Me.CtlBuscaEmpleado1 = New WWTS.Roles.Modulo.CtlBuscaEmpleados()
+    Me.CtlBuscaEmpleado1 = New WWTS.Roles.Controles.CtlBuscaEmpleados()
     Me.HeaderStrip1 = New Infoware.Consola.Base.HeaderStrip()
     Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
     Me.DataGridViewTextBoxColumn49 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -279,7 +279,7 @@ Partial Class FrmPrestamos
     '
     Me.btnelidet.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
     Me.btnelidet.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-    Me.btnelidet.Image = Global.WWTS.Roles.Modulo.My.Resources.Resources.eliminar
+    Me.btnelidet.Image = My.Resources.Resources.eliminar
     Me.btnelidet.ImageTransparentColor = System.Drawing.Color.Magenta
     Me.btnelidet.Name = "btnelidet"
     Me.btnelidet.Size = New System.Drawing.Size(23, 16)
@@ -289,7 +289,7 @@ Partial Class FrmPrestamos
     '
     Me.btnabrirdet.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
     Me.btnabrirdet.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-    Me.btnabrirdet.Image = Global.WWTS.Roles.Modulo.My.Resources.Resources.abrir
+    Me.btnabrirdet.Image = My.Resources.Resources.open
     Me.btnabrirdet.ImageTransparentColor = System.Drawing.Color.Magenta
     Me.btnabrirdet.Name = "btnabrirdet"
     Me.btnabrirdet.Size = New System.Drawing.Size(23, 16)
@@ -299,7 +299,7 @@ Partial Class FrmPrestamos
     '
     Me.btnnuevodet.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
     Me.btnnuevodet.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-    Me.btnnuevodet.Image = Global.WWTS.Roles.Modulo.My.Resources.Resources.nuevo
+    Me.btnnuevodet.Image = My.Resources.Resources._new
     Me.btnnuevodet.ImageTransparentColor = System.Drawing.Color.Magenta
     Me.btnnuevodet.Name = "btnnuevodet"
     Me.btnnuevodet.Size = New System.Drawing.Size(23, 16)
@@ -435,7 +435,7 @@ Partial Class FrmPrestamos
     '
     Me.btnelirubro.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
     Me.btnelirubro.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-    Me.btnelirubro.Image = Global.WWTS.Roles.Modulo.My.Resources.Resources.eliminar
+    Me.btnelirubro.Image = My.Resources.Resources.eliminar
     Me.btnelirubro.ImageTransparentColor = System.Drawing.Color.Magenta
     Me.btnelirubro.Name = "btnelirubro"
     Me.btnelirubro.Size = New System.Drawing.Size(23, 16)
@@ -445,7 +445,7 @@ Partial Class FrmPrestamos
     '
     Me.btnabrirrubro.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
     Me.btnabrirrubro.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-    Me.btnabrirrubro.Image = Global.WWTS.Roles.Modulo.My.Resources.Resources.abrir
+    Me.btnabrirrubro.Image = My.Resources.Resources.open
     Me.btnabrirrubro.ImageTransparentColor = System.Drawing.Color.Magenta
     Me.btnabrirrubro.Name = "btnabrirrubro"
     Me.btnabrirrubro.Size = New System.Drawing.Size(23, 16)
@@ -455,7 +455,7 @@ Partial Class FrmPrestamos
     '
     Me.btnnuevorubro.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
     Me.btnnuevorubro.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-    Me.btnnuevorubro.Image = Global.WWTS.Roles.Modulo.My.Resources.Resources.nuevo
+    Me.btnnuevorubro.Image = My.Resources.Resources._new
     Me.btnnuevorubro.ImageTransparentColor = System.Drawing.Color.Magenta
     Me.btnnuevorubro.Name = "btnnuevorubro"
     Me.btnnuevorubro.Size = New System.Drawing.Size(23, 16)
@@ -820,7 +820,7 @@ Partial Class FrmPrestamos
   Friend WithEvents Pnlcuerpo As System.Windows.Forms.Panel
   Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
   Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
-  Friend WithEvents CtlBuscaEmpleado1 As CtlBuscaEmpleados
+  Friend WithEvents CtlBuscaEmpleado1 As WWTS.Roles.Controles.CtlBuscaEmpleados
   Friend WithEvents HeaderStrip1 As Infoware.Consola.Base.HeaderStrip
   Friend WithEvents ToolStripLabel1 As System.Windows.Forms.ToolStripLabel
   Friend WithEvents Panel3 As System.Windows.Forms.Panel

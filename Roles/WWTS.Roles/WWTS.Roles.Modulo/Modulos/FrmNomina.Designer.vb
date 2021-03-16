@@ -50,7 +50,7 @@ Partial Class FrmNomina
     Me.txtEgresos = New System.Windows.Forms.ToolStripStatusLabel()
     Me.ToolStripStatusLabel5 = New System.Windows.Forms.ToolStripStatusLabel()
     Me.txtTotal = New System.Windows.Forms.ToolStripStatusLabel()
-    Me.CtlBuscaEmpleadosPeriodo1 = New WWTS.Roles.Modulo.CtlBuscaEmpleadosPeriodo()
+    Me.CtlBuscaEmpleadosPeriodo1 = New CtlBuscaEmpleadosPeriodo()
     Me.HeaderStrip1 = New Infoware.Consola.Base.HeaderStrip()
     Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
     Me.DataGridViewTextBoxColumn84 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -262,7 +262,7 @@ Partial Class FrmNomina
     'btnnuevo
     '
     Me.btnnuevo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-    Me.btnnuevo.Image = Global.WWTS.Roles.Modulo.My.Resources.Resources.nuevo
+    Me.btnnuevo.Image = My.Resources.Resources._new
     Me.btnnuevo.ImageTransparentColor = System.Drawing.Color.Magenta
     Me.btnnuevo.Name = "btnnuevo"
     Me.btnnuevo.Size = New System.Drawing.Size(24, 23)
@@ -272,7 +272,7 @@ Partial Class FrmNomina
     'btnabrir
     '
     Me.btnabrir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-    Me.btnabrir.Image = Global.WWTS.Roles.Modulo.My.Resources.Resources.abrir
+    Me.btnabrir.Image = My.Resources.Resources.open
     Me.btnabrir.ImageTransparentColor = System.Drawing.Color.Magenta
     Me.btnabrir.Name = "btnabrir"
     Me.btnabrir.Size = New System.Drawing.Size(24, 23)
@@ -281,7 +281,7 @@ Partial Class FrmNomina
     'btnExcel
     '
     Me.btnExcel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-    Me.btnExcel.Image = Global.WWTS.Roles.Modulo.My.Resources.Resources.docexcel
+    Me.btnExcel.Image = My.Resources.Resources.docexcel
     Me.btnExcel.ImageTransparentColor = System.Drawing.Color.Magenta
     Me.btnExcel.Name = "btnExcel"
     Me.btnExcel.Size = New System.Drawing.Size(24, 23)
@@ -294,7 +294,7 @@ Partial Class FrmNomina
     '
     'btngrabar
     '
-    Me.btngrabar.Image = Global.WWTS.Roles.Modulo.My.Resources.Resources.save16
+    Me.btngrabar.Image = My.Resources.Resources.save
     Me.btngrabar.ImageTransparentColor = System.Drawing.Color.Magenta
     Me.btngrabar.Name = "btngrabar"
     Me.btngrabar.Size = New System.Drawing.Size(135, 23)
@@ -302,7 +302,7 @@ Partial Class FrmNomina
     '
     'btneliminar
     '
-    Me.btneliminar.Image = Global.WWTS.Roles.Modulo.My.Resources.Resources.eliminar
+    Me.btneliminar.Image = My.Resources.Resources.eliminar
     Me.btneliminar.ImageTransparentColor = System.Drawing.Color.Magenta
     Me.btneliminar.Name = "btneliminar"
     Me.btneliminar.Size = New System.Drawing.Size(144, 23)

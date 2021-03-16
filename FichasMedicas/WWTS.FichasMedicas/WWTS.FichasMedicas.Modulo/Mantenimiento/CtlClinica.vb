@@ -11,7 +11,7 @@ Public Class CtlClinica
 
       If Not value Is Nothing Then
         ComboBoxParametroDetClinica.OperadorDatos = value.OperadorDatos
-        ComboBoxParametroDetClinica.Parametro = General.Reglas.Enumerados.EnumParametros.Clinica
+        ComboBoxParametroDetClinica.Parametro = WWTS.General.Reglas.Enumerados.EnumParametros.Clinica
         ComboBoxParametroDetClinica.Llenar_Datos()
 
         Actualizar()

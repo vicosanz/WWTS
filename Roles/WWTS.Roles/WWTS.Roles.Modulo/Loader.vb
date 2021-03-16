@@ -212,16 +212,18 @@ Public Class Loader
   End Function
 
   Function CargarCuentasBancarias(ByVal _Sistema As Sistema, ByVal _Restriccion As Restriccion, ByVal _Opcion As Opcion) As IDockContent
-    Dim f As New General.Controles.FrmListaParametroDets(_Sistema, _Restriccion, False)
-    f.Parame_Codigo = Enumerados.EnumParametros.CuentaBancaria
-    f.PuedeNuevo = True
+    Dim f As New FrmListaParametroDets(_Sistema, _Restriccion, False) With {
+      .Parame_Codigo = Enumerados.EnumParametros.CuentaBancaria,
+      .PuedeNuevo = True
+    }
     Return f
   End Function
 
   Function CargarRutas(ByVal _Sistema As Sistema, ByVal _Restriccion As Restriccion, ByVal _Opcion As Opcion) As IDockContent
-    Dim f As New General.Controles.FrmListaParametroDets(_Sistema, _Restriccion, False)
-    f.Parame_Codigo = Enumerados.EnumParametros.RutasRoles
-    f.PuedeNuevo = False
+    Dim f As New FrmListaParametroDets(_Sistema, _Restriccion, False) With {
+      .Parame_Codigo = Enumerados.EnumParametros.RutasRoles,
+      .PuedeNuevo = False
+    }
     Return f
   End Function
 

@@ -11,11 +11,11 @@ Public Class CtlDatosUsuario
 
       If Not value Is Nothing Then
         ComboBoxParametroDetGenero.OperadorDatos = value.OperadorDatos
-        ComboBoxParametroDetGenero.Parametro = General.Reglas.Enumerados.EnumParametros.Genero
+        ComboBoxParametroDetGenero.Parametro = WWTS.General.Reglas.Enumerados.EnumParametros.Genero
         ComboBoxParametroDetGenero.Llenar_Datos()
 
         ComboBoxParametroDetReligion.OperadorDatos = value.OperadorDatos
-        ComboBoxParametroDetReligion.Parametro = General.Reglas.Enumerados.EnumParametros.Religion
+        ComboBoxParametroDetReligion.Parametro = WWTS.General.Reglas.Enumerados.EnumParametros.Religion
         ComboBoxParametroDetReligion.Llenar_Datos()
 
         Actualizar()

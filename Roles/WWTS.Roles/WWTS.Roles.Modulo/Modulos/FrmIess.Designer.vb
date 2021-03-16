@@ -50,9 +50,9 @@ Partial Class FrmIess
     Me.btnrecmes = New Infoware.Controles.Base.ButtonStd
     Me.btnexportar = New Infoware.Controles.Base.ButtonStd
     Me.Panel2 = New System.Windows.Forms.Panel
-    Me.CtlTipoContrato1 = New WWTS.Roles.Modulo.CtlTipoContrato
+    Me.CtlTipoContrato1 = New WWTS.Roles.Controles.CtlTipoContrato
     Me.Label8 = New System.Windows.Forms.Label
-    Me.CtlPatrono1 = New WWTS.Roles.Modulo.CtlPatrono
+    Me.CtlPatrono1 = New WWTS.Roles.Controles.CtlPatrono
     Me.Label5 = New System.Windows.Forms.Label
     Me.numanio = New System.Windows.Forms.NumericUpDown
     Me.Label4 = New System.Windows.Forms.Label
@@ -82,9 +82,9 @@ Partial Class FrmIess
     Me.btnimprimir = New Infoware.Controles.Base.ButtonStd
     Me.btngenerar = New Infoware.Controles.Base.ButtonStd
     Me.Panel3 = New System.Windows.Forms.Panel
-    Me.CtlTipoContrato2 = New WWTS.Roles.Modulo.CtlTipoContrato
+    Me.CtlTipoContrato2 = New WWTS.Roles.Controles.CtlTipoContrato
     Me.chksolocontrato = New System.Windows.Forms.CheckBox
-    Me.CtlPatrono2 = New WWTS.Roles.Modulo.CtlPatrono
+    Me.CtlPatrono2 = New WWTS.Roles.Controles.CtlPatrono
     Me.Label1 = New System.Windows.Forms.Label
     Me.dthasta = New System.Windows.Forms.DateTimePicker
     Me.Label2 = New System.Windows.Forms.Label
@@ -106,9 +106,9 @@ Partial Class FrmIess
     Me.btnmostraracum = New Infoware.Controles.Base.ButtonStd
     Me.btnexportaracum = New Infoware.Controles.Base.ButtonStd
     Me.Panel5 = New System.Windows.Forms.Panel
-    Me.CtlTipoContrato3 = New WWTS.Roles.Modulo.CtlTipoContrato
+    Me.CtlTipoContrato3 = New WWTS.Roles.Controles.CtlTipoContrato
     Me.chksolocontrato3 = New System.Windows.Forms.CheckBox
-    Me.CtlPatrono3 = New WWTS.Roles.Modulo.CtlPatrono
+    Me.CtlPatrono3 = New WWTS.Roles.Controles.CtlPatrono
     Me.chksolopatrono3 = New System.Windows.Forms.CheckBox
     Me.Panel7 = New System.Windows.Forms.Panel
     Me.cbomeshasta = New System.Windows.Forms.ComboBox
@@ -126,9 +126,9 @@ Partial Class FrmIess
     Me.TipoContratoListBindingSource = New System.Windows.Forms.BindingSource(Me.components)
     Me.RegistroIESSListBindingSource = New System.Windows.Forms.BindingSource(Me.components)
     Me.Panel10 = New System.Windows.Forms.Panel
-    Me.CtlTipoContrato4 = New WWTS.Roles.Modulo.CtlTipoContrato
+    Me.CtlTipoContrato4 = New WWTS.Roles.Controles.CtlTipoContrato
     Me.btnmostrarregiess = New Infoware.Controles.Base.ButtonStd
-    Me.CtlPatrono4 = New WWTS.Roles.Modulo.CtlPatrono
+    Me.CtlPatrono4 = New WWTS.Roles.Controles.CtlPatrono
     Me.Label11 = New System.Windows.Forms.Label
     Me.Label7 = New System.Windows.Forms.Label
     Me.HeaderStrip1 = New Infoware.Consola.Base.HeaderStrip
@@ -1262,14 +1262,14 @@ Partial Class FrmIess
   Friend WithEvents TabPage3 As System.Windows.Forms.TabPage
   Friend WithEvents TabControl2 As System.Windows.Forms.TabControl
   Friend WithEvents TabPage4 As System.Windows.Forms.TabPage
-  Friend WithEvents CtlTipoContrato1 As CtlTipoContrato
-  Friend WithEvents CtlPatrono1 As CtlPatrono
+  Friend WithEvents CtlTipoContrato1 As WWTS.Roles.Controles.CtlTipoContrato
+  Friend WithEvents CtlPatrono1 As WWTS.Roles.Controles.CtlPatrono
   Friend WithEvents TabControl3 As System.Windows.Forms.TabControl
   Friend WithEvents TabPage5 As System.Windows.Forms.TabPage
   Friend WithEvents Panel3 As System.Windows.Forms.Panel
-  Friend WithEvents CtlTipoContrato2 As CtlTipoContrato
+  Friend WithEvents CtlTipoContrato2 As WWTS.Roles.Controles.CtlTipoContrato
   Friend WithEvents chksolocontrato As System.Windows.Forms.CheckBox
-  Friend WithEvents CtlPatrono2 As CtlPatrono
+  Friend WithEvents CtlPatrono2 As WWTS.Roles.Controles.CtlPatrono
   Friend WithEvents Label1 As System.Windows.Forms.Label
   Friend WithEvents dthasta As System.Windows.Forms.DateTimePicker
   Friend WithEvents Label2 As System.Windows.Forms.Label
@@ -1277,7 +1277,7 @@ Partial Class FrmIess
   Friend WithEvents Label6 As System.Windows.Forms.Label
   Friend WithEvents Panel5 As System.Windows.Forms.Panel
   Friend WithEvents chksolocontrato3 As System.Windows.Forms.CheckBox
-  Friend WithEvents CtlPatrono3 As CtlPatrono
+  Friend WithEvents CtlPatrono3 As WWTS.Roles.Controles.CtlPatrono
   Friend WithEvents chksolopatrono3 As System.Windows.Forms.CheckBox
   Friend WithEvents Panel7 As System.Windows.Forms.Panel
   Friend WithEvents cbomeshasta As System.Windows.Forms.ComboBox
@@ -1295,7 +1295,7 @@ Partial Class FrmIess
   Friend WithEvents btnexportar As Infoware.Controles.Base.ButtonStd
   Friend WithEvents TabControl4 As System.Windows.Forms.TabControl
   Friend WithEvents TabPage6 As System.Windows.Forms.TabPage
-  Friend WithEvents CtlTipoContrato3 As CtlTipoContrato
+  Friend WithEvents CtlTipoContrato3 As WWTS.Roles.Controles.CtlTipoContrato
   Friend WithEvents dgiess As System.Windows.Forms.DataGridView
   Friend WithEvents Panel8 As System.Windows.Forms.Panel
   Friend WithEvents btnmostrariess As Infoware.Controles.Base.ButtonStd
@@ -1340,8 +1340,8 @@ Partial Class FrmIess
   Friend WithEvents PatronoListBindingSource As System.Windows.Forms.BindingSource
   Friend WithEvents TipoContratoListBindingSource As System.Windows.Forms.BindingSource
   Friend WithEvents Panel10 As System.Windows.Forms.Panel
-  Friend WithEvents CtlTipoContrato4 As CtlTipoContrato
-  Friend WithEvents CtlPatrono4 As CtlPatrono
+  Friend WithEvents CtlTipoContrato4 As WWTS.Roles.Controles.CtlTipoContrato
+  Friend WithEvents CtlPatrono4 As WWTS.Roles.Controles.CtlPatrono
   Friend WithEvents Label7 As System.Windows.Forms.Label
   Friend WithEvents btnmostrarregiess As Infoware.Controles.Base.ButtonStd
   Friend WithEvents Label11 As System.Windows.Forms.Label

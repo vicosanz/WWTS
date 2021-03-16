@@ -1,5 +1,4 @@
-﻿Imports WWTS.Roles.Modulo
-
+﻿
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class CtlContratoFichasMedicas
   Inherits System.Windows.Forms.UserControl
@@ -36,19 +35,19 @@ Partial Class CtlContratoFichasMedicas
     Me.cbotiposalida = New WWTS.General.Controles.ComboBoxParametroDet()
     Me.Panel1 = New System.Windows.Forms.Panel()
     Me.Label1 = New System.Windows.Forms.Label()
-    Me.CtlTipoContrato1 = New WWTS.Roles.Modulo.CtlTipoContrato()
+    Me.CtlTipoContrato1 = New WWTS.Roles.Controles.CtlTipoContrato()
     Me.Label24 = New System.Windows.Forms.Label()
     Me.dtfecdesde = New System.Windows.Forms.DateTimePicker()
     Me.Cerrado = New System.Windows.Forms.CheckBox()
     Me.Panel3 = New System.Windows.Forms.Panel()
     Me.Label17 = New System.Windows.Forms.Label()
     Me.cboSubCentroCosto = New WWTS.General.Controles.ComboBoxParametroDet()
-    Me.CtlPatronoCombo1 = New WWTS.Roles.Modulo.CtlPatronoCombo()
+    Me.CtlPatronoCombo1 = New WWTS.Roles.Controles.CtlPatronoCombo()
     Me.Label15 = New System.Windows.Forms.Label()
     Me.cboDepartamento = New WWTS.General.Controles.ComboBoxParametroDet()
-    Me.CtlArea1 = New WWTS.Roles.Modulo.CtlArea()
+    Me.CtlArea1 = New WWTS.Roles.Controles.CtlArea()
     Me.cboSeccion = New WWTS.General.Controles.ComboBoxParametroDet()
-    Me.CtlCargo1 = New WWTS.Roles.Modulo.CtlCargo()
+    Me.CtlCargo1 = New WWTS.Roles.Controles.CtlCargo()
     Me.Label14 = New System.Windows.Forms.Label()
     Me.Label13 = New System.Windows.Forms.Label()
     Me.Label12 = New System.Windows.Forms.Label()
@@ -949,7 +948,7 @@ Partial Class CtlContratoFichasMedicas
     '
     Me.btnnuevaficha.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
     Me.btnnuevaficha.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FichaPreocupacionalToolStripMenuItem, Me.FichaOcupacionalToolStripMenuItem, Me.FichaDeReintegroToolStripMenuItem, Me.FichaDeRetiroToolStripMenuItem})
-    Me.btnnuevaficha.Image = Global.WWTS.FichasMedicas.Modulo.My.Resources.Resources.nuevo
+    Me.btnnuevaficha.Image = My.Resources.Resources.nuevo
     Me.btnnuevaficha.ImageTransparentColor = System.Drawing.Color.Magenta
     Me.btnnuevaficha.Name = "btnnuevaficha"
     Me.btnnuevaficha.Size = New System.Drawing.Size(34, 23)
@@ -982,7 +981,7 @@ Partial Class CtlContratoFichasMedicas
     'btnabrirficha
     '
     Me.btnabrirficha.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-    Me.btnabrirficha.Image = Global.WWTS.FichasMedicas.Modulo.My.Resources.Resources.abrir
+    Me.btnabrirficha.Image = My.Resources.Resources.abrir
     Me.btnabrirficha.ImageTransparentColor = System.Drawing.Color.Magenta
     Me.btnabrirficha.Name = "btnabrirficha"
     Me.btnabrirficha.Size = New System.Drawing.Size(24, 23)
@@ -991,7 +990,7 @@ Partial Class CtlContratoFichasMedicas
     'btneliminarficha
     '
     Me.btneliminarficha.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-    Me.btneliminarficha.Image = Global.WWTS.FichasMedicas.Modulo.My.Resources.Resources.eliminar
+    Me.btneliminarficha.Image = My.Resources.Resources.eliminar
     Me.btneliminarficha.ImageTransparentColor = System.Drawing.Color.Magenta
     Me.btneliminarficha.Name = "btneliminarficha"
     Me.btneliminarficha.Size = New System.Drawing.Size(24, 23)
@@ -1006,7 +1005,7 @@ Partial Class CtlContratoFichasMedicas
     '
     Me.btnimprimirficha.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
     Me.btnimprimirficha.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnpag1, Me.btnpag2, Me.btnpag3})
-    Me.btnimprimirficha.Image = Global.WWTS.FichasMedicas.Modulo.My.Resources.Resources.print
+    Me.btnimprimirficha.Image = My.Resources.Resources.print
     Me.btnimprimirficha.ImageTransparentColor = System.Drawing.Color.Magenta
     Me.btnimprimirficha.Name = "btnimprimirficha"
     Me.btnimprimirficha.Size = New System.Drawing.Size(34, 23)
@@ -3411,24 +3410,24 @@ Partial Class CtlContratoFichasMedicas
   Friend WithEvents pnlcierre As Panel
   Friend WithEvents lblfeccierre As Label
   Friend WithEvents dtfechasta As DateTimePicker
-  Friend WithEvents cbotipoliq As General.Controles.ComboBoxParametroDet
+  Friend WithEvents cbotipoliq As WWTS.General.Controles.ComboBoxParametroDet
   Friend WithEvents Label4 As Label
-  Friend WithEvents cbotiposalida As General.Controles.ComboBoxParametroDet
+  Friend WithEvents cbotiposalida As WWTS.General.Controles.ComboBoxParametroDet
   Friend WithEvents Panel1 As Panel
   Friend WithEvents Label1 As Label
-  Friend WithEvents CtlTipoContrato1 As CtlTipoContrato
+  Friend WithEvents CtlTipoContrato1 As WWTS.Roles.Controles.CtlTipoContrato
   Friend WithEvents Label24 As Label
   Friend WithEvents dtfecdesde As DateTimePicker
   Friend WithEvents Cerrado As CheckBox
   Friend WithEvents Panel3 As Panel
   Friend WithEvents Label17 As Label
-  Friend WithEvents cboSubCentroCosto As General.Controles.ComboBoxParametroDet
-  Friend WithEvents CtlPatronoCombo1 As CtlPatronoCombo
+  Friend WithEvents cboSubCentroCosto As WWTS.General.Controles.ComboBoxParametroDet
+  Friend WithEvents CtlPatronoCombo1 As WWTS.Roles.Controles.CtlPatronoCombo
   Friend WithEvents Label15 As Label
-  Friend WithEvents cboDepartamento As General.Controles.ComboBoxParametroDet
-  Friend WithEvents CtlArea1 As CtlArea
-  Friend WithEvents cboSeccion As General.Controles.ComboBoxParametroDet
-  Friend WithEvents CtlCargo1 As CtlCargo
+  Friend WithEvents cboDepartamento As WWTS.General.Controles.ComboBoxParametroDet
+  Friend WithEvents CtlArea1 As WWTS.Roles.Controles.CtlArea
+  Friend WithEvents cboSeccion As WWTS.General.Controles.ComboBoxParametroDet
+  Friend WithEvents CtlCargo1 As WWTS.Roles.Controles.CtlCargo
   Friend WithEvents Label14 As Label
   Friend WithEvents Label13 As Label
   Friend WithEvents Label12 As Label

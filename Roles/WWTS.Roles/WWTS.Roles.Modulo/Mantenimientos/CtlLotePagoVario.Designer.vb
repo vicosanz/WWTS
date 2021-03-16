@@ -50,7 +50,7 @@ Partial Class CtlLotePago
     'btneliminar
     '
     Me.btneliminar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-    Me.btneliminar.Image = Global.WWTS.Roles.Modulo.My.Resources.Resources.eliminar
+    Me.btneliminar.Image = My.Resources.Resources.eliminar
     Me.btneliminar.ImageTransparentColor = System.Drawing.Color.Magenta
     Me.btneliminar.Name = "btneliminar"
     Me.btneliminar.Size = New System.Drawing.Size(21, 20)
@@ -59,7 +59,7 @@ Partial Class CtlLotePago
     'btncerrar
     '
     Me.btncerrar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-    Me.btncerrar.Image = Global.WWTS.Roles.Modulo.My.Resources.Resources.cerraricono
+    Me.btncerrar.Image = My.Resources.Resources.cerraricono
     Me.btncerrar.ImageTransparentColor = System.Drawing.Color.Magenta
     Me.btncerrar.Name = "btncerrar"
     Me.btncerrar.Size = New System.Drawing.Size(21, 20)

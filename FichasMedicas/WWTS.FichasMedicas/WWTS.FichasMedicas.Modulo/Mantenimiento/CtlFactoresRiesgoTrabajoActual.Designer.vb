@@ -23,10 +23,10 @@ Partial Class CtlFactoresRiesgoTrabajoActual
   <System.Diagnostics.DebuggerStepThrough()> _
   Private Sub InitializeComponent()
     Me.Label12 = New System.Windows.Forms.Label()
-    Me.CtlFactorRiesgoTrabajoActual4 = New WWTS.FichasMedicas.Modulo.CtlFactorRiesgoTrabajoActual()
-    Me.CtlFactorRiesgoTrabajoActual3 = New WWTS.FichasMedicas.Modulo.CtlFactorRiesgoTrabajoActual()
-    Me.CtlFactorRiesgoTrabajoActual2 = New WWTS.FichasMedicas.Modulo.CtlFactorRiesgoTrabajoActual()
-    Me.CtlFactorRiesgoTrabajoActual1 = New WWTS.FichasMedicas.Modulo.CtlFactorRiesgoTrabajoActual()
+    Me.CtlFactorRiesgoTrabajoActual4 = New CtlFactorRiesgoTrabajoActual()
+    Me.CtlFactorRiesgoTrabajoActual3 = New CtlFactorRiesgoTrabajoActual()
+    Me.CtlFactorRiesgoTrabajoActual2 = New CtlFactorRiesgoTrabajoActual()
+    Me.CtlFactorRiesgoTrabajoActual1 = New CtlFactorRiesgoTrabajoActual()
     Me.SuspendLayout()
     '
     'Label12

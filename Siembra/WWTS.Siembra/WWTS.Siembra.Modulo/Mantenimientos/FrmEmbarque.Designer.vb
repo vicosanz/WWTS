@@ -25,7 +25,7 @@ Partial Class FrmEmbarque
     Me.Label3 = New System.Windows.Forms.Label
     Me.txtcodigo = New Infoware.Controles.Base.TextBoxCalculator
     Me.dtfecha = New System.Windows.Forms.DateTimePicker
-    Me.CtlDestino1 = New WWTS.Siembra.Modulo.CtlDestino
+    Me.CtlDestino1 = New CtlDestino
     Me.SuspendLayout()
     '
     'Label1
@@ -108,6 +108,6 @@ Partial Class FrmEmbarque
   Friend WithEvents Label3 As System.Windows.Forms.Label
   Friend WithEvents txtcodigo As Infoware.Controles.Base.TextBoxCalculator
   Friend WithEvents dtfecha As System.Windows.Forms.DateTimePicker
-  Friend WithEvents CtlDestino1 As WWTS.Siembra.Modulo.CtlDestino
+  Friend WithEvents CtlDestino1 As CtlDestino
 
 End Class

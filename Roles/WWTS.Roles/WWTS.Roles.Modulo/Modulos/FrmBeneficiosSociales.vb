@@ -1322,7 +1322,7 @@ Public Class FrmBeneficiosSociales
       _rubrodet.calculovalorvacacion(_beneficio.BenSoc_FechaDesde, _beneficio.BenSoc_FechaHasta)
     Next
 
-    Roles.Reglas.ExcelReporte.Vacacion.Imprimir_vacacion(mContrato, mrubro, CtlPeriodoVacacion1.BSperiodo.Current, mvacacionlist, Sistema.UsuarioString)
+    ExcelReporte.Vacacion.Imprimir_vacacion(mContrato, mrubro, CtlPeriodoVacacion1.BSperiodo.Current, mvacacionlist, Sistema.UsuarioString)
   End Sub
 
   Private Sub btncalcularotros_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btncalcularotros.Click

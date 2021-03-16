@@ -94,8 +94,8 @@ Partial Class CtlDatosUsuario
 
   End Sub
 
-  Friend WithEvents ComboBoxParametroDetReligion As General.Controles.ComboBoxParametroDet
+  Friend WithEvents ComboBoxParametroDetReligion As WWTS.General.Controles.ComboBoxParametroDet
   Friend WithEvents Label1 As Label
-  Friend WithEvents ComboBoxParametroDetGenero As General.Controles.ComboBoxParametroDet
+  Friend WithEvents ComboBoxParametroDetGenero As WWTS.General.Controles.ComboBoxParametroDet
   Friend WithEvents Label2 As Label
 End Class

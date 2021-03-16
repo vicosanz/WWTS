@@ -23,10 +23,10 @@ Partial Class CtlAntecedentesTrabajosAnteriores
   <System.Diagnostics.DebuggerStepThrough()> _
   Private Sub InitializeComponent()
     Me.Label12 = New System.Windows.Forms.Label()
-    Me.CtlAntecedentesTrabajoAnterior1 = New WWTS.FichasMedicas.Modulo.CtlAntecedentesTrabajoAnterior()
-    Me.CtlAntecedentesTrabajoAnterior2 = New WWTS.FichasMedicas.Modulo.CtlAntecedentesTrabajoAnterior()
-    Me.CtlAntecedentesTrabajoAnterior3 = New WWTS.FichasMedicas.Modulo.CtlAntecedentesTrabajoAnterior()
-    Me.CtlAntecedentesTrabajoAnterior4 = New WWTS.FichasMedicas.Modulo.CtlAntecedentesTrabajoAnterior()
+    Me.CtlAntecedentesTrabajoAnterior1 = New CtlAntecedentesTrabajoAnterior()
+    Me.CtlAntecedentesTrabajoAnterior2 = New CtlAntecedentesTrabajoAnterior()
+    Me.CtlAntecedentesTrabajoAnterior3 = New CtlAntecedentesTrabajoAnterior()
+    Me.CtlAntecedentesTrabajoAnterior4 = New CtlAntecedentesTrabajoAnterior()
     Me.SuspendLayout()
     '
     'Label12

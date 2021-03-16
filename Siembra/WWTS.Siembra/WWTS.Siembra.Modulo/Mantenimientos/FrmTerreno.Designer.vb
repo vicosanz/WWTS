@@ -31,8 +31,8 @@ Partial Class FrmTerreno
     Me.txtareau = New Infoware.Controles.Base.TextBoxCalculator
     Me.Label5 = New System.Windows.Forms.Label
     Me.Label6 = New System.Windows.Forms.Label
-    Me.CtlPropietario1 = New WWTS.Siembra.Modulo.CtlPropietario
-    Me.CtlHacienda1 = New WWTS.Siembra.Modulo.CtlHacienda
+    Me.CtlPropietario1 = New CtlPropietario
+    Me.CtlHacienda1 = New CtlHacienda
     Me.SuspendLayout()
     '
     'txtcodigo
@@ -198,7 +198,7 @@ Partial Class FrmTerreno
   Friend WithEvents txtareau As Infoware.Controles.Base.TextBoxCalculator
   Friend WithEvents Label5 As System.Windows.Forms.Label
   Friend WithEvents Label6 As System.Windows.Forms.Label
-  Friend WithEvents CtlPropietario1 As WWTS.Siembra.Modulo.CtlPropietario
-  Friend WithEvents CtlHacienda1 As WWTS.Siembra.Modulo.CtlHacienda
+  Friend WithEvents CtlPropietario1 As CtlPropietario
+  Friend WithEvents CtlHacienda1 As CtlHacienda
 
 End Class

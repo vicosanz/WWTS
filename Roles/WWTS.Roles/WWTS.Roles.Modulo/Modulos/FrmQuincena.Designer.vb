@@ -108,7 +108,7 @@ Partial Class FrmQuincena
     Me.btnReporte = New System.Windows.Forms.ToolStripDropDownButton()
     Me.QuincenaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
     Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-    Me.CtlBuscaEmpleadosPeriodo1 = New WWTS.Roles.Modulo.CtlBuscaEmpleadosPeriodo()
+    Me.CtlBuscaEmpleadosPeriodo1 = New CtlBuscaEmpleadosPeriodo()
     Me.Pnlcuerpo.SuspendLayout()
     Me.TabControl1.SuspendLayout()
     Me.TabPage1.SuspendLayout()
@@ -313,7 +313,7 @@ Partial Class FrmQuincena
     'btnnuevo
     '
     Me.btnnuevo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-    Me.btnnuevo.Image = Global.WWTS.Roles.Modulo.My.Resources.Resources.nuevo
+    Me.btnnuevo.Image = My.Resources.Resources._new
     Me.btnnuevo.ImageTransparentColor = System.Drawing.Color.Magenta
     Me.btnnuevo.Name = "btnnuevo"
     Me.btnnuevo.Size = New System.Drawing.Size(23, 18)
@@ -322,7 +322,7 @@ Partial Class FrmQuincena
     'btnabrir
     '
     Me.btnabrir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-    Me.btnabrir.Image = Global.WWTS.Roles.Modulo.My.Resources.Resources.abrir
+    Me.btnabrir.Image = My.Resources.Resources.open
     Me.btnabrir.ImageTransparentColor = System.Drawing.Color.Magenta
     Me.btnabrir.Name = "btnabrir"
     Me.btnabrir.Size = New System.Drawing.Size(23, 18)
@@ -335,7 +335,7 @@ Partial Class FrmQuincena
     '
     'btngrabar
     '
-    Me.btngrabar.Image = Global.WWTS.Roles.Modulo.My.Resources.Resources.save16
+    Me.btngrabar.Image = My.Resources.Resources.save
     Me.btngrabar.ImageTransparentColor = System.Drawing.Color.Magenta
     Me.btngrabar.Name = "btngrabar"
     Me.btngrabar.Size = New System.Drawing.Size(116, 18)
@@ -343,7 +343,7 @@ Partial Class FrmQuincena
     '
     'btneliminar
     '
-    Me.btneliminar.Image = Global.WWTS.Roles.Modulo.My.Resources.Resources.eliminar
+    Me.btneliminar.Image = My.Resources.Resources.eliminar
     Me.btneliminar.ImageTransparentColor = System.Drawing.Color.Magenta
     Me.btneliminar.Name = "btneliminar"
     Me.btneliminar.Size = New System.Drawing.Size(124, 18)

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.1433
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31105.61
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WWTS.FichasMedicas.Reglas", "WWTS.FichasMedicas\WWTS.FichasMedicas.Reglas\WWTS.FichasMedicas.Reglas.vbproj", "{90DA84A9-754C-4C3F-B50F-D91347978E17}"
 EndProject
@@ -33,13 +33,13 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WWTS.General.Modulo", "..\G
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WWTS.Aplicacion.Controles", "..\General\WWTS.Aplicacion\WWTS.Aplicacion.Controles\WWTS.Aplicacion.Controles.vbproj", "{6BDE14A6-64B8-41D0-A651-F32A8877CBD0}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WWTS.FichasMedicas.Modulo", "WWTS.FichasMedicas\WWTS.FichasMedicas.Modulo\WWTS.FichasMedicas.Modulo.vbproj", "{0BEEF6E2-B1F6-4FF4-935A-FE69A3AA1CE5}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "FichasMedicas", "WWTS.FichasMedicas\WWTS.FichasMedicas.Modulo\FichasMedicas.vbproj", "{0BEEF6E2-B1F6-4FF4-935A-FE69A3AA1CE5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Roles", "Roles", "{323F5DF0-ECFF-4655-9CEB-C7E6845EEDFB}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WWTS.Roles.Reglas", "..\Roles\WWTS.Roles\WWTS.Roles.Reglas\WWTS.Roles.Reglas.vbproj", "{01E84104-277E-4AEB-A5F4-85A404990B5C}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WWTS.Roles.Modulo", "..\Roles\WWTS.Roles\WWTS.Roles.Modulo\WWTS.Roles.Modulo.vbproj", "{6583DF9B-D939-47E6-B888-1D00202B7C87}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WWTS.Roles.Controles", "..\Roles\WWTS.Roles\WWTS.Roles.Controles\WWTS.Roles.Controles.vbproj", "{DFC6BF50-6A1F-40DF-8DB7-A4D56F9BB525}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -107,10 +107,10 @@ Global
 		{01E84104-277E-4AEB-A5F4-85A404990B5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01E84104-277E-4AEB-A5F4-85A404990B5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01E84104-277E-4AEB-A5F4-85A404990B5C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6583DF9B-D939-47E6-B888-1D00202B7C87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6583DF9B-D939-47E6-B888-1D00202B7C87}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6583DF9B-D939-47E6-B888-1D00202B7C87}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6583DF9B-D939-47E6-B888-1D00202B7C87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFC6BF50-6A1F-40DF-8DB7-A4D56F9BB525}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFC6BF50-6A1F-40DF-8DB7-A4D56F9BB525}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFC6BF50-6A1F-40DF-8DB7-A4D56F9BB525}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFC6BF50-6A1F-40DF-8DB7-A4D56F9BB525}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -129,7 +129,7 @@ Global
 		{B5137A08-F8DB-4741-B474-39A437533DAF} = {82D65EEE-BAD5-47DD-ACAF-8E5DA20BEF04}
 		{6BDE14A6-64B8-41D0-A651-F32A8877CBD0} = {82D65EEE-BAD5-47DD-ACAF-8E5DA20BEF04}
 		{01E84104-277E-4AEB-A5F4-85A404990B5C} = {323F5DF0-ECFF-4655-9CEB-C7E6845EEDFB}
-		{6583DF9B-D939-47E6-B888-1D00202B7C87} = {323F5DF0-ECFF-4655-9CEB-C7E6845EEDFB}
+		{DFC6BF50-6A1F-40DF-8DB7-A4D56F9BB525} = {323F5DF0-ECFF-4655-9CEB-C7E6845EEDFB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BF59805D-21E1-4931-BC95-FCA5439CB37C}

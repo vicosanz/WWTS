@@ -29,7 +29,7 @@ Partial Class FrmLabor
     Me.chkcontrolarhe = New System.Windows.Forms.CheckBox()
     Me.Label4 = New System.Windows.Forms.Label()
     Me.CtlCargoSeccion = New WWTS.General.Controles.ComboBoxParametroDet()
-    Me.CtlModeloLabor1 = New WWTS.Roles.Modulo.CtlModeloLabor()
+    Me.CtlModeloLabor1 = New WWTS.Roles.Controles.CtlModeloLabor()
     CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
     Me.SuspendLayout()
     '
@@ -186,6 +186,6 @@ Partial Class FrmLabor
   Friend WithEvents chkcontrolarhe As System.Windows.Forms.CheckBox
   Friend WithEvents Label4 As System.Windows.Forms.Label
   Friend WithEvents CtlCargoSeccion As WWTS.General.Controles.ComboBoxParametroDet
-  Friend WithEvents CtlModeloLabor1 As WWTS.Roles.Modulo.CtlModeloLabor
+  Friend WithEvents CtlModeloLabor1 As WWTS.Roles.Controles.CtlModeloLabor
 
 End Class

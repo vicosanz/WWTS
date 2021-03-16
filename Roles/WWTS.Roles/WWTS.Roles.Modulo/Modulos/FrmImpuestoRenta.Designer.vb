@@ -61,7 +61,7 @@ Partial Class FrmImpuestoRenta
     Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
     Me.btnReporte = New System.Windows.Forms.ToolStripDropDownButton()
     Me.FormatoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-    Me.CtlBuscaEmpleados1 = New WWTS.Roles.Modulo.CtlBuscaEmpleados()
+    Me.CtlBuscaEmpleados1 = New WWTS.Roles.Controles.CtlBuscaEmpleados()
     Me.Pnlcuerpo.SuspendLayout()
     Me.Panel1.SuspendLayout()
     Me.TabControl1.SuspendLayout()
@@ -435,9 +435,9 @@ Partial Class FrmImpuestoRenta
   Friend WithEvents LiqvalorpagarDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
   Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
   Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
-  'Friend WithEvents CtlBuscaEmpleados1 As WWTS.Roles.Modulo.CtlBuscaEmpleados
+  'Friend WithEvents CtlBuscaEmpleados1 As CtlBuscaEmpleados
   Friend WithEvents Panel1 As System.Windows.Forms.Panel
-  Friend WithEvents CtlBuscaEmpleados1 As WWTS.Roles.Modulo.CtlBuscaEmpleados
+  Friend WithEvents CtlBuscaEmpleados1 As WWTS.Roles.Controles.CtlBuscaEmpleados
   Friend WithEvents Panel2 As System.Windows.Forms.Panel
   Friend WithEvents Label1 As System.Windows.Forms.Label
   Friend WithEvents ComboBoxGastoPersonal As WWTS.General.Controles.ComboBoxParametroDet
