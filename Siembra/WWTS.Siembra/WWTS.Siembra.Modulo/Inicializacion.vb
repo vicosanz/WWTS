@@ -122,7 +122,7 @@ Public Class Inicializacion
 
   Public Async Function ComprobarActualizaciones() As Task(Of Boolean) Implements IAplicacion.ComprobarActualizaciones
     Dim result As Boolean = False
-    Using mgr As UpdateManager = Await GitHubUpdateManager.GetUpdateManager("vicosanz", "SiembraInstaller")
+    Using mgr As FUpdateManager = Await GitHubUpdateManager.GetUpdateManager("vicosanz", "SiembraInstaller")
       Dim _updateInfo As UpdateInfo = Nothing
       Try
         _updateInfo = Await mgr.CheckForUpdate()

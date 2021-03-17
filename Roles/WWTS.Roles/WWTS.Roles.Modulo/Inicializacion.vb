@@ -5,6 +5,7 @@ Imports System.IO
 Imports Squirrel
 Imports System.Threading.Tasks
 Imports System.Linq
+Imports Infoware.Updates
 
 Public Class Inicializacion
   Implements Infoware.Consola.Base.IAplicacion

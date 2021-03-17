@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>$project$</id>
+    <version>$version$</version>
+    <authors>Victor Sanchez</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/vicosanz/WWTS</projectUrl>
+	<icon>siembraicon.png</icon>
+    <description>Siembra</description>
+    <copyright>Infoware Soluciones</copyright>
+  </metadata>
+  <files>
+	<file src="..\Recursos\siembraicon.png" />
+	<file src=".\WWTS.$project$\WWTS.$project$.Modulo\bin\Release\*.application" target="lib\Net45"/>
+	<file src=".\WWTS.$project$\WWTS.$project$.Modulo\bin\Release\*.manifest" target="lib\Net45"/>
+	<file src=".\WWTS.$project$\WWTS.$project$.Modulo\bin\Release\*.config" target="lib\Net45"/>
+	<file src=".\WWTS.$project$\WWTS.$project$.Modulo\bin\Release\*.xml" target="lib\Net45"/>
+	<file src=".\WWTS.$project$\WWTS.$project$.Modulo\bin\Release\*.exe" target="lib\Net45"/>
+	<file src=".\WWTS.$project$\WWTS.$project$.Modulo\bin\Release\*.dll" target="lib\Net45" />
+  </files>
+</package>

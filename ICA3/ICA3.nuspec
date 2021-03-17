@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>$project$</id>
+    <version>$version$</version>
+    <authors>Victor Sanchez</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/vicosanz/WWTS</projectUrl>
+	<icon>$project$icon.png</icon>
+    <description>Infoware Consola Administrativa 3</description>
+    <copyright>Infoware Soluciones</copyright>
+  </metadata>
+  <files>
+	<file src="..\Recursos\$project$icon.png" />
+	<file src=".\$project$\bin\Release\*.application" target="lib\Net45"/>
+	<file src=".\$project$\bin\Release\*.manifest" target="lib\Net45"/>
+	<file src=".\$project$\bin\Release\*.config" target="lib\Net45"/>
+	<file src=".\$project$\bin\Release\*.xml" target="lib\Net45"/>
+	<file src=".\$project$\bin\Release\*.exe" target="lib\Net45"/>
+	<file src=".\$project$\bin\Release\*.dll" target="lib\Net45" />
+  </files>
+</package>

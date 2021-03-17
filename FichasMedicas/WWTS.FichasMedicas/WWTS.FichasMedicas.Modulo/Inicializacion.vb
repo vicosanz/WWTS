@@ -128,7 +128,7 @@ Public Class Inicializacion
 
   Private Async Function BuscarActualizaciones() As Task(Of Boolean)
     Dim result As Boolean = False
-    Using mgr As UpdateManager = Await GitHubUpdateManager.GetUpdateManager("vicosanz", "FichasMedicasInstaller")
+    Using mgr As FUpdateManager = Await GitHubUpdateManager.GetUpdateManager("vicosanz", "FichasMedicasInstaller")
       Dim _updateInfo As UpdateInfo = Nothing
       Try
         _updateInfo = Await mgr.CheckForUpdate()
