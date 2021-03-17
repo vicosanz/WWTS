@@ -273,6 +273,10 @@
       <Project>{8365B169-5835-4CC6-B9F3-91DD27AE4E1A}</Project>
       <Name>Infoware.Reglas</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Infoware.Updates\Infoware.Updates.csproj">
+      <Project>{ffef18e1-fc15-42c9-88eb-2b24b54d7f73}</Project>
+      <Name>Infoware.Updates</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\db.png" />
@@ -313,7 +317,7 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\squirrel.windows.2.0.1\build\squirrel.windows.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\squirrel.windows.2.0.1\build\squirrel.windows.props'))" />
   </Target>

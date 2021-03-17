@@ -704,6 +704,10 @@
       <Project>{6f7c7749-44bd-42c0-9ef8-cacf87184cdf}</Project>
       <Name>WWTS.General.Reglas</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\ICA3\Infoware.Updates\Infoware.Updates.csproj">
+      <Project>{FFEF18E1-FC15-42C9-88EB-2B24B54D7F73}</Project>
+      <Name>Infoware.Updates</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WWTS.Siembra.Reglas\WWTS.Siembra.Reglas.vbproj">
       <Project>{b6348e9d-0c68-4215-92ab-3e488c32829f}</Project>
       <Name>WWTS.Siembra.Reglas</Name>

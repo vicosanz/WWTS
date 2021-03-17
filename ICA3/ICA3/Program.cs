@@ -15,25 +15,10 @@ namespace ICA3
         [STAThread]
         static void Main()
         {
-            CheckForUpdates();
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormMain());
         }
 
-        private static void CheckForUpdates()
-        {
-            try
-            {
-                using (var mgr = UpdateManager.GitHubUpdateManager("https://github.com/vicosanz/ICA3Installer"))
-                {
-                    mgr.Result.UpdateApp().ConfigureAwait(false);
-                }
-            }
-            catch (Exception)
-            {
-            }
-        }
     }
 }

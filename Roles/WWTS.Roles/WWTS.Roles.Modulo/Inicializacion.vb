@@ -119,22 +119,21 @@ Public Class Inicializacion
   Public Event ActualizacionesMensaje As EventHandler(Of String) Implements IAplicacion.ActualizacionesMensaje
 
   Public Async Function ComprobarActualizaciones() As Task(Of Boolean) Implements IAplicacion.ComprobarActualizaciones
-    Dim _updateInfo As UpdateInfo = Nothing
     Dim result As Boolean = False
-    Try
-      RaiseEvent ActualizacionesMensaje(Me, "Comprobando actualizaciones...")
-
-      Using mgr As UpdateManager = Await UpdateManager.GitHubUpdateManager("https://github.com/vicosanz/RolesInstaller")
+    Using mgr As FUpdateManager = Await GitHubUpdateManager.GetUpdateManager("vicosanz", "RolesInstaller")
+      Dim _updateInfo As UpdateInfo = Nothing
+      Try
         _updateInfo = Await mgr.CheckForUpdate()
         If _updateInfo.ReleasesToApply.Any() Then
-          RaiseEvent ActualizacionesMensaje(Me, "Existen actualizaciones por aplicar")
+          RaiseEvent ActualizacionesMensaje(Me, "Nueva versión detectada. Instalando en segundo plano versión.")
+          Await mgr.UpdateApp()
+          RaiseEvent ActualizacionesMensaje(Me, "Aplicación actualizada. Por favor reinicie el programa para continuar.")
           result = True
         End If
-        Await mgr.UpdateApp()
-      End Using
-    Catch ex As Exception
-      RaiseEvent ActualizacionesMensaje(Me, ex.Message)
-    End Try
+      Catch ex As Exception
+        RaiseEvent ActualizacionesMensaje(Me, ex.Message)
+      End Try
+    End Using
     Return result
   End Function
 End Class

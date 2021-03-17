@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ICA3.Toolboxes;
 using Infoware.Consola.Base;
+using Infoware.Updates;
 using Squirrel;
 using WeifenLuo.WinFormsUI.Docking;
 
@@ -107,29 +108,30 @@ namespace ICA3
 
         private async Task CheckForUpdatesAsync()
         {
-            UpdateInfo updateInfo = null;
-            try
+            using (var mgr = await GitHubUpdateManager.GetUpdateManager("vicosanz", "ICA3Installer"))
             {
-                using (var mgr = await UpdateManager.GitHubUpdateManager("https://github.com/vicosanz/ICA3Installer"))
+                UpdateInfo updateInfo = null;
+                try
                 {
                     updateInfo = await mgr.CheckForUpdate();
                     if (updateInfo.ReleasesToApply.Any())
                     {
-                        Mostrarmensaje($"Nueva versión detectada. Instalando en segundo plano versión {updateInfo.FutureReleaseEntry.Version}.");
+                        Mostrarmensaje("Nueva versión detectada. Instalando en segundo plano versión.");
+
+                        await mgr.UpdateApp();
+                        Mostrarmensaje("Aplicación actualizada. Por favor reinicie el programa para continuar.");
                     }
-                    await mgr.UpdateApp();
-                    Mostrarmensaje($"Aplicación actualizada a la versión {updateInfo.FutureReleaseEntry.Version}. Por favor reinicie el programa para continuar.");
                 }
-            }
-            catch (Exception ex)
-            {
-                if (updateInfo is null)
+                catch (Exception ex)
                 {
-                    Mostrarmensaje($"No se puede revisar las actualizaciones. {ex.Message}");
-                }
-                else
-                {
-                    Mostrarmensaje($"ERROR actualizando a la versión {updateInfo.FutureReleaseEntry.Version}. {ex.Message}");
+                    if (updateInfo is null)
+                    {
+                        Mostrarmensaje($"No se puede revisar las actualizaciones. {ex.Message}");
+                    }
+                    else
+                    {
+                        Mostrarmensaje($"ERROR actualizando a la versión {updateInfo.FutureReleaseEntry}. {ex.Message}");
+                    }
                 }
             }
         }
@@ -385,12 +387,6 @@ namespace ICA3
             lblerror.Visible = false;
             lblok.Visible = true;
             tmr_error.Enabled = false;
-        }
-
-        private void tmrUpdate_Tick(object sender, EventArgs e)
-        {
-            tmrUpdate.Enabled = false;
-            //CheckForUpdatesAsync();
         }
     }
 }

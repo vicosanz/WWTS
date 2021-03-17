@@ -536,6 +536,10 @@
       <Project>{6f7c7749-44bd-42c0-9ef8-cacf87184cdf}</Project>
       <Name>WWTS.General.Reglas</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\ICA3\Infoware.Updates\Infoware.Updates.csproj">
+      <Project>{FFEF18E1-FC15-42C9-88EB-2B24B54D7F73}</Project>
+      <Name>Infoware.Updates</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Roles\WWTS.Roles\WWTS.Roles.Controles\WWTS.Roles.Controles.vbproj">
       <Project>{dfc6bf50-6a1f-40df-8db7-a4d56f9bb525}</Project>
       <Name>WWTS.Roles.Controles</Name>

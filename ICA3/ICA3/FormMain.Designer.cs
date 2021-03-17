@@ -51,7 +51,6 @@
             this.FavoritosToolStrip = new System.Windows.Forms.ToolStripButton();
             this.ReportesToolStrip = new System.Windows.Forms.ToolStripButton();
             this.tmr_error = new System.Windows.Forms.Timer(this.components);
-            this.tmrUpdate = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ListBindingSource)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -82,7 +81,7 @@
             this.verToolStripMenuItem.MergeAction = System.Windows.Forms.MergeAction.MatchOnly;
             this.verToolStripMenuItem.MergeIndex = 2;
             this.verToolStripMenuItem.Name = "verToolStripMenuItem";
-            this.verToolStripMenuItem.Size = new System.Drawing.Size(42, 24);
+            this.verToolStripMenuItem.Size = new System.Drawing.Size(44, 24);
             this.verToolStripMenuItem.Text = "&Ver";
             // 
             // barrasOtrasVentanasToolStripMenuItem
@@ -93,7 +92,7 @@
             this.MenuFavoritos,
             this.MenuReportes});
             this.barrasOtrasVentanasToolStripMenuItem.Name = "barrasOtrasVentanasToolStripMenuItem";
-            this.barrasOtrasVentanasToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.barrasOtrasVentanasToolStripMenuItem.Size = new System.Drawing.Size(189, 26);
             this.barrasOtrasVentanasToolStripMenuItem.Text = "Otras ventanas";
             // 
             // MenuSistemas
@@ -102,7 +101,7 @@
             this.MenuSistemas.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.MenuSistemas.MergeIndex = 0;
             this.MenuSistemas.Name = "MenuSistemas";
-            this.MenuSistemas.Size = new System.Drawing.Size(236, 26);
+            this.MenuSistemas.Size = new System.Drawing.Size(244, 26);
             this.MenuSistemas.Text = "&Sistemas Registrados";
             this.MenuSistemas.ToolTipText = "Muestra la lista de sistemas registrados";
             this.MenuSistemas.Click += new System.EventHandler(this.MenuSistemas_Click);
@@ -113,7 +112,7 @@
             this.MenuExplorador.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.MenuExplorador.MergeIndex = 1;
             this.MenuExplorador.Name = "MenuExplorador";
-            this.MenuExplorador.Size = new System.Drawing.Size(236, 26);
+            this.MenuExplorador.Size = new System.Drawing.Size(244, 26);
             this.MenuExplorador.Text = "&Explorador del sistema";
             this.MenuExplorador.ToolTipText = "Muestra la lista de opciones del sistema seleccionado";
             this.MenuExplorador.Click += new System.EventHandler(this.MenuExplorador_Click);
@@ -124,7 +123,7 @@
             this.MenuFavoritos.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.MenuFavoritos.MergeIndex = 2;
             this.MenuFavoritos.Name = "MenuFavoritos";
-            this.MenuFavoritos.Size = new System.Drawing.Size(236, 26);
+            this.MenuFavoritos.Size = new System.Drawing.Size(244, 26);
             this.MenuFavoritos.Text = "&Favoritos";
             this.MenuFavoritos.ToolTipText = "Muestra las opciones favoritas del sistema seleccionado";
             this.MenuFavoritos.Click += new System.EventHandler(this.MenuFavoritos_Click);
@@ -135,7 +134,7 @@
             this.MenuReportes.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.MenuReportes.MergeIndex = 3;
             this.MenuReportes.Name = "MenuReportes";
-            this.MenuReportes.Size = new System.Drawing.Size(236, 26);
+            this.MenuReportes.Size = new System.Drawing.Size(244, 26);
             this.MenuReportes.Text = "&Reportes";
             this.MenuReportes.ToolTipText = "Muestra los reportes del sistema seleccionado";
             this.MenuReportes.Click += new System.EventHandler(this.MenuReportes_Click);
@@ -145,7 +144,7 @@
             this.toolStripMenuItemSep.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.toolStripMenuItemSep.MergeIndex = 4;
             this.toolStripMenuItemSep.Name = "toolStripMenuItemSep";
-            this.toolStripMenuItemSep.Size = new System.Drawing.Size(178, 6);
+            this.toolStripMenuItemSep.Size = new System.Drawing.Size(186, 6);
             // 
             // ventanaToolStripMenuItem
             // 
@@ -154,13 +153,13 @@
             this.ventanaToolStripMenuItem.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.ventanaToolStripMenuItem.MergeIndex = 3;
             this.ventanaToolStripMenuItem.Name = "ventanaToolStripMenuItem";
-            this.ventanaToolStripMenuItem.Size = new System.Drawing.Size(80, 24);
+            this.ventanaToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
             this.ventanaToolStripMenuItem.Text = "V&entanas";
             // 
             // restablecerEsquemaToolStripMenuItem
             // 
             this.restablecerEsquemaToolStripMenuItem.Name = "restablecerEsquemaToolStripMenuItem";
-            this.restablecerEsquemaToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
+            this.restablecerEsquemaToolStripMenuItem.Size = new System.Drawing.Size(233, 26);
             this.restablecerEsquemaToolStripMenuItem.Text = "Restablecer esquema";
             this.restablecerEsquemaToolStripMenuItem.Click += new System.EventHandler(this.RestablecerEsquemaToolStripMenuItem_Click);
             // 
@@ -188,7 +187,7 @@
             this.SistemasToolStrip.Image = global::ICA3.Properties.Resources.db;
             this.SistemasToolStrip.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.SistemasToolStrip.Name = "SistemasToolStrip";
-            this.SistemasToolStrip.Size = new System.Drawing.Size(24, 24);
+            this.SistemasToolStrip.Size = new System.Drawing.Size(29, 24);
             this.SistemasToolStrip.Text = "Sistemas registrados";
             this.SistemasToolStrip.Click += new System.EventHandler(this.SistemasToolStrip_Click);
             // 
@@ -198,7 +197,7 @@
             this.ModulosToolStrip.Image = global::ICA3.Properties.Resources.table;
             this.ModulosToolStrip.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ModulosToolStrip.Name = "ModulosToolStrip";
-            this.ModulosToolStrip.Size = new System.Drawing.Size(24, 24);
+            this.ModulosToolStrip.Size = new System.Drawing.Size(29, 24);
             this.ModulosToolStrip.Text = "Explorador de sistema";
             this.ModulosToolStrip.Click += new System.EventHandler(this.ModulosToolStrip_Click);
             // 
@@ -208,7 +207,7 @@
             this.FavoritosToolStrip.Image = global::ICA3.Properties.Resources.favorites;
             this.FavoritosToolStrip.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.FavoritosToolStrip.Name = "FavoritosToolStrip";
-            this.FavoritosToolStrip.Size = new System.Drawing.Size(24, 24);
+            this.FavoritosToolStrip.Size = new System.Drawing.Size(29, 24);
             this.FavoritosToolStrip.Text = "Favoritos";
             this.FavoritosToolStrip.Click += new System.EventHandler(this.FavoritosToolStrip_Click);
             // 
@@ -218,7 +217,7 @@
             this.ReportesToolStrip.Image = global::ICA3.Properties.Resources.print;
             this.ReportesToolStrip.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ReportesToolStrip.Name = "ReportesToolStrip";
-            this.ReportesToolStrip.Size = new System.Drawing.Size(24, 24);
+            this.ReportesToolStrip.Size = new System.Drawing.Size(29, 24);
             this.ReportesToolStrip.Text = "Reportes";
             this.ReportesToolStrip.Click += new System.EventHandler(this.ReportesToolStrip_Click);
             // 
@@ -226,12 +225,6 @@
             // 
             this.tmr_error.Interval = 60000;
             this.tmr_error.Tick += new System.EventHandler(this.tmr_error_Tick);
-            // 
-            // tmrUpdate
-            // 
-            this.tmrUpdate.Enabled = true;
-            this.tmrUpdate.Interval = 5000;
-            this.tmrUpdate.Tick += new System.EventHandler(this.tmrUpdate_Tick);
             // 
             // FormMain
             // 
@@ -282,6 +275,5 @@
         private System.Windows.Forms.ToolStripMenuItem MenuExplorador;
         private System.Windows.Forms.ToolStripMenuItem MenuFavoritos;
         private System.Windows.Forms.ToolStripMenuItem MenuReportes;
-        private System.Windows.Forms.Timer tmrUpdate;
     }
 }
