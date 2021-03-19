@@ -37,7 +37,7 @@ Partial Class FrmFermentacion
     Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
     Me.rdoDetallado = New System.Windows.Forms.RadioButton()
     Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+
     Me.PnlCuerpo.SuspendLayout()
     Me.TabControl1.SuspendLayout()
     Me.TabPage1.SuspendLayout()
@@ -241,7 +241,7 @@ Partial Class FrmFermentacion
     Me.Controls.Add(Me.PnlCuerpo)
     Me.Name = "FrmFermentacion"
     Me.Text = "Fermentación"
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+
     Me.PnlCuerpo.ResumeLayout(False)
     Me.TabControl1.ResumeLayout(False)
     Me.TabPage1.ResumeLayout(False)

@@ -30,7 +30,7 @@ Partial Class FrmCuarto
     Me.txtarea = New Infoware.Controles.Base.TextBoxCalculator()
     Me.txttemperatura = New Infoware.Controles.Base.TextBoxCalculator()
     Me.chkCaliente = New System.Windows.Forms.CheckBox()
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+
     Me.SuspendLayout()
     '
     'txtdescripcion
@@ -161,7 +161,7 @@ Partial Class FrmCuarto
     Me.Controls.SetChildIndex(Me.txtarea, 0)
     Me.Controls.SetChildIndex(Me.txttemperatura, 0)
     Me.Controls.SetChildIndex(Me.chkCaliente, 0)
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+
     Me.ResumeLayout(False)
     Me.PerformLayout()
 

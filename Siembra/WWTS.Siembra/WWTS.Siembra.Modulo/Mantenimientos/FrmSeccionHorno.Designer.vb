@@ -25,7 +25,7 @@ Partial Class FrmSeccionHorno
     Me.txthasta = New Infoware.Controles.Base.TextBoxCalculator()
     Me.chkhasta = New System.Windows.Forms.CheckBox()
     Me.txtcodigo = New Infoware.Controles.Base.TextBoxCalculator()
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+
     Me.pnlnuevo.SuspendLayout()
     Me.SuspendLayout()
     '
@@ -111,7 +111,7 @@ Partial Class FrmSeccionHorno
     Me.Controls.SetChildIndex(Me.lblmensaje, 0)
     Me.Controls.SetChildIndex(Me.pnlnuevo, 0)
     Me.Controls.SetChildIndex(Me.txtcodigo, 0)
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+
     Me.pnlnuevo.ResumeLayout(False)
     Me.pnlnuevo.PerformLayout()
     Me.ResumeLayout(False)

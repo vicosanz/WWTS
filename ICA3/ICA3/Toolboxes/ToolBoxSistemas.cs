@@ -151,26 +151,31 @@ namespace ICA3.Toolboxes
             }
         }
 
+        public Sistema SistemaActual
+        {
+            get => (Sistema) treeView1.SelectedNode?.Tag;
+        }
+
         private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (treeView1.SelectedNode is null)
+            if (SistemaActual is null)
             {
                 return;
             }
-            Sistemas.Remove((Sistema)treeView1.SelectedNode.Tag);
+            Sistemas.Remove(SistemaActual);
             treeView1.SelectedNode.Remove();
             SistemaList.SerializeList(Sistemas, configFile);
         }
 
         private void modificarSistemaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (treeView1.SelectedNode is null)
+            if (SistemaActual is null)
             {
                 return;
             }
             FrmSistemas f = new FrmSistemas()
             {
-                Sistema = (Sistema)treeView1.SelectedNode.Tag
+                Sistema = SistemaActual
             };
             if (f.ShowDialog() == DialogResult.OK)
             {
@@ -191,10 +196,9 @@ namespace ICA3.Toolboxes
             {
                 return;
             }
-            Sistema _sistema = (Sistema)treeView1.SelectedNode.Tag;
-            if (!_sistema.Probarconexion())
+            if (!SistemaActual.Probarconexion())
             {
-                if (!modificarLogin() || !_sistema.Probarconexion())
+                if (!modificarLogin() || !SistemaActual.Probarconexion())
                 {
                     treeView1.SelectedNode.ImageIndex = 1;
                     treeView1.SelectedNode.SelectedImageIndex = 1;
@@ -211,13 +215,13 @@ namespace ICA3.Toolboxes
 
         private bool modificarLogin()
         {
-            if (treeView1.SelectedNode is null)
+            if (SistemaActual is null)
             {
                 return false;
             }
             FrmSistemasLogin f = new FrmSistemasLogin()
             {
-                Sistema = (Sistema)treeView1.SelectedNode.Tag
+                Sistema = SistemaActual
             };
             if (f.ShowDialog() == DialogResult.OK)
             {
@@ -242,6 +246,24 @@ namespace ICA3.Toolboxes
                     _nodo.SelectedImageIndex = 1;
                 }
             }
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+            desconectarToolStripMenuItem.Enabled = treeView1.SelectedNode?.ImageIndex == 0;
+            modificarSistemaToolStripMenuItem.Enabled = SistemaActual != null;
+            eliminarToolStripMenuItem.Enabled = SistemaActual != null;
+        }
+
+        public event EventHandler<Sistema> DesconectarSistema;
+
+        private void desconectarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (SistemaActual is null)
+            {
+                return;
+            }
+            DesconectarSistema?.Invoke(this, SistemaActual);
         }
     }
 }

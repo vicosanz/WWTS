@@ -48,7 +48,7 @@ Partial Class FrmRezago
     Me.btnlistaempaque = New System.Windows.Forms.Button()
     Me.HeaderStrip1 = New Infoware.Consola.Base.HeaderStrip()
     Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+
     Me.pnlCuerpo.SuspendLayout()
     Me.TabControl1.SuspendLayout()
     Me.TabPage1.SuspendLayout()
@@ -379,7 +379,7 @@ Partial Class FrmRezago
     Me.Controls.Add(Me.pnlCuerpo)
     Me.Name = "FrmRezago"
     Me.Text = "Rezago"
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+
     Me.pnlCuerpo.ResumeLayout(False)
     Me.TabControl1.ResumeLayout(False)
     Me.TabPage1.ResumeLayout(False)

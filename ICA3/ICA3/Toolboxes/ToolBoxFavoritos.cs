@@ -261,5 +261,10 @@ namespace ICA3.Toolboxes
         {
             MarcarFavorito(false);
         }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+            quitarDeFavoritosToolStripMenuItem1.Enabled = treeView1.SelectedNode != null;
+        }
     }
 }

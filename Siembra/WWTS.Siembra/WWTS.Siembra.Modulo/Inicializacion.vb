@@ -120,16 +120,17 @@ Public Class Inicializacion
 
   Public Event ActualizacionesMensaje As EventHandler(Of String) Implements IAplicacion.ActualizacionesMensaje
 
-  Public Async Function ComprobarActualizaciones() As Task(Of Boolean) Implements IAplicacion.ComprobarActualizaciones
+  Public Async Function ComprobarActualizaciones(ensamblado As String) As Task(Of Boolean) Implements IAplicacion.ComprobarActualizaciones
     Dim result As Boolean = False
-    Using mgr As FUpdateManager = Await GitHubUpdateManager.GetUpdateManager("vicosanz", "SiembraInstaller")
+    Using mgr As FUpdateManager = Await GitHubUpdateManager.GetUpdateManager("vicosanz", "SiembraInstaller", ensamblado)
+      Dim _nombreAplicacion = Path.GetFileNameWithoutExtension(ensamblado)
       Dim _updateInfo As UpdateInfo = Nothing
       Try
         _updateInfo = Await mgr.CheckForUpdate()
         If _updateInfo.ReleasesToApply.Any() Then
-          RaiseEvent ActualizacionesMensaje(Me, "Nueva versión detectada. Instalando en segundo plano versión.")
+          RaiseEvent ActualizacionesMensaje(Me, $"Nueva versión {_nombreAplicacion} detectada. Instalando en segundo plano versión.")
           Await mgr.UpdateApp()
-          RaiseEvent ActualizacionesMensaje(Me, "Aplicación actualizada. Por favor reinicie el programa para continuar.")
+          RaiseEvent ActualizacionesMensaje(Me, $"Aplicación {_nombreAplicacion} actualizada. Por favor reinicie el programa para continuar.")
           result = True
         End If
       Catch ex As Exception

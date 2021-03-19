@@ -31,12 +31,14 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ToolBoxSistemas));
             this.treeView1 = new System.Windows.Forms.TreeView();
-            this.ImageList1 = new System.Windows.Forms.ImageList(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.agregarSistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarSistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ImageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.desconectarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,6 +46,7 @@
             // 
             this.treeView1.ContextMenuStrip = this.contextMenuStrip1;
             this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeView1.HideSelection = false;
             this.treeView1.ImageIndex = 0;
             this.treeView1.ImageList = this.ImageList1;
             this.treeView1.Indent = 19;
@@ -55,6 +58,46 @@
             this.treeView1.TabIndex = 3;
             this.treeView1.DoubleClick += new System.EventHandler(this.Abrir_Click);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.desconectarToolStripMenuItem,
+            this.toolStripMenuItem2,
+            this.agregarSistemaToolStripMenuItem,
+            this.modificarSistemaToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.eliminarToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 140);
+            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
+            // 
+            // agregarSistemaToolStripMenuItem
+            // 
+            this.agregarSistemaToolStripMenuItem.Name = "agregarSistemaToolStripMenuItem";
+            this.agregarSistemaToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.agregarSistemaToolStripMenuItem.Text = "&Agregar";
+            this.agregarSistemaToolStripMenuItem.Click += new System.EventHandler(this.agregarSistemaToolStripMenuItem_Click);
+            // 
+            // modificarSistemaToolStripMenuItem
+            // 
+            this.modificarSistemaToolStripMenuItem.Name = "modificarSistemaToolStripMenuItem";
+            this.modificarSistemaToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.modificarSistemaToolStripMenuItem.Text = "&Modificar";
+            this.modificarSistemaToolStripMenuItem.Click += new System.EventHandler(this.modificarSistemaToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(207, 6);
+            // 
+            // eliminarToolStripMenuItem
+            // 
+            this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.eliminarToolStripMenuItem.Text = "&Remover";
+            this.eliminarToolStripMenuItem.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
+            // 
             // ImageList1
             // 
             this.ImageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ImageList1.ImageStream")));
@@ -62,42 +105,17 @@
             this.ImageList1.Images.SetKeyName(0, "db16.ico");
             this.ImageList1.Images.SetKeyName(1, "db16_d.ico");
             // 
-            // contextMenuStrip1
+            // desconectarToolStripMenuItem
             // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agregarSistemaToolStripMenuItem,
-            this.modificarSistemaToolStripMenuItem,
-            this.toolStripMenuItem1,
-            this.eliminarToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(143, 82);
+            this.desconectarToolStripMenuItem.Name = "desconectarToolStripMenuItem";
+            this.desconectarToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.desconectarToolStripMenuItem.Text = "&Desconectar";
+            this.desconectarToolStripMenuItem.Click += new System.EventHandler(this.desconectarToolStripMenuItem_Click);
             // 
-            // agregarSistemaToolStripMenuItem
+            // toolStripMenuItem2
             // 
-            this.agregarSistemaToolStripMenuItem.Name = "agregarSistemaToolStripMenuItem";
-            this.agregarSistemaToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
-            this.agregarSistemaToolStripMenuItem.Text = "&Agregar";
-            this.agregarSistemaToolStripMenuItem.Click += new System.EventHandler(this.agregarSistemaToolStripMenuItem_Click);
-            // 
-            // modificarSistemaToolStripMenuItem
-            // 
-            this.modificarSistemaToolStripMenuItem.Name = "modificarSistemaToolStripMenuItem";
-            this.modificarSistemaToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
-            this.modificarSistemaToolStripMenuItem.Text = "&Modificar";
-            this.modificarSistemaToolStripMenuItem.Click += new System.EventHandler(this.modificarSistemaToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(139, 6);
-            // 
-            // eliminarToolStripMenuItem
-            // 
-            this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
-            this.eliminarToolStripMenuItem.Text = "&Remover";
-            this.eliminarToolStripMenuItem.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(157, 6);
             // 
             // ToolBoxSistemas
             // 
@@ -123,5 +141,7 @@
         private System.Windows.Forms.ToolStripMenuItem modificarSistemaToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem desconectarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
     }
 }

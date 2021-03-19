@@ -15,6 +15,6 @@ namespace Infoware.Consola.Base
 
         event EventHandler<string> ActualizacionesMensaje;
 
-        Task<bool> ComprobarActualizaciones();
+        Task<bool> ComprobarActualizaciones(string ensamblado);
     }
 }

@@ -57,7 +57,7 @@ Partial Class FrmEnsarteZafadura
     Me.CtlZafra1 = New CtlZafra()
     Me.CtlZafra2 = New CtlZafra()
     Me.CtlZafra3 = New CtlZafra()
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+
     Me.PnlCuerpo.SuspendLayout()
     Me.TabControl1.SuspendLayout()
     Me.TabPage1.SuspendLayout()
@@ -543,7 +543,7 @@ Partial Class FrmEnsarteZafadura
     Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.Name = "FrmEnsarteZafadura"
     Me.Text = "Ensarte/Zafadura"
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+
     Me.PnlCuerpo.ResumeLayout(False)
     Me.TabControl1.ResumeLayout(False)
     Me.TabPage1.ResumeLayout(False)

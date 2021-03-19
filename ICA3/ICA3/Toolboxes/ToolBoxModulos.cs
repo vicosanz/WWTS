@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,7 +37,7 @@ namespace ICA3.Toolboxes
             }
         }
 
-        public SistemaList mSistemas { get; private set; } = new SistemaList();
+        public SistemaList MSistemas { get; private set; } = new SistemaList();
 
         public void AgregarSistema(Sistema _Sistema)
         {
@@ -62,7 +63,7 @@ namespace ICA3.Toolboxes
                 };
                 treeView1.Nodes.Add(_node);
                 treeView1.SelectedNode = _node;
-                mSistemas.Add(_Sistema);
+                MSistemas.Add(_Sistema);
                 if (!_Sistema.Probarconexion())
                 {
                     MessageBox.Show(_Sistema.MensajeError, "Error");
@@ -72,7 +73,7 @@ namespace ICA3.Toolboxes
                 _node.SelectedImageIndex = 0;
                 TreeNode _primeraopcion = null;
                 _Sistema.SistemaObjeto.ActualizacionesMensaje += SistemaObjeto_ActualizacionesMensaje;
-                _Sistema.SistemaObjeto.ComprobarActualizaciones().ConfigureAwait(false);
+                _Sistema.SistemaObjeto.ComprobarActualizaciones(_Sistema.Ensamblado).ConfigureAwait(false);
                 List<GrupoOpcion> _grupoopciones = _Sistema.SistemaObjeto.CargarListaGrupoOpciones(_Sistema);
                 foreach(GrupoOpcion _grupoopcion in _grupoopciones)
                 {
@@ -211,11 +212,11 @@ namespace ICA3.Toolboxes
             }
         }
 
-        public event EventHandler DesconectarSistema;
+        public event EventHandler<Sistema> DesconectarSistema;
 
         private void desconectarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DesconectarSistema?.Invoke(this, null);
+            DesconectarSistema?.Invoke(this, SistemaActual);
         }
 
         public void CerrarSistema(Sistema _Sistema)
@@ -288,6 +289,13 @@ namespace ICA3.Toolboxes
         private void quitarDeFavoritosToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             MarcarFavorito(false);
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+            desconectarToolStripMenuItem.Enabled = treeView1.SelectedNode != null;
+            agregarAFavoritosToolStripMenuItem1.Enabled = treeView1.SelectedNode != null;
+            quitarDeFavoritosToolStripMenuItem1.Enabled = treeView1.SelectedNode != null;
         }
     }
 }

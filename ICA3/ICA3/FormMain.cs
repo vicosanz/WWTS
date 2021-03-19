@@ -71,6 +71,7 @@ namespace ICA3
             mToolBoxReportes = new ToolBoxReportes();
 
             mToolBoxSistemas.AbrirSitema += MToolBoxSistemas_AbrirSitema;
+            mToolBoxSistemas.DesconectarSistema += MToolBoxModulos_DesconectarSistema;
             mToolBoxModulos.DesconectarSistema += MToolBoxModulos_DesconectarSistema;
             mToolBoxModulos.MensajeError += MToolBoxModulos_MensajeError;
             mToolBoxModulos.CambioFavoritos += MToolBoxModulos_CambioFavoritos;
@@ -166,12 +167,12 @@ namespace ICA3
             tmr_error.Enabled = true;
         }
 
-        private void MToolBoxModulos_DesconectarSistema(object sender, EventArgs e)
+        private void MToolBoxModulos_DesconectarSistema(object sender, Sistema sistema)
         {
-            mToolBoxSistemas.CerrarSistema(mToolBoxModulos.SistemaActual);
-            mToolBoxFavoritos.CerrarSistema(mToolBoxModulos.SistemaActual);
-            mToolBoxReportes.CerrarSistema(mToolBoxModulos.SistemaActual);
-            mToolBoxModulos.CerrarSistema(mToolBoxModulos.SistemaActual);
+            mToolBoxSistemas.CerrarSistema(sistema);
+            mToolBoxFavoritos.CerrarSistema(sistema);
+            mToolBoxReportes.CerrarSistema(sistema);
+            mToolBoxModulos.CerrarSistema(sistema);
         }
 
         private void MToolBoxSistemas_AbrirSitema(object sender, EventArgs e)

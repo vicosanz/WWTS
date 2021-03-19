@@ -109,7 +109,7 @@ Public Class Inicializacion
 
   Public Event ActualizacionesMensaje As EventHandler(Of String) Implements IAplicacion.ActualizacionesMensaje
 
-  Public Function ComprobarActualizaciones() As Task(Of Boolean) Implements IAplicacion.ComprobarActualizaciones
+  Public Function ComprobarActualizaciones(ensamblado As String) As Task(Of Boolean) Implements IAplicacion.ComprobarActualizaciones
     Return Task.FromResult(False)
   End Function
 End Class

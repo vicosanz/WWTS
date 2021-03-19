@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -18,8 +19,7 @@ namespace Infoware.Updates
         public static async Task<FUpdateManager> GetUpdateManager(
             string gitUser,
             string gitRepo,
-            string applicationName = null,
-            string rootDirectory = null,
+            string ensamblado = null,
             bool prerelease = false)
         {
             var github = new Octokit.GitHubClient(new Octokit.ProductHeaderValue("Squirrel", Assembly.GetExecutingAssembly().GetName().Version.ToString()));
@@ -31,7 +31,15 @@ namespace Infoware.Updates
                 .First();
 
             GitHubFileDownloader urlDownloader = new GitHubFileDownloader(github, latest);
-            
+
+            string applicationName = null;
+            string rootDirectory = null;
+            if (!string.IsNullOrWhiteSpace(ensamblado))
+            {
+                applicationName = Path.GetFileNameWithoutExtension(ensamblado);
+                rootDirectory = FUtilities.GetLocalAppDataDirectory(ensamblado);
+            }
+
             return new FUpdateManager(
                 applicationName,
                 rootDirectory,
