@@ -358,6 +358,10 @@ Public Class CtlContrato
     'mostrar_vacacion()
     mostrar_auditoria()
     mostrar_sueldos()
+
+
+    CtlFichasMedicas1.ModoenSeleccion = ModoenSeleccion
+    CtlFichasMedicas1.Contrato = contrato
   End Sub
 
   Private mLlamadas As LlamadaAtencionList

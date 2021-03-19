@@ -31,7 +31,7 @@ Partial Class FrmModeloLabor
     Me.CtlDetalleModeloLabor6 = New CtlDetalleModeloLabor()
     Me.CtlDetalleModeloLabor7 = New CtlDetalleModeloLabor()
     Me.Panel2 = New System.Windows.Forms.Panel()
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+
     Me.Panel2.SuspendLayout()
     Me.SuspendLayout()
     '
@@ -170,7 +170,7 @@ Partial Class FrmModeloLabor
     Me.Controls.SetChildIndex(Me.Label2, 0)
     Me.Controls.SetChildIndex(Me.txtcodigo, 0)
     Me.Controls.SetChildIndex(Me.Label1, 0)
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+
     Me.Panel2.ResumeLayout(False)
     Me.ResumeLayout(False)
     Me.PerformLayout()

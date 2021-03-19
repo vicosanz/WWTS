@@ -50,7 +50,6 @@
             this.PantallaCompletaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlhidemenu = new System.Windows.Forms.Panel();
             this.dockPanel1 = new WeifenLuo.WinFormsUI.Docking.DockPanel();
-            ((System.ComponentModel.ISupportInitialize)(this.ListBindingSource)).BeginInit();
             this.StatusStrip.SuspendLayout();
             this.MenuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -285,7 +284,6 @@
             this.MainMenuStrip = this.MenuStrip;
             this.Name = "FormBaseMain";
             this.Text = "";
-            ((System.ComponentModel.ISupportInitialize)(this.ListBindingSource)).EndInit();
             this.StatusStrip.ResumeLayout(false);
             this.StatusStrip.PerformLayout();
             this.MenuStrip.ResumeLayout(false);

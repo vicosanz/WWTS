@@ -38,7 +38,7 @@ Partial Class FrmPeriodo
     Me.dtmarcacionhasta = New System.Windows.Forms.DateTimePicker()
     Me.Label8 = New System.Windows.Forms.Label()
     Me.chkesQuincena = New System.Windows.Forms.CheckBox()
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+
     Me.SuspendLayout()
     '
     'dtfecpago
@@ -247,7 +247,6 @@ Partial Class FrmPeriodo
     Me.Controls.SetChildIndex(Me.Label7, 0)
     Me.Controls.SetChildIndex(Me.dtmarcacionhasta, 0)
     Me.Controls.SetChildIndex(Me.Label8, 0)
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
     Me.ResumeLayout(False)
     Me.PerformLayout()
 

@@ -24,7 +24,7 @@ Public Class FrmPrestamos
     Get
       Return mContrato
     End Get
-    Set(ByVal Value As Contrato)
+    Set(value As Contrato)
       mContrato = Value
       Me.TableLayoutPanel1.Enabled = Not Value Is Nothing
       buscar_rubro()

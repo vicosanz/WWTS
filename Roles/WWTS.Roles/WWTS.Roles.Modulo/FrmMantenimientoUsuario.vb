@@ -15,7 +15,7 @@ Public Class FrmMantenimientoUsuario
     Get
       Return MyBase.ListBindingSource
     End Get
-    Set(ByVal value As BindingSource)
+    Set(value As BindingSource)
       MyBase.ListBindingSource = value
       llenar_datos()
     End Set
@@ -26,7 +26,7 @@ Public Class FrmMantenimientoUsuario
     Get
       Return mUsuario
     End Get
-    Set(ByVal value As WWTSUsuario)
+    Set(value As WWTSUsuario)
       mUsuario = value
       If MyBase.ListBindingSource.DataSource Is Nothing Then
         Dim _Usuarios As New WWTSUsuarioList

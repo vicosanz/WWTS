@@ -21,7 +21,7 @@ Public Class FrmQuincena
     Get
       Return mContrato
     End Get
-    Set(ByVal Value As Contrato)
+    Set(value As Contrato)
       mContrato = Value
       Me.Panel1.Enabled = Not Value Is Nothing
       If Panel1.Enabled Then
@@ -43,7 +43,7 @@ Public Class FrmQuincena
     Get
       Return mRubroDetSueldo
     End Get
-    Set(ByVal value As RubroDet)
+    Set(value As RubroDet)
       mRubroDetSueldo = value
     End Set
   End Property
@@ -53,7 +53,7 @@ Public Class FrmQuincena
     Get
       Return mRubroDetQuincena
     End Get
-    Set(ByVal value As RubroDet)
+    Set(value As RubroDet)
       mRubroDetQuincena = value
     End Set
   End Property

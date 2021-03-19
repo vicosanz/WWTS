@@ -25,7 +25,7 @@ Public Class CtlLotePago
         Return mLotePagos(IIf(Me.lstlpv.SelectedIndex = -1, 0, Me.lstlpv.SelectedIndex))
       End If
     End Get
-    Set(ByVal Value As LotePago)
+    Set(value As LotePago)
       If Value Is Nothing Then
         Me.lstlpv.SelectedIndex = -1
       Else

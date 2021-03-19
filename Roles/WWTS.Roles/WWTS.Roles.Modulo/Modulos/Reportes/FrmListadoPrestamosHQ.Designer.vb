@@ -26,7 +26,7 @@ Partial Class FrmListadoPrestamosHQ
     Me.btnMostrar = New System.Windows.Forms.Button()
     Me.pnlcuerpo.SuspendLayout()
     Me.Panel1.SuspendLayout()
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+
     Me.SuspendLayout()
     '
     'pnlcuerpo
@@ -93,7 +93,7 @@ Partial Class FrmListadoPrestamosHQ
     Me.pnlcuerpo.ResumeLayout(False)
     Me.Panel1.ResumeLayout(False)
     Me.Panel1.PerformLayout()
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+
     Me.ResumeLayout(False)
     Me.PerformLayout()
 

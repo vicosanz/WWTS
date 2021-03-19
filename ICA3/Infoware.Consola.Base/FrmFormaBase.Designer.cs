@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.ListBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.ListBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // FrmFormaBase
@@ -40,15 +37,10 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.DockAreas = WeifenLuo.WinFormsUI.Docking.DockAreas.Document;
             this.Name = "FrmFormaBase";
-            this.Text = "FormBase";
-            this.Load += new System.EventHandler(this.FrmFormaBase_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ListBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        public System.Windows.Forms.BindingSource ListBindingSource;
     }
 }

@@ -16,6 +16,19 @@ namespace Infoware.Consola.Base
 {
     public partial class FrmListaSimpleBase : FrmFormaBase, IOpcion
     {
+        public BindingSource ListBindingSource
+        {
+            get => BindingSource;
+            set
+            {
+                BindingSource = value;
+                if (value != null)
+                {
+                    BindingSource.CurrentChanged += Actualizar_Click;
+                }
+            }
+        }
+        
         public string Titulo
         {
             set
@@ -609,6 +622,11 @@ namespace Infoware.Consola.Base
         #endregion
 
         public event EventHandler Actualizar;
+        private void Actualizar_Click(object sender, EventArgs e)
+        {
+            Actualizar?.Invoke(this, null);
+        }
+
         private void Timer1_Tick(object sender, EventArgs e)
         {
             ToolStripProgressBar1.Increment(1);
@@ -710,5 +728,6 @@ namespace Infoware.Consola.Base
             oAttach = null;
             oAttachs = null;
         }
+
     }
 }

@@ -312,6 +312,9 @@ Public Class CtlEmpleado
   End Sub
 
   Private Sub CtlFotoPersona1_CambioImagen(ByVal sender As Object, ByVal e As System.EventArgs) Handles CtlFotoPersona1.CambioImagen
+    If (Empleado Is Nothing) Then
+      Exit Sub
+    End If
     Try
       Me.Empleado.Entidadnatural.Entidad.ArchivoImagen = Me.CtlFotoPersona1.ArchivoImagen
     Catch ex As Exception

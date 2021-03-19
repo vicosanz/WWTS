@@ -32,7 +32,7 @@ Partial Class FrmLotePago
     Me.Label2 = New System.Windows.Forms.Label()
     Me.btneditar = New Infoware.Controles.Base.ButtonStd()
     Me.ofd = New System.Windows.Forms.OpenFileDialog()
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+
     Me.SuspendLayout()
     '
     'cbotipopago
@@ -178,7 +178,6 @@ Partial Class FrmLotePago
     Me.Controls.SetChildIndex(Me.btnnuevo, 0)
     Me.Controls.SetChildIndex(Me.Label5, 0)
     Me.Controls.SetChildIndex(Me.cbotipopago, 0)
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
     Me.ResumeLayout(False)
     Me.PerformLayout()
 

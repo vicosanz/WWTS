@@ -17,6 +17,19 @@ namespace Infoware.Consola.Base
 {
     public partial class FrmMantenimientoBase : FrmFormaBase, IOpcion
     {
+        public BindingSource ListBindingSource
+        {
+            get => BindingSource;
+            set
+            {
+                BindingSource = value;
+                if (value != null)
+                {
+                    BindingSource.CurrentChanged += Actualizar_Click;
+                }
+            }
+        }
+
         public string Tabla
         {
             set
@@ -185,15 +198,6 @@ namespace Infoware.Consola.Base
             AplicarRestricciones += Frm_AplicarRestricciones;
         }
 
-        public FrmMantenimientoBase(Sistema sistema, Restriccion restriccion)
-        {
-            InitializeComponent();
-
-            AplicarRestricciones += Frm_AplicarRestricciones;
-            Sistema = sistema;
-            Restriccion = restriccion;
-        }
-
         private void Frm_AplicarRestricciones(object sender, EventArgs e)
         {
             bool restrinuevo = (EsNuevo && Restriccion.Restri_Ingreso) || (!EsNuevo && Restriccion.Restri_Modificacion);
@@ -314,7 +318,8 @@ namespace Infoware.Consola.Base
 
         #region Binding
         public event EventHandler Actualizar;
-        private void BindingSource1_CurrentChanged(object sender, EventArgs e)
+
+        private void Actualizar_Click(object sender, EventArgs e)
         {
             ValidarRegistro();
             Actualizar?.Invoke(this, null);
@@ -335,9 +340,9 @@ namespace Infoware.Consola.Base
             }
 
             mEsNuevo = false;
-            if (ListBindingSource.Current is _Database)
+            if (ListBindingSource.Current is _Database database)
             {
-                mEsNuevo = ((_Database)ListBindingSource.Current).EsNuevo;
+                mEsNuevo = database.EsNuevo;
             }
             Frm_AplicarRestricciones(this, null);
         }
@@ -360,6 +365,7 @@ namespace Infoware.Consola.Base
 
         private void Siguiente_Click(object sender, EventArgs e)
         {
+            ListBindingSource.CurrentChanged += Actualizar_Click;
             CancelEventArgs ev = new CancelEventArgs();
             Siguiente?.Invoke(this, ev);
             if (!ev.Cancel)
@@ -393,6 +399,5 @@ namespace Infoware.Consola.Base
         }
 
         #endregion
-
     }
 }

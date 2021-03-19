@@ -51,7 +51,6 @@
             this.FavoritosToolStrip = new System.Windows.Forms.ToolStripButton();
             this.ReportesToolStrip = new System.Windows.Forms.ToolStripButton();
             this.tmr_error = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.ListBindingSource)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -59,6 +58,7 @@
             // pnlhidemenu
             // 
             this.pnlhidemenu.Location = new System.Drawing.Point(0, 53);
+            this.pnlhidemenu.Size = new System.Drawing.Size(1059, 12);
             // 
             // menuStrip1
             // 
@@ -177,7 +177,7 @@
             this.ReportesToolStrip});
             this.toolStrip1.Location = new System.Drawing.Point(0, 65);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(800, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(1059, 27);
             this.toolStrip1.TabIndex = 17;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -230,7 +230,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1059, 698);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -242,7 +242,6 @@
             this.Controls.SetChildIndex(this.menuStrip1, 0);
             this.Controls.SetChildIndex(this.pnlhidemenu, 0);
             this.Controls.SetChildIndex(this.toolStrip1, 0);
-            ((System.ComponentModel.ISupportInitialize)(this.ListBindingSource)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);

@@ -11,7 +11,7 @@ Public Class CtlLabor
     Get
       Return mOp
     End Get
-    Set(ByVal value As OperadorDatos)
+    Set(value As OperadorDatos)
       mOp = value
       If value IsNot Nothing Then
         Me.CtlSeccion1.Parametro = Enumerados.EnumParametros.Seccion
@@ -32,7 +32,7 @@ Public Class CtlLabor
         Return mLabors(IIf(Me.lstLabor.SelectedIndex = -1, 0, Me.lstLabor.SelectedIndex))
       End If
     End Get
-    Set(ByVal Value As Labor)
+    Set(value As Labor)
       If Value Is Nothing Then
         Me.lstLabor.SelectedIndex = -1
       Else

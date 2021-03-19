@@ -44,7 +44,7 @@ Public Class CtlAsistencia
     Get
       Return mOp
     End Get
-    Set(ByVal value As OperadorDatos)
+    Set(value As OperadorDatos)
       mOp = value
 
       If value IsNot Nothing Then
@@ -82,7 +82,7 @@ Public Class CtlAsistencia
     Get
       Return mContrato
     End Get
-    Set(ByVal Value As Contrato)
+    Set(value As Contrato)
       mContrato = Value
       If Value Is Nothing Then
         mEmpleado = Nothing
@@ -100,7 +100,7 @@ Public Class CtlAsistencia
     Get
       Return mEmpleado
     End Get
-    Set(ByVal Value As Empleado)
+    Set(value As Empleado)
       mEmpleado = Value
       mContrato = Nothing
       mTipoContrato = Nothing
@@ -114,7 +114,7 @@ Public Class CtlAsistencia
     Get
       Return mPatrono
     End Get
-    Set(ByVal Value As Patrono)
+    Set(value As Patrono)
       mPatrono = Value
       mContrato = Nothing
       mAsistencia = Nothing
@@ -126,7 +126,7 @@ Public Class CtlAsistencia
     Get
       Return mPeriodo
     End Get
-    Set(ByVal Value As PeriodoPago)
+    Set(value As PeriodoPago)
       mPeriodo = Value
       'mContrato = Nothing
       mAsistencia = Nothing
@@ -162,7 +162,7 @@ Public Class CtlAsistencia
     Get
       Return mTipoContrato
     End Get
-    Set(ByVal Value As TipoContrato)
+    Set(value As TipoContrato)
       mTipoContrato = Value
       mAsistencia = Nothing
       mContrato = Nothing
@@ -174,7 +174,7 @@ Public Class CtlAsistencia
     Get
       Return mAsistencia
     End Get
-    Set(ByVal Value As Asistencia)
+    Set(value As Asistencia)
       mAsistencia = Value
       If Value Is Nothing Then
         mContrato = Nothing

@@ -8,10 +8,10 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("WWTS.Roles.Modulo")> 
-<Assembly: AssemblyDescription("")>
+<Assembly: AssemblyTitle("Roles de pago")>
+<Assembly: AssemblyDescription("Roles de pago")>
 <Assembly: AssemblyCompany("Infoware Soluciones")>
-<Assembly: AssemblyProduct("WWTS.Roles.Modulo")> 
+<Assembly: AssemblyProduct("Roles")>
 <Assembly: AssemblyCopyright("Copyright ©  2008")> 
 <Assembly: AssemblyTrademark("")> 
 

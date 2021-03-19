@@ -16,6 +16,20 @@ namespace Infoware.Consola.Base
 {
     public partial class FrmListaBase : FrmFormaBase, IOpcion
     {
+        public BindingSource ListBindingSource
+        {
+            get => BindingSource;
+            set
+            {
+                BindingSource = value;
+                if (value != null)
+                {
+                    BindingSource.CurrentChanged += Actualizar_Click;
+                    BindingSource.DataSourceChanged += ListBindingSource_DataSourceChanged;
+                }
+            }
+        }
+        
         public string Titulo
         {
             set
@@ -127,6 +141,12 @@ namespace Infoware.Consola.Base
             AplicarRestricciones += FrmReporteBase_AplicarRestricciones;
         }
 
+        private void ListBindingSource_DataSourceChanged(object sender, EventArgs e)
+        {
+            DataGridView1.AutoDiscover();
+            lblmessage.Text = BindingSource !=null && BindingSource.Count>0 ? "" : $"{BindingSource.Count} registros presentados";
+        }
+
         public void InitSistema(Sistema sistema, Restriccion restriccion, bool esBusqueda)
         {
             Sistema = sistema;
@@ -207,6 +227,7 @@ namespace Infoware.Consola.Base
         private void Actualizar_Click(object sender, EventArgs e)
         {
             Actualizar?.Invoke(this, null);
+            SeleccionoFila?.Invoke(this, null);
         }
         #endregion
 
@@ -304,25 +325,9 @@ namespace Infoware.Consola.Base
         }
         #endregion
 
-        private void ListBindingSource_DataSourceChanged(object sender, EventArgs e)
-        {
-            DataGridView1.AutoDiscover();
-            if (ListBindingSource is null || ListBindingSource.Count == 0)
-            {
-                lblmessage.Text = "";
-            }
-            else
-            {
-                lblmessage.Text = $"{ListBindingSource.Count} registros presentados";
-            }
-        }
-
         #region SeleccionoFila
         public event EventHandler SeleccionoFila;
-        private void ListBindingSource_CurrentChanged(object sender, EventArgs e)
-        {
-            SeleccionoFila?.Invoke(this, null);
-        }
+
         #endregion
 
         private void btnseleccionar_Click(object sender, EventArgs e)
@@ -404,7 +409,6 @@ namespace Infoware.Consola.Base
         {
             DespuesSeleccionarCampos?.Invoke(this, null);
         }
-
 
     }
 }

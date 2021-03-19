@@ -60,7 +60,7 @@ Partial Class FrmLiquidacion
     Me.cbotipoliquidacion = New WWTS.General.Controles.ComboBoxParametroDet()
     Me.CtlBuscaEmpleados1 = New WWTS.Roles.Controles.CtlBuscaEmpleados()
     Me.ComboBoxLoteLiquidacion1 = New ComboBoxLoteLiquidacion()
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+
     Me.Pnlcuerpo.SuspendLayout()
     Me.Panel1.SuspendLayout()
     Me.TabControl1.SuspendLayout()
@@ -467,7 +467,7 @@ Partial Class FrmLiquidacion
     Me.Margin = New System.Windows.Forms.Padding(4)
     Me.Name = "FrmLiquidacion"
     Me.Text = "Liquidación"
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+
     Me.Pnlcuerpo.ResumeLayout(False)
     Me.Panel1.ResumeLayout(False)
     Me.TabControl1.ResumeLayout(False)

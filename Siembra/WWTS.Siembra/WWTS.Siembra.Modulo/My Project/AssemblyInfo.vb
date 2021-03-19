@@ -8,10 +8,10 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("WWTS.Siembra.Modulo")> 
-<Assembly: AssemblyDescription("")>
+<Assembly: AssemblyTitle("Siembra")>
+<Assembly: AssemblyDescription("Siembra")>
 <Assembly: AssemblyCompany("Infoware Soluciones")>
-<Assembly: AssemblyProduct("WWTS.Siembra.Modulo")> 
+<Assembly: AssemblyProduct("Siembra")>
 <Assembly: AssemblyCopyright("Copyright ©  2015")> 
 <Assembly: AssemblyTrademark("")> 
 

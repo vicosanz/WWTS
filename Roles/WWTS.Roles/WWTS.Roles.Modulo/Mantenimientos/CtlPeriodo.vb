@@ -18,7 +18,7 @@ Public Class CtlPeriodo
     Get
       Return mOp
     End Get
-    Set(ByVal value As OperadorDatos)
+    Set(value As OperadorDatos)
       mOp = value
     End Set
   End Property
@@ -29,7 +29,7 @@ Public Class CtlPeriodo
     Get
       Return mPardetPeriodoPago
     End Get
-    Set(ByVal Value As WWTSParametroDet)
+    Set(value As WWTSParametroDet)
       mPardetPeriodoPago = Value
     End Set
   End Property
@@ -42,7 +42,7 @@ Public Class CtlPeriodo
         Return mPeriodoPagos(IIf(MyBase.SelectedIndex = -1, 0, MyBase.SelectedIndex))
       End If
     End Get
-    Set(ByVal Value As PeriodoPago)
+    Set(value As PeriodoPago)
       If Value Is Nothing Then
         MyBase.SelectedIndex = -1
       Else

@@ -77,11 +77,6 @@ namespace Infoware.Consola.Base
             }
         }
 
-        private void FrmFormaBase_Load(object sender, EventArgs e)
-        {
-
-        }
-
         public void InitSistema(Sistema sistema, Restriccion restriccion)
         {
             Sistema = sistema;

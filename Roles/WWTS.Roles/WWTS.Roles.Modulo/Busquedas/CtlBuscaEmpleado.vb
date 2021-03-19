@@ -8,7 +8,7 @@ Public Class CtlBuscaEmpleado
     Get
       Return mOp
     End Get
-    Set(ByVal value As OperadorDatos)
+    Set(value As OperadorDatos)
       mOp = value
     End Set
   End Property

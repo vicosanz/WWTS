@@ -11,7 +11,7 @@ Public Class CtlPeriodoVacacion
     Get
       Return mContratoSeleccionado
     End Get
-    Set(ByVal value As Contrato)
+    Set(value As Contrato)
       mContratoSeleccionado = value
       mostrar_vacacion()
     End Set

@@ -13,7 +13,7 @@ Public Class FrmListaUsuarios
         Return ListBindingSource.Current
       End If
     End Get
-    Set(ByVal value As WWTSUsuario)
+    Set(value As WWTSUsuario)
       If Not ListBindingSource.Count = 0 And value IsNot Nothing Then
         Dim t As Integer = 0
         For Each _Usuario As WWTSUsuario In Me.ListBindingSource.DataSource
@@ -30,7 +30,7 @@ Public Class FrmListaUsuarios
     Get
       Return MyBase.combobuscar.Text
     End Get
-    Set(ByVal value As String)
+    Set(value As String)
       MyBase.combobuscar.Text = value
       MyBase.Hacer_busqueda()
     End Set

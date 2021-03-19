@@ -42,6 +42,7 @@
             // 
             // treeView1
             // 
+            this.treeView1.ContextMenuStrip = this.contextMenuStrip1;
             this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeView1.ImageIndex = 0;
             this.treeView1.ImageList = this.ImageList1;
@@ -75,26 +76,26 @@
             // agregarSistemaToolStripMenuItem
             // 
             this.agregarSistemaToolStripMenuItem.Name = "agregarSistemaToolStripMenuItem";
-            this.agregarSistemaToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.agregarSistemaToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
             this.agregarSistemaToolStripMenuItem.Text = "&Agregar";
             this.agregarSistemaToolStripMenuItem.Click += new System.EventHandler(this.agregarSistemaToolStripMenuItem_Click);
             // 
             // modificarSistemaToolStripMenuItem
             // 
             this.modificarSistemaToolStripMenuItem.Name = "modificarSistemaToolStripMenuItem";
-            this.modificarSistemaToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.modificarSistemaToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
             this.modificarSistemaToolStripMenuItem.Text = "&Modificar";
             this.modificarSistemaToolStripMenuItem.Click += new System.EventHandler(this.modificarSistemaToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(207, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(139, 6);
             // 
             // eliminarToolStripMenuItem
             // 
             this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
             this.eliminarToolStripMenuItem.Text = "&Remover";
             this.eliminarToolStripMenuItem.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
             // 

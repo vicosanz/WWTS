@@ -16,6 +16,19 @@ namespace Infoware.Consola.Base
 {
     public partial class FrmMantenimientoSimpleBase : FrmFormaBase, IOpcion
     {
+        public BindingSource ListBindingSource
+        {
+            get => BindingSource;
+            set
+            {
+                BindingSource = value;
+                if (value != null)
+                {
+                    BindingSource.CurrentChanged += Actualizar_Click;
+                }
+            }
+        }
+
         public string Tabla
         {
             set
@@ -67,6 +80,14 @@ namespace Infoware.Consola.Base
             AplicarRestricciones += FrmReporteBase_AplicarRestricciones;
         }
 
+        #region Actualizar
+        public event EventHandler Actualizar;
+        private void Actualizar_Click(object sender, EventArgs e)
+        {
+            Actualizar?.Invoke(this, null);
+        }
+        #endregion
+
         private void FrmReporteBase_AplicarRestricciones(object sender, EventArgs e)
         {
             bool restrinuevo = (EsNuevo && Restriccion.Restri_Ingreso) || (!EsNuevo && Restriccion.Restri_Modificacion);
@@ -98,6 +119,11 @@ namespace Infoware.Consola.Base
         private void Guardar_Click(object sender, EventArgs e)
         {
             Guardar?.Invoke(this, null);
+        }
+
+        private void Guardarnuevo_Click(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

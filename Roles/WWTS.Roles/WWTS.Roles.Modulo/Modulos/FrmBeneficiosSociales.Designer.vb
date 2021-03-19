@@ -196,7 +196,7 @@ Partial Class FrmBeneficiosSociales
     Me.BSBeneficiosxLote = New System.Windows.Forms.BindingSource(Me.components)
     Me.bslote = New System.Windows.Forms.BindingSource(Me.components)
     Me.LiquidacionListBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+
     Me.Pnlcuerpo.SuspendLayout()
     Me.TabControl1.SuspendLayout()
     Me.TabPage1.SuspendLayout()
@@ -1621,7 +1621,7 @@ Partial Class FrmBeneficiosSociales
     Me.Margin = New System.Windows.Forms.Padding(4)
     Me.Name = "FrmBeneficiosSociales"
     Me.Text = "Beneficios Sociales"
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+
     Me.Pnlcuerpo.ResumeLayout(False)
     Me.TabControl1.ResumeLayout(False)
     Me.TabPage1.ResumeLayout(False)

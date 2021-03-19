@@ -11,7 +11,7 @@ Public Class FrmPagoVario
     Get
       Return mPagoVario
     End Get
-    Set(ByVal Value As LotePagoVarioDetalle)
+    Set(value As LotePagoVarioDetalle)
       If Value Is Nothing Then
         Throw New NullReferenceException("Debe instanciar un Detalle Lote Pago")
       End If
@@ -32,7 +32,7 @@ Public Class FrmPagoVario
     Get
       Return mDireccion
     End Get
-    Set(ByVal value As IMantenimiento.Accion)
+    Set(value As IMantenimiento.Accion)
       mDireccion = value
       Refrescar_forma()
     End Set

@@ -107,7 +107,7 @@ Partial Class FrmPagos
     Me.mnuPagoCheque = New System.Windows.Forms.ToolStripMenuItem()
     Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
     Me.mnulistapagos = New System.Windows.Forms.ToolStripMenuItem()
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+
     Me.Pnlcuerpo.SuspendLayout()
     Me.TabControl2.SuspendLayout()
     Me.TabPage4.SuspendLayout()
@@ -1044,7 +1044,7 @@ Partial Class FrmPagos
     Me.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
     Me.Name = "FrmPagos"
     Me.Text = "Pagos"
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+
     Me.Pnlcuerpo.ResumeLayout(False)
     Me.TabControl2.ResumeLayout(False)
     Me.TabPage4.ResumeLayout(False)

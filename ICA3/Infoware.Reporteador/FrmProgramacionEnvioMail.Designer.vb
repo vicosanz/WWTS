@@ -73,7 +73,6 @@ Partial Class FrmProgramacionEnvioMail
     Me.GroupBoxHeader1 = New Infoware.Controles.Base.GroupBoxHeader()
     Me.chklisto = New System.Windows.Forms.CheckBox()
     Me.pnlcuerpo.SuspendLayout()
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
     Me.FlowLayoutPanel1.SuspendLayout()
     Me.grpsucede.SuspendLayout()
     Me.grpdiario.SuspendLayout()
@@ -696,7 +695,6 @@ Partial Class FrmProgramacionEnvioMail
     Me.Name = "FrmProgramacionEnvioMail"
     Me.Text = "Programación envío mail automático"
     Me.pnlcuerpo.ResumeLayout(False)
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
     Me.FlowLayoutPanel1.ResumeLayout(False)
     Me.grpsucede.ResumeLayout(False)
     Me.grpsucede.PerformLayout()

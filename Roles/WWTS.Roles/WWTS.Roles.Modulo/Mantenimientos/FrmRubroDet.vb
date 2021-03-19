@@ -10,7 +10,7 @@ Public Class FrmRubroDet
     Get
       Return MyBase.ListBindingSource
     End Get
-    Set(ByVal value As BindingSource)
+    Set(value As BindingSource)
       MyBase.ListBindingSource = value
       llenar_datos()
     End Set
@@ -21,7 +21,7 @@ Public Class FrmRubroDet
     Get
       Return mRubroDet
     End Get
-    Set(ByVal value As RubroDet)
+    Set(value As RubroDet)
       mRubroDet = value
       If MyBase.ListBindingSource.DataSource Is Nothing Then
         Dim _RubroDets As New RubroDetList
@@ -37,7 +37,7 @@ Public Class FrmRubroDet
     Get
       Return mRubro
     End Get
-    Set(ByVal value As Rubro)
+    Set(value As Rubro)
       mRubro = value
     End Set
   End Property
@@ -47,7 +47,7 @@ Public Class FrmRubroDet
     Get
       Return mGuardarEnMemoria
     End Get
-    Set(ByVal value As Boolean)
+    Set(value As Boolean)
       mGuardarEnMemoria = value
     End Set
   End Property
@@ -57,7 +57,7 @@ Public Class FrmRubroDet
     Get
       Return mtemporal
     End Get
-    Set(ByVal value As Decimal)
+    Set(value As Decimal)
       mtemporal = value
     End Set
   End Property

@@ -42,7 +42,7 @@ Partial Class FrmRubro
     Me.txtObservacion = New Infoware.Controles.Base.TextBoxStd()
     Me.pnlPrestamo = New System.Windows.Forms.Panel()
     Me.btnImprSolicitud = New Infoware.Controles.Base.ButtonStd()
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+
     Me.pnlPrestamo.SuspendLayout()
     Me.SuspendLayout()
     '
@@ -321,7 +321,7 @@ Partial Class FrmRubro
     Me.Controls.SetChildIndex(Me.Label11, 0)
     Me.Controls.SetChildIndex(Me.txtObservacion, 0)
     Me.Controls.SetChildIndex(Me.pnlPrestamo, 0)
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+
     Me.pnlPrestamo.ResumeLayout(False)
     Me.ResumeLayout(False)
     Me.PerformLayout()

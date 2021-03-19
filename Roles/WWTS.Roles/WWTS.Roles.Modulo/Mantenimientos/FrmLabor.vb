@@ -13,7 +13,7 @@ Public Class FrmLabor
     Get
       Return mLabor
     End Get
-    Set(ByVal Value As Labor)
+    Set(value As Labor)
       If Value Is Nothing Then
         Throw New NullReferenceException("Debe instanciar un Labor")
       End If
@@ -35,7 +35,7 @@ Public Class FrmLabor
     Get
       Return mDireccion
     End Get
-    Set(ByVal value As IMantenimiento.Accion)
+    Set(value As IMantenimiento.Accion)
       mDireccion = value
       Refrescar_forma()
     End Set

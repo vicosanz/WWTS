@@ -13,30 +13,26 @@ Public Class FrmMantenimientoEmpleado
 #Region "Parametros"
   Public Property Empleados() As BindingSource
     Get
-      Return MyBase.ListBindingSource
+      Return ListBindingSource
     End Get
-    Set(ByVal value As BindingSource)
-      MyBase.ListBindingSource = value
-      llenar_datos()
+    Set(value As BindingSource)
+      ListBindingSource = value
     End Set
   End Property
 
-  Private mEmpleado As Empleado = Nothing
-  Public Property Empleado() As Empleado
+  Public ReadOnly Property Empleado() As Empleado
     Get
-      Return mEmpleado
+      If Empleados Is Nothing Then
+        Return Nothing
+      End If
+      If TypeOf Empleados.Current Is Empleado Then
+        Return Empleados.Current
+      End If
+      If TypeOf Empleados.Current Is Contrato Then
+        Return CType(Empleados.Current, Contrato).Empleado
+      End If
+      Return Nothing
     End Get
-    Set(ByVal value As Empleado)
-      mEmpleado = value
-      'If MyBase.ListBindingSource.DataSource Is Nothing Then
-      Dim _Empleados As New EmpleadoList
-      _Empleados.Add(mEmpleado)
-      'MyBase.ListBindingSource.DataSource = GetType(WWTS.General.Reglas.Empleado)
-      MyBase.ListBindingSource.DataSource = _Empleados
-      'Me.CtlContrato1.Enabled = True
-      'End If
-      'llenar_datos()
-    End Set
   End Property
 
   Sub llenar_datos()
@@ -44,9 +40,8 @@ Public Class FrmMantenimientoEmpleado
       Exit Sub
     End If
 
-    mEmpleado = Empleados.Current
-    Me.CtlEmpleado1.Empleado = mEmpleado
-    Me.CtlContrato1.Empleado = mEmpleado
+    Me.CtlEmpleado1.Empleado = Empleado
+    Me.CtlContrato1.Empleado = Empleado
     'Me.CtlContrato1.HeaderStrip1.Enabled = True
   End Sub
 
@@ -65,7 +60,7 @@ Public Class FrmMantenimientoEmpleado
   End Sub
 
   Private Function Cancelar_Nuevo() As Boolean
-    Dim _esnuevo As Boolean = mEmpleado.EsNuevo
+    Dim _esnuevo As Boolean = Empleado.EsNuevo
     If _esnuevo AndAlso Empleados.Current IsNot Nothing Then
       Empleados.RemoveCurrent()
     End If
@@ -93,13 +88,13 @@ Public Class FrmMantenimientoEmpleado
   Private Function Guardar_datos() As Boolean
     Try
       mapear_datos()
-      Dim _esnuevo As Boolean = mEmpleado.EsNuevo
-      If mEmpleado.Guardar() Then
-        Auditoria.Registrar_Auditoria(Restriccion, IIf(_esnuevo, Enumerados.enumTipoAccion.Adicion, Enumerados.enumTipoAccion.Modificacion), mEmpleado.NombreCompleto)
+      Dim _esnuevo As Boolean = Empleado.EsNuevo
+      If Empleado.Guardar() Then
+        Auditoria.Registrar_Auditoria(Restriccion, IIf(_esnuevo, Enumerados.enumTipoAccion.Adicion, Enumerados.enumTipoAccion.Modificacion), Empleado.NombreCompleto)
 
         If _esnuevo Then
-          mEmpleado.Recargar()
-          Me.CtlBuscaEmpleados1.Empleado = mEmpleado
+          Empleado.Recargar()
+          Me.CtlBuscaEmpleados1.Empleado = Empleado
         End If
         Return True
       End If
@@ -110,7 +105,7 @@ Public Class FrmMantenimientoEmpleado
   End Function
 
   Private Sub FrmMantenimientoEmpleado_Eliminar(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Eliminar
-    If Empleados.Current IsNot Nothing AndAlso mEmpleado.Eliminar() Then
+    If Empleados.Current IsNot Nothing AndAlso Empleado.Eliminar() Then
       Empleados.RemoveCurrent()
       Me.CtlBuscaEmpleados1.Empleado = Nothing
       Me.CtlEmpleado1.Empleado = Nothing
@@ -144,13 +139,13 @@ Public Class FrmMantenimientoEmpleado
     Me.ListBindingSource = Nothing
   End Sub
 
-  Private Sub CtlBuscaEmpleados1_CambioEmpleado(ByVal sender As Object, ByVal e As EventArgs) Handles CtlBuscaEmpleados1.CambioEmpleado
-    Recargar_Empleado()
-  End Sub
+  'Private Sub CtlBuscaEmpleados1_CambioEmpleado(ByVal sender As Object, ByVal e As EventArgs) Handles CtlBuscaEmpleados1.CambioEmpleado
+  '  Recargar_Empleado()
+  'End Sub
 
-  Sub Recargar_Empleado()
-    Me.Empleado = Me.CtlBuscaEmpleados1.Empleado
-  End Sub
+  'Sub Recargar_Empleado()
+  '  Me.Empleado = Me.CtlBuscaEmpleados1.Empleado
+  'End Sub
 
   Sub CargarHojaVida()
     If Me.CtlBuscaEmpleados1.Empleado Is Nothing Then
@@ -256,5 +251,9 @@ Public Class FrmMantenimientoEmpleado
 
   Private Sub CtlEmpleado1_Load(sender As System.Object, e As System.EventArgs) Handles CtlEmpleado1.Load
 
+  End Sub
+
+  Private Sub CtlBuscaEmpleados1_CambioFuenteDatos(sender As Object, e As EventArgs) Handles CtlBuscaEmpleados1.CambioFuenteDatos
+    Empleados = CtlBuscaEmpleados1.ListBindingSource
   End Sub
 End Class

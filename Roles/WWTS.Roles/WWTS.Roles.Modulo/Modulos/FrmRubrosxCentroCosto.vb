@@ -15,7 +15,7 @@ Public Class FrmRubrosxCentroCosto
         Return ListBindingSource.Current
       End If
     End Get
-    Set(ByVal value As RubrosxCentroCosto)
+    Set(value As RubrosxCentroCosto)
       If Not ListBindingSource.Count = 0 And value IsNot Nothing Then
         Dim t As Integer = 0
         For Each mRubrosxCentroCosto As RubrosxCentroCosto In Me.ListBindingSource.DataSource
@@ -32,7 +32,7 @@ Public Class FrmRubrosxCentroCosto
     Get
       Return MyBase.combobuscar.Text
     End Get
-    Set(ByVal value As String)
+    Set(value As String)
       MyBase.combobuscar.Text = value
       MyBase.Hacer_busqueda()
     End Set

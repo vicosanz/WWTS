@@ -14,7 +14,7 @@ Public Class ComboBoxLoteLiquidacion
     Get
       Return mPatrono
     End Get
-    Set(ByVal value As Patrono)
+    Set(value As Patrono)
       mPatrono = value
     End Set
   End Property
@@ -24,7 +24,7 @@ Public Class ComboBoxLoteLiquidacion
     Get
       Return mPardetTipoBeneficio
     End Get
-    Set(ByVal value As WWTSParametroDet)
+    Set(value As WWTSParametroDet)
       mPardetTipoBeneficio = value
     End Set
   End Property
@@ -38,7 +38,7 @@ Public Class ComboBoxLoteLiquidacion
         Return mBeneficiosSocialesLotePagos(MyBase.SelectedIndex)
       End If
     End Get
-    Set(ByVal value As BeneficiosSocialesLotePago)
+    Set(value As BeneficiosSocialesLotePago)
       If value Is Nothing Then
         Me.SelectedIndex = -1
       Else

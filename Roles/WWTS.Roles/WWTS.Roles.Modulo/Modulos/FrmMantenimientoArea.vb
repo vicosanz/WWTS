@@ -8,10 +8,10 @@ Public Class FrmMantenimientoArea
 #Region "Parametros"
   Public Property Areas() As BindingSource
     Get
-      Return MyBase.ListBindingSource
+      Return ListBindingSource
     End Get
-    Set(ByVal value As BindingSource)
-      MyBase.ListBindingSource = value
+    Set(value As BindingSource)
+      ListBindingSource = value
       llenar_datos()
     End Set
   End Property
@@ -21,19 +21,19 @@ Public Class FrmMantenimientoArea
     Get
       Return mArea
     End Get
-    Set(ByVal value As Area)
+    Set(value As Area)
       mArea = value
-      If MyBase.ListBindingSource.DataSource Is Nothing Then
+      If ListBindingSource.DataSource Is Nothing Then
         Dim _Areas As New AreaList
         _Areas.Add(mArea)
-        MyBase.ListBindingSource.DataSource = GetType(Area)
-        MyBase.ListBindingSource.DataSource = _Areas
+        ListBindingSource.DataSource = GetType(Area)
+        ListBindingSource.DataSource = _Areas
       End If
     End Set
   End Property
 
   Sub llenar_datos()
-    If Sistema Is Nothing Then
+    If Sistema Is Nothing OrElse Areas?.Current Is Nothing Then
       Exit Sub
     End If
 
@@ -93,7 +93,7 @@ Public Class FrmMantenimientoArea
     e.NewObject = _Area
   End Sub
 
-  Private Sub FrmMantenimientoArea_Actualizar(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Actualizar
+  Private Sub FrmMantenimientoArea_Actualizar(sender As Object, e As System.EventArgs) Handles Me.Actualizar
     llenar_datos()
   End Sub
 #End Region

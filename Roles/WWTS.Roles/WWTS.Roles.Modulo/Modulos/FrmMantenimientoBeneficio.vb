@@ -13,7 +13,7 @@ Public Class FrmMantenimientoBeneficio
     Get
       Return mBeneficioSocial
     End Get
-    Set(ByVal Value As BeneficiosSociales)
+    Set(value As BeneficiosSociales)
       If Value Is Nothing Then
         Throw New NullReferenceException("Debe instanciar una Beneficio")
       End If
@@ -28,7 +28,7 @@ Public Class FrmMantenimientoBeneficio
     Get
       Return mDireccion
     End Get
-    Set(ByVal value As IMantenimiento.Accion)
+    Set(value As IMantenimiento.Accion)
       mDireccion = value
       Refrescar_forma()
     End Set
@@ -39,7 +39,7 @@ Public Class FrmMantenimientoBeneficio
     Get
       Return mtemporal
     End Get
-    Set(ByVal value As Decimal)
+    Set(value As Decimal)
       mtemporal = value
     End Set
   End Property
@@ -161,7 +161,7 @@ Public Class FrmMantenimientoBeneficio
     Get
       Return mconsulta
     End Get
-    Set(ByVal value As Integer)
+    Set(value As Integer)
       mconsulta = value
     End Set
   End Property
@@ -170,7 +170,7 @@ Public Class FrmMantenimientoBeneficio
     Get
       Return mdesde
     End Get
-    Set(ByVal value As Date)
+    Set(value As Date)
       mdesde = value
     End Set
   End Property
@@ -179,7 +179,7 @@ Public Class FrmMantenimientoBeneficio
     Get
       Return mhasta
     End Get
-    Set(ByVal value As Date)
+    Set(value As Date)
       mhasta = value
     End Set
   End Property
@@ -188,7 +188,7 @@ Public Class FrmMantenimientoBeneficio
     Get
       Return mtipobeneficio
     End Get
-    Set(ByVal value As Enumerados.enumTipoBeneficio)
+    Set(value As Enumerados.enumTipoBeneficio)
       mtipobeneficio = value
     End Set
   End Property

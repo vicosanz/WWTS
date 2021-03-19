@@ -10,7 +10,7 @@ Public Class CtlContratoFichasMedicas
     Get
       Return mUsuario
     End Get
-    Set(ByVal value As Infoware.Reglas.General.Usuario)
+    Set(value As Infoware.Reglas.General.Usuario)
       mUsuario = value
     End Set
   End Property
@@ -22,7 +22,7 @@ Public Class CtlContratoFichasMedicas
     Get
       Return mOp
     End Get
-    Set(ByVal value As OperadorDatos)
+    Set(value As OperadorDatos)
       mOp = value
       'Me.CtlPatrono1.Op = mOp
       Me.CtlPatronoCombo1.Op = mOp
@@ -92,7 +92,7 @@ Public Class CtlContratoFichasMedicas
     Get
       Return mEmpleado
     End Get
-    Set(ByVal Value As Empleado)
+    Set(Value As Empleado)
       mEmpleado = Value
 
       Me.llenar_datos()
@@ -100,7 +100,7 @@ Public Class CtlContratoFichasMedicas
   End Property
 
   Public WriteOnly Property Contrato As Contrato
-    Set(ByVal value As Contrato)
+    Set(value As Contrato)
       Dim _contratos As New ContratoList
 
       _contratos.Add(value)
@@ -126,7 +126,7 @@ Public Class CtlContratoFichasMedicas
     End If
   End Sub
 
-  Sub llenar_contratos(ByVal _contratos As ContratoList)
+  Sub llenar_contratos(_contratos As ContratoList)
     If _contratos IsNot Nothing Then
       For Each _contrato As Contrato In _contratos
         Dim node As New TreeNode
@@ -179,7 +179,7 @@ Public Class CtlContratoFichasMedicas
     End If
   End Sub
 
-  Private Sub tvcontratos_AfterSelect(ByVal sender As System.Object, ByVal e As System.Windows.Forms.TreeViewEventArgs) Handles tvcontratos.AfterSelect
+  Private Sub tvcontratos_AfterSelect(sender As System.Object, ByVal e As System.Windows.Forms.TreeViewEventArgs) Handles tvcontratos.AfterSelect
     If Not e.Node Is Nothing Then
       If tvcontratos.SelectedNode.Text = "[Nuevo]" Then
         CtlCargo1.Enabled = True
@@ -194,7 +194,7 @@ Public Class CtlContratoFichasMedicas
       Else
         'chkDescontarir.Enabled = Restriccion.Restri_VerConfidencial
 
-        Me.pnlrubros.Enabled = Restriccion.Restri_VerConfidencial
+        'Me.CtlFichasMedicas1.Enabled = Restriccion.Restri_VerConfidencial
 
         Me.pnldatos.Enabled = Restriccion.Restri_VerConfidencial
         'CtlCargo1.Enabled = Restriccion.Restri_VerConfidencial
@@ -216,17 +216,13 @@ Public Class CtlContratoFichasMedicas
   Dim DepartamentoAnterior As ParametroDet = Nothing
   Dim AreaAnterior As ParametroDet = Nothing
 
-  Sub MapearContratoaForma(ByVal contrato As Contrato)
+  Sub MapearContratoaForma(contrato As Contrato)
     Me.HeaderStrip1.Enabled = True
     If contrato Is Nothing OrElse mEmpleado.EsNuevo Then
       Me.tb.Enabled = False
       Exit Sub
     End If
     Me.tb.Enabled = True
-
-    If ModoenSeleccion Then
-      Me.HeaderStrip2.Enabled = contrato.EsNuevo
-    End If
 
     Me.cboSubCentroCosto.ParametroDet = contrato.PardetSubCentroCosto
 
@@ -293,29 +289,17 @@ Public Class CtlContratoFichasMedicas
       End If
     End If
 
-    mostrar_fichasmedicas()
+    CtlFichasMedicas1.ModoenSeleccion = ModoenSeleccion
+    CtlFichasMedicas1.Contrato = contrato
   End Sub
 
 
-  Private mFichasMedicas As FichaMedicaList
-  Sub mostrar_fichasmedicas()
-    If ContratoSeleccionado Is Nothing Then
-      Me.BSFichas.DataSource = Nothing
-      Exit Sub
-    End If
-    Me.BSFichas.DataSource = GetType(FichaMedica)
-    mFichasMedicas = FichaMedicaList.ObtenerLista(ContratoSeleccionado.OperadorDatos, ContratoSeleccionado)
-    Dim mitemssortfichamedica As New Infoware.Reglas.SortedView(mFichasMedicas)
-    BSFichas.DataSource = mitemssortfichamedica
-    Me.DataGridView3.AutoDiscover()
-  End Sub
-
-  Private Sub Cerrado_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cerrado.CheckedChanged
+  Private Sub Cerrado_CheckedChanged(sender As System.Object, ByVal e As System.EventArgs) Handles Cerrado.CheckedChanged
     Me.pnlcierre.Visible = Cerrado.Checked
   End Sub
 
   Private guardo As Boolean = True
-  Function GuardarContrato(ByVal nodo As TreeNode) As Boolean
+  Function GuardarContrato(nodo As TreeNode) As Boolean
     Try
       guardo = True
       If Not nodo Is Nothing Then
@@ -404,15 +388,15 @@ Public Class CtlContratoFichasMedicas
     contrato.Selecc_Codigo = Selecc_Codigo
   End Sub
 
-  Private Sub btnnuevo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+  Private Sub btnnuevo_Click(sender As System.Object, ByVal e As System.EventArgs)
     NuevoContrato()
   End Sub
 
-  Private Sub btnguardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+  Private Sub btnguardar_Click(sender As System.Object, ByVal e As System.EventArgs)
     GuardarContrato(Me.tvcontratos.SelectedNode)
   End Sub
 
-  Private Sub btneliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+  Private Sub btneliminar_Click(sender As System.Object, ByVal e As System.EventArgs)
     If MsgBox("¿Está seguro que desea eliminar el contrato?", MsgBoxStyle.YesNo, "Pregunta") = MsgBoxResult.No Then
       Exit Sub
     End If
@@ -446,52 +430,11 @@ Public Class CtlContratoFichasMedicas
 
 
 
-  Private Sub btneliminarficha_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btneliminarficha.Click
-    If BSFichas.Current Is Nothing Then
-      Exit Sub
-    End If
-    If MsgBox("¿Está seguro que desea eliminar esta ficha?", MsgBoxStyle.YesNo, "Pregunta") = MsgBoxResult.No Then
-      Exit Sub
-    End If
-    If Not CType(BSFichas.Current, FichaMedica).Eliminar Then
-      MsgBox("Error al eliminar ficha", MsgBoxStyle.Critical, "Error")
-      Exit Sub
-    End If
-    Auditoria.Registrar_Auditoria(Restriccion, Enumerados.enumTipoAccion.Eliminacion, String.Format("{2}.{3}.{4} Eliminó Ficha {0} {1}", CType(BSFichas.Current, FichaMedica).Contrato.EmpleadoString, CType(BSFichas.Current, FichaMedica).PardetTipoFicha.Descripcion, CType(BSFichas.Current, FichaMedica).Contrato.Entida_Codigo, CType(BSFichas.Current, FichaMedica).Contrato.Patron_Codigo, CType(BSFichas.Current, FichaMedica).Contrato.Contra_Secuencia))
-    mostrar_fichasmedicas()
-  End Sub
-
-  Private Sub DataGridView3_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles DataGridView3.DoubleClick
-    If Not ModoenSeleccion Then
-      abrir_ficha()
-    End If
-  End Sub
-
-  Private Sub DataGridView3_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles DataGridView3.KeyDown
-    Select Case e.KeyCode
-      Case Keys.Enter
-        e.Handled = True
-        abrir_ficha()
-      Case Else
-        e.Handled = False
-    End Select
-
-  End Sub
-
-  Sub abrir_ficha()
-    If Me.BSFichas.Current Is Nothing Then
-      Exit Sub
-    End If
-
-    Dim f As New FrmMantenimientoFichaMedica(CType(Me.ParentForm, FrmFormaBase).Sistema, Enumerados.EnumOpciones.FichasMedicas)
-    f.FichaMedica = CType(BSFichas.Current, FichaMedica)
-    f.ShowDialog()
-
-    mostrar_fichasmedicas()
-  End Sub
 
 
-  Private Sub ContratosToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+
+  Private Sub ContratosToolStripMenuItem_Click(sender As System.Object, ByVal e As System.EventArgs)
     If ContratoSeleccionado Is Nothing OrElse ContratoSeleccionado.EsNuevo Then
       If ContratoSeleccionado.EsNuevo Then
         MsgBox("No está guardado el contrato. Primero guarde el contrato antes de imprimirlo.", MsgBoxStyle.Information, "Información")
@@ -507,7 +450,7 @@ Public Class CtlContratoFichasMedicas
     End If
   End Sub
 
-  Private Sub CertificadosDeTrabajoToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+  Private Sub CertificadosDeTrabajoToolStripMenuItem_Click(sender As System.Object, ByVal e As System.EventArgs)
     If ContratoSeleccionado Is Nothing OrElse ContratoSeleccionado.EsNuevo Then
       If ContratoSeleccionado.EsNuevo Then
         MsgBox("No está guardado el contrato. Primero guarde el contrato antes de imprimir.", MsgBoxStyle.Information, "Información")
@@ -522,11 +465,9 @@ Public Class CtlContratoFichasMedicas
     End If
   End Sub
 
-  Private Sub btnabrirficha_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnabrirficha.Click
-    abrir_ficha()
-  End Sub
 
-  Private Sub cboseccion_CambioItem(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cboSeccion.CambioItem
+
+  Private Sub cboseccion_CambioItem(sender As System.Object, ByVal e As System.EventArgs) Handles cboSeccion.CambioItem
     If Not mCargando Then
       Me.cboDepartamento.Llenar_Datos(ParametroDetList.enumTipoObjeto.Nada, cboSeccion.ParametroDet)
       Me.CtlArea1.Seccion = cboSeccion.ParametroDet
@@ -544,7 +485,7 @@ Public Class CtlContratoFichasMedicas
     End Try
   End Sub
 
-  Private Sub LnkSeleccion_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs)
+  Private Sub LnkSeleccion_LinkClicked(sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs)
     Dim _sistema As Sistema = CType(Me.ParentForm, FrmFormaBase).Sistema
     Dim _seleccion As Seleccion = New Seleccion(mOp, Selecc_Codigo)
     Dim f As New WWTS.Roles.Controles.FrmMantenimientoSeleccion(_sistema, Enumerados.EnumOpciones.Personal)
@@ -558,28 +499,20 @@ Public Class CtlContratoFichasMedicas
     Get
       Return Me.mselecc_codigo
     End Get
-    Set(ByVal value As Integer)
+    Set(value As Integer)
       Me.mselecc_codigo = value
     End Set
   End Property
 
-  Private Sub CtlArea1_CambioItem(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CtlArea1.CambioItem
+  Public Property ModoenSeleccion As Boolean
+
+  Private Sub CtlArea1_CambioItem(sender As System.Object, ByVal e As System.EventArgs) Handles CtlArea1.CambioItem
     If Not mCargando Then
       Llenar_cargos()
     End If
   End Sub
 
-  Private mModoenSeleccion As Boolean = False
-  Public Property ModoenSeleccion As Boolean
-    Get
-      Return mModoenSeleccion
-    End Get
-    Set(ByVal value As Boolean)
-      mModoenSeleccion = value
-    End Set
-  End Property
-
-  Private Sub cboDepartamento_CambioItem(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cboDepartamento.CambioItem
+  Private Sub cboDepartamento_CambioItem(sender As System.Object, ByVal e As System.EventArgs) Handles cboDepartamento.CambioItem
     If Not mCargando Then
       Try
         Me.CtlArea1.Seccion = cboSeccion.ParametroDet
@@ -598,7 +531,7 @@ Public Class CtlContratoFichasMedicas
     Me.CtlTipoContrato1.llenar_datos()
   End Sub
 
-  Private Sub AperturaCuentaBancacriaToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+  Private Sub AperturaCuentaBancacriaToolStripMenuItem_Click(sender As System.Object, ByVal e As System.EventArgs)
     If ContratoSeleccionado Is Nothing OrElse ContratoSeleccionado.EsNuevo Then
       If ContratoSeleccionado.EsNuevo Then
         MsgBox("No está guardado el contrato. Primero guarde el contrato.", MsgBoxStyle.Information, "Información")
@@ -614,7 +547,7 @@ Public Class CtlContratoFichasMedicas
     End If
   End Sub
 
-  Private Sub AutorizaciónClaveIESSToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+  Private Sub AutorizaciónClaveIESSToolStripMenuItem_Click(sender As System.Object, ByVal e As System.EventArgs)
     If ContratoSeleccionado Is Nothing OrElse ContratoSeleccionado.EsNuevo Then
       If ContratoSeleccionado.EsNuevo Then
         MsgBox("No está guardado el contrato. Primero guarde el contrato antes de imprimir.", MsgBoxStyle.Information, "Información")
@@ -632,89 +565,4 @@ Public Class CtlContratoFichasMedicas
     End If
   End Sub
 
-  Private Sub FichaPreocupacionalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FichaPreocupacionalToolStripMenuItem.Click
-    NuevaFicha(Enumerados.TiposFichasMedicas.Preocupacional)
-  End Sub
-
-  Private Sub NuevaFicha(TipoFicha As Enumerados.TiposFichasMedicas)
-    Dim nuevo As New FichaMedica(mOp, True) With {
-          .PardetTipoFicha = New WWTSParametroDet(mOp, Enumerados.EnumParametros.TipoFichaMedica, TipoFicha),
-          .Contrato = ContratoSeleccionado
-        }
-    BSFichas.Add(nuevo)
-    BSFichas.MoveLast()
-    abrir_ficha()
-  End Sub
-
-  Private Sub FichaOcupacionalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FichaOcupacionalToolStripMenuItem.Click
-    NuevaFicha(Enumerados.TiposFichasMedicas.Ocupacional)
-  End Sub
-
-  Private Sub FichaDeReintegroToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FichaDeReintegroToolStripMenuItem.Click
-    NuevaFicha(Enumerados.TiposFichasMedicas.Reingreso)
-  End Sub
-
-  Private Sub FichaDeRetiroToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FichaDeRetiroToolStripMenuItem.Click
-    NuevaFicha(Enumerados.TiposFichasMedicas.Retiro)
-  End Sub
-
-  Private Sub btnimprimirficha_DropDownOpening(sender As Object, e As EventArgs) Handles btnimprimirficha.DropDownOpening
-    btnpag1.Enabled = False
-    btnpag2.Enabled = False
-    btnpag3.Enabled = False
-    If Me.BSFichas.Current Is Nothing Then
-      Exit Sub
-    End If
-    Dim ficha As FichaMedica = Me.BSFichas.Current
-    btnpag1.Enabled = True
-    If ficha.Pardet_TipoFicha = Enumerados.TiposFichasMedicas.Preocupacional OrElse ficha.Pardet_TipoFicha = Enumerados.TiposFichasMedicas.Ocupacional Then
-      btnpag2.Enabled = True
-      btnpag3.Enabled = True
-    End If
-  End Sub
-
-  Private Sub btnpag1_Click(sender As Object, e As EventArgs) Handles btnpag1.Click
-    If Me.BSFichas.Current Is Nothing Then
-      Exit Sub
-    End If
-    Dim ficha As FichaMedica = Me.BSFichas.Current
-    If ficha.Pardet_TipoFicha = Enumerados.TiposFichasMedicas.Preocupacional Then
-      FichaMedicaExcel.CombinarCorrespondenciaFichaPreocupacionalPag1(ficha, String.Format(ficha.PardetTipoFicha.Pardet_DatoStr1, 1))
-    End If
-    If ficha.Pardet_TipoFicha = Enumerados.TiposFichasMedicas.Ocupacional Then
-      FichaMedicaExcel.CombinarCorrespondenciaFichaOcupacionalPag1(ficha, String.Format(ficha.PardetTipoFicha.Pardet_DatoStr1, 1))
-    End If
-    If ficha.Pardet_TipoFicha = Enumerados.TiposFichasMedicas.Reingreso Then
-      FichaMedicaExcel.CombinarCorrespondenciaFichaReingresolPag1(ficha, String.Format(ficha.PardetTipoFicha.Pardet_DatoStr1, 1))
-    End If
-    If ficha.Pardet_TipoFicha = Enumerados.TiposFichasMedicas.Retiro Then
-      FichaMedicaExcel.CombinarCorrespondenciaFichaRetiroPag1(ficha, String.Format(ficha.PardetTipoFicha.Pardet_DatoStr1, 1))
-    End If
-  End Sub
-
-  Private Sub btnpag2_Click(sender As Object, e As EventArgs) Handles btnpag2.Click
-    If Me.BSFichas.Current Is Nothing Then
-      Exit Sub
-    End If
-    Dim ficha As FichaMedica = Me.BSFichas.Current
-    If ficha.Pardet_TipoFicha = Enumerados.TiposFichasMedicas.Preocupacional Then
-      FichaMedicaExcel.CombinarCorrespondenciaFichaPreocupacionalPag2(ficha, String.Format(ficha.PardetTipoFicha.Pardet_DatoStr1, 2))
-    End If
-    If ficha.Pardet_TipoFicha = Enumerados.TiposFichasMedicas.Ocupacional Then
-      FichaMedicaExcel.CombinarCorrespondenciaFichaOcupacionalPag2(ficha, String.Format(ficha.PardetTipoFicha.Pardet_DatoStr1, 2))
-    End If
-  End Sub
-
-  Private Sub btnpag3_Click(sender As Object, e As EventArgs) Handles btnpag3.Click
-    If Me.BSFichas.Current Is Nothing Then
-      Exit Sub
-    End If
-    Dim ficha As FichaMedica = Me.BSFichas.Current
-    If ficha.Pardet_TipoFicha = Enumerados.TiposFichasMedicas.Preocupacional Then
-      FichaMedicaExcel.CombinarCorrespondenciaFichaPreocupacionalPag3(ficha, String.Format(ficha.PardetTipoFicha.Pardet_DatoStr1, 3))
-    End If
-    If ficha.Pardet_TipoFicha = Enumerados.TiposFichasMedicas.Ocupacional Then
-      FichaMedicaExcel.CombinarCorrespondenciaFichaOcupacionalPag3(ficha, String.Format(ficha.PardetTipoFicha.Pardet_DatoStr1, 3))
-    End If
-  End Sub
 End Class

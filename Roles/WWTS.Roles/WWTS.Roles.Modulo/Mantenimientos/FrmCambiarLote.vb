@@ -13,7 +13,7 @@ Public Class FrmCambiarLote
       End If
       Return Me.cboLote.ParametroDet
     End Get
-    Set(ByVal Value As WWTSParametroDet)
+    Set(value As WWTSParametroDet)
       If Value Is Nothing Then
         Me.chkNulo.Checked = True
       Else

@@ -38,7 +38,7 @@ Public Class FrmNomina
     Get
       Return mContrato
     End Get
-    Set(ByVal Value As Contrato)
+    Set(value As Contrato)
       mContrato = Value
       Me.Panel1.Enabled = Not CtlBuscaEmpleadosPeriodo1.Periodo.PerPag_esPagado
       llenar_datos()

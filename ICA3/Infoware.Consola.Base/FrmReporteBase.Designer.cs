@@ -47,7 +47,6 @@
             this.Panel1 = new System.Windows.Forms.Panel();
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.pnlcuerpo = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.ListBindingSource)).BeginInit();
             this.MenuStrip1.SuspendLayout();
             this.ToolStrip1.SuspendLayout();
             this.headerStrip1.SuspendLayout();
@@ -63,7 +62,6 @@
             this.AyudaToolStripMenuItem});
             this.MenuStrip1.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip1.Name = "MenuStrip1";
-            this.MenuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
             this.MenuStrip1.Size = new System.Drawing.Size(924, 28);
             this.MenuStrip1.TabIndex = 4;
             this.MenuStrip1.Text = "MenuStrip1";
@@ -77,7 +75,7 @@
             this.CerrarToolStripMenuItem});
             this.ArchivoToolStripMenuItem.MergeAction = System.Windows.Forms.MergeAction.MatchOnly;
             this.ArchivoToolStripMenuItem.Name = "ArchivoToolStripMenuItem";
-            this.ArchivoToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
+            this.ArchivoToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
             this.ArchivoToolStripMenuItem.Text = "&Archivo";
             // 
             // ImprimirToolStripMenuItem
@@ -88,7 +86,7 @@
             this.ImprimirToolStripMenuItem.Name = "ImprimirToolStripMenuItem";
             this.ImprimirToolStripMenuItem.ShortcutKeyDisplayString = "";
             this.ImprimirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.ImprimirToolStripMenuItem.Size = new System.Drawing.Size(289, 26);
+            this.ImprimirToolStripMenuItem.Size = new System.Drawing.Size(297, 26);
             this.ImprimirToolStripMenuItem.Text = "&Imprimir";
             this.ImprimirToolStripMenuItem.Click += new System.EventHandler(this.ImprimirToolStripMenuItem_Click);
             // 
@@ -99,7 +97,7 @@
             this.ExportarToolStripMenuItem.MergeIndex = 2;
             this.ExportarToolStripMenuItem.Name = "ExportarToolStripMenuItem";
             this.ExportarToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
-            this.ExportarToolStripMenuItem.Size = new System.Drawing.Size(289, 26);
+            this.ExportarToolStripMenuItem.Size = new System.Drawing.Size(297, 26);
             this.ExportarToolStripMenuItem.Text = "&Exportar a Acrobat PDF";
             this.ExportarToolStripMenuItem.Click += new System.EventHandler(this.ExportarToolStripMenuItem_Click);
             // 
@@ -108,13 +106,13 @@
             this.ToolStripMenuItem3.MergeAction = System.Windows.Forms.MergeAction.MatchOnly;
             this.ToolStripMenuItem3.Name = "ToolStripMenuItem3";
             this.ToolStripMenuItem3.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never;
-            this.ToolStripMenuItem3.Size = new System.Drawing.Size(286, 6);
+            this.ToolStripMenuItem3.Size = new System.Drawing.Size(294, 6);
             // 
             // CerrarToolStripMenuItem
             // 
             this.CerrarToolStripMenuItem.MergeAction = System.Windows.Forms.MergeAction.Remove;
             this.CerrarToolStripMenuItem.Name = "CerrarToolStripMenuItem";
-            this.CerrarToolStripMenuItem.Size = new System.Drawing.Size(289, 26);
+            this.CerrarToolStripMenuItem.Size = new System.Drawing.Size(297, 26);
             this.CerrarToolStripMenuItem.Text = "&Cerrar";
             this.CerrarToolStripMenuItem.Click += new System.EventHandler(this.CerrarToolStripMenuItem_Click);
             // 
@@ -123,7 +121,7 @@
             this.EdicionToolStripMenuItem.MergeAction = System.Windows.Forms.MergeAction.Replace;
             this.EdicionToolStripMenuItem.MergeIndex = 1;
             this.EdicionToolStripMenuItem.Name = "EdicionToolStripMenuItem";
-            this.EdicionToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
+            this.EdicionToolStripMenuItem.Size = new System.Drawing.Size(72, 24);
             this.EdicionToolStripMenuItem.Text = "&Edición";
             // 
             // AyudaToolStripMenuItem
@@ -133,7 +131,7 @@
             this.AyudaToolStripMenuItem.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.AyudaToolStripMenuItem.MergeIndex = 5;
             this.AyudaToolStripMenuItem.Name = "AyudaToolStripMenuItem";
-            this.AyudaToolStripMenuItem.Size = new System.Drawing.Size(63, 24);
+            this.AyudaToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
             this.AyudaToolStripMenuItem.Text = "Ay&uda";
             // 
             // AyudaDinamicaToolStripMenuItem
@@ -142,7 +140,7 @@
             this.AyudaDinamicaToolStripMenuItem.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.AyudaDinamicaToolStripMenuItem.MergeIndex = 1;
             this.AyudaDinamicaToolStripMenuItem.Name = "AyudaDinamicaToolStripMenuItem";
-            this.AyudaDinamicaToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.AyudaDinamicaToolStripMenuItem.Size = new System.Drawing.Size(199, 26);
             this.AyudaDinamicaToolStripMenuItem.Text = "&Ayuda dinámica";
             this.AyudaDinamicaToolStripMenuItem.Click += new System.EventHandler(this.AyudaDinamicaToolStripMenuItem_Click);
             // 
@@ -166,7 +164,7 @@
             this.btnimprimir.Image = global::Infoware.Consola.Base.Properties.Resources.print;
             this.btnimprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnimprimir.Name = "btnimprimir";
-            this.btnimprimir.Size = new System.Drawing.Size(24, 24);
+            this.btnimprimir.Size = new System.Drawing.Size(29, 24);
             this.btnimprimir.Text = "Imprimir";
             this.btnimprimir.Click += new System.EventHandler(this.btnimprimir_Click);
             // 
@@ -176,7 +174,7 @@
             this.btnexportar.Image = global::Infoware.Consola.Base.Properties.Resources.acrobat;
             this.btnexportar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnexportar.Name = "btnexportar";
-            this.btnexportar.Size = new System.Drawing.Size(24, 24);
+            this.btnexportar.Size = new System.Drawing.Size(29, 24);
             this.btnexportar.Text = "Exportar";
             this.btnexportar.Click += new System.EventHandler(this.btnexportar_Click);
             // 
@@ -191,7 +189,7 @@
             this.ToolStripButtonAyuda.Image = global::Infoware.Consola.Base.Properties.Resources.help;
             this.ToolStripButtonAyuda.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ToolStripButtonAyuda.Name = "ToolStripButtonAyuda";
-            this.ToolStripButtonAyuda.Size = new System.Drawing.Size(24, 24);
+            this.ToolStripButtonAyuda.Size = new System.Drawing.Size(29, 24);
             this.ToolStripButtonAyuda.Text = "Ayuda dinámica";
             this.ToolStripButtonAyuda.Click += new System.EventHandler(this.ToolStripButtonAyuda_Click);
             // 
@@ -257,8 +255,6 @@
             this.Controls.Add(this.ToolStrip1);
             this.Controls.Add(this.MenuStrip1);
             this.Name = "FrmReporteBase";
-            this.Text = "";
-            ((System.ComponentModel.ISupportInitialize)(this.ListBindingSource)).EndInit();
             this.MenuStrip1.ResumeLayout(false);
             this.MenuStrip1.PerformLayout();
             this.ToolStrip1.ResumeLayout(false);

@@ -13,7 +13,7 @@ Public Class CtlConfigRoles
     Get
       Return mOp
     End Get
-    Set(ByVal Value As OperadorDatos)
+    Set(value As OperadorDatos)
       If Not Value Is Nothing Then
         mOp = Value
         Me.CtlPais1.OperadorDatos = mOp

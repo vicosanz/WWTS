@@ -13,7 +13,7 @@ Public Class FrmMantenimientoRubrosxCentroCosto
     Get
       Return mRubrosxCentroCosto
     End Get
-    Set(ByVal Value As RubrosxCentroCosto)
+    Set(value As RubrosxCentroCosto)
       If Value Is Nothing Then
         Throw New NullReferenceException("Debe instanciar un RubrosxCentroCosto")
       End If
@@ -34,7 +34,7 @@ Public Class FrmMantenimientoRubrosxCentroCosto
     Get
       Return mDireccion
     End Get
-    Set(ByVal value As IMantenimiento.Accion)
+    Set(value As IMantenimiento.Accion)
       mDireccion = value
       Refrescar_forma()
     End Set

@@ -43,7 +43,7 @@ Partial Class FrmMantenimientoVacacion
     Me.Label5 = New System.Windows.Forms.Label()
     Me.ComboBoxPeriodoPago = New WWTS.General.Controles.ComboBoxParametroDet()
     Me.dtPeriodoPagoDesde = New System.Windows.Forms.DateTimePicker()
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+
     Me.PnlLiquidado.SuspendLayout()
     Me.PnlGoceVacaciones.SuspendLayout()
     Me.SuspendLayout()
@@ -281,7 +281,7 @@ Partial Class FrmMantenimientoVacacion
     Me.Controls.SetChildIndex(Me.Label3, 0)
     Me.Controls.SetChildIndex(Me.chckLiquidado, 0)
     Me.Controls.SetChildIndex(Me.PnlLiquidado, 0)
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+
     Me.PnlLiquidado.ResumeLayout(False)
     Me.PnlLiquidado.PerformLayout()
     Me.PnlGoceVacaciones.ResumeLayout(False)

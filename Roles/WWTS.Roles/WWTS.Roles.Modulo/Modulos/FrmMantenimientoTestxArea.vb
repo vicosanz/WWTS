@@ -13,7 +13,7 @@ Public Class FrmMantenimientoTestxArea
     Get
       Return mTestSeleccion
     End Get
-    Set(ByVal Value As TestxArea)
+    Set(value As TestxArea)
       If Value Is Nothing Then
         Throw New NullReferenceException("Debe instanciar un TestxArea")
       End If
@@ -34,7 +34,7 @@ Public Class FrmMantenimientoTestxArea
     Get
       Return mDireccion
     End Get
-    Set(ByVal value As IMantenimiento.Accion)
+    Set(value As IMantenimiento.Accion)
       mDireccion = value
       Refrescar_forma()
     End Set

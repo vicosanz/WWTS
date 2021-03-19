@@ -15,7 +15,7 @@ Public Class FrmSeleccion
         Return ListBindingSource.Current
       End If
     End Get
-    Set(ByVal value As Seleccion)
+    Set(value As Seleccion)
       If Not ListBindingSource.Count = 0 And value IsNot Nothing Then
         Dim t As Integer = 0
         For Each _Seleccion As Seleccion In Me.ListBindingSource.DataSource
@@ -32,7 +32,7 @@ Public Class FrmSeleccion
     Get
       Return MyBase.combobuscar.Text
     End Get
-    Set(ByVal value As String)
+    Set(value As String)
       MyBase.combobuscar.Text = value
       MyBase.Hacer_busqueda()
     End Set

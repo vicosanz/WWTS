@@ -48,7 +48,7 @@ Public Class Inicializacion
     'Loop While Not mProcess.WaitForExit(1000)
   End Sub
 
-  Public Function Validacion(ByVal _Usuario As Infoware.Reglas.General.Usuario) As Boolean Implements Infoware.Consola.Base.IAplicacion.Validacion
+  Public Function Validacion(_Usuario As Infoware.Reglas.General.Usuario) As Boolean Implements Infoware.Consola.Base.IAplicacion.Validacion
     Dim _parametrodet As New Infoware.Reglas.General.ParametroDet(_Usuario.OperadorDatos, 5, 1)
     If Not _parametrodet.Pardet_Descripcion = "Domus" And Not _parametrodet.Pardet_Descripcion = "SalesManager" Then
       MsgBox("Base de datos no compatible con esta aplicación")
@@ -62,13 +62,13 @@ Public Class Inicializacion
     Return True
   End Function
 
-  'Public Sub CargarListaModulos(ByVal _Principal As Infoware.Consola.Base.FrmPrincipal) Implements Infoware.Consola.Base.IAplicacion.CargarListaModulos
+  'Public Sub CargarListaModulos(_Principal As Infoware.Consola.Base.FrmPrincipal) Implements Infoware.Consola.Base.IAplicacion.CargarListaModulos
   '  If _Principal.Sistema.Usuario.Restricciones.Rango(1000, 1050) Then
   '    _Principal.LeftSpine1.Items.Add(_Principal.CrearBotonModulo("Fidelización", My.Resources.Resources.Empresa.ToBitmap, New IAplicacion.DelegadoCargarModulos(AddressOf CargarModulo)))
   '  End If
   'End Sub
 
-  'Public Sub CargarModulo(ByVal _Principal As Infoware.Consola.Base.FrmPrincipal)
+  'Public Sub CargarModulo(_Principal As Infoware.Consola.Base.FrmPrincipal)
   '  _Principal.Text = "Fidelización"
   '  Dim f As New FrmMenuFidelizacion(_Principal.Sistema)
   '  _Principal.Cargar_IModulo(f)
@@ -81,7 +81,7 @@ Public Class Inicializacion
   '  Return result
   'End Function
 
-  'Sub NuevoAfiliado(ByVal _Sistema As Sistema)
+  'Sub NuevoAfiliado(_Sistema As Sistema)
   '  Dim f As New FrmMantenimientoAfiliado(_Sistema, WWTS.General.Reglas.Enumerados.EnumOpciones.ListadoAfiliados)
   '  f.Afiliado = New WWTS.Fidelizacion.Reglas.Afiliado(_Sistema.OperadorDatos, True)
   '  f.ShowDialog()
@@ -96,21 +96,21 @@ Public Class Inicializacion
   '  Return result
   'End Function
 
-  'Sub BuscarAfiliado(ByVal _Sistema As Sistema, ByVal _Texto As String)
+  'Sub BuscarAfiliado(_Sistema As Sistema, ByVal _Texto As String)
   '  Dim f As New FrmListaAfiliados(_Sistema, WWTS.General.Reglas.Enumerados.EnumOpciones.ListadoAfiliados, False)
 
   '  f.Filtro = _Texto
   '  f.ShowDialog()
   'End Sub
 
-  'Sub BuscarPremio(ByVal _Sistema As Sistema, ByVal _Texto As String)
+  'Sub BuscarPremio(_Sistema As Sistema, ByVal _Texto As String)
   '  Dim f As New FrmListaItems(_Sistema, WWTS.General.Reglas.Enumerados.EnumOpciones.Premios, False, Nothing)
 
   '  f.Filtro = _Texto
   '  f.ShowDialog()
   'End Sub
 
-  Public Function CargarListaGrupoOpciones(ByVal _Sistema As Infoware.Consola.Base.Sistema) As System.Collections.Generic.List(Of Infoware.Consola.Base.GrupoOpcion) Implements Infoware.Consola.Base.IAplicacion.CargarListaGrupoOpciones
+  Public Function CargarListaGrupoOpciones(_Sistema As Infoware.Consola.Base.Sistema) As System.Collections.Generic.List(Of Infoware.Consola.Base.GrupoOpcion) Implements Infoware.Consola.Base.IAplicacion.CargarListaGrupoOpciones
     Dim _grupos As New List(Of GrupoOpcion)
 
     If _Sistema.Usuario.Restricciones.porModulo(Enumerados.EnumModulos.FichasMedicas) Then

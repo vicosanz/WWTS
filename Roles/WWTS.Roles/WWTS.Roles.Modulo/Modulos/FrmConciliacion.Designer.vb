@@ -34,7 +34,7 @@ Partial Class FrmConciliacion
     Me.HeaderStrip1 = New Infoware.Consola.Base.HeaderStrip()
     Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
     Me.ofd = New System.Windows.Forms.OpenFileDialog()
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+
     Me.Pnlcuerpo.SuspendLayout()
     Me.HeaderStrip1.SuspendLayout()
     Me.SuspendLayout()
@@ -208,7 +208,7 @@ Partial Class FrmConciliacion
     Me.Margin = New System.Windows.Forms.Padding(4)
     Me.Name = "FrmConciliacion"
     Me.Text = "Configuración"
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+
     Me.Pnlcuerpo.ResumeLayout(False)
     Me.Pnlcuerpo.PerformLayout()
     Me.HeaderStrip1.ResumeLayout(False)

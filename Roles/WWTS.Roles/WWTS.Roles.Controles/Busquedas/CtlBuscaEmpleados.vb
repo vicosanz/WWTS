@@ -613,4 +613,9 @@ Public Class CtlBuscaEmpleados
     RaiseEvent CambioPatrono(Me, Nothing)
   End Sub
 
+  Public Event CambioFuenteDatos As EventHandler
+
+  Private Sub ListBindingSource_DataSourceChanged(sender As Object, e As EventArgs) Handles ListBindingSource.DataSourceChanged
+    RaiseEvent CambioFuenteDatos(Me, Nothing)
+  End Sub
 End Class

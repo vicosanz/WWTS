@@ -62,7 +62,7 @@ Partial Class FrmTipoContrato
     Me.BSFormatos = New System.Windows.Forms.BindingSource(Me.components)
     Me.Label8 = New System.Windows.Forms.Label()
     Me.txtSueldoMaximo = New Infoware.Controles.Base.TextBoxCalculator()
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+
     Me.Panel2.SuspendLayout()
     Me.pnlvalorhora.SuspendLayout()
     Me.Panel3.SuspendLayout()
@@ -537,7 +537,7 @@ Partial Class FrmTipoContrato
     Me.Controls.SetChildIndex(Me.pnlnodestajo, 0)
     Me.Controls.SetChildIndex(Me.pnlvalorhora, 0)
     Me.Controls.SetChildIndex(Me.Panel3, 0)
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+
     Me.Panel2.ResumeLayout(False)
     Me.Panel2.PerformLayout()
     Me.pnlvalorhora.ResumeLayout(False)

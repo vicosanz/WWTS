@@ -12,7 +12,7 @@ Public Class FrmMantenimientoPrestamoDetDets
     Get
       Return mPrestamo
     End Get
-    Set(ByVal value As Prestamo)
+    Set(value As Prestamo)
       mPrestamo = value
       MyBase.Tabla = "Detalles de préstamo"
     End Set
@@ -24,7 +24,7 @@ Public Class FrmMantenimientoPrestamoDetDets
     Get
       Return MyBase.ListBindingSource
     End Get
-    Set(ByVal value As BindingSource)
+    Set(value As BindingSource)
       MyBase.ListBindingSource = value
       llenar_datos()
     End Set
@@ -35,7 +35,7 @@ Public Class FrmMantenimientoPrestamoDetDets
     Get
       Return mPrestamoDet
     End Get
-    Set(ByVal value As PrestamoDet)
+    Set(value As PrestamoDet)
       mPrestamoDet = value
       If MyBase.ListBindingSource.DataSource Is Nothing Then
         Dim _PrestamoDets As New PrestamoDetList

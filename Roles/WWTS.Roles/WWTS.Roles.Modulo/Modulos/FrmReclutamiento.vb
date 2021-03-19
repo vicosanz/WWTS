@@ -14,7 +14,7 @@ Public Class FrmReclutamiento
         Return ListBindingSource.Current
       End If
     End Get
-    Set(ByVal value As Empleado)
+    Set(value As Empleado)
       If Not ListBindingSource.Count = 0 And value IsNot Nothing Then
         Dim t As Integer = 0
         For Each _Empleado As Empleado In Me.ListBindingSource.DataSource
@@ -31,7 +31,7 @@ Public Class FrmReclutamiento
     Get
       Return MyBase.combobuscar.Text
     End Get
-    Set(ByVal value As String)
+    Set(value As String)
       MyBase.combobuscar.Text = value
       MyBase.Hacer_busqueda()
     End Set
@@ -94,7 +94,7 @@ Public Class FrmReclutamiento
   Private WithEvents mEmpleadoList As EmpleadoList = Nothing
 
   Sub Llenar_datos(Optional ByVal _filtro As String = "")
-    MyBase.Titulo = "reclutamiento"
+    MyBase.Titulo = "Reclutamiento"
     MyBase.AgregarLeyenda = "Agregar un nuevo candidato"
 
     Me.ListBindingSource.DataSource = GetType(EmpleadoList)
@@ -110,41 +110,47 @@ Public Class FrmReclutamiento
     Me.DataGridView1.Columns.Clear()
 
     Dim DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
-    DataGridViewTextBoxColumn1.DataPropertyName = "Entida_Codigo"
-    DataGridViewTextBoxColumn1.HeaderText = "Código"
-    DataGridViewTextBoxColumn1.Width = 50
-    Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {DataGridViewTextBoxColumn1})
+    DataGridViewTextBoxColumn1 = New DataGridViewTextBoxColumn With {
+      .DataPropertyName = "Entida_Codigo",
+      .HeaderText = "Código",
+      .Width = 50
+    }
+    Me.DataGridView1.Columns.AddRange(New DataGridViewColumn() {DataGridViewTextBoxColumn1})
 
-    DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
-    DataGridViewTextBoxColumn1.DataPropertyName = "NombreCompleto"
-    DataGridViewTextBoxColumn1.HeaderText = "Nombre Completo"
-    DataGridViewTextBoxColumn1.Width = 250
-    Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {DataGridViewTextBoxColumn1})
+    DataGridViewTextBoxColumn1 = New DataGridViewTextBoxColumn With {
+      .DataPropertyName = "NombreCompleto",
+      .HeaderText = "Nombre Completo",
+      .Width = 250
+    }
+    Me.DataGridView1.Columns.AddRange(New DataGridViewColumn() {DataGridViewTextBoxColumn1})
 
-    DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
-    DataGridViewTextBoxColumn1.DataPropertyName = "TelefonosString"
-    DataGridViewTextBoxColumn1.HeaderText = "Teléfono"
-    DataGridViewTextBoxColumn1.Width = 100
-    Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {DataGridViewTextBoxColumn1})
+    DataGridViewTextBoxColumn1 = New DataGridViewTextBoxColumn With {
+      .DataPropertyName = "TelefonosString",
+      .HeaderText = "Teléfono",
+      .Width = 100
+    }
+    Me.DataGridView1.Columns.AddRange(New DataGridViewColumn() {DataGridViewTextBoxColumn1})
 
-    DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
-    DataGridViewTextBoxColumn1.DataPropertyName = "CiudadDomicilioString"
-    DataGridViewTextBoxColumn1.HeaderText = "Ciudad Domicilio"
-    DataGridViewTextBoxColumn1.Width = 100
-    Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {DataGridViewTextBoxColumn1})
+    DataGridViewTextBoxColumn1 = New DataGridViewTextBoxColumn With {
+      .DataPropertyName = "CiudadDomicilioString",
+      .HeaderText = "Ciudad Domicilio",
+      .Width = 100
+    }
+    Me.DataGridView1.Columns.AddRange(New DataGridViewColumn() {DataGridViewTextBoxColumn1})
 
-    DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
-    DataGridViewTextBoxColumn1.DataPropertyName = "SectorDomicilioString"
-    DataGridViewTextBoxColumn1.HeaderText = "Sector Domicilio"
-    DataGridViewTextBoxColumn1.Width = 75
-    Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {DataGridViewTextBoxColumn1})
+    DataGridViewTextBoxColumn1 = New DataGridViewTextBoxColumn With {
+      .DataPropertyName = "SectorDomicilioString",
+      .HeaderText = "Sector Domicilio",
+      .Width = 75
+    }
+    Me.DataGridView1.Columns.AddRange(New DataGridViewColumn() {DataGridViewTextBoxColumn1})
 
-    DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
-    DataGridViewTextBoxColumn1.DataPropertyName = "EstadoActualString"
-    DataGridViewTextBoxColumn1.HeaderText = "Estado Actual"
-    DataGridViewTextBoxColumn1.Width = 250
-    Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {DataGridViewTextBoxColumn1})
+    DataGridViewTextBoxColumn1 = New DataGridViewTextBoxColumn With {
+      .DataPropertyName = "EstadoActualString",
+      .HeaderText = "Estado Actual",
+      .Width = 250
+    }
+    Me.DataGridView1.Columns.AddRange(New DataGridViewColumn() {DataGridViewTextBoxColumn1})
 
   End Sub
 

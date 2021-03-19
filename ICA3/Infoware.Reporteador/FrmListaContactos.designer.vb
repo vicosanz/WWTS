@@ -25,7 +25,6 @@ Partial Class FrmListaContactos
     Me.btnmayorizar = New System.Windows.Forms.ToolStripButton()
     Me.btndemayorizar = New System.Windows.Forms.ToolStripButton()
     Me.pnlcuerpo.SuspendLayout()
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
     Me.ToolStrip2.SuspendLayout()
     Me.SuspendLayout()
     '
@@ -88,7 +87,6 @@ Partial Class FrmListaContactos
     Me.Controls.SetChildIndex(Me.ToolStrip2, 0)
     Me.Controls.SetChildIndex(Me.pnlcuerpo, 0)
     Me.pnlcuerpo.ResumeLayout(False)
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
     Me.ToolStrip2.ResumeLayout(False)
     Me.ToolStrip2.PerformLayout()
     Me.ResumeLayout(False)

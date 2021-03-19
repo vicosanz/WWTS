@@ -7,7 +7,7 @@ Imports WeifenLuo.WinFormsUI.Docking
 
 Public Class Loader
 #Region "FichasMedicas"
-  Function CargarModuloFichasMedicas(ByVal _Sistema As Sistema) As List(Of GrupoOpcion)
+  Function CargarModuloFichasMedicas(_Sistema As Sistema) As List(Of GrupoOpcion)
     Dim _grupos As New List(Of GrupoOpcion)
     If _Sistema.Usuario.Restricciones.porModulo(Enumerados.EnumModulos.FichasMedicas) Then
       _grupos.Add(New GrupoOpcion(New ParametroDet(_Sistema.OperadorDatos, 4, Enumerados.EnumModulos.FichasMedicas), CargarOpcionesFichasMedicas(_Sistema, False), CargarOpcionesFichasMedicas(_Sistema, True), CargarOpcionesFichasMedicasRep(_Sistema)))
@@ -15,7 +15,7 @@ Public Class Loader
     Return _grupos
   End Function
 
-  Function CargarOpcionesFichasMedicas(ByVal _Sistema As Sistema, ByVal _SoloFavoritas As Boolean) As List(Of Opcion)
+  Function CargarOpcionesFichasMedicas(_Sistema As Sistema, ByVal _SoloFavoritas As Boolean) As List(Of Opcion)
     Dim _opciones As New List(Of Opcion)
 
     For Each _restriccion As Restriccion In _Sistema.Restricciones
@@ -33,7 +33,7 @@ Public Class Loader
     Return _opciones
   End Function
 
-  Function CargarOpcionesFichasMedicasRep(ByVal _Sistema As Sistema) As List(Of Opcion)
+  Function CargarOpcionesFichasMedicasRep(_Sistema As Sistema) As List(Of Opcion)
     Dim _opciones As New List(Of Opcion)
 
     For Each _restriccion As Restriccion In _Sistema.Restricciones
@@ -52,26 +52,26 @@ Public Class Loader
     Return _opciones
   End Function
 
-  Function CargarReporte(ByVal _Sistema As Sistema, ByVal _Restriccion As Restriccion, ByVal _Opcion As Opcion) As IDockContent
+  Function CargarReporte(_Sistema As Sistema, ByVal _Restriccion As Restriccion, ByVal _Opcion As Opcion) As IDockContent
     Dim f As New Infoware.Reporteador.FrmLista(_Sistema, _Restriccion) With {
       .Reporte = _Opcion.Tag
     }
     Return f
   End Function
 
-  Function CargarFichasMedicas(ByVal _Sistema As Sistema, ByVal _Restriccion As Restriccion, ByVal _Opcion As Opcion) As IDockContent
-    Dim f As New FrmMantenimientoEmpleado(_Sistema, _Restriccion)
+  Function CargarFichasMedicas(_Sistema As Sistema, ByVal _Restriccion As Restriccion, ByVal _Opcion As Opcion) As IDockContent
+    Dim f As New FrmMantenimientoFichasMedicas(_Sistema, _Restriccion)
     Return f
   End Function
 
-  Function CargarTiposFichasMedicas(ByVal _Sistema As Sistema, ByVal _Restriccion As Restriccion, ByVal _Opcion As Opcion) As IDockContent
+  Function CargarTiposFichasMedicas(_Sistema As Sistema, ByVal _Restriccion As Restriccion, ByVal _Opcion As Opcion) As IDockContent
     Dim f As New FrmListaParametroDets(_Sistema, _Restriccion, False) With {
       .Parame_Codigo = Enumerados.EnumParametros.TipoFichaMedica,
       .PuedeNuevo = False
     }
     Return f
   End Function
-  'Function CargarFranjashorarios(ByVal _Sistema As Sistema, ByVal _Restriccion As Restriccion, ByVal _Opcion As Opcion) As IDockContent
+  'Function CargarFranjashorarios(_Sistema As Sistema, ByVal _Restriccion As Restriccion, ByVal _Opcion As Opcion) As IDockContent
   'Dim f As New General.Controles.FrmListaParametroDets(_Sistema, _Restriccion, False)
   'f.Parame_Codigo = Enumerados.EnumParametros.FranjaHorarios
   'Return f

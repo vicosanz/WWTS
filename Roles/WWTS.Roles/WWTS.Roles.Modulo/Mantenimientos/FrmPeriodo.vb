@@ -12,7 +12,7 @@ Public Class FrmPeriodo
     Get
       Return Me.ComboBoxParametroDet1.ParametroDet
     End Get
-    Set(ByVal value As WWTSParametroDet)
+    Set(value As WWTSParametroDet)
       ComboBoxParametroDet1.ParametroDet = value
     End Set
   End Property
@@ -22,7 +22,7 @@ Public Class FrmPeriodo
     Get
       Return mPeriodoPago
     End Get
-    Set(ByVal Value As PeriodoPago)
+    Set(value As PeriodoPago)
       If Value Is Nothing Then
         Throw New NullReferenceException("Debe instanciar un Periodo Pago")
       End If
@@ -44,7 +44,7 @@ Public Class FrmPeriodo
     Get
       Return mDireccion
     End Get
-    Set(ByVal value As IMantenimiento.Accion)
+    Set(value As IMantenimiento.Accion)
       mDireccion = value
       Refrescar_forma()
     End Set

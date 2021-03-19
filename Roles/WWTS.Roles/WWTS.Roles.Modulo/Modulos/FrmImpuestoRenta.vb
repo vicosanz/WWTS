@@ -14,7 +14,7 @@ Public Class FrmImpuestoRenta
     Get
       Return mContrato
     End Get
-    Set(ByVal Value As Contrato)
+    Set(value As Contrato)
       mContrato = Value
     End Set
   End Property

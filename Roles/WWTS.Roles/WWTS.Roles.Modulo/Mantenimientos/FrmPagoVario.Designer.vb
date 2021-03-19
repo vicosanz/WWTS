@@ -33,7 +33,7 @@ Partial Class FrmPagoVario
     Me.txtvalor = New Infoware.Controles.Base.TextBoxCalculator()
     Me.CtlBuscaEmpleado1 = New CtlBuscaEmpleado()
     Me.chkmostrarenprovisiones = New System.Windows.Forms.CheckBox()
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+
     Me.SuspendLayout()
     '
     'cbotipopago
@@ -206,7 +206,7 @@ Partial Class FrmPagoVario
     Me.Controls.SetChildIndex(Me.txtvalor, 0)
     Me.Controls.SetChildIndex(Me.CtlBuscaEmpleado1, 0)
     Me.Controls.SetChildIndex(Me.chkmostrarenprovisiones, 0)
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+
     Me.ResumeLayout(False)
     Me.PerformLayout()
 

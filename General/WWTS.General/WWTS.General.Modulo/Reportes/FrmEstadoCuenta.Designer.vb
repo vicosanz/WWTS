@@ -32,7 +32,6 @@ Partial Class FrmEstadoCuenta
     Me.Label2 = New System.Windows.Forms.Label()
     Me.dtfechasta = New System.Windows.Forms.DateTimePicker()
     Me.BarraEmpresa1 = New WWTS.Aplicacion.Controles.BarraEmpresa()
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
     Me.pnlcuerpo.SuspendLayout()
     Me.Panel1.SuspendLayout()
     Me.Panel3.SuspendLayout()
@@ -207,7 +206,6 @@ Partial Class FrmEstadoCuenta
     Me.PuedeImprimir = True
     Me.Controls.SetChildIndex(Me.BarraEmpresa1, 0)
     Me.Controls.SetChildIndex(Me.pnlcuerpo, 0)
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
     Me.pnlcuerpo.ResumeLayout(False)
     Me.Panel1.ResumeLayout(False)
     Me.Panel1.PerformLayout()

@@ -70,7 +70,7 @@
             this.Panel2.Name = "Panel2";
             this.Panel2.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
             this.Panel2.Size = new System.Drawing.Size(569, 253);
-            this.Panel2.TabIndex = 5;
+            this.Panel2.TabIndex = 0;
             // 
             // Panel1
             // 
@@ -127,7 +127,7 @@
             this.GroupBoxHeader1.Name = "GroupBoxHeader1";
             this.GroupBoxHeader1.Padding = new System.Windows.Forms.Padding(20, 12, 4, 4);
             this.GroupBoxHeader1.Size = new System.Drawing.Size(543, 162);
-            this.GroupBoxHeader1.TabIndex = 3;
+            this.GroupBoxHeader1.TabIndex = 0;
             this.GroupBoxHeader1.TabStop = false;
             this.GroupBoxHeader1.Text = "Inicio de sesión";
             // 
@@ -154,7 +154,7 @@
             this.txtnombreusuario.MultiLine = false;
             this.txtnombreusuario.Name = "txtnombreusuario";
             this.txtnombreusuario.Size = new System.Drawing.Size(330, 22);
-            this.txtnombreusuario.TabIndex = 1;
+            this.txtnombreusuario.TabIndex = 0;
             // 
             // txtcontrasena
             // 
@@ -166,7 +166,7 @@
             this.txtcontrasena.MultiLine = false;
             this.txtcontrasena.Name = "txtcontrasena";
             this.txtcontrasena.Size = new System.Drawing.Size(330, 22);
-            this.txtcontrasena.TabIndex = 2;
+            this.txtcontrasena.TabIndex = 1;
             // 
             // chkguardarcontrasena
             // 
@@ -175,7 +175,7 @@
             this.chkguardarcontrasena.Margin = new System.Windows.Forms.Padding(4);
             this.chkguardarcontrasena.Name = "chkguardarcontrasena";
             this.chkguardarcontrasena.Size = new System.Drawing.Size(256, 21);
-            this.chkguardarcontrasena.TabIndex = 3;
+            this.chkguardarcontrasena.TabIndex = 2;
             this.chkguardarcontrasena.Text = "&Guardar contraseña en este equipo";
             this.chkguardarcontrasena.UseVisualStyleBackColor = true;
             // 
@@ -186,7 +186,7 @@
             this.FlowLayoutPanel2.Location = new System.Drawing.Point(20, 27);
             this.FlowLayoutPanel2.Name = "FlowLayoutPanel2";
             this.FlowLayoutPanel2.Size = new System.Drawing.Size(519, 29);
-            this.FlowLayoutPanel2.TabIndex = 3;
+            this.FlowLayoutPanel2.TabIndex = 0;
             // 
             // chkSeguridadWindows
             // 
@@ -195,7 +195,7 @@
             this.chkSeguridadWindows.Margin = new System.Windows.Forms.Padding(4);
             this.chkSeguridadWindows.Name = "chkSeguridadWindows";
             this.chkSeguridadWindows.Size = new System.Drawing.Size(270, 21);
-            this.chkSeguridadWindows.TabIndex = 4;
+            this.chkSeguridadWindows.TabIndex = 0;
             this.chkSeguridadWindows.Text = "&Usar Seguridad de Microsoft Windows";
             this.chkSeguridadWindows.UseVisualStyleBackColor = true;
             this.chkSeguridadWindows.CheckedChanged += new System.EventHandler(this.chkSeguridadWindows_CheckedChanged);

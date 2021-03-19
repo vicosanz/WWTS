@@ -13,7 +13,7 @@ Public Class FrmRubroAdicionalNomina
     Get
       Return mRubro
     End Get
-    Set(ByVal Value As Rubro)
+    Set(value As Rubro)
       If Value Is Nothing Then
         Throw New NullReferenceException("Debe instanciar un Rubro")
       End If
@@ -31,7 +31,7 @@ Public Class FrmRubroAdicionalNomina
     Get
       Return mRubroDet
     End Get
-    Set(ByVal Value As RubroDet)
+    Set(value As RubroDet)
       If Value Is Nothing Then
         Throw New NullReferenceException("Debe instanciar un RubroDet")
       End If
@@ -44,7 +44,7 @@ Public Class FrmRubroAdicionalNomina
     Get
       Return mPeriodoPago
     End Get
-    Set(ByVal Value As PeriodoPago)
+    Set(value As PeriodoPago)
       If Value Is Nothing Then
         Throw New NullReferenceException("Debe instanciar un PeriodoPago")
       End If
@@ -57,7 +57,7 @@ Public Class FrmRubroAdicionalNomina
     Get
       Return mEsQuincena
     End Get
-    Set(ByVal Value As Boolean)
+    Set(value As Boolean)
       mEsQuincena = Value
     End Set
   End Property
@@ -67,7 +67,7 @@ Public Class FrmRubroAdicionalNomina
     Get
       Return mParametro
     End Get
-    Set(ByVal value As WWTSParametroDet)
+    Set(value As WWTSParametroDet)
       mParametro = value
     End Set
   End Property
@@ -77,7 +77,7 @@ Public Class FrmRubroAdicionalNomina
     Get
       Return mDireccion
     End Get
-    Set(ByVal value As IMantenimiento.Accion)
+    Set(value As IMantenimiento.Accion)
       mDireccion = value
       Refrescar_forma()
     End Set

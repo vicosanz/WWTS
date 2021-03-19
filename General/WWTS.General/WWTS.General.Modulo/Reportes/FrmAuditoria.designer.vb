@@ -27,7 +27,6 @@ Partial Class FrmAuditoria
     Me.Label2 = New System.Windows.Forms.Label
     Me.chksolousuario = New Infoware.Controles.Base.CheckBoxStd
     Me.ComboBoxUsuario1 = New ComboBoxUsuario
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
     Me.pnlcuerpo.SuspendLayout()
     Me.Panel1.SuspendLayout()
     Me.GroupBox1.SuspendLayout()
@@ -121,7 +120,6 @@ Partial Class FrmAuditoria
     Me.ClientSize = New System.Drawing.Size(580, 441)
     Me.Name = "FrmAuditoria"
     Me.PuedeImprimir = True
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
     Me.pnlcuerpo.ResumeLayout(False)
     Me.Panel1.ResumeLayout(False)
     Me.Panel1.PerformLayout()

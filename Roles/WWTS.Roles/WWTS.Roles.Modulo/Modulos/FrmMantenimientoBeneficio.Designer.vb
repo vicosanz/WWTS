@@ -41,7 +41,7 @@ Partial Class FrmMantenimientoBeneficio
     Me.Label6 = New System.Windows.Forms.Label()
     Me.txtdias = New Infoware.Controles.Base.TextBoxCalculator()
     Me.Label7 = New System.Windows.Forms.Label()
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+
     CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
     CType(Me.BSdetalle, System.ComponentModel.ISupportInitialize).BeginInit()
     Me.SuspendLayout()
@@ -251,7 +251,7 @@ Partial Class FrmMantenimientoBeneficio
     Me.Controls.SetChildIndex(Me.Label6, 0)
     Me.Controls.SetChildIndex(Me.Label7, 0)
     Me.Controls.SetChildIndex(Me.txtdias, 0)
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+
     CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
     CType(Me.BSdetalle, System.ComponentModel.ISupportInitialize).EndInit()
     Me.ResumeLayout(False)

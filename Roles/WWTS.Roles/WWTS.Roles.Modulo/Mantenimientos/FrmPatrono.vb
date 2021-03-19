@@ -13,7 +13,7 @@ Public Class FrmPatrono
     Get
       Return mPatrono
     End Get
-    Set(ByVal Value As Patrono)
+    Set(value As Patrono)
       If Value Is Nothing Then
         Throw New NullReferenceException("Debe instanciar un Patrono")
       End If
@@ -30,7 +30,7 @@ Public Class FrmPatrono
     Get
       Return mDireccion
     End Get
-    Set(ByVal value As IMantenimiento.Accion)
+    Set(value As IMantenimiento.Accion)
       mDireccion = value
       Refrescar_forma()
     End Set

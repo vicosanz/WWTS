@@ -8,10 +8,10 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("WWTS.FichasMedicas.Modulo")>
+<Assembly: AssemblyTitle("FichasMedicas")>
 <Assembly: AssemblyDescription("")>
 <Assembly: AssemblyCompany("Infoware Soluciones")>
-<Assembly: AssemblyProduct("WWTS.FichasMedicas.Modulo")>
+<Assembly: AssemblyProduct("FichasMedicas")>
 <Assembly: AssemblyCopyright("Copyright ©  2021")>
 <Assembly: AssemblyTrademark("")>
 

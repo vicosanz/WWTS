@@ -24,7 +24,6 @@ Partial Class FrmConfiguracion
     Me.tvconfigurar = New System.Windows.Forms.TreeView()
     Me.HeaderStrip1 = New Infoware.Consola.Base.HeaderStrip()
     Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
     Me.Pnlcuerpo.SuspendLayout()
     Me.HeaderStrip1.SuspendLayout()
     Me.SuspendLayout()
@@ -90,7 +89,7 @@ Partial Class FrmConfiguracion
     Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
     Me.Name = "FrmConfiguracion"
     Me.Text = "Configuración"
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+
     Me.Pnlcuerpo.ResumeLayout(False)
     Me.HeaderStrip1.ResumeLayout(False)
     Me.HeaderStrip1.PerformLayout()

@@ -20,7 +20,7 @@ Partial Class FrmSolicPrestamo
   <System.Diagnostics.DebuggerStepThrough()> _
   Private Sub InitializeComponent()
     Me.pnlcuerpo.SuspendLayout()
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+
     Me.SuspendLayout()
     '
     'pnlcuerpo
@@ -46,7 +46,7 @@ Partial Class FrmSolicPrestamo
     Me.Name = "FrmSolicPrestamo"
     Me.PuedeImprimir = True
     Me.pnlcuerpo.ResumeLayout(False)
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+
     Me.ResumeLayout(False)
     Me.PerformLayout()
 

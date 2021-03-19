@@ -10,7 +10,7 @@ Public Class FrmCambiarArea
     Get
       Return Me.ComboBoxParametroDet1.ParametroDet
     End Get
-    Set(ByVal Value As WWTSParametroDet)
+    Set(value As WWTSParametroDet)
       Me.ComboBoxParametroDet1.ParametroDet = Value
     End Set
   End Property

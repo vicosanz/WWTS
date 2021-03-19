@@ -15,7 +15,7 @@ Public Class FrmTestxArea
         Return ListBindingSource.Current
       End If
     End Get
-    Set(ByVal value As Seleccion)
+    Set(value As Seleccion)
       If Not ListBindingSource.Count = 0 And value IsNot Nothing Then
         Dim t As Integer = 0
         For Each _Seleccion As Seleccion In Me.ListBindingSource.DataSource
@@ -32,7 +32,7 @@ Public Class FrmTestxArea
     Get
       Return MyBase.combobuscar.Text
     End Get
-    Set(ByVal value As String)
+    Set(value As String)
       MyBase.combobuscar.Text = value
       MyBase.Hacer_busqueda()
     End Set
@@ -95,8 +95,8 @@ Public Class FrmTestxArea
   Private WithEvents mTestSeleccionList As TestxAreaList = Nothing
 
   Sub Llenar_datos(Optional ByVal _filtro As String = "")
-    MyBase.Titulo = "test por área"
-    MyBase.AgregarLeyenda = "Agregar un nuevo test a un área"
+    MyBase.Titulo = "Test por área"
+    MyBase.AgregarLeyenda = "Agregar un nuevo Test a un área"
 
     mTestSeleccionList = TestxAreaList.ObtenerLista(Sistema.OperadorDatos, cboarea.ParametroDet, _filtro)
     Dim mitemssort As New Infoware.Reglas.SortedView(mTestSeleccionList)

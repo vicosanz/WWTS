@@ -8,7 +8,7 @@ Public Class CtlBuscaEmpleadosMarcacion
     Get
       Return mUsuario
     End Get
-    Set(ByVal value As Infoware.Reglas.General.Usuario)
+    Set(value As Infoware.Reglas.General.Usuario)
       mUsuario = value
     End Set
   End Property
@@ -18,7 +18,7 @@ Public Class CtlBuscaEmpleadosMarcacion
     Get
       Return mOp
     End Get
-    Set(ByVal value As OperadorDatos)
+    Set(value As OperadorDatos)
       mOp = value
       If Not value Is Nothing Then
         Me.CtlPatrono1.Op = mOp

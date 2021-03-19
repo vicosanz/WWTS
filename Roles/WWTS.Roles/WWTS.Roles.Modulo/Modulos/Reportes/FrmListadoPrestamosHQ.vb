@@ -25,7 +25,7 @@ Public Class FrmListadoPrestamosHQ
 
   Private mPatrono As Patrono = Nothing
   Public WriteOnly Property Patrono() As Patrono
-    Set(ByVal value As Patrono)
+    Set(value As Patrono)
       mPatrono = value
       If value IsNot Nothing Then
         Llenar_datos()

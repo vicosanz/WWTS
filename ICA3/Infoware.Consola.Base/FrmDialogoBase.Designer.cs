@@ -31,7 +31,6 @@
             this.Panel1 = new System.Windows.Forms.Panel();
             this.Cancel_Button = new Infoware.Controles.Base.ButtonStd();
             this.OK_Button = new Infoware.Controles.Base.ButtonStd();
-            ((System.ComponentModel.ISupportInitialize)(this.ListBindingSource)).BeginInit();
             this.Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,10 +49,10 @@
             // 
             this.Cancel_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Cancel_Button.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.Cancel_Button.Location = new System.Drawing.Point(378, 4);
+            this.Cancel_Button.Location = new System.Drawing.Point(353, 4);
             this.Cancel_Button.Margin = new System.Windows.Forms.Padding(4);
             this.Cancel_Button.Name = "Cancel_Button";
-            this.Cancel_Button.Size = new System.Drawing.Size(120, 23);
+            this.Cancel_Button.Size = new System.Drawing.Size(145, 23);
             this.Cancel_Button.TabIndex = 1;
             this.Cancel_Button.Text = "Cancelar";
             this.Cancel_Button.Click += new System.EventHandler(this.Cancel_Button_Click);
@@ -61,10 +60,10 @@
             // OK_Button
             // 
             this.OK_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.OK_Button.Location = new System.Drawing.Point(250, 4);
+            this.OK_Button.Location = new System.Drawing.Point(200, 4);
             this.OK_Button.Margin = new System.Windows.Forms.Padding(4);
             this.OK_Button.Name = "OK_Button";
-            this.OK_Button.Size = new System.Drawing.Size(120, 23);
+            this.OK_Button.Size = new System.Drawing.Size(145, 23);
             this.OK_Button.TabIndex = 0;
             this.OK_Button.Text = "Aceptar";
             this.OK_Button.Click += new System.EventHandler(this.OK_Button_Click);
@@ -81,7 +80,6 @@
             this.Name = "FrmDialogoBase";
             this.Text = "";
             this.Load += new System.EventHandler(this.FrmDialogoBase_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ListBindingSource)).EndInit();
             this.Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

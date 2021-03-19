@@ -115,6 +115,12 @@
     <Compile Include="FrmListaBase.Designer.cs">
       <DependentUpon>FrmListaBase.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmListaSimpleBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmListaSimpleBase.Designer.cs">
+      <DependentUpon>FrmListaSimpleBase.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMantenimientoBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,12 +132,6 @@
     </Compile>
     <Compile Include="FrmMantenimientoSimpleBase.Designer.cs">
       <DependentUpon>FrmMantenimientoSimpleBase.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmListaSimpleBase.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmListaSimpleBase.Designer.cs">
-      <DependentUpon>FrmListaSimpleBase.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmReporteBase.cs">
       <SubType>Form</SubType>
@@ -191,14 +191,14 @@
     <EmbeddedResource Include="FrmListaBase.resx">
       <DependentUpon>FrmListaBase.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmListaSimpleBase.resx">
+      <DependentUpon>FrmListaSimpleBase.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMantenimientoBase.resx">
       <DependentUpon>FrmMantenimientoBase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMantenimientoSimpleBase.resx">
       <DependentUpon>FrmMantenimientoSimpleBase.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmListaSimpleBase.resx">
-      <DependentUpon>FrmListaSimpleBase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmReporteBase.resx">
       <DependentUpon>FrmReporteBase.cs</DependentUpon>

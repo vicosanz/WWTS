@@ -30,7 +30,7 @@ Partial Class FrmLabor
     Me.Label4 = New System.Windows.Forms.Label()
     Me.CtlCargoSeccion = New WWTS.General.Controles.ComboBoxParametroDet()
     Me.CtlModeloLabor1 = New WWTS.Roles.Controles.CtlModeloLabor()
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+
     Me.SuspendLayout()
     '
     'txtcodigo
@@ -172,7 +172,7 @@ Partial Class FrmLabor
     Me.Controls.SetChildIndex(Me.CtlModeloLabor1, 0)
     Me.Controls.SetChildIndex(Me.CtlCargoSeccion, 0)
     Me.Controls.SetChildIndex(Me.chkcontrolarhe, 0)
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+
     Me.ResumeLayout(False)
     Me.PerformLayout()
 

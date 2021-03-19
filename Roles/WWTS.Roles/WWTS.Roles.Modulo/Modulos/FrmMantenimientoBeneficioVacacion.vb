@@ -13,7 +13,7 @@ Public Class FrmMantenimientoBeneficioVacacion
     Get
       Return mVacacion
     End Get
-    Set(ByVal Value As BeneficiosSociales)
+    Set(value As BeneficiosSociales)
       If Value Is Nothing Then
         Throw New NullReferenceException("Debe instanciar un Vacacion")
       End If
@@ -27,7 +27,7 @@ Public Class FrmMantenimientoBeneficioVacacion
     Get
       Return mDireccion
     End Get
-    Set(ByVal value As IMantenimiento.Accion)
+    Set(value As IMantenimiento.Accion)
       mDireccion = value
       Refrescar_forma()
     End Set
@@ -38,7 +38,7 @@ Public Class FrmMantenimientoBeneficioVacacion
     Get
       Return mtemporal
     End Get
-    Set(ByVal value As Decimal)
+    Set(value As Decimal)
       mtemporal = value
     End Set
   End Property

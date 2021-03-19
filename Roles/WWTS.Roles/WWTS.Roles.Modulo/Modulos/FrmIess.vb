@@ -16,7 +16,7 @@ Public Class FrmIess
     Get
       Return mOp
     End Get
-    Set(ByVal value As OperadorDatos)
+    Set(value As OperadorDatos)
       mOp = value
       Me.CtlPatrono1.Op = mOp
       Me.CtlPatrono2.Op = mOp

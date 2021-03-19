@@ -21,7 +21,7 @@ Public Class FrmPagos
     Get
       Return mLotePago
     End Get
-    Set(ByVal Value As LotePago)
+    Set(value As LotePago)
       mLotePago = Value
     End Set
   End Property

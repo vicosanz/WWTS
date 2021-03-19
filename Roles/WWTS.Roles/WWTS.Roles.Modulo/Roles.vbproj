@@ -1072,6 +1072,14 @@
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\FichasMedicas\WWTS.FichasMedicas\WWTS.FichasMedicas.Controles\WWTS.FichasMedicas.Controles.vbproj">
+      <Project>{dc541dbd-0ca3-4ecb-81bd-6130859dacb4}</Project>
+      <Name>WWTS.FichasMedicas.Controles</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\FichasMedicas\WWTS.FichasMedicas\WWTS.FichasMedicas.Reglas\WWTS.FichasMedicas.Reglas.vbproj">
+      <Project>{90da84a9-754c-4c3f-b50f-d91347978e17}</Project>
+      <Name>WWTS.FichasMedicas.Reglas</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\General\WWTS.General\WWTS.General.Controles\WWTS.General.Controles.vbproj">
       <Project>{b3f0a363-382f-4cdd-97a7-9df3a4bf0b5a}</Project>
       <Name>WWTS.General.Controles</Name>

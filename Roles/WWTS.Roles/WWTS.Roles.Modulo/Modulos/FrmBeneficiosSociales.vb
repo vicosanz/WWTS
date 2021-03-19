@@ -1226,7 +1226,7 @@ Public Class FrmBeneficiosSociales
     Get
       Return mContrato
     End Get
-    Set(ByVal Value As Contrato)
+    Set(value As Contrato)
       bsperiodovacacion.Clear()
       mContrato = Value
       CtlPeriodoVacacion1.Contrato = Value

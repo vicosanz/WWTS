@@ -35,7 +35,6 @@ Partial Class FrmMantenimientoLicencia
     Me.CtlAdjunto1 = New WWTS.General.Controles.CtlAdjunto()
     Me.Label4 = New System.Windows.Forms.Label()
     Me.chckaprobado = New Infoware.Controles.Base.CheckBoxStd()
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
     Me.pnlvacacion.SuspendLayout()
     Me.SuspendLayout()
     '
@@ -213,7 +212,7 @@ Partial Class FrmMantenimientoLicencia
     Me.Controls.SetChildIndex(Me.chckFechafin, 0)
     Me.Controls.SetChildIndex(Me.Label4, 0)
     Me.Controls.SetChildIndex(Me.chckaprobado, 0)
-    CType(Me.ListBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+
     Me.pnlvacacion.ResumeLayout(False)
     Me.ResumeLayout(False)
     Me.PerformLayout()
