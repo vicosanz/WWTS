@@ -121,23 +121,25 @@ namespace Infoware.Updates
             var ourExePath = ourExe != null ? ourExe.Location : null;
 
             FUnsafeUtility.EnumerateProcesses()
-                .Where(x => {
-                        // Processes we can't query will have an empty process name, we can't kill them
-                        // anyways
-                        if (String.IsNullOrWhiteSpace(x.Item1)) return false;
+                .Where(x =>
+                {
+                    // Processes we can't query will have an empty process name, we can't kill them
+                    // anyways
+                    if (String.IsNullOrWhiteSpace(x.Item1)) return false;
 
-                        // Files that aren't in our root app directory are untouched
-                        if (!x.Item1.StartsWith(rootAppDirectory, StringComparison.OrdinalIgnoreCase)) return false;
+                    // Files that aren't in our root app directory are untouched
+                    if (!x.Item1.StartsWith(rootAppDirectory, StringComparison.OrdinalIgnoreCase)) return false;
 
-                        // Never kill our own EXE
-                        if (ourExePath != null && x.Item1.Equals(ourExePath, StringComparison.OrdinalIgnoreCase)) return false;
+                    // Never kill our own EXE
+                    if (ourExePath != null && x.Item1.Equals(ourExePath, StringComparison.OrdinalIgnoreCase)) return false;
 
                     var name = Path.GetFileName(x.Item1).ToLowerInvariant();
                     if (name == "squirrel.exe" || name == "update.exe") return false;
 
                     return true;
                 })
-                .ForEach(x => {
+                .ForEach(x =>
+                {
                     try
                     {
                         this.WarnIfThrows(() => Process.GetProcessById(x.Item2).Kill());

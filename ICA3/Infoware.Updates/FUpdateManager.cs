@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Diagnostics.Contracts;
 using System.IO;
 using System.Linq;
-using System.Reflection;
-using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -63,7 +61,8 @@ namespace Infoware.Updates
         {
             if (updateLock != null) return Task.FromResult(updateLock);
 
-            return Task.Run(() => {
+            return Task.Run(() =>
+            {
                 var key = FUtilities.CalculateStreamSHA1(new MemoryStream(Encoding.UTF8.GetBytes(rootAppDirectory)));
 
                 IDisposable theLock;
@@ -77,7 +76,8 @@ namespace Infoware.Updates
                     throw new TimeoutException("Couldn't acquire update lock, another instance may be running updates");
                 }
 
-                var ret = FDisposable.Create(() => {
+                var ret = FDisposable.Create(() =>
+                {
                     theLock.Dispose();
                     updateLock = null;
                 });

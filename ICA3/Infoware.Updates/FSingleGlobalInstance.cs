@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using Squirrel.SimpleSplat;
 
 namespace Infoware.Updates
@@ -49,7 +45,8 @@ namespace Infoware.Updates
                 throw new Exception("Couldn't acquire lock, is another instance running");
             }
 
-            handle = FDisposable.Create(() => {
+            handle = FDisposable.Create(() =>
+            {
                 fh.Dispose();
                 File.Delete(path);
             });

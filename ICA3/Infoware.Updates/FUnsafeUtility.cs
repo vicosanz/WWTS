@@ -26,7 +26,8 @@ namespace Infoware.Updates
 
             return Enumerable.Range(0, bytesReturned / sizeof(int))
                 .Where(i => pids[i] > 0)
-                .Select(i => {
+                .Select(i =>
+                {
                     try
                     {
                         var hProcess = FNativeMethods.OpenProcess(ProcessAccess.QueryLimitedInformation, false, pids[i]);

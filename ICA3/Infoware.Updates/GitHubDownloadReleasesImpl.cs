@@ -26,10 +26,12 @@ namespace Infoware.Updates
             double toIncrement = 100.0 / releasesToDownload.Count();
 
             // From Internet
-            await releasesToDownload.ForEachAsync(async x => {
+            await releasesToDownload.ForEachAsync(async x =>
+            {
                 var targetFile = Path.Combine(packagesDirectory, x.Filename);
                 double component = 0;
-                await downloadRelease(x, urlDownloader, targetFile, p => {
+                await downloadRelease(x, urlDownloader, targetFile, p =>
+                {
                     lock (progress)
                     {
                         current -= component;

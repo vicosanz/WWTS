@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Octokit;
 using Squirrel;
@@ -26,7 +25,7 @@ namespace Infoware.Updates
             try
             {
                 this.Log().Info("Downloading file: " + url);
-                
+
                 var response = await github.Connection.Get<object>(new Uri(url), new Dictionary<string, string>(), "application/octet-stream");
                 File.WriteAllBytes(targetFile, (byte[])response.HttpResponse.Body);
                 progress(100);

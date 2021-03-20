@@ -33,7 +33,7 @@ namespace Infoware.Updates
             progress(0);
 
             // Progress range: 00 -> 40
-            var release = await createFullPackagesFromDeltas(updateInfo.ReleasesToApply, updateInfo.CurrentlyInstalledVersion, 
+            var release = await createFullPackagesFromDeltas(updateInfo.ReleasesToApply, updateInfo.CurrentlyInstalledVersion,
                 new FApplyReleasesProgress(updateInfo.ReleasesToApply.Count, x => progress(FUtilities.CalculateProgress(x, 0, 40))));
 
             progress(40);
@@ -130,7 +130,8 @@ namespace Infoware.Updates
 
                     if (squirrelAwareApps.Count > 0)
                     {
-                        await squirrelAwareApps.ForEachAsync(async exe => {
+                        await squirrelAwareApps.ForEachAsync(async exe =>
+                        {
                             using (var cts = new CancellationTokenSource())
                             {
                                 cts.CancelAfter(10 * 1000);
@@ -262,7 +263,8 @@ namespace Infoware.Updates
                 this.Log().Info("Creating shortcut for {0} => {1}", exeName, file);
 
                 ShellLink sl;
-                this.ErrorIfThrows(() => FUtilities.Retry(() => {
+                this.ErrorIfThrows(() => FUtilities.Retry(() =>
+                {
                     File.Delete(file);
 
                     var target = Path.Combine(rootAppDirectory, exeName);
@@ -314,7 +316,8 @@ namespace Infoware.Updates
 
                 this.Log().Info("Removing shortcut for {0} => {1}", exeName, file);
 
-                this.ErrorIfThrows(() => {
+                this.ErrorIfThrows(() =>
+                {
                     if (File.Exists(file)) File.Delete(file);
                 }, "Couldn't delete shortcut: " + file);
             }
@@ -324,7 +327,8 @@ namespace Infoware.Updates
 
         Task<string> installPackageToAppDir(UpdateInfo updateInfo, ReleaseEntry release, Action<int> progressCallback)
         {
-            return Task.Run(async () => {
+            return Task.Run(async () =>
+            {
                 var target = getDirectoryForRelease(release.Version);
 
                 // NB: This might happen if we got killed partially through applying the release
@@ -381,7 +385,8 @@ namespace Infoware.Updates
             // 
 
             // Smash together our base full package and the nearest delta
-            var ret = await Task.Run(() => {
+            var ret = await Task.Run(() =>
+            {
                 var basePkg = new ReleasePackage(Path.Combine(rootAppDirectory, "packages", currentVersion.Filename));
                 var deltaPkg = new ReleasePackage(Path.Combine(rootAppDirectory, "packages", releasesToApply.First().Filename));
 
@@ -444,7 +449,8 @@ namespace Infoware.Updates
             this.Log().Info("Squirrel Enabled Apps: [{0}]", String.Join(",", squirrelApps));
 
             // For each app, run the install command in-order and wait
-            if (!firstRunOnly) await squirrelApps.ForEachAsync(async exe => {
+            if (!firstRunOnly) await squirrelApps.ForEachAsync(async exe =>
+            {
                 using (var cts = new CancellationTokenSource())
                 {
                     cts.CancelAfter(15 * 1000);
@@ -506,7 +512,8 @@ namespace Infoware.Updates
                 return;
             }
 
-            var resolveLink = new Func<FileInfo, ShellLink>(file => {
+            var resolveLink = new Func<FileInfo, ShellLink>(file =>
+            {
                 try
                 {
                     this.Log().Debug("Examining Pin: " + file);
@@ -589,7 +596,8 @@ namespace Infoware.Updates
 
         internal void unshimOurselves()
         {
-            new[] { RegistryView.Registry32, RegistryView.Registry64 }.ForEach(view => {
+            new[] { RegistryView.Registry32, RegistryView.Registry64 }.ForEach(view =>
+            {
                 var baseKey = default(RegistryKey);
                 var regKey = default(RegistryKey);
 
@@ -661,14 +669,16 @@ namespace Infoware.Updates
 
             if (forceUninstall == false)
             {
-                await toCleanup.ForEachAsync(async x => {
+                await toCleanup.ForEachAsync(async x =>
+                {
                     var squirrelApps = FSquirrelAwareExecutableDetector.GetAllSquirrelAwareApps(x.FullName);
                     var args = String.Format("--squirrel-obsolete {0}", x.Name.Replace("app-", ""));
 
                     if (squirrelApps.Count > 0)
                     {
                         // For each app, run the install command in-order and wait
-                        await squirrelApps.ForEachAsync(async exe => {
+                        await squirrelApps.ForEachAsync(async exe =>
+                        {
                             using (var cts = new CancellationTokenSource())
                             {
                                 cts.CancelAfter(10 * 1000);
@@ -697,7 +707,8 @@ namespace Infoware.Updates
             var runningProcesses = FUnsafeUtility.EnumerateProcesses();
 
             // Finally, clean up the app-X.Y.Z directories
-            await toCleanup.ForEachAsync(async x => {
+            await toCleanup.ForEachAsync(async x =>
+            {
                 try
                 {
                     if (runningProcesses.All(p => p.Item1 == null || !p.Item1.StartsWith(x.FullName, StringComparison.OrdinalIgnoreCase)))

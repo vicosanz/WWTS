@@ -190,7 +190,8 @@ namespace Infoware.Updates
         {
             return Task.WhenAll(
                 from partition in Partitioner.Create(source).GetPartitions(degreeOfParallelism)
-                select Task.Run(async () => {
+                select Task.Run(async () =>
+                {
                     using (partition)
                         while (partition.MoveNext())
                             await body(partition.Current);
@@ -422,7 +423,8 @@ namespace Infoware.Updates
         public static async Task<Tuple<int, string>> InvokeProcessAsync(ProcessStartInfo psi, CancellationToken ct)
         {
             var pi = Process.Start(psi);
-            await Task.Run(() => {
+            await Task.Run(() =>
+            {
                 while (!ct.IsCancellationRequested)
                 {
                     if (pi.WaitForExit(2000)) return;
@@ -515,7 +517,8 @@ namespace Infoware.Updates
                 Log().Warn(message, ex);
             }
 
-            var fileOperations = files.ForEachAsync(file => {
+            var fileOperations = files.ForEachAsync(file =>
+            {
                 File.SetAttributes(file, FileAttributes.Normal);
                 File.Delete(file);
             });
@@ -546,7 +549,8 @@ namespace Infoware.Updates
         {
             Contract.Requires(retries > 0);
 
-            Func<object> thunk = () => {
+            Func<object> thunk = () =>
+            {
                 block();
                 return null;
             };
