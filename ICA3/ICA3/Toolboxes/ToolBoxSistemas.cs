@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ICA3.Formas;
 using Infoware.Consola.Base;
@@ -41,7 +35,7 @@ namespace ICA3.Toolboxes
             Crearsistema();
         }
 
-        private void Crearsistema( string _ensamblado = "")
+        private void Crearsistema(string _ensamblado = "")
         {
             FrmSistemas f = new FrmSistemas
             {
@@ -72,20 +66,20 @@ namespace ICA3.Toolboxes
             {
                 Sistemas = SistemaList.DeSerializeList(configFile);
 
-                if (mCargarArgumentos && Environment.GetCommandLineArgs().Count() >1)
+                if (mCargarArgumentos && Environment.GetCommandLineArgs().Count() > 1)
                 {
                     int index = 1;
-                    while(index < Environment.GetCommandLineArgs().Count())
+                    while (index < Environment.GetCommandLineArgs().Count())
                     {
                         string _arg = Environment.GetCommandLineArgs()[index];
                         bool _existearg = false;
-                        foreach(Sistema _sistema in Sistemas)
+                        foreach (Sistema _sistema in Sistemas)
                         {
                             if (_arg.ToUpper() == _sistema.Ensamblado.ToUpper())
                             {
                                 _existearg = true;
                                 int _existen2 = 0;
-                                foreach(Sistema _sistema2 in Sistemas)
+                                foreach (Sistema _sistema2 in Sistemas)
                                 {
                                     if (_arg.ToUpper() == _sistema2.Ensamblado.ToUpper())
                                     {
@@ -100,7 +94,7 @@ namespace ICA3.Toolboxes
                             }
                             else if (Path.GetFileName(_arg).ToUpper() == Path.GetFileName(_sistema.Ensamblado).ToUpper())
                             {
-                                if (MessageBox.Show($"Existe una nueva versión del programa {Path.GetFileName(_arg)}, ¿Desea que se actualice automáticamente los parámetros para acceder a este sistema?", 
+                                if (MessageBox.Show($"Existe una nueva versión del programa {Path.GetFileName(_arg)}, ¿Desea que se actualice automáticamente los parámetros para acceder a este sistema?",
                                     "Pregunta", MessageBoxButtons.YesNo) == DialogResult.Yes)
                                 {
                                     _existearg = true;
@@ -127,7 +121,7 @@ namespace ICA3.Toolboxes
                     SistemaList.SerializeList(Sistemas, configFile);
                 }
 
-                foreach(Sistema _sistema in Sistemas)
+                foreach (Sistema _sistema in Sistemas)
                 {
                     TreeNode _node = new TreeNode
                     {
@@ -153,7 +147,7 @@ namespace ICA3.Toolboxes
 
         public Sistema SistemaActual
         {
-            get => (Sistema) treeView1.SelectedNode?.Tag;
+            get => (Sistema)treeView1.SelectedNode?.Tag;
         }
 
         private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -234,7 +228,7 @@ namespace ICA3.Toolboxes
 
         public void CerrarSistema(Sistema _sistema)
         {
-            foreach(TreeNode _nodo in treeView1.Nodes)
+            foreach (TreeNode _nodo in treeView1.Nodes)
             {
                 if (_nodo.Tag == _sistema)
                 {

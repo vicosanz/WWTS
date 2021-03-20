@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Infoware.Consola.Base;
 using Infoware.Datos;
@@ -83,7 +76,7 @@ namespace ICA3.Formas
             mSistema.CargaralIniciar = chkguardarcontrasena.Checked && chkcargaraliniciar.Checked;
 
             mSistema.Ensamblado = txtarchivoensamblado.Text;
-            mSistema.OperadorDatos = OperadorDatosFactory.CrearInstancia((enumProveedorDatos)cboproveedor.ComboBoxStd1.SelectedIndex, cboservidor.Text, txtbasedatos.Text, 
+            mSistema.OperadorDatos = OperadorDatosFactory.CrearInstancia((enumProveedorDatos)cboproveedor.ComboBoxStd1.SelectedIndex, cboservidor.Text, txtbasedatos.Text,
                 txtnombreusuariobd.Text, txtcontrasenabd.Text, chkSeguridadIntegrada.Checked);
             mSistema.OperadorDatos.DirectorioReplicacion = txtDirectorioReplicacion.Text;
             mSistema.OperadorDatos.SufijoReplicacion = txtSufijoReplicacion.Text;
@@ -157,7 +150,7 @@ namespace ICA3.Formas
             OpenFileDialog1.FileName = "";
             OpenFileDialog1.Filter = "Ejecutable compatible (*.exe)|*.exe|Libreria compatible (*.dll)|*.dll|Todos los archivos (*.*)|*.*";
 
-            if (OpenFileDialog1.ShowDialog()== DialogResult.OK)
+            if (OpenFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 txtarchivoensamblado.Text = OpenFileDialog1.FileName;
             }
@@ -187,7 +180,7 @@ namespace ICA3.Formas
             //{
             //    cboservidor.ComboBoxStd1.Items.Clear();
             //    AutoCompleteStringCollection _complete = new AutoCompleteStringCollection();
-                
+
             //    System.Data.Sql.SqlDataSourceEnumerator x = System.Data.Sql.SqlDataSourceEnumerator.Instance;
             //    foreach(DataRow _dr in x.GetDataSources().Rows)
             //    {

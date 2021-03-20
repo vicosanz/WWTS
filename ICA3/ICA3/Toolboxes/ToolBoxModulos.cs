@@ -1,12 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Infoware.Consola.Base;
 using WeifenLuo.WinFormsUI.Docking;
@@ -42,7 +36,7 @@ namespace ICA3.Toolboxes
         public void AgregarSistema(Sistema _Sistema)
         {
             bool _existe = false;
-            foreach(TreeNode _nodo in treeView1.Nodes)
+            foreach (TreeNode _nodo in treeView1.Nodes)
             {
                 if (_nodo.Tag == _Sistema)
                 {
@@ -75,7 +69,7 @@ namespace ICA3.Toolboxes
                 _Sistema.SistemaObjeto.ActualizacionesMensaje += SistemaObjeto_ActualizacionesMensaje;
                 _Sistema.SistemaObjeto.ComprobarActualizaciones(_Sistema.Ensamblado).ConfigureAwait(false);
                 List<GrupoOpcion> _grupoopciones = _Sistema.SistemaObjeto.CargarListaGrupoOpciones(_Sistema);
-                foreach(GrupoOpcion _grupoopcion in _grupoopciones)
+                foreach (GrupoOpcion _grupoopcion in _grupoopciones)
                 {
                     TreeNode _nodogrupo = new TreeNode()
                     {
@@ -184,11 +178,11 @@ namespace ICA3.Toolboxes
             }
             else
             {
-                for (int index = DockPanel.Contents.Count -1; index >=0; index--)
+                for (int index = DockPanel.Contents.Count - 1; index >= 0; index--)
                 {
                     if (DockPanel.Contents[index] is IDockContent)
                     {
-                        if (((Form) DockPanel.Contents[index]).Tag == _opcion)
+                        if (((Form)DockPanel.Contents[index]).Tag == _opcion)
                         {
                             _existe = true;
                             DockPanel.Contents[index].DockHandler.Show();
@@ -222,15 +216,15 @@ namespace ICA3.Toolboxes
         public void CerrarSistema(Sistema _Sistema)
         {
             DockPanel.SuspendLayout();
-            foreach(TreeNode _nodo in treeView1.Nodes)
+            foreach (TreeNode _nodo in treeView1.Nodes)
             {
                 if (_nodo.Tag == _Sistema)
                 {
                     foreach (TreeNode _nodogrp in _nodo.Nodes)
                     {
-                        foreach(TreeNode _nodoopc in _nodogrp.Nodes)
+                        foreach (TreeNode _nodoopc in _nodogrp.Nodes)
                         {
-                            for (int t = DockPanel.Contents.Count -1; t>=0; t--)
+                            for (int t = DockPanel.Contents.Count - 1; t >= 0; t--)
                             {
                                 DockContent dockContent = ((DockContent)DockPanel.Contents[t]);
                                 if (dockContent.Tag == _nodoopc.Tag)
