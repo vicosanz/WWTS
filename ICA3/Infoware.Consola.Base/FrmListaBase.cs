@@ -286,7 +286,7 @@ namespace Infoware.Consola.Base
         {
             Abrir?.Invoke(this, null);
         }
-        private void abrirToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Abrir_Click(object sender, EventArgs e)
         {
             OnAbrir();
         }

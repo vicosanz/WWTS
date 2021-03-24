@@ -26,6 +26,10 @@ namespace Infoware.Consola.Base
 
         public void AutoDiscover()
         {
+            if (this.DesignMode)
+            {
+                return;
+            }
             this.Invalidate();
             this.ContextMenuStrip = this.ContextMenuStrip1;
             this.ContextMenuStrip1.Items.Clear();

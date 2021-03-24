@@ -104,9 +104,9 @@
             this.pnlcuerpo.Controls.Add(this.Panel1);
             this.pnlcuerpo.Controls.Add(this.headerStrip1);
             this.pnlcuerpo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlcuerpo.Location = new System.Drawing.Point(0, 55);
+            this.pnlcuerpo.Location = new System.Drawing.Point(0, 58);
             this.pnlcuerpo.Name = "pnlcuerpo";
-            this.pnlcuerpo.Size = new System.Drawing.Size(924, 458);
+            this.pnlcuerpo.Size = new System.Drawing.Size(924, 455);
             this.pnlcuerpo.TabIndex = 9;
             // 
             // TabControl1
@@ -116,7 +116,7 @@
             this.TabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.TabControl1.Name = "TabControl1";
             this.TabControl1.SelectedIndex = 0;
-            this.TabControl1.Size = new System.Drawing.Size(924, 311);
+            this.TabControl1.Size = new System.Drawing.Size(924, 308);
             this.TabControl1.TabIndex = 8;
             // 
             // Panel2
@@ -143,7 +143,7 @@
             this.ToolStripButtonAyuda});
             this.ToolStrip1.Location = new System.Drawing.Point(0, 28);
             this.ToolStrip1.Name = "ToolStrip1";
-            this.ToolStrip1.Size = new System.Drawing.Size(924, 27);
+            this.ToolStrip1.Size = new System.Drawing.Size(924, 30);
             this.ToolStrip1.TabIndex = 11;
             this.ToolStrip1.Text = "ToolStrip1";
             // 
@@ -154,7 +154,7 @@
             this.btnexportar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnexportar.MergeIndex = 0;
             this.btnexportar.Name = "btnexportar";
-            this.btnexportar.Size = new System.Drawing.Size(29, 24);
+            this.btnexportar.Size = new System.Drawing.Size(29, 27);
             this.btnexportar.Text = "Exportar a Microsoft Excel";
             this.btnexportar.Click += new System.EventHandler(this.Exportar_Click);
             // 
@@ -164,7 +164,7 @@
             this.btncorreo.Image = global::Infoware.Consola.Base.Properties.Resources.attach;
             this.btncorreo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btncorreo.Name = "btncorreo";
-            this.btncorreo.Size = new System.Drawing.Size(29, 24);
+            this.btncorreo.Size = new System.Drawing.Size(29, 27);
             this.btncorreo.Text = "Enviar por correo";
             this.btncorreo.Click += new System.EventHandler(this.Correo_Click);
             // 
@@ -186,7 +186,7 @@
             this.btnimprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnimprimir.MergeIndex = 0;
             this.btnimprimir.Name = "btnimprimir";
-            this.btnimprimir.Size = new System.Drawing.Size(29, 24);
+            this.btnimprimir.Size = new System.Drawing.Size(29, 27);
             this.btnimprimir.Text = "Imprimir";
             this.btnimprimir.Click += new System.EventHandler(this.Imprimir_Click);
             // 
@@ -194,7 +194,7 @@
             // 
             this.ToolStripSeparator2.MergeIndex = 99;
             this.ToolStripSeparator2.Name = "ToolStripSeparator2";
-            this.ToolStripSeparator2.Size = new System.Drawing.Size(6, 27);
+            this.ToolStripSeparator2.Size = new System.Drawing.Size(6, 30);
             // 
             // ToolStripProgressBar1
             // 
@@ -207,7 +207,7 @@
             this.btnenviomails.Image = global::Infoware.Consola.Base.Properties.Resources.attach;
             this.btnenviomails.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnenviomails.Name = "btnenviomails";
-            this.btnenviomails.Size = new System.Drawing.Size(271, 24);
+            this.btnenviomails.Size = new System.Drawing.Size(271, 27);
             this.btnenviomails.Text = "No se ha definido envío automático";
             this.btnenviomails.ToolTipText = "Clic aquí para iniciar el envío manualmente";
             this.btnenviomails.Visible = false;
@@ -219,7 +219,7 @@
             this.ToolStripButtonAyuda.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ToolStripButtonAyuda.MergeIndex = 99;
             this.ToolStripButtonAyuda.Name = "ToolStripButtonAyuda";
-            this.ToolStripButtonAyuda.Size = new System.Drawing.Size(29, 24);
+            this.ToolStripButtonAyuda.Size = new System.Drawing.Size(29, 27);
             this.ToolStripButtonAyuda.Text = "Ayuda dinámica";
             this.ToolStripButtonAyuda.Click += new System.EventHandler(this.Ayuda_Click);
             // 
