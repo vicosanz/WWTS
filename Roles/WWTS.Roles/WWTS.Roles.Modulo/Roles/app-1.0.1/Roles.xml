@@ -1,0 +1,496 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Roles
+</name>
+</assembly>
+<members>
+<member name="T:Roles.My.Resources.Resources">
+<summary>
+  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+</summary>
+</member>
+<member name="P:Roles.My.Resources.Resources.ResourceManager">
+<summary>
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+</summary>
+</member>
+<member name="P:Roles.My.Resources.Resources.Culture">
+<summary>
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+</summary>
+</member>
+<member name="P:Roles.My.Resources.Resources._new">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Roles.My.Resources.Resources.APROBAR">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Roles.My.Resources.Resources.asistencia">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+</summary>
+</member>
+<member name="P:Roles.My.Resources.Resources.beneficios">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+</summary>
+</member>
+<member name="P:Roles.My.Resources.Resources.cerraricono">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Roles.My.Resources.Resources.configuracion">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+</summary>
+</member>
+<member name="P:Roles.My.Resources.Resources.cuentas">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+</summary>
+</member>
+<member name="P:Roles.My.Resources.Resources.docexcel">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Roles.My.Resources.Resources.eliminar">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Roles.My.Resources.Resources.Foto">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Roles.My.Resources.Resources.IESS">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+</summary>
+</member>
+<member name="P:Roles.My.Resources.Resources.open">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Roles.My.Resources.Resources.pagos">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+</summary>
+</member>
+<member name="P:Roles.My.Resources.Resources.personal">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+</summary>
+</member>
+<member name="P:Roles.My.Resources.Resources.prestamos">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+</summary>
+</member>
+<member name="P:Roles.My.Resources.Resources.print">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Roles.My.Resources.Resources.printpreview">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Roles.My.Resources.Resources.Refrescar">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+</summary>
+</member>
+<member name="P:Roles.My.Resources.Resources.report">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Roles.My.Resources.Resources.reporte">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+</summary>
+</member>
+<member name="P:Roles.My.Resources.Resources.rolesicon">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+</summary>
+</member>
+<member name="P:Roles.My.Resources.Resources.save">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="T:Roles.DSlisfaltasmes">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Roles.DSlisfaltasmes.v_alertaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Roles.DSlisfaltasmes.v_alertaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Roles.DSlisfaltasmes.v_alertaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Roles.DSasientocontable">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Roles.DSasientocontable.vw_asientocontableDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Roles.DSasientocontable.vw_asientocontableRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Roles.DSasientocontable.vw_asientocontableRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Roles.DSasisfaltas">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Roles.DSasisfaltas.vw_asisfaltasDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Roles.DSasisfaltas.vw_asisfaltasRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Roles.DSasisfaltas.vw_asisfaltasRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Roles.DSavisos">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Roles.DSavisos.vi_avisoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Roles.DSavisos.vi_avisoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Roles.DSavisos.vi_avisoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Roles.DSContador">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Roles.DSContador.vw_contadorDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Roles.DSContador.vw_contadorRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Roles.DSContador.vw_contadorRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Roles.DSJubPatronal">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Roles.DSJubPatronal.JubPatronalDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Roles.DSJubPatronal.JubPatronalRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Roles.DSJubPatronal.JubPatronalRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Roles.DSlistadofirmas">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Roles.DSlistadofirmas.v_resumenperiodoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Roles.DSlistadofirmas.v_resumenperiodoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Roles.DSlistadofirmas.v_resumenperiodoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Roles.DSListadoFirmasTareas">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Roles.DSListadoFirmasTareas.vw_tareasDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Roles.DSListadoFirmasTareas.vw_tareasRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Roles.DSListadoFirmasTareas.vw_tareasRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Roles.dslistaprestquirog">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Roles.dslistaprestquirog.vw_listaprestquirogDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Roles.dslistaprestquirog.vw_listaprestquirogRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Roles.dslistaprestquirog.vw_listaprestquirogRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Roles.dsprestamoshq">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Roles.dsprestamoshq.v_resumenprestamoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Roles.dsprestamoshq.v_resumenprestamoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Roles.dsprestamoshq.v_resumenprestamoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Roles.DSReciboPago">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Roles.DSReciboPago.v_recibopagoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Roles.DSReciboPago.v_recibopagoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Roles.DSReciboPago.v_recibopagoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Roles.dsresumenprestamo">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Roles.dsresumenprestamo.v_resumenprestamoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Roles.dsresumenprestamo.v_resumenprestamoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Roles.dsresumenprestamo.v_resumenprestamoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Roles.DSTareaAgrupada">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Roles.DSTareaAgrupada.vw_tareagDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Roles.DSTareaAgrupada.vw_tareagRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Roles.DSTareaAgrupada.vw_tareagRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Roles.DSdetallesprestamos">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Roles.DSdetallesprestamos.v_detallesprestamosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Roles.DSdetallesprestamos.v_detallesprestamosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Roles.DSdetallesprestamos.v_detallesprestamosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Roles.DSHojaVida">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Roles.DSHojaVida.v_hojavidaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Roles.DSHojaVida.v_hojavidaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Roles.DSHojaVida.v_hojavidaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Roles.DSListadocheques">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Roles.DSListadocheques.v_listadochequesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Roles.DSListadocheques.v_listadochequesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Roles.DSListadocheques.v_listadochequesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Roles.DSprovisiones">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Roles.DSprovisiones.v_ProvisionesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Roles.DSprovisiones.v_ProvisionesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Roles.DSprovisiones.v_ProvisionesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Roles.DSlistadoxseccion">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Roles.DSlistadoxseccion.v_resumenperiodoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Roles.DSlistadoxseccion.v_resumenperiodoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Roles.DSlistadoxseccion.v_resumenperiodoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+</members>
+</doc>

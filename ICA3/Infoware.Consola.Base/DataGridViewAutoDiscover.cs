@@ -300,7 +300,7 @@ namespace Infoware.Consola.Base
                 };
                 Workbook workbook = excelApp.Workbooks.Add();
                 Worksheet worksheet1 = (Worksheet)workbook.Worksheets.Item[1];
-                int columnCount1 = this.ColumnCount;
+                int columnCount1 = ColumnCount;
                 int num1 = 1;
                 while (num1 <= columnCount1)
                 {
@@ -310,7 +310,7 @@ namespace Infoware.Consola.Base
                     PropertyInfo property = dets.GetProperty(this.Columns[num1 - 1].DataPropertyName);
                     if (property != null)
                     {
-                        if (_output != EnumSalida.MailMerge && property.PropertyType == typeof(Decimal) | property.PropertyType == typeof(double))
+                        if (_output != EnumSalida.MailMerge && property.PropertyType == typeof(decimal) | property.PropertyType == typeof(double))
                             worksheet1.Columns[num1].numberformat = "0.00";
                         else if (_output != EnumSalida.MailMerge && property.PropertyType == typeof(int) | property.PropertyType == typeof(byte))
                             worksheet1.Columns[num1].numberformat = "0";
@@ -328,40 +328,41 @@ namespace Infoware.Consola.Base
                 }
                 int num2 = 0;
                 int count = data.Count;
-                int num3 = 1;
-                while (num3 <= count)
+                int _fila = 1;
+                while (_fila <= count)
                 {
                     ++num2;
                     if (_progressbar != null)
                         _progressbar.Value = num2;
                     int columnCount2 = this.ColumnCount;
-                    int num4 = 1;
-                    while (num4 <= columnCount2)
+                    int icol = 1;
+                    while (icol <= columnCount2)
                     {
-                        object objectValue = GetField(data[num3 - 1], this.Columns[num4 - 1].DataPropertyName);
-                        if (objectValue is bool)
+                        object objectValue = GetField(data[_fila - 1], Columns[icol - 1].DataPropertyName);
+                        if (objectValue is bool boolvalue)
                         {
-                            worksheet1.Cells[num3 + 1, num4].Value = (bool)objectValue ? "Sí" : "No";
+                            worksheet1.Cells[_fila + 1, icol].Value = boolvalue ? "Sí" : "No";
                         }
                         else
                         {
-                            PropertyInfo property = dets.GetProperty(Columns[num4 - 1].DataPropertyName);
-                            if (_output == EnumSalida.MailMerge && property.PropertyType == (object)typeof(Decimal) | (object)property.PropertyType == (object)typeof(double))
+                            PropertyInfo property = dets.GetProperty(Columns[icol - 1].DataPropertyName);
+                            switch (_output)
                             {
-                                worksheet1.Cells[num3+1, num4].value = Double.Parse((string)objectValue).ToString("0.00");
+                                case EnumSalida.MailMerge when property.PropertyType == typeof(decimal) | property.PropertyType == typeof(double):
+                                    worksheet1.Cells[_fila + 1, icol].value = double.Parse((string)objectValue).ToString("0.00");
+                                    break;
+                                case EnumSalida.MailMerge when property.PropertyType == typeof(int) | property.PropertyType == typeof(byte):
+                                    worksheet1.Cells[_fila + 1, icol].value = double.Parse((string)objectValue).ToString("0.00");
+                                    break;
+                                default:
+                                    worksheet1.Cells[_fila + 1, icol].value = objectValue;
+                                    break;
                             }
-                            else if (_output == EnumSalida.MailMerge && (object)property.PropertyType == (object)typeof(int) | (object)property.PropertyType == (object)typeof(byte))
-                            {
-                                worksheet1.Cells[num3 + 1, num4].value = Double.Parse((string)objectValue).ToString("0.00");
-
-                            }
-                            else
-                                worksheet1.Cells[num3 + 1, num4].value = objectValue;
 
                         }
-                        ++num4;
+                        ++icol;
                     }
-                    ++num3;
+                    ++_fila;
                 }
                 if (_progressbar != null)
                     _progressbar.Visible = false;
@@ -373,26 +374,27 @@ namespace Infoware.Consola.Base
                         excelApp.Dialogs[XlBuiltInDialog.xlDialogSendMail].Show();
                         break;
                     case EnumSalida.MailMerge:
-                        string rutfte = Path.GetTempPath() + "\\temp.xlsx";
+                        string rutfte = Path.Combine(Path.GetTempPath(), "temp.xlsx");
                         try
                         {
                             File.Delete(rutfte);
                         }
                         catch (Exception)
                         {
-                            throw new Exception(string.Format("No se puede eliminar el archivo temporal {0), posiblemente esté en uso", rutfte));
+                            throw new Exception($"No se puede eliminar el archivo temporal {rutfte}, posiblemente esté en uso");
                         }
                         workbook.SaveAs(rutfte);
                         workbook.Close();
                         excelApp.Quit();
-                        Microsoft.Office.Interop.Word.Application instance2 = new Microsoft.Office.Interop.Word.Application();
-                        Microsoft.Office.Interop.Word.Document WordDocument = instance2.Documents.Open(_docmerge);
-                        instance2.Visible = true;
+                        Microsoft.Office.Interop.Word.Application WordApp = new Microsoft.Office.Interop.Word.Application();
+                        Microsoft.Office.Interop.Word.Document WordDocument = WordApp.Documents.Open(_docmerge);
+                        WordApp.Visible = true;
                         WordDocument.Activate();
-                        WordDocument.MailMerge.OpenDataSource(Name: rutfte, Connection: $"Provider=Microsoft.Jet.OLEDB.4.0;Data Source={rutfte};",
-                            SQLStatement: "SELECT * FROM `Hoja1$`");
+                        WordDocument.MailMerge.OpenDataSource(Name: rutfte,
+                                                              Connection: $"Provider=Microsoft.Jet.OLEDB.4.0;Data Source={rutfte};",
+                                                              SQLStatement: "SELECT * FROM `Hoja1$`");
                         WordDocument.MailMerge.ViewMailMergeFieldCodes = 0;
-                        WordDocument.MailMerge.Destination = 0;
+                        WordDocument.MailMerge.Destination = Microsoft.Office.Interop.Word.WdMailMergeDestination.wdSendToNewDocument;
                         WordDocument.MailMerge.SuppressBlankLines = true;
                         WordDocument.MailMerge.DataSource.FirstRecord = 1;
                         WordDocument.MailMerge.DataSource.LastRecord = -16;

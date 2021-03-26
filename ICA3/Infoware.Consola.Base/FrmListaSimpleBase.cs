@@ -208,8 +208,9 @@ namespace Infoware.Consola.Base
                     DataGridView dg = (DataGridView)tabPage.Controls[0];
                     Microsoft.Office.Interop.Excel.Worksheet excelWorksheet = idtab + 1 > workbook.Worksheets.Count ? workbook.Worksheets.Add(After: workbook.Worksheets[idtab]) : workbook.Worksheets[idtab + 1];
                     excelWorksheet.Name = tabPage.Text;
-                    DataTable data =(DataTable) ((BindingSource)dg.DataSource).DataSource;
-                    for (int t=1; t<= dg.ColumnCount; t++)
+                    DataTable data = (DataTable)((BindingSource)dg.DataSource).DataSource;
+
+                    for (int t = 1; t <= dg.ColumnCount; t++)
                     {
                         if (string.Equals(dg.Columns[t - 1].HeaderText.Trim().ToLower(), "txt_salida"))
                         {
@@ -222,13 +223,13 @@ namespace Infoware.Consola.Base
                         int icol = 1;
                         for (int t = 1; t <= dg.ColumnCount; t++)
                         {
-                            if (!string.Equals(dg.Columns[t - 1].HeaderText[0], "_"))
+                            if (!Equals(dg.Columns[t - 1].HeaderText[0], "_"))
                             {
                                 excelWorksheet.Cells[1, icol].Value = dg.Columns[t - 1].HeaderText;
                                 excelWorksheet.Columns[icol].columnwidth = dg.Columns[t - 1].Width / 6.8 > byte.MaxValue ? byte.MaxValue : dg.Columns[t - 1].Width / 6.8;
                                 if (dg.Columns[t - 1].HeaderText.ToUpper().IndexOf("FECHA_HORA") >= 0)
                                     excelWorksheet.Columns[icol].numberformat = "m/d/yy h:mm;@";
-                                else if (_output != EnumSalida.MailMerge && data.Columns[t - 1].DataType == typeof(Decimal) | data.Columns[t - 1].DataType == typeof(double))
+                                else if (_output != EnumSalida.MailMerge && data.Columns[t - 1].DataType == typeof(decimal) | data.Columns[t - 1].DataType == typeof(double))
                                     excelWorksheet.Columns[icol].numberformat = "0.00";
                                 else if (_output != EnumSalida.MailMerge && data.Columns[t - 1].DataType == typeof(int) | data.Columns[t - 1].DataType == typeof(byte))
                                     excelWorksheet.Columns[icol].numberformat = "0";
@@ -267,12 +268,12 @@ namespace Infoware.Consola.Base
                             int icol = 1;
                             for (int t = 1; t <= dg.ColumnCount; t++)
                             {
-                                if (!string.Equals(dg.Columns[t - 1].HeaderText[0], "_"))
+                                if (!Equals(dg.Columns[t - 1].HeaderText[0], "_"))
                                 {
                                     object objectValue = row[t - 1];
-                                    if (objectValue is bool)
+                                    if (objectValue is bool boolval)
                                     {
-                                        excelWorksheet.Cells[_fila + 1, icol].Value = (bool)objectValue ? "Sí" : "No";
+                                        excelWorksheet.Cells[_fila + 1, icol].Value = boolval ? "Sí" : "No";
                                     }
                                     else if (objectValue is Array)
                                     {
@@ -282,14 +283,21 @@ namespace Infoware.Consola.Base
                                     {
                                         if (!(objectValue is DBNull))
                                         {
-                                            if (_output == EnumSalida.MailMerge && data.Columns[t - 1].DataType == typeof(decimal) | data.Columns[t - 1].DataType == typeof(double))
-                                                excelWorksheet.Cells[_fila + 1, icol].Value = Double.Parse(objectValue.ToString()).ToString("0.00");
-                                            else if (_output == EnumSalida.MailMerge && data.Columns[t - 1].DataType == typeof(int) | data.Columns[t - 1].DataType == typeof(byte))
-                                                excelWorksheet.Cells[_fila + 1, icol].Value = Double.Parse(objectValue.ToString()).ToString("0");
-                                            else if (_output == EnumSalida.MailMerge && data.Columns[t - 1].DataType == typeof(DateTime))
-                                                excelWorksheet.Cells[_fila + 1, icol].Value = string.Format(objectValue.ToString(), CultureInfo.CurrentCulture.DateTimeFormat.ShortDatePattern);
-                                            else
-                                                excelWorksheet.Cells[_fila + 1, icol].Value = objectValue;
+                                            switch (_output)
+                                            {
+                                                case EnumSalida.MailMerge when data.Columns[t - 1].DataType == typeof(decimal) | data.Columns[t - 1].DataType == typeof(double):
+                                                    excelWorksheet.Cells[_fila + 1, icol].Value = double.Parse(objectValue.ToString()).ToString("0.00");
+                                                    break;
+                                                case EnumSalida.MailMerge when data.Columns[t - 1].DataType == typeof(int) | data.Columns[t - 1].DataType == typeof(byte):
+                                                    excelWorksheet.Cells[_fila + 1, icol].Value = double.Parse(objectValue.ToString()).ToString("0");
+                                                    break;
+                                                case EnumSalida.MailMerge when data.Columns[t - 1].DataType == typeof(DateTime):
+                                                    excelWorksheet.Cells[_fila + 1, icol].Value = string.Format(objectValue.ToString(), CultureInfo.CurrentCulture.DateTimeFormat.ShortDatePattern);
+                                                    break;
+                                                default:
+                                                    excelWorksheet.Cells[_fila + 1, icol].Value = objectValue;
+                                                    break;
+                                            }
                                         }
                                     }
                                     icol++;
@@ -299,7 +307,10 @@ namespace Infoware.Consola.Base
 
                     }
                     if (!_esTxt)
+                    {
                         excelWorksheet.Cells[1, 1].AutoFormat(Format: Microsoft.Office.Interop.Excel.XlRangeAutoFormat.xlRangeAutoFormatList3, Number: true, Font: true, Alignment: true, Border: true, Pattern: true, Width: true);
+                    }
+
                     StructExcel structExcel = ((StructExcelList)this.TabControl1.Tag).Devolver(idtab + 1);
                     if (structExcel.Subtotales != null && structExcel.Subtotales.Count > 0)
                     {
@@ -420,10 +431,10 @@ namespace Infoware.Consola.Base
                                     _proceso = Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlMin;
                                     break;
                             }
-                            pivotTable1.AddDataField(pivotTable1.PivotFields(_item.Campo), $"{_item.Funcion.ToString()} de {_item.Campo}", _proceso);
+                            pivotTable1.AddDataField(pivotTable1.PivotFields(_item.Campo), $"{_item.Funcion} de {_item.Campo}", _proceso);
                             if (string.Equals(_item.Formato.Trim(), string.Empty))
                             {
-                                pivotTable1.PivotFields($"{_item.Funcion.ToString()} de {_item.Campo}").numberformat = _item.Formato;
+                                pivotTable1.PivotFields($"{_item.Funcion} de {_item.Campo}").numberformat = _item.Formato;
                             }
                         }
                         if (structExcel.TablaDinamica.DataPivotFieldasColumn)
@@ -493,7 +504,7 @@ namespace Infoware.Consola.Base
                             Auditoria.Registrar_Auditoria(this.Restriccion, Auditoria.enumTipoAccion.Impresion, "Exportar a Excel y enviar por mail");
                             break;
                         case EnumSalida.MailMerge:
-                            string rutfte = Path.GetTempPath() + "\\temp.xlsx";
+                            string rutfte = Path.Combine(Path.GetTempPath(), "temp.xlsx");
                             try
                             {
                                 if (File.Exists(rutfte))
@@ -501,7 +512,7 @@ namespace Infoware.Consola.Base
                             }
                             catch (Exception)
                             {
-                                throw new Exception(string.Format("No se puede eliminar el archivo temporal {0), posiblemente esté en uso", rutfte));
+                                throw new Exception($"No se puede eliminar el archivo temporal {rutfte}, posiblemente esté en uso");
                             }
                             workbook.SaveAs(Filename: rutfte);
                             workbook.Close();
@@ -511,7 +522,9 @@ namespace Infoware.Consola.Base
                             Microsoft.Office.Interop.Word.Document WordDocument = WordApp.Documents.Open(_docmerge);
                             WordApp.Visible = true;
                             WordDocument.Activate();
-                            WordDocument.MailMerge.OpenDataSource(Name: rutfte, Connection: $"Provider=Microsoft.Jet.OLEDB.4.0;Data Source={rutfte};", SQLStatement: "SELECT * FROM `{Me.TabControl1.TabPages(0).Text}$`");
+                            WordDocument.MailMerge.OpenDataSource(Name: rutfte,
+                                                                  Connection: $"Provider=Microsoft.Jet.OLEDB.4.0;Data Source={rutfte};",
+                                                                  SQLStatement: "SELECT * FROM `{Me.TabControl1.TabPages(0).Text}$`");
                             WordDocument.MailMerge.ViewMailMergeFieldCodes = 0;
                             WordDocument.MailMerge.Destination = Microsoft.Office.Interop.Word.WdMailMergeDestination.wdSendToNewDocument;
                             WordDocument.MailMerge.SuppressBlankLines = true;
