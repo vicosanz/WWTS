@@ -104,15 +104,8 @@ Public Class Inicializacion
   Public Function CargarListaGrupoOpciones(ByVal _Sistema As Infoware.Consola.Base.Sistema) As System.Collections.Generic.List(Of Infoware.Consola.Base.GrupoOpcion) Implements Infoware.Consola.Base.IAplicacion.CargarListaGrupoOpciones
     Dim _grupos As New List(Of GrupoOpcion)
 
-    If _Sistema.Usuario.Restricciones.porModulo(Enumerados.EnumModulos.Reclutamiento) Then
+    If _Sistema.Usuario.Restricciones.porModulo(Enumerados.EnumModulos.Siembra) Then
       _grupos.AddRange(New Loader().CargarModuloSiembra(_Sistema))
-    End If
-
-    If _Sistema.Usuario.Restricciones.porModulo(Enumerados.EnumModulos.Seguridad) Then
-      _grupos.AddRange(New WWTS.General.Modulo.Loader().CargarModuloSeguridad(_Sistema))
-    End If
-    If _Sistema.Usuario.Restricciones.porModulo(Enumerados.EnumModulos.Configuracion) Then
-      _grupos.AddRange(New WWTS.General.Modulo.Loader().CargarModuloConfiguracion(_Sistema))
     End If
 
     Return _grupos

@@ -57,7 +57,7 @@
             // 
             // pnlhidemenu
             // 
-            this.pnlhidemenu.Location = new System.Drawing.Point(0, 53);
+            this.pnlhidemenu.Location = new System.Drawing.Point(0, 61);
             this.pnlhidemenu.Size = new System.Drawing.Size(1059, 12);
             // 
             // menuStrip1
@@ -175,9 +175,9 @@
             this.ModulosToolStrip,
             this.FavoritosToolStrip,
             this.ReportesToolStrip});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 65);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 73);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1059, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(1059, 31);
             this.toolStrip1.TabIndex = 17;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -187,7 +187,7 @@
             this.SistemasToolStrip.Image = global::ICA3.Properties.Resources.db;
             this.SistemasToolStrip.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.SistemasToolStrip.Name = "SistemasToolStrip";
-            this.SistemasToolStrip.Size = new System.Drawing.Size(29, 24);
+            this.SistemasToolStrip.Size = new System.Drawing.Size(29, 28);
             this.SistemasToolStrip.Text = "Sistemas registrados";
             this.SistemasToolStrip.Click += new System.EventHandler(this.SistemasToolStrip_Click);
             // 
@@ -197,7 +197,7 @@
             this.ModulosToolStrip.Image = global::ICA3.Properties.Resources.table;
             this.ModulosToolStrip.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ModulosToolStrip.Name = "ModulosToolStrip";
-            this.ModulosToolStrip.Size = new System.Drawing.Size(29, 24);
+            this.ModulosToolStrip.Size = new System.Drawing.Size(29, 28);
             this.ModulosToolStrip.Text = "Explorador de sistema";
             this.ModulosToolStrip.Click += new System.EventHandler(this.ModulosToolStrip_Click);
             // 
@@ -207,7 +207,7 @@
             this.FavoritosToolStrip.Image = global::ICA3.Properties.Resources.favorites;
             this.FavoritosToolStrip.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.FavoritosToolStrip.Name = "FavoritosToolStrip";
-            this.FavoritosToolStrip.Size = new System.Drawing.Size(29, 24);
+            this.FavoritosToolStrip.Size = new System.Drawing.Size(29, 28);
             this.FavoritosToolStrip.Text = "Favoritos";
             this.FavoritosToolStrip.Click += new System.EventHandler(this.FavoritosToolStrip_Click);
             // 
@@ -217,7 +217,7 @@
             this.ReportesToolStrip.Image = global::ICA3.Properties.Resources.print;
             this.ReportesToolStrip.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ReportesToolStrip.Name = "ReportesToolStrip";
-            this.ReportesToolStrip.Size = new System.Drawing.Size(29, 24);
+            this.ReportesToolStrip.Size = new System.Drawing.Size(29, 28);
             this.ReportesToolStrip.Text = "Reportes";
             this.ReportesToolStrip.Click += new System.EventHandler(this.ReportesToolStrip_Click);
             // 

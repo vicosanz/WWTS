@@ -15,28 +15,23 @@ namespace Infoware.Consola.Base
 {
     public class DataGridViewAutoDiscover : DataGridView
     {
-        private bool mAgruparRepetidos;
         private ContextMenuStrip ContextMenuStrip1;
 
-        public bool AgruparRepetidos
-        {
-            get => this.mAgruparRepetidos;
-            set => this.mAgruparRepetidos = value;
-        }
+        public bool AgruparRepetidos { get; set; }
 
         public void AutoDiscover()
         {
-            if (this.DesignMode)
+            if (DesignMode)
             {
                 return;
             }
-            this.Invalidate();
-            this.ContextMenuStrip = this.ContextMenuStrip1;
-            this.ContextMenuStrip1.Items.Clear();
+            Invalidate();
+            ContextMenuStrip = ContextMenuStrip1;
+            ContextMenuStrip1.Items.Clear();
             try
             {
-                IList data = (IList)this.DataSource;
-                Type SourceType = (Type)data[0].GetType();
+                IList data = (IList)DataSource;
+                Type SourceType = data[0].GetType();
                 foreach (PropertyInfo mInfo in SourceType.GetProperties())
                 {
                     CampoReporteAtributo campoReporteAtributo = null;
@@ -273,7 +268,7 @@ namespace Infoware.Consola.Base
             this.DataSourceChanged += new EventHandler(this.DataGridViewAutoDiscover_DataSourceChanged);
             this.Paint += new PaintEventHandler(this.DataGridView1_Paint);
             this.RowPostPaint += new DataGridViewRowPostPaintEventHandler(this.DataGridView1_RowPostPaint);
-            this.mAgruparRepetidos = false;
+            this.AgruparRepetidos = false;
             this.ContextMenuStrip1 = new ContextMenuStrip();
             this.SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.OptimizedDoubleBuffer, true);
         }

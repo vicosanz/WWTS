@@ -524,7 +524,7 @@ namespace Infoware.Consola.Base
                             WordDocument.Activate();
                             WordDocument.MailMerge.OpenDataSource(Name: rutfte,
                                                                   Connection: $"Provider=Microsoft.Jet.OLEDB.4.0;Data Source={rutfte};",
-                                                                  SQLStatement: "SELECT * FROM `{Me.TabControl1.TabPages(0).Text}$`");
+                                                                  SQLStatement: $"SELECT * FROM `{TabControl1.TabPages[0].Text}$`");
                             WordDocument.MailMerge.ViewMailMergeFieldCodes = 0;
                             WordDocument.MailMerge.Destination = Microsoft.Office.Interop.Word.WdMailMergeDestination.wdSendToNewDocument;
                             WordDocument.MailMerge.SuppressBlankLines = true;

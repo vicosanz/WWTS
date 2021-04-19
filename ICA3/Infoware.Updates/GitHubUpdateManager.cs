@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
@@ -33,7 +34,7 @@ namespace Infoware.Updates
             if (!string.IsNullOrWhiteSpace(ensamblado))
             {
                 applicationName = Path.GetFileNameWithoutExtension(ensamblado);
-                rootDirectory = FUtilities.GetLocalAppDataDirectory(ensamblado);
+                rootDirectory = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
             }
 
             return new FUpdateManager(
