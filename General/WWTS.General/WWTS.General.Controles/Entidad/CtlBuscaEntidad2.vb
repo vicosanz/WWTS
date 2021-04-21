@@ -121,10 +121,6 @@ Public Class CtlBuscaEntidad2
     RaiseEvent CambioEntidad(Me, Nothing)
   End Sub
 
-  Private Sub btnadd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnadd.Click
-    Abrir_Mantenimiento(New Entidad(Sistema.OperadorDatos, True))
-  End Sub
-
   Sub Abrir_Mantenimiento(_entidad As Entidad)
     If _entidad Is Nothing Then
       Exit Sub
