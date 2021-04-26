@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -11,7 +12,7 @@ using WeifenLuo.WinFormsUI.Docking;
 
 namespace Infoware.Consola.Base
 {
-    public partial class FormBaseMain : FrmFormaBase
+    public partial class FormBaseMain : FrmFormaBase, IMessageFilter
     {
         public DockPanel MainDockPanel {
             get
@@ -23,6 +24,8 @@ namespace Infoware.Consola.Base
         public FormBaseMain()
         {
             InitializeComponent();
+            MoveFromControls.Add(lblTitle);
+            Resize += FrmHome_Resize;
         }
 
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -121,5 +124,85 @@ namespace Infoware.Consola.Base
                 lbl_contectadoa.Text = $"Conectado a: {_mensaje}";
             }
         }
+
+        #region controlbox
+        private void mnuMinimizar_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void mnuMaximizar_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Maximized;
+        }
+
+        private void mnuRestaurar_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Normal;
+        }
+
+        private void mnuCerrar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void lblTitle_DoubleClick(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Maximized)
+            {
+                WindowState = FormWindowState.Normal;
+            }
+            else
+            {
+                WindowState = FormWindowState.Maximized;
+            }
+        }
+        #endregion
+
+        #region MoveForm Title less
+        private void FrmHome_Resize(object sender, EventArgs e)
+        {
+            mnuMaximizar.Visible = WindowState != FormWindowState.Maximized;
+            mnuRestaurar.Visible = WindowState == FormWindowState.Maximized;
+        }
+
+        private HashSet<Control> MoveFromControls = new HashSet<Control>();
+
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HT_CAPTION = 0x2;
+        public const int WM_LBUTTONDOWN = 0x0201;
+
+        [DllImport("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [DllImport("user32.dll")]
+        public static extern bool ReleaseCapture();
+
+        public bool PreFilterMessage(ref Message m)
+        {
+            if (m.Msg == WM_LBUTTONDOWN && MoveFromControls.Contains(FromHandle(m.HWnd)))
+            {
+                ReleaseCapture();
+                SendMessage(this.Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+                return true;
+            }
+            return false;
+        }
+
+        protected override void WndProc(ref Message m)
+        {
+            base.WndProc(ref m);
+            if (m.Msg == 0x84)
+            {
+                const int resizeArea = 10;
+                Point cursorPosition = PointToClient(new Point(m.LParam.ToInt32() & 0xffff, m.LParam.ToInt32() >> 16));
+                if (cursorPosition.X >= ClientSize.Width - resizeArea && cursorPosition.Y >= ClientSize.Height - resizeArea)
+                {
+                    m.Result = (IntPtr)17;
+                    return;
+                }
+            }
+        }
+        #endregion
+
     }
 }

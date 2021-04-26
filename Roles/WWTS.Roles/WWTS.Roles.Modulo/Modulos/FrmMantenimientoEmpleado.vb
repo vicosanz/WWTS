@@ -39,7 +39,6 @@ Public Class FrmMantenimientoEmpleado
     If Sistema Is Nothing Then
       Exit Sub
     End If
-
     Me.CtlEmpleado1.Empleado = Empleado
     Me.CtlContrato1.Empleado = Empleado
     'Me.CtlContrato1.HeaderStrip1.Enabled = True
@@ -254,6 +253,11 @@ Public Class FrmMantenimientoEmpleado
   End Sub
 
   Private Sub CtlBuscaEmpleados1_CambioFuenteDatos(sender As Object, e As EventArgs) Handles CtlBuscaEmpleados1.CambioFuenteDatos
-    Empleados = CtlBuscaEmpleados1.ListBindingSource
+    'Empleados = CtlBuscaEmpleados1.ListBindingSource
+  End Sub
+
+  Private Sub CtlBuscaEmpleados1_CambioEmpleado(sender As Object, e As EventArgs) Handles CtlBuscaEmpleados1.CambioEmpleado
+    Me.ListBindingSource.DataSource = New EmpleadoList
+    Me.ListBindingSource.Add(CtlBuscaEmpleados1.Empleado)
   End Sub
 End Class

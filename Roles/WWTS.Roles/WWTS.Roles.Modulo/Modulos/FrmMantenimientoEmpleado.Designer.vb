@@ -56,14 +56,14 @@ Partial Class FrmMantenimientoEmpleado
         'HeaderStrip1
         '
         Me.HeaderStrip1.AutoSize = False
-        Me.HeaderStrip1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.HeaderStrip1.Font = New System.Drawing.Font("Arial", 12.75!, System.Drawing.FontStyle.Bold)
         Me.HeaderStrip1.ForeColor = System.Drawing.Color.White
         Me.HeaderStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.HeaderStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.HeaderStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStriptitulo})
         Me.HeaderStrip1.Location = New System.Drawing.Point(0, 0)
         Me.HeaderStrip1.Name = "HeaderStrip1"
-        Me.HeaderStrip1.Size = New System.Drawing.Size(960, 29)
+        Me.HeaderStrip1.Size = New System.Drawing.Size(960, 32)
         Me.HeaderStrip1.TabIndex = 5
         Me.HeaderStrip1.TabStop = True
         Me.HeaderStrip1.Text = "HeaderStrip1"
@@ -125,13 +125,13 @@ Partial Class FrmMantenimientoEmpleado
         '
         Me.CtlContrato1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CtlContrato1.Empleado = Nothing
-        Me.CtlContrato1.Location = New System.Drawing.Point(231, 383)
+        Me.CtlContrato1.Location = New System.Drawing.Point(231, 386)
         Me.CtlContrato1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.CtlContrato1.ModoenSeleccion = False
         Me.CtlContrato1.Name = "CtlContrato1"
         Me.CtlContrato1.Op = Nothing
         Me.CtlContrato1.Selecc_Codigo = 0
-        Me.CtlContrato1.Size = New System.Drawing.Size(729, 298)
+        Me.CtlContrato1.Size = New System.Drawing.Size(729, 295)
         Me.CtlContrato1.TabIndex = 4
         Me.CtlContrato1.Usuario = Nothing
         '
@@ -140,7 +140,7 @@ Partial Class FrmMantenimientoEmpleado
         Me.CtlEmpleado1.Dock = System.Windows.Forms.DockStyle.Top
         Me.CtlEmpleado1.Empleado = Nothing
         Me.CtlEmpleado1.Enabled = False
-        Me.CtlEmpleado1.Location = New System.Drawing.Point(231, 29)
+        Me.CtlEmpleado1.Location = New System.Drawing.Point(231, 32)
         Me.CtlEmpleado1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.CtlEmpleado1.Name = "CtlEmpleado1"
         Me.CtlEmpleado1.OperadorDatos = Nothing
@@ -152,12 +152,12 @@ Partial Class FrmMantenimientoEmpleado
         Me.CtlBuscaEmpleados1.BackColor = System.Drawing.SystemColors.Info
         Me.CtlBuscaEmpleados1.Dock = System.Windows.Forms.DockStyle.Left
         Me.CtlBuscaEmpleados1.Empleado = Nothing
-        Me.CtlBuscaEmpleados1.Location = New System.Drawing.Point(0, 29)
+        Me.CtlBuscaEmpleados1.Location = New System.Drawing.Point(0, 32)
         Me.CtlBuscaEmpleados1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.CtlBuscaEmpleados1.Name = "CtlBuscaEmpleados1"
         Me.CtlBuscaEmpleados1.Op = Nothing
         Me.CtlBuscaEmpleados1.Patrono = Nothing
-        Me.CtlBuscaEmpleados1.Size = New System.Drawing.Size(231, 652)
+        Me.CtlBuscaEmpleados1.Size = New System.Drawing.Size(231, 649)
         Me.CtlBuscaEmpleados1.TabIndex = 2
         Me.CtlBuscaEmpleados1.Usuario = Nothing
         '

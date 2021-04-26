@@ -61,13 +61,13 @@ Public Class CtlBuscaEmpleados
 
   Public Property Empleado() As Empleado
     Get
-      If ListBindingSource.Current Is Nothing Then
+      If BindingSource.Current Is Nothing Then
         Return Nothing
       Else
         If mesEmpleado Then
-          Return ListBindingSource.Current
+          Return BindingSource.Current
         Else
-          Return CType(ListBindingSource.Current, Contrato).Empleado
+          Return CType(BindingSource.Current, Contrato).Empleado
         End If
       End If
     End Get
@@ -75,20 +75,20 @@ Public Class CtlBuscaEmpleados
       If value IsNot Nothing Then
         mEmpleados = New EmpleadoList
         mEmpleados.Add(value)
-        Me.ListBindingSource.DataSource = mEmpleados
+        Me.BindingSource.DataSource = mEmpleados
         MostrarEmpleados()
       Else
-        Me.ListBindingSource.DataSource = Nothing
+        Me.BindingSource.DataSource = Nothing
       End If
     End Set
   End Property
 
   Public ReadOnly Property Contrato() As Contrato
     Get
-      If TypeOf (ListBindingSource.Current) Is empleado Then
-        Return CType(ListBindingSource.Current, Empleado).UltimoContrato(Me.CtlPatrono1.Patrono)
+      If TypeOf (BindingSource.Current) Is Empleado Then
+        Return CType(BindingSource.Current, Empleado).UltimoContrato(Me.CtlPatrono1.Patrono)
       Else
-        Return CType(ListBindingSource.Current, Contrato)
+        Return CType(BindingSource.Current, Contrato)
       End If
     End Get
   End Property
@@ -98,16 +98,24 @@ Public Class CtlBuscaEmpleados
   '    Return Me.tvEmpleados
   '  End Get
   'End Property
+  Public Property BindingSource As BindingSource
+    Get
+      Return ListBindingSource
+    End Get
+    Set(value As BindingSource)
+      ListBindingSource = value
+      Me.tvEmpleados.DataSource = ListBindingSource
+    End Set
+  End Property
 
   Private mEmpleados As EmpleadoList = Nothing
   Private mContratos As ContratoList = Nothing
   Private mesEmpleado As Boolean = True
   Private mesLlenandoLista As Boolean = False
   Public Sub llenar_datos(ByVal salida As Integer)
-    If op Is Nothing Then
+    If Op Is Nothing Then
       Exit Sub
     End If
-    mesLlenandoLista = True
     Retornar_Empleados()
     Me.lblstatus.Text = "."
     If mesEmpleado Then
@@ -149,10 +157,11 @@ Public Class CtlBuscaEmpleados
           DataGridViewTextBoxColumn1.ReadOnly = True
           Me.tvEmpleados.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {DataGridViewTextBoxColumn1})
 
-          Me.ListBindingSource.DataSource = GetType(WWTS.General.Reglas.Contrato)
+          mesLlenandoLista = True
           Dim mitemssort As New Infoware.Reglas.SortedView(mContratos)
-          ListBindingSource.DataSource = mitemssort
+          BindingSource.DataSource = mitemssort
         End If
+        mesLlenandoLista = False
         CambiarEmpleado(True)
       Case 3
         Me.tvEmpleados.EndEdit()
@@ -163,7 +172,6 @@ Public Class CtlBuscaEmpleados
         End If
     End Select
     mDeshabSelect = False
-    mesLlenandoLista = False
   End Sub
 
   Private Sub MostrarEmpleados()
@@ -191,9 +199,10 @@ Public Class CtlBuscaEmpleados
     DataGridViewTextBoxColumn1.ReadOnly = True
     Me.tvEmpleados.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {DataGridViewTextBoxColumn1})
 
-    Me.ListBindingSource.DataSource = GetType(WWTS.General.Reglas.Empleado)
+    mesLlenandoLista = True
     Dim mitemssort As New Infoware.Reglas.SortedView(mEmpleados)
-    ListBindingSource.DataSource = mitemssort
+    BindingSource.DataSource = mitemssort
+    mesLlenandoLista = False
     CambiarEmpleado(True)
   End Sub
 
@@ -581,7 +590,7 @@ Public Class CtlBuscaEmpleados
     Me.pnlbusqueda.Visible = True
   End Sub
 
-  Private Sub ListBindingSource_CurrentChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles ListBindingSource.CurrentChanged
+  Private Sub BindingSource_CurrentChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles ListBindingSource.CurrentChanged
     CambiarEmpleado()
   End Sub
 
@@ -615,7 +624,7 @@ Public Class CtlBuscaEmpleados
 
   Public Event CambioFuenteDatos As EventHandler
 
-  Private Sub ListBindingSource_DataSourceChanged(sender As Object, e As EventArgs) Handles ListBindingSource.DataSourceChanged
+  Private Sub BindingSource_DataSourceChanged(sender As Object, e As EventArgs) Handles ListBindingSource.DataSourceChanged
     RaiseEvent CambioFuenteDatos(Me, Nothing)
   End Sub
 End Class

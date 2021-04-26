@@ -20,14 +20,7 @@ namespace Infoware.Consola.Base
         public BindingSource ListBindingSource
         {
             get => BindingSource;
-            set
-            {
-                BindingSource = value;
-                if (value != null)
-                {
-                    BindingSource.CurrentChanged += Actualizar_Click;
-                }
-            }
+            set => BindingSource = value;
         }
 
         public string Tabla
@@ -196,6 +189,8 @@ namespace Infoware.Consola.Base
             InitializeComponent();
 
             AplicarRestricciones += Frm_AplicarRestricciones;
+            BindingSource.DataSourceChanged += Actualizar_Click;
+            BindingSource.CurrentChanged += Actualizar_Click;
         }
 
         private void Frm_AplicarRestricciones(object sender, EventArgs e)
@@ -365,7 +360,6 @@ namespace Infoware.Consola.Base
 
         private void Siguiente_Click(object sender, EventArgs e)
         {
-            ListBindingSource.CurrentChanged += Actualizar_Click;
             CancelEventArgs ev = new CancelEventArgs();
             Siguiente?.Invoke(this, ev);
             if (!ev.Cancel)

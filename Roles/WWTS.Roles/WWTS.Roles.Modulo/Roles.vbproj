@@ -1056,6 +1056,7 @@
     <None Include="Modulos\Reportes\DSresumenprestamo.xss">
       <DependentUpon>DSresumenprestamo.xsd</DependentUpon>
     </None>
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
