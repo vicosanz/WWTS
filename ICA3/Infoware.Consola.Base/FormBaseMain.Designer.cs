@@ -154,9 +154,9 @@
             // lblTitle
             // 
             this.lblTitle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTitle.Location = new System.Drawing.Point(555, 0);
+            this.lblTitle.Location = new System.Drawing.Point(231, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(57, 29);
+            this.lblTitle.Size = new System.Drawing.Size(381, 29);
             this.lblTitle.TabIndex = 14;
             this.lblTitle.Text = "Infoware Consola Administrativa";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -233,7 +233,7 @@
             this.MenuStrip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.MenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip.Name = "MenuStrip";
-            this.MenuStrip.Size = new System.Drawing.Size(555, 29);
+            this.MenuStrip.Size = new System.Drawing.Size(231, 29);
             this.MenuStrip.TabIndex = 11;
             this.MenuStrip.Text = "MenuStrip1";
             // 
@@ -379,6 +379,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlhidemenu);
             this.IsMdiContainer = true;
+            this.MainMenuStrip = this.MenuStrip;
             this.Name = "FormBaseMain";
             this.StatusStrip.ResumeLayout(false);
             this.StatusStrip.PerformLayout();
