@@ -85,8 +85,8 @@ Public Class CtlTarjEnsarte
     Me.grabar.Visible = Not Me.mEnsarteZafadura.EsNuevo
     Me.btnguardar.Enabled = True
     Me.btneli.Enabled = Not Me.mEnsarteZafadura.EsNuevo
-    Me.pn1.Enabled = True
-    Me.pn3.Enabled = True
+        Me.pn1.Enabled = mEnsarteZafadura.EsNuevo
+        Me.pn3.Enabled = True
     Me.GroupBox1.Enabled = True
 
     Me.CtlZafra1.Zafra = mEnsarteZafadura.Zafra

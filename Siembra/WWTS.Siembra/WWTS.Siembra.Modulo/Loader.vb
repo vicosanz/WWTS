@@ -25,10 +25,12 @@ Public Class Loader
           Select Case CType(_restriccion.Pardet_Opciones, Enumerados.EnumOpciones)
             Case Enumerados.EnumOpciones.EnsarteZafadura
               _opciones.Add(New Opcion(_restriccion, AddressOf CargarEnsarteZafadura))
-            Case Enumerados.EnumOpciones.Fermentacion
-              _opciones.Add(New Opcion(_restriccion, AddressOf CargarFermentacion))
-            Case Enumerados.EnumOpciones.Rezago
-              _opciones.Add(New Opcion(_restriccion, AddressOf CargarRezago))
+                        Case Enumerados.EnumOpciones.Fermentacion
+                            _opciones.Add(New Opcion(_restriccion, AddressOf CargarFermentacion))
+                        Case Enumerados.EnumOpciones.Curacion
+                            _opciones.Add(New Opcion(_restriccion, AddressOf CargarCuracion))
+                        Case Enumerados.EnumOpciones.Rezago
+                            _opciones.Add(New Opcion(_restriccion, AddressOf CargarRezago))
             Case Enumerados.EnumOpciones.ConfiguracionSiembra
               _opciones.Add(New Opcion(_restriccion, AddressOf CargarConfiguracion))
           End Select
@@ -80,17 +82,22 @@ Public Class Loader
     Return f
   End Function
 
-  Private Function CargarFermentacion(ByVal _Sistema As Sistema, ByVal _Restriccion As Restriccion, ByVal _Opcion As Opcion) As IDockContent
-    Dim f As New FrmFermentacion(_Sistema, _Restriccion)
-    Return f
-  End Function
+    Private Function CargarFermentacion(ByVal _Sistema As Sistema, ByVal _Restriccion As Restriccion, ByVal _Opcion As Opcion) As IDockContent
+        Dim f As New FrmFermentacion(_Sistema, _Restriccion)
+        Return f
+    End Function
 
-  Private Function CargarRezago(ByVal _Sistema As Sistema, ByVal _Restriccion As Restriccion, ByVal _Opcion As Opcion) As IDockContent
-    Dim f As New FrmRezago(_Sistema, _Restriccion)
-    Return f
-  End Function
+    Private Function CargarCuracion(ByVal _Sistema As Sistema, ByVal _Restriccion As Restriccion, ByVal _Opcion As Opcion) As IDockContent
+        Dim f As New FrmCuracion(_Sistema, _Restriccion)
+        Return f
+    End Function
 
-  Private Function CargarConfiguracion(ByVal _Sistema As Sistema, ByVal _Restriccion As Restriccion, ByVal _Opcion As Opcion) As IDockContent
+    Private Function CargarRezago(ByVal _Sistema As Sistema, ByVal _Restriccion As Restriccion, ByVal _Opcion As Opcion) As IDockContent
+        Dim f As New FrmRezago(_Sistema, _Restriccion)
+        Return f
+    End Function
+
+    Private Function CargarConfiguracion(ByVal _Sistema As Sistema, ByVal _Restriccion As Restriccion, ByVal _Opcion As Opcion) As IDockContent
     Dim f As New FrmConfiguracion(_Sistema, _Restriccion)
     Return f
   End Function

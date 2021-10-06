@@ -67,9 +67,10 @@ Public Class ConfigSiembra
 #Region "Métodos internos de la clase"
   Private Sub MapearDataRowaObjeto(ByVal Fila As DataRow)
     Me.mCfs_empaque = CInt(Fila("Cfs_empaque"))
-    Me.mCfs_ensarte = CInt(Fila("Cfs_ensarte"))
-    Me.mCfs_tara = CDec(Fila("Cfs_tara"))
-    Me.mCfs_rutaetiq = CStr(Fila("Cfs_rutaetiq"))
+        Me.mCfs_ensarte = CInt(Fila("Cfs_ensarte"))
+        Me.mCfs_curacion = CInt(Fila("Cfs_curacion"))
+        Me.mCfs_tara = CDec(Fila("Cfs_tara"))
+        Me.mCfs_rutaetiq = CStr(Fila("Cfs_rutaetiq"))
     Me.mCfs_bloque = CStr(Fila("Cfs_bloque"))
   End Sub
 
@@ -85,9 +86,10 @@ Public Class ConfigSiembra
     With OperadorDatos
       .AgregarParametro("@accion", sAccion)
       .AgregarParametro("@Cfs_empaque", Me.mCfs_empaque)
-      .AgregarParametro("@Cfs_ensarte", Me.mCfs_ensarte)
-      .AgregarParametro("@Cfs_rutaetiq", Me.mCfs_rutaetiq)
-      .AgregarParametro("@Cfs_tara", Me.mCfs_tara)
+            .AgregarParametro("@Cfs_ensarte", Me.mCfs_ensarte)
+            .AgregarParametro("@Cfs_curacion", Me.mCfs_curacion)
+            .AgregarParametro("@Cfs_rutaetiq", Me.mCfs_rutaetiq)
+            .AgregarParametro("@Cfs_tara", Me.mCfs_tara)
       .AgregarParametro("@Cfs_bloque", Me.mCfs_bloque)
       .Procedimiento = _Procedimiento
       bReturn = .Ejecutar(dsResult)
@@ -107,11 +109,15 @@ Public Class ConfigSiembra
     Me.mCfs_empaque += 1
     Return Guardar()
   End Function
-  Public Function AvanzarEnsarte() As Boolean
-    Me.mCfs_ensarte += 1
-    Return Guardar()
-  End Function
-  Public Function AvanzarBloque() As Boolean
+    Public Function AvanzarEnsarte() As Boolean
+        Me.mCfs_ensarte += 1
+        Return Guardar()
+    End Function
+    Public Function AvanzarCuracion() As Boolean
+        Me.mCfs_curacion += 1
+        Return Guardar()
+    End Function
+    Public Function AvanzarBloque() As Boolean
     Me.mCfs_bloque += 1
     Return Guardar()
   End Function

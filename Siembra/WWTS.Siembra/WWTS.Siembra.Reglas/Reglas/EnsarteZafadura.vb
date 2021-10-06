@@ -149,25 +149,21 @@ Public Class EnsarteZafadura
     EsNuevo = _nuevo
   End Sub
 
-  Public Sub New(ByVal _OperadorDatos As OperadorDatos, ByVal _zafra As ZafraSiembra, ByVal _ens_numero As Integer, ByVal _Nuevo As Boolean)
-    If _OperadorDatos Is Nothing Then
-      Throw New InvalidOperationException("El operador de datos es nulo")
-    End If
-    OperadorDatos = _OperadorDatos
-    If _zafra Is Nothing Then
-      Throw New Exception("No se puede enlazar Zafra")
-    End If
-    mZaf_codigo = _zafra.Zaf_codigo
-    Ens_numero = _ens_numero
-    EsNuevo = _Nuevo
-    If Not _Nuevo Then
-      If Not Me.Recargar Then
-        Throw New Exception("El objeto no puede ser cargado")
-      End If
-    End If
-  End Sub
+    Public Sub New(ByVal _OperadorDatos As OperadorDatos, ByVal _ens_numero As Integer, ByVal _Nuevo As Boolean)
+        If _OperadorDatos Is Nothing Then
+            Throw New InvalidOperationException("El operador de datos es nulo")
+        End If
+        OperadorDatos = _OperadorDatos
+        Ens_numero = _ens_numero
+        EsNuevo = _Nuevo
+        If Not _Nuevo Then
+            If Not Me.Recargar Then
+                Throw New Exception("El objeto no puede ser cargado")
+            End If
+        End If
+    End Sub
 
-  Public Sub New(ByVal _OperadorDatos As OperadorDatos, ByVal _ens_numero As Integer)
+    Public Sub New(ByVal _OperadorDatos As OperadorDatos, ByVal _ens_numero As Integer)
     If _OperadorDatos Is Nothing Then
       Throw New InvalidOperationException("El operador de datos es nulo")
     End If
@@ -186,9 +182,8 @@ Public Class EnsarteZafadura
     With OperadorDatos
       .AgregarParametro("@accion", "C")
       .AgregarParametro("@Ens_numero", mEns_numero)
-      .AgregarParametro("@Zaf_codigo", mZaf_codigo)
-      .Procedimiento = _Procedimiento
-      bResult = .Ejecutar(dsResult)
+            .Procedimiento = _Procedimiento
+            bResult = .Ejecutar(dsResult)
       .LimpiarParametros()
     End With
     If bResult AndAlso Not dsResult Is Nothing AndAlso dsResult.Tables.Count > 0 AndAlso dsResult.Tables(0).Rows.Count > 0 Then
@@ -304,7 +299,6 @@ Public Class EnsarteZafadura
     With OperadorDatos
       .AgregarParametro("@accion", "E")
       .AgregarParametro("@Ens_numero", mEns_numero)
-      .AgregarParametro("@Zaf_codigo", mZaf_codigo)
       .Procedimiento = _Procedimiento
       bReturn = .Ejecutar(dsResult)
       .LimpiarParametros()

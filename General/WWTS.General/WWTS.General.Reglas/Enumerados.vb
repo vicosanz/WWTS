@@ -156,8 +156,9 @@ Public Class Enumerados
     DashboardMesas = 1425
 
     EnsarteZafadura = 1505
-    Fermentacion = 1510
-    Rezago = 1515
+        Fermentacion = 1510
+        Curacion = 1512
+        Rezago = 1515
     ConfiguracionSiembra = 1550
     ReportesSiembra = 1590
     ReportesPlanificacion = 1592
@@ -322,8 +323,9 @@ Public Class Enumerados
     Hacienda = 900
     Terreno = 905
     Lote = 910
-    Horno = 915
-    Bodega = 920
+        Horno = 915
+        TipoTabaco = 917
+        Bodega = 920
 
     CicloEnsarte = 820
 

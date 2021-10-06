@@ -29,9 +29,10 @@ Public Class FrmConfiguracion
     Me.txtempaque.Text = mConfigSiembra.Cfs_empaque.ToString("0")
     Me.txttara.Text = mConfigSiembra.Cfs_tara.ToString("0.00")
     Me.btnrutaetiqueta.Text = mConfigSiembra.Cfs_rutaetiq
-    Me.txtensarte.Text = mConfigSiembra.Cfs_ensarte.ToString("0")
-    Me.txtbloques.Text = mConfigSiembra.Cfs_bloque.ToString("0")
-  End Sub
+        Me.txtensarte.Text = mConfigSiembra.Cfs_ensarte.ToString("0")
+        Me.txtcuracion.Text = mConfigSiembra.Cfs_curacion.ToString("0")
+        Me.txtbloques.Text = mConfigSiembra.Cfs_bloque.ToString("0")
+    End Sub
 
   Private Sub btnrutaetiqueta_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnrutaetiqueta.Click
     With ofd
@@ -49,10 +50,11 @@ Public Class FrmConfiguracion
       mConfigSiembra.Cfs_empaque = CInt(Me.txtempaque.Text)
       mConfigSiembra.Cfs_tara = CDec(Me.txttara.Text)
       mConfigSiembra.Cfs_rutaetiq = Me.btnrutaetiqueta.Text
-      mConfigSiembra.Cfs_ensarte = CInt(Me.txtensarte.Text)
-      mConfigSiembra.Cfs_bloque = CInt(Me.txtbloques.Text)
+            mConfigSiembra.Cfs_ensarte = CInt(Me.txtensarte.Text)
+            mConfigSiembra.Cfs_curacion = CInt(Me.txtcuracion.Text)
+            mConfigSiembra.Cfs_bloque = CInt(Me.txtbloques.Text)
 
-      If Not mConfigSiembra.Guardar Then
+            If Not mConfigSiembra.Guardar Then
         Throw New Exception(mConfigSiembra.OperadorDatos.MsgError)
       End If
     Catch ex As Exception

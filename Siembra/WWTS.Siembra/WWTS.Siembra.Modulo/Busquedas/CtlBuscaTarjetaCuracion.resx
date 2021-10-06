@@ -117,29 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="nuevo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABOklEQVQ4T2MgFRyTYPgPwlAuAlT3X/mP
-        jKHCKACk8W9X7v//2QL/r2kKINSANFgs/I+Cs7IWohhSXL32/9t5XmCNILxGjPn/LAaoS6pbTmEYgIxB
-        mlde/v1/0cQZ/7+uMEXVDALF1Qf+4wIwzT2HfvyPX/72v13u1v9B0V3/9977jnAlzICFCxeiYJjm3iM/
-        /8es+PDftPAgWHNLS8v/5++RDSjeBjYAGSBrjlr2/r9F2QG4zSDN557jMQAo/7+ioOZ/256PYJuxaUbx
-        QlbCDLBGmNOry0P+Tytx/F9aNwXu7Ly8PLDTYRjDAJCtIAyyAWTAyir3//mhEmDNa69BbIVhkGZUAyIg
-        Bnz58v+/X3DEfycX1/+JCYE4NYIwSA7FAJBmkO26urpgQwhpRjEABEAcUjFU69AGDAwA0YvwZZnArjcA
-        AAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="grabar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAkklEQVQ4T2OgGqjuv/IfGUOFiQMgDRYL
-        /6PgrKyFxBtS3XIKwwBiMFQ7A0Nx9YH/xIL33xEY7kpCBiBrguHnQAJhQPE2qFJUgK4Bhs89h2C8BmDT
-        iKx57z0kA7ISZqBoAmFsmpAxhgHYNOLTjGpABMSAL18gBmDTBMIwjSC89hqaAaRqRjEABEAcUjFU69AG
-        DAwAHbwWxn0UR54AAAAASUVORK5CYII=
-</value>
-  </data>
-  <metadata name="ToolStrip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="HeaderStrip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
+  </metadata>
+  <metadata name="ContextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>263, 17</value>
   </metadata>
 </root>

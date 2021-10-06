@@ -25,9 +25,10 @@ Partial Public Class ConfigSiembra
 #Region "Campos variables"
   Private mCfs_tara As Decimal = 0.0
   Private mCfs_empaque As Integer = 0
-  Private mCfs_ensarte As Integer = 0
-  Private mCfs_rutaetiq As String = String.Empty
-  Private mCfs_bloque As Integer = 0
+    Private mCfs_ensarte As Integer = 0
+    Private mCfs_curacion As Integer = 0
+    Private mCfs_rutaetiq As String = String.Empty
+    Private mCfs_bloque As Integer = 0
 #End Region
 
 #Region "Propiedades públicas de la clase"
@@ -57,20 +58,32 @@ Partial Public Class ConfigSiembra
     End Set
   End Property
 
-  <XmlAttribute()> _
-  Public Overridable Property Cfs_ensarte() As Integer
-    Get
-      Return Me.mCfs_ensarte
-    End Get
-    Set(ByVal Value As Integer)
-      If Value < 0 Then
-        Throw New ArgumentNullException("Ensarte", "Secuencia debe ser positivo o cero")
-      End If
-      Me.mCfs_ensarte = Value
-    End Set
-  End Property
+    <XmlAttribute()>
+    Public Overridable Property Cfs_ensarte() As Integer
+        Get
+            Return Me.mCfs_ensarte
+        End Get
+        Set(ByVal Value As Integer)
+            If Value < 0 Then
+                Throw New ArgumentNullException("Ensarte", "Secuencia debe ser positivo o cero")
+            End If
+            Me.mCfs_ensarte = Value
+        End Set
+    End Property
+    <XmlAttribute()>
+    Public Overridable Property Cfs_curacion() As Integer
+        Get
+            Return Me.mCfs_curacion
+        End Get
+        Set(ByVal Value As Integer)
+            If Value < 0 Then
+                Throw New ArgumentNullException("Curación", "Secuencia debe ser positivo o cero")
+            End If
+            Me.mCfs_curacion = Value
+        End Set
+    End Property
 
-  <XmlAttribute()> _
+    <XmlAttribute()> _
   Public Overridable Property Cfs_rutaetiq() As String
     Get
       Return mCfs_rutaetiq
