@@ -25,7 +25,6 @@ Partial Public Class CuracionCortes
 #Region "Campos variables"
     Private mCur_numero As Integer = 0
     Private mCurcorte_secuencia As Integer = 0
-    Private mCurcorte_cujes As Integer = 0
     Private mEns_numero As Integer = 0
 
 #End Region
@@ -49,16 +48,6 @@ Partial Public Class CuracionCortes
         End Get
         Set(value As Integer)
             mCurcorte_secuencia = value
-        End Set
-    End Property
-
-    <XmlAttribute()>
-    Public Overridable Property Curcorte_cujes As Integer
-        Get
-            Return mCurcorte_cujes
-        End Get
-        Set(value As Integer)
-            mCurcorte_cujes = value
         End Set
     End Property
 

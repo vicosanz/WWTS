@@ -39,8 +39,8 @@ Public Class Loader
     For Each _restriccion As Restriccion In _Sistema.Restricciones
       If _restriccion.Restri_Lectura Then
         Select Case CType(_restriccion.Pardet_Opciones, Enumerados.EnumOpciones)
-          Case Enumerados.EnumOpciones.ReportesContables
-            Dim _reportes As Infoware.Reporteador.ReporteList = Infoware.Reporteador.ReporteList.ObtenerLista(_Sistema.OperadorDatos, "REPFM")
+                    Case Enumerados.EnumOpciones.ReportesFichasMedicas
+                        Dim _reportes As Infoware.Reporteador.ReporteList = Infoware.Reporteador.ReporteList.ObtenerLista(_Sistema.OperadorDatos, "REPFM")
 
             For Each _reporte As Infoware.Reporteador.Reporte In _reportes
               _opciones.Add(New Opcion(_restriccion, AddressOf CargarReporte, _reporte.NombreReporte, _reporte))

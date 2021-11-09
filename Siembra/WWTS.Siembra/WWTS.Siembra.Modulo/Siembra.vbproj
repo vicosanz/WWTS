@@ -333,6 +333,12 @@
     <Compile Include="Mantenimientos\FrmZafra.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Modulos\FrmMetereologia.Designer.vb">
+      <DependentUpon>FrmMetereologia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\FrmMetereologia.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Modulos\FrmConfiguracion.Designer.vb">
       <DependentUpon>FrmConfiguracion.vb</DependentUpon>
     </Compile>
@@ -556,6 +562,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\FrmZafra.resx">
       <DependentUpon>FrmZafra.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\FrmMetereologia.resx">
+      <DependentUpon>FrmMetereologia.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modulos\FrmConfiguracion.resx">
       <DependentUpon>FrmConfiguracion.vb</DependentUpon>

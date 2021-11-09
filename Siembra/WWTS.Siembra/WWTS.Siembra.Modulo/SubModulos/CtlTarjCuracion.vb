@@ -109,6 +109,10 @@ Public Class CtlTarjCuracion
 
     Private Sub btnguardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnguardar.Click
         Try
+            If mCuracion.Detalles.Count() = 0 Then
+                Throw New Exception("Debe generar los detalles primero")
+            End If
+
             Dim nuevo As Boolean = mCuracion.EsNuevo
             'If (Not mCuracion.esNuevo) And (CInt(Me.txtNumEns.Text) <> mCuracion.Ens_numero) Then
             '	mCuracion.CambiarEmpaque(CInt(Me.txtNumEns.Text))
@@ -181,52 +185,58 @@ Public Class CtlTarjCuracion
         If mCuracion.Pardet_TipoTabaco = 1 Then 'natural
             For d As Integer = 0 To 31
                 For h As Integer = 1 To 24
-                    Dim detalle As New CuracionDetalle(mOp, mCuracion, dtpFechaInicio.Value.AddDays(d), h, True)
-                    detalles.Add(detalle)
+                    If (d = 0 AndAlso h < 18) Then
+                    Else
+                        Dim detalle As New CuracionDetalle(mOp, mCuracion, dtpFechaInicio.Value.AddDays(d), h, True)
+                        detalles.Add(detalle)
+                    End If
                 Next
             Next
         End If
         If mCuracion.Pardet_TipoTabaco = 2 Then 'candela
             For d As Integer = 0 To 3
                 For h As Integer = 1 To 24
-                    Dim detalle As New CuracionDetalle(mOp, mCuracion, dtpFechaInicio.Value.AddDays(d), h, True)
-                    If (d = 0 AndAlso h = 18) Then
-                        detalle.Curdet_preest = 84
-                    End If
-                    If (d = 0 AndAlso h = 24) Then
-                        detalle.Curdet_preest = 102
-                    End If
+                    If (d = 0 AndAlso h < 18) Then
+                    Else
+                        Dim detalle As New CuracionDetalle(mOp, mCuracion, dtpFechaInicio.Value.AddDays(d), h, True)
+                        If (d = 0 AndAlso h = 18) Then
+                            detalle.Curdet_preest = 84
+                        End If
+                        If (d = 0 AndAlso h = 24) Then
+                            detalle.Curdet_preest = 102
+                        End If
 
-                    If (d = 1 AndAlso h = 6) Then
-                        detalle.Curdet_preest = 110
-                    End If
-                    If (d = 1 AndAlso h = 12) Then
-                        detalle.Curdet_preest = 118
-                    End If
-                    If (d = 1 AndAlso h = 18) Then
-                        detalle.Curdet_preest = 126
-                    End If
-                    If (d = 1 AndAlso h = 24) Then
-                        detalle.Curdet_preest = 134
-                    End If
+                        If (d = 1 AndAlso h = 6) Then
+                            detalle.Curdet_preest = 110
+                        End If
+                        If (d = 1 AndAlso h = 12) Then
+                            detalle.Curdet_preest = 118
+                        End If
+                        If (d = 1 AndAlso h = 18) Then
+                            detalle.Curdet_preest = 126
+                        End If
+                        If (d = 1 AndAlso h = 24) Then
+                            detalle.Curdet_preest = 134
+                        End If
 
-                    If (d = 2 AndAlso h = 6) Then
-                        detalle.Curdet_preest = 140
-                    End If
-                    If (d = 2 AndAlso h = 12) Then
-                        detalle.Curdet_preest = 146
-                    End If
-                    If (d = 2 AndAlso h = 18) Then
-                        detalle.Curdet_preest = 152
-                    End If
-                    If (d = 2 AndAlso h = 24) Then
-                        detalle.Curdet_preest = 158
-                    End If
+                        If (d = 2 AndAlso h = 6) Then
+                            detalle.Curdet_preest = 140
+                        End If
+                        If (d = 2 AndAlso h = 12) Then
+                            detalle.Curdet_preest = 146
+                        End If
+                        If (d = 2 AndAlso h = 18) Then
+                            detalle.Curdet_preest = 152
+                        End If
+                        If (d = 2 AndAlso h = 24) Then
+                            detalle.Curdet_preest = 158
+                        End If
 
-                    If (d = 3 AndAlso h = 6) Then
-                        detalle.Curdet_preest = 164
+                        If (d = 3 AndAlso h = 6) Then
+                            detalle.Curdet_preest = 164
+                        End If
+                        detalles.Add(detalle)
                     End If
-                    detalles.Add(detalle)
                 Next
             Next
         End If

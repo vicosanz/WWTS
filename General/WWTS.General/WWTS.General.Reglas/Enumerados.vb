@@ -159,14 +159,16 @@ Public Class Enumerados
         Fermentacion = 1510
         Curacion = 1512
         Rezago = 1515
-    ConfiguracionSiembra = 1550
-    ReportesSiembra = 1590
+        ConfiguracionSiembra = 1550
+        Metereologia = 1560
+        ReportesSiembra = 1590
     ReportesPlanificacion = 1592
 
     FichasMedicas = 1605
-    TiposFichasMedicas = 1610
+        TiposFichasMedicas = 1610
+        ReportesFichasMedicas = 1615
 
-    Modulos = 9005
+        Modulos = 9005
     Opciones = 9010
   End Enum
 #End Region

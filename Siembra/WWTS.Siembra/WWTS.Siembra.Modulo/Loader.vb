@@ -31,8 +31,10 @@ Public Class Loader
                             _opciones.Add(New Opcion(_restriccion, AddressOf CargarCuracion))
                         Case Enumerados.EnumOpciones.Rezago
                             _opciones.Add(New Opcion(_restriccion, AddressOf CargarRezago))
-            Case Enumerados.EnumOpciones.ConfiguracionSiembra
-              _opciones.Add(New Opcion(_restriccion, AddressOf CargarConfiguracion))
+                        Case Enumerados.EnumOpciones.Metereologia
+                            _opciones.Add(New Opcion(_restriccion, AddressOf CargarMetereologia))
+                        Case Enumerados.EnumOpciones.ConfiguracionSiembra
+                            _opciones.Add(New Opcion(_restriccion, AddressOf CargarConfiguracion))
           End Select
         End If
       End If
@@ -94,6 +96,11 @@ Public Class Loader
 
     Private Function CargarRezago(ByVal _Sistema As Sistema, ByVal _Restriccion As Restriccion, ByVal _Opcion As Opcion) As IDockContent
         Dim f As New FrmRezago(_Sistema, _Restriccion)
+        Return f
+    End Function
+
+    Private Function CargarMetereologia(ByVal _Sistema As Sistema, ByVal _Restriccion As Restriccion, ByVal _Opcion As Opcion) As IDockContent
+        Dim f As New FrmMetereologia(_Sistema, _Restriccion)
         Return f
     End Function
 

@@ -89,6 +89,7 @@
     <Compile Include="Database\ConfigSiembra.vb" />
     <Compile Include="Database\Corte.vb" />
     <Compile Include="Database\Cuarto.vb" />
+    <Compile Include="Database\Metereologia.vb" />
     <Compile Include="Database\HumedadRelativa.vb" />
     <Compile Include="Database\CuracionCortes.vb" />
     <Compile Include="Database\CuracionDetalle.vb" />
@@ -133,6 +134,7 @@
     <Compile Include="Reglas\ConfigSiembra.vb" />
     <Compile Include="Reglas\Corte.vb" />
     <Compile Include="Reglas\Cuarto.vb" />
+    <Compile Include="Reglas\Metereologia.vb" />
     <Compile Include="Reglas\HumedadRelativa.vb" />
     <Compile Include="Reglas\CuracionCortes.vb" />
     <Compile Include="Reglas\CuracionDetalle.vb" />

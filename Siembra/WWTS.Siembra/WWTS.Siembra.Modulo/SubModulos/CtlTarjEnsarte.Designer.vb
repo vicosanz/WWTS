@@ -24,11 +24,11 @@ Partial Class CtlTarjEnsarte
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.pn1 = New System.Windows.Forms.Panel()
-        Me.CtlZafra1 = New Siembra.CtlZafra()
-        Me.Label14 = New System.Windows.Forms.Label()
         Me.txtNumEns = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.pn3 = New System.Windows.Forms.Panel()
+        Me.CtlZafra1 = New Siembra.CtlZafra()
+        Me.Label14 = New System.Windows.Forms.Label()
         Me.cboCicloEnsarte = New WWTS.General.Controles.ComboBoxParametroDet()
         Me.dtpFecha = New System.Windows.Forms.DateTimePicker()
         Me.Label12 = New System.Windows.Forms.Label()
@@ -113,30 +113,6 @@ Partial Class CtlTarjEnsarte
         Me.pn1.Size = New System.Drawing.Size(229, 26)
         Me.pn1.TabIndex = 0
         '
-        'CtlZafra1
-        '
-        Me.CtlZafra1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CtlZafra1.FormattingEnabled = True
-        Me.CtlZafra1.Location = New System.Drawing.Point(104, 27)
-        Me.CtlZafra1.Name = "CtlZafra1"
-        Me.CtlZafra1.Op = Nothing
-        Me.CtlZafra1.PuedeActualizar = True
-        Me.CtlZafra1.PuedeEliminar = True
-        Me.CtlZafra1.PuedeModificar = True
-        Me.CtlZafra1.PuedeNuevo = True
-        Me.CtlZafra1.Size = New System.Drawing.Size(121, 21)
-        Me.CtlZafra1.TabIndex = 1
-        Me.CtlZafra1.Zafra = Nothing
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(8, 30)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(32, 13)
-        Me.Label14.TabIndex = 0
-        Me.Label14.Text = "Zafra"
-        '
         'txtNumEns
         '
         Me.txtNumEns.Location = New System.Drawing.Point(96, 3)
@@ -168,12 +144,36 @@ Partial Class CtlTarjEnsarte
         Me.pn3.Size = New System.Drawing.Size(388, 101)
         Me.pn3.TabIndex = 1
         '
+        'CtlZafra1
+        '
+        Me.CtlZafra1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CtlZafra1.FormattingEnabled = True
+        Me.CtlZafra1.Location = New System.Drawing.Point(104, 27)
+        Me.CtlZafra1.Name = "CtlZafra1"
+        Me.CtlZafra1.Op = Nothing
+        Me.CtlZafra1.PuedeActualizar = True
+        Me.CtlZafra1.PuedeEliminar = True
+        Me.CtlZafra1.PuedeModificar = True
+        Me.CtlZafra1.PuedeNuevo = True
+        Me.CtlZafra1.Size = New System.Drawing.Size(121, 21)
+        Me.CtlZafra1.TabIndex = 1
+        Me.CtlZafra1.Zafra = Nothing
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(8, 30)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(32, 13)
+        Me.Label14.TabIndex = 0
+        Me.Label14.Text = "Zafra"
+        '
         'cboCicloEnsarte
         '
         Me.cboCicloEnsarte.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboCicloEnsarte.FormattingEnabled = True
         Me.cboCicloEnsarte.Location = New System.Drawing.Point(104, 76)
-        Me.cboCicloEnsarte.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cboCicloEnsarte.Margin = New System.Windows.Forms.Padding(2)
         Me.cboCicloEnsarte.Name = "cboCicloEnsarte"
         Me.cboCicloEnsarte.OperadorDatos = Nothing
         Me.cboCicloEnsarte.Parametro = WWTS.General.Reglas.Enumerados.EnumParametros.TipoEntidad
@@ -256,7 +256,7 @@ Partial Class CtlTarjEnsarte
         Me.btnnuevo.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnnuevo.Name = "btnnuevo"
         Me.btnnuevo.Size = New System.Drawing.Size(23, 22)
-        Me.btnnuevo.Text = "ToolStripButton1"
+        Me.btnnuevo.Text = "Nueva tarjeta"
         '
         'btneli
         '
@@ -265,7 +265,7 @@ Partial Class CtlTarjEnsarte
         Me.btneli.ImageTransparentColor = System.Drawing.Color.White
         Me.btneli.Name = "btneli"
         Me.btneli.Size = New System.Drawing.Size(23, 22)
-        Me.btneli.Text = "ToolStripButton2"
+        Me.btneli.Text = "Eliminar tarjeta"
         '
         'btnguardar
         '
@@ -274,7 +274,7 @@ Partial Class CtlTarjEnsarte
         Me.btnguardar.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnguardar.Name = "btnguardar"
         Me.btnguardar.Size = New System.Drawing.Size(23, 22)
-        Me.btnguardar.Text = "ToolStripButton3"
+        Me.btnguardar.Text = "Guardar cambios"
         '
         'GroupBox1
         '
@@ -361,7 +361,7 @@ Partial Class CtlTarjEnsarte
         'CtlSeccionHorno1
         '
         Me.CtlSeccionHorno1.Location = New System.Drawing.Point(358, 11)
-        Me.CtlSeccionHorno1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CtlSeccionHorno1.Margin = New System.Windows.Forms.Padding(4)
         Me.CtlSeccionHorno1.Name = "CtlSeccionHorno1"
         Me.CtlSeccionHorno1.Op = Nothing
         Me.CtlSeccionHorno1.SeccionHorno = Nothing
@@ -402,7 +402,7 @@ Partial Class CtlTarjEnsarte
         '
         Me.CtlLote1.Location = New System.Drawing.Point(83, 11)
         Me.CtlLote1.Lote = Nothing
-        Me.CtlLote1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CtlLote1.Margin = New System.Windows.Forms.Padding(4)
         Me.CtlLote1.Name = "CtlLote1"
         Me.CtlLote1.Op = Nothing
         Me.CtlLote1.Size = New System.Drawing.Size(167, 75)
@@ -455,7 +455,7 @@ Partial Class CtlTarjEnsarte
         Me.grpzafada.Dock = System.Windows.Forms.DockStyle.Fill
         Me.grpzafada.Location = New System.Drawing.Point(0, 363)
         Me.grpzafada.Name = "grpzafada"
-        Me.grpzafada.Padding = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.grpzafada.Padding = New System.Windows.Forms.Padding(5)
         Me.grpzafada.Size = New System.Drawing.Size(561, 169)
         Me.grpzafada.TabIndex = 19
         Me.grpzafada.TabStop = False

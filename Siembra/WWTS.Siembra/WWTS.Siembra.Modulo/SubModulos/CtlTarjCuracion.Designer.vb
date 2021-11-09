@@ -27,7 +27,6 @@ Partial Class CtlTarjCuracion
         Me.txtNumEns = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.pn3 = New System.Windows.Forms.Panel()
-        Me.CtlZafra1 = New Siembra.CtlZafra()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.cboTipoTabaco = New WWTS.General.Controles.ComboBoxParametroDet()
         Me.dtpFecha = New System.Windows.Forms.DateTimePicker()
@@ -41,14 +40,11 @@ Partial Class CtlTarjCuracion
         Me.btneli = New System.Windows.Forms.ToolStripButton()
         Me.btnguardar = New System.Windows.Forms.ToolStripButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.dtpFechaInicio = New System.Windows.Forms.DateTimePicker()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.CtlSeccionHorno1 = New Siembra.CtlSeccionHorno()
-        Me.CtlSemilla1 = New Siembra.CtlSemilla()
-        Me.CtlLote1 = New Siembra.CtlLote()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
+        Me.dtpFechaInicio = New System.Windows.Forms.DateTimePicker()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.btnDetalles = New System.Windows.Forms.Button()
         Me.DGDetalles = New Infoware.Consola.Base.DataGridViewAutoDiscover()
         Me.BSDetalles = New System.Windows.Forms.BindingSource(Me.components)
@@ -58,6 +54,10 @@ Partial Class CtlTarjCuracion
         Me.TSCortes = New System.Windows.Forms.ToolStrip()
         Me.btnnuevocorte = New System.Windows.Forms.ToolStripButton()
         Me.btneliminarcorte = New System.Windows.Forms.ToolStripButton()
+        Me.CtlSeccionHorno1 = New Siembra.CtlSeccionHorno()
+        Me.CtlSemilla1 = New Siembra.CtlSemilla()
+        Me.CtlLote1 = New Siembra.CtlLote()
+        Me.CtlZafra1 = New Siembra.CtlZafra()
         Me.Panel1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.pn1.SuspendLayout()
@@ -135,21 +135,6 @@ Partial Class CtlTarjCuracion
         Me.pn3.Name = "pn3"
         Me.pn3.Size = New System.Drawing.Size(388, 101)
         Me.pn3.TabIndex = 1
-        '
-        'CtlZafra1
-        '
-        Me.CtlZafra1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CtlZafra1.FormattingEnabled = True
-        Me.CtlZafra1.Location = New System.Drawing.Point(104, 27)
-        Me.CtlZafra1.Name = "CtlZafra1"
-        Me.CtlZafra1.Op = Nothing
-        Me.CtlZafra1.PuedeActualizar = True
-        Me.CtlZafra1.PuedeEliminar = True
-        Me.CtlZafra1.PuedeModificar = True
-        Me.CtlZafra1.PuedeNuevo = True
-        Me.CtlZafra1.Size = New System.Drawing.Size(121, 21)
-        Me.CtlZafra1.TabIndex = 1
-        Me.CtlZafra1.Zafra = Nothing
         '
         'Label14
         '
@@ -248,7 +233,7 @@ Partial Class CtlTarjCuracion
         Me.btnnuevo.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnnuevo.Name = "btnnuevo"
         Me.btnnuevo.Size = New System.Drawing.Size(23, 22)
-        Me.btnnuevo.Text = "ToolStripButton1"
+        Me.btnnuevo.Text = "Nueva tarjeta"
         '
         'btneli
         '
@@ -257,7 +242,7 @@ Partial Class CtlTarjCuracion
         Me.btneli.ImageTransparentColor = System.Drawing.Color.White
         Me.btneli.Name = "btneli"
         Me.btneli.Size = New System.Drawing.Size(23, 22)
-        Me.btneli.Text = "ToolStripButton2"
+        Me.btneli.Text = "Eliminar tarjeta"
         '
         'btnguardar
         '
@@ -266,7 +251,7 @@ Partial Class CtlTarjCuracion
         Me.btnguardar.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnguardar.Name = "btnguardar"
         Me.btnguardar.Size = New System.Drawing.Size(23, 22)
-        Me.btnguardar.Text = "ToolStripButton3"
+        Me.btnguardar.Text = "Guardar cambios"
         '
         'GroupBox1
         '
@@ -283,57 +268,6 @@ Partial Class CtlTarjCuracion
         Me.GroupBox1.Size = New System.Drawing.Size(561, 163)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
-        '
-        'dtpFechaInicio
-        '
-        Me.dtpFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaInicio.Location = New System.Drawing.Point(83, 404)
-        Me.dtpFechaInicio.Name = "dtpFechaInicio"
-        Me.dtpFechaInicio.Size = New System.Drawing.Size(121, 20)
-        Me.dtpFechaInicio.TabIndex = 5
-        '
-        'Label2
-        '
-        Me.Label2.Location = New System.Drawing.Point(8, 408)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(69, 16)
-        Me.Label2.TabIndex = 4
-        Me.Label2.Text = "Fecha inicio"
-        '
-        'CtlSeccionHorno1
-        '
-        Me.CtlSeccionHorno1.Location = New System.Drawing.Point(358, 11)
-        Me.CtlSeccionHorno1.Margin = New System.Windows.Forms.Padding(4)
-        Me.CtlSeccionHorno1.Name = "CtlSeccionHorno1"
-        Me.CtlSeccionHorno1.Op = Nothing
-        Me.CtlSeccionHorno1.SeccionHorno = Nothing
-        Me.CtlSeccionHorno1.Size = New System.Drawing.Size(186, 148)
-        Me.CtlSeccionHorno1.TabIndex = 7
-        '
-        'CtlSemilla1
-        '
-        Me.CtlSemilla1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CtlSemilla1.FormattingEnabled = True
-        Me.CtlSemilla1.Location = New System.Drawing.Point(83, 91)
-        Me.CtlSemilla1.Name = "CtlSemilla1"
-        Me.CtlSemilla1.Op = Nothing
-        Me.CtlSemilla1.PuedeActualizar = True
-        Me.CtlSemilla1.PuedeEliminar = True
-        Me.CtlSemilla1.PuedeModificar = True
-        Me.CtlSemilla1.PuedeNuevo = True
-        Me.CtlSemilla1.Semilla = Nothing
-        Me.CtlSemilla1.Size = New System.Drawing.Size(167, 21)
-        Me.CtlSemilla1.TabIndex = 3
-        '
-        'CtlLote1
-        '
-        Me.CtlLote1.Location = New System.Drawing.Point(83, 11)
-        Me.CtlLote1.Lote = Nothing
-        Me.CtlLote1.Margin = New System.Windows.Forms.Padding(4)
-        Me.CtlLote1.Name = "CtlLote1"
-        Me.CtlLote1.Op = Nothing
-        Me.CtlLote1.Size = New System.Drawing.Size(167, 75)
-        Me.CtlLote1.TabIndex = 1
         '
         'Label5
         '
@@ -358,6 +292,22 @@ Partial Class CtlTarjCuracion
         Me.Label11.Size = New System.Drawing.Size(68, 20)
         Me.Label11.TabIndex = 0
         Me.Label11.Text = "Lote:"
+        '
+        'dtpFechaInicio
+        '
+        Me.dtpFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpFechaInicio.Location = New System.Drawing.Point(83, 404)
+        Me.dtpFechaInicio.Name = "dtpFechaInicio"
+        Me.dtpFechaInicio.Size = New System.Drawing.Size(121, 20)
+        Me.dtpFechaInicio.TabIndex = 5
+        '
+        'Label2
+        '
+        Me.Label2.Location = New System.Drawing.Point(8, 408)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(69, 16)
+        Me.Label2.TabIndex = 4
+        Me.Label2.Text = "Fecha inicio"
         '
         'btnDetalles
         '
@@ -442,6 +392,56 @@ Partial Class CtlTarjCuracion
         Me.btneliminarcorte.Name = "btneliminarcorte"
         Me.btneliminarcorte.Size = New System.Drawing.Size(23, 22)
         Me.btneliminarcorte.Text = "Eliminar corte"
+        '
+        'CtlSeccionHorno1
+        '
+        Me.CtlSeccionHorno1.Location = New System.Drawing.Point(358, 11)
+        Me.CtlSeccionHorno1.Margin = New System.Windows.Forms.Padding(4)
+        Me.CtlSeccionHorno1.Name = "CtlSeccionHorno1"
+        Me.CtlSeccionHorno1.Op = Nothing
+        Me.CtlSeccionHorno1.SeccionHorno = Nothing
+        Me.CtlSeccionHorno1.Size = New System.Drawing.Size(186, 148)
+        Me.CtlSeccionHorno1.TabIndex = 7
+        '
+        'CtlSemilla1
+        '
+        Me.CtlSemilla1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CtlSemilla1.FormattingEnabled = True
+        Me.CtlSemilla1.Location = New System.Drawing.Point(83, 91)
+        Me.CtlSemilla1.Name = "CtlSemilla1"
+        Me.CtlSemilla1.Op = Nothing
+        Me.CtlSemilla1.PuedeActualizar = True
+        Me.CtlSemilla1.PuedeEliminar = True
+        Me.CtlSemilla1.PuedeModificar = True
+        Me.CtlSemilla1.PuedeNuevo = True
+        Me.CtlSemilla1.Semilla = Nothing
+        Me.CtlSemilla1.Size = New System.Drawing.Size(167, 21)
+        Me.CtlSemilla1.TabIndex = 3
+        '
+        'CtlLote1
+        '
+        Me.CtlLote1.Location = New System.Drawing.Point(83, 11)
+        Me.CtlLote1.Lote = Nothing
+        Me.CtlLote1.Margin = New System.Windows.Forms.Padding(4)
+        Me.CtlLote1.Name = "CtlLote1"
+        Me.CtlLote1.Op = Nothing
+        Me.CtlLote1.Size = New System.Drawing.Size(167, 75)
+        Me.CtlLote1.TabIndex = 1
+        '
+        'CtlZafra1
+        '
+        Me.CtlZafra1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CtlZafra1.FormattingEnabled = True
+        Me.CtlZafra1.Location = New System.Drawing.Point(104, 27)
+        Me.CtlZafra1.Name = "CtlZafra1"
+        Me.CtlZafra1.Op = Nothing
+        Me.CtlZafra1.PuedeActualizar = True
+        Me.CtlZafra1.PuedeEliminar = True
+        Me.CtlZafra1.PuedeModificar = True
+        Me.CtlZafra1.PuedeNuevo = True
+        Me.CtlZafra1.Size = New System.Drawing.Size(121, 21)
+        Me.CtlZafra1.TabIndex = 1
+        Me.CtlZafra1.Zafra = Nothing
         '
         'CtlTarjCuracion
         '
