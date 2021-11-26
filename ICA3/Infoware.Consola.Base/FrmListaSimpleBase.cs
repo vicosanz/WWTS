@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Infoware.Reglas.General;
+using Microsoft.Office.Core;
 
 namespace Infoware.Consola.Base
 {
@@ -443,29 +444,40 @@ namespace Infoware.Consola.Base
                     }
                     if (structExcel.Graficar.TipoGrafico != 0)
                     {
-                        Microsoft.Office.Interop.Excel.Chart chart1 = excelApp.Charts.Add();
-                        chart1.ChartType = (Microsoft.Office.Interop.Excel.XlChartType)structExcel.Graficar.TipoGrafico;
-                        chart1.SetSourceData(Source: excelWorksheet.Range[excelWorksheet.Cells[1, 1], excelWorksheet.Cells[dg.RowCount + 1, dg.ColumnCount]],
+                        var shape = excelWorksheet.Shapes.AddChart2(XlChartType:(Microsoft.Office.Interop.Excel.XlChartType)structExcel.Graficar.TipoGrafico);
+                        shape.Chart.SetSourceData(Source: excelWorksheet.Range[excelWorksheet.Cells[1, 1], excelWorksheet.Cells[dg.RowCount + 1, dg.ColumnCount]],
                             PlotBy: structExcel.Graficar.Orientacion);
-                        chart1.Location(Where: Microsoft.Office.Interop.Excel.XlChartLocation.xlLocationAsObject, Name: tabPage.Text);
-                        try
-                        {
-                            chart1.Axes(Microsoft.Office.Interop.Excel.XlAxisType.xlCategory).TickLabelSpacingIsAuto = true;
-                        }
-                        catch (Exception)
-                        {
-                        }
-                        try
-                        {
-                            chart1.Axes(Microsoft.Office.Interop.Excel.XlAxisType.xlCategory).TickLabelSpacing = 1;
-                        }
-                        catch (Exception)
-                        {
-                        }
-                        excelWorksheet.Shapes.Item(1).Left = 0;
-                        excelWorksheet.Shapes.Item(1).Top = 15 * data.Rows.Count + 3;
-                        excelWorksheet.Shapes.Item(1).Height = excelWorksheet.Shapes.Item(1).Height * Convert.ToSingle(structExcel.Graficar.RelacionAlto);
-                        excelWorksheet.Shapes.Item(1).Width = excelWorksheet.Shapes.Item(1).Width * Convert.ToSingle(structExcel.Graficar.RelacionAncho);
+                        shape.Chart.ChartTitle.Text = structExcel.Graficar.Titulo;
+                        shape.Top = 15 * (data.Rows.Count + 3);
+                        shape.Left = 0;
+                        shape.Height = shape.Height * Convert.ToSingle(structExcel.Graficar.RelacionAlto);
+                        shape.Width = shape.Width * Convert.ToSingle(structExcel.Graficar.RelacionAncho);
+                        //Microsoft.Office.Interop.Excel.Chart chart1 = excelApp.Charts.Add();
+                        //chart1.ChartType = (Microsoft.Office.Interop.Excel.XlChartType)structExcel.Graficar.TipoGrafico;
+                        //chart1.SetSourceData(Source: excelWorksheet.Range[excelWorksheet.Cells[1, 1], excelWorksheet.Cells[dg.RowCount + 1, dg.ColumnCount]],
+                        //    PlotBy: structExcel.Graficar.Orientacion);
+                        //chart1.Location(Where: Microsoft.Office.Interop.Excel.XlChartLocation.xlLocationAsObject, Name: tabPage.Text);
+                        //try
+                        //{
+                        //    chart1.Axes(Microsoft.Office.Interop.Excel.XlAxisType.xlCategory).TickLabelSpacingIsAuto = true;
+                        //}
+                        //catch (Exception)
+                        //{
+                        //}
+                        //try
+                        //{
+                        //    chart1.Axes(Microsoft.Office.Interop.Excel.XlAxisType.xlCategory).TickLabelSpacing = 1;
+                        //}
+                        //catch (Exception)
+                        //{
+                        //}
+                        //chart1.SetElement(Microsoft.Office.Core.MsoChartElementType.msoElementChartTitleCenteredOverlay);
+                        //chart1.ChartTitle.Text = structExcel.Graficar.Titulo;
+                        //excelWorksheet.Shapes.Item(1).Left = 0;
+                        //excelWorksheet.Shapes.Item(1).Top = 15 * (data.Rows.Count + 3);
+                        //excelWorksheet.Shapes.Item(1).Height = excelWorksheet.Shapes.Item(1).Height * Convert.ToSingle(structExcel.Graficar.RelacionAlto);
+                        //excelWorksheet.Shapes.Item(1).Width = excelWorksheet.Shapes.Item(1).Width * Convert.ToSingle(structExcel.Graficar.RelacionAncho);
+                        //excelWorksheet.Shapes.Item(1).Title = structExcel.Graficar.Titulo;
                     }
                     ++idtab;
                 }
@@ -532,7 +544,7 @@ namespace Infoware.Consola.Base
                             WordDocument.MailMerge.DataSource.FirstRecord = 1;
                             WordDocument.MailMerge.DataSource.LastRecord = -16;
                             WordDocument.MailMerge.Execute(Pause: false);
-                            WordDocument.ActiveWindow.Close();
+                            WordDocument.ActiveWindow.Close(SaveChanges: false);
                             Auditoria.Registrar_Auditoria(this.Restriccion, Auditoria.enumTipoAccion.Impresion, "Exportar a Excel y combinó correspondencia");
                             break;
                         case EnumSalida.Archivo:

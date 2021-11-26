@@ -478,7 +478,7 @@ Public Class FrmLista
 #End Region
 
 #Region "New"
-  Public Sub New(ByVal _Sistema As Sistema, ByVal _Restriccion As Restriccion)
+    Public Sub New(ByVal _Sistema As Sistema, ByVal _Restriccion As Restriccion)
 
     ' This call is required by the Windows Form Designer.
     InitializeComponent()
@@ -654,8 +654,9 @@ Public Class FrmLista
         _structgraficar.TipoGrafico = CInt(_row(1))
         _structgraficar.Orientacion = CInt(_row(2))
         _structgraficar.RelacionAncho = CDec(_row(3))
-        _structgraficar.RelacionAlto = CDec(_row(4))
-        _struct.Graficar = _structgraficar
+                _structgraficar.RelacionAlto = CDec(_row(4))
+                _structgraficar.Titulo = CStr(_row(5))
+                _struct.Graficar = _structgraficar
       Next
     End If
 

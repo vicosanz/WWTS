@@ -82,6 +82,8 @@ namespace Infoware.Consola.Base
             public StructExcel.enumGraficarOrientacion Orientacion;
             public Decimal RelacionAncho;
             public Decimal RelacionAlto;
+
+            public string Titulo { get; set; }
         }
     }
 
