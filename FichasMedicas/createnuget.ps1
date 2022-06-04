@@ -53,6 +53,6 @@ $squirrelreleasify = "Squirrel -releasify .\$($project).$($version).nupkg"
 Write-Host "$($squirrelreleasifyh)"
 Invoke-Expression "$($squirrelreleasify)"
 
-$push = "C:\Projects\GitHubPushRelease\GitHubPushRelease\bin\Release\net5.0\GitHubPushRelease.exe -u=vicosanz -r=$($project)installer -f='.\Releases'"
+$push = "d:\Projects\GitHubPushRelease\GitHubPushRelease\bin\Release\net5.0\GitHubPushRelease.exe -u=vicosanz -r=$($project)installer -f='.\Releases'"
 Write-Host "$($push)"
 Invoke-Expression "$($push)"
