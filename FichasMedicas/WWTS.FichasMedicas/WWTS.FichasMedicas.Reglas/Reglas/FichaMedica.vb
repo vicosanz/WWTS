@@ -39,6 +39,26 @@ Public Class FichaMedica
         Me.Patron_Codigo = Value.Patron_Codigo
         Me.Entida_Codigo = Value.Entida_Codigo
         Me.Contra_Secuencia = Value.Contra_Secuencia
+        Me.Empleado = Value.Empleado
+      End If
+    End Set
+  End Property
+
+  Private mEmpleado As Empleado
+
+  Public Property Empleado() As Empleado
+    Get
+      If mEmpleado Is Nothing And Entida_Codigo <> 0 Then
+        mEmpleado = New Empleado(Me.OperadorDatos, Entida_Codigo)
+      End If
+      Return mEmpleado
+    End Get
+    Set(value As Empleado)
+      mEmpleado = value
+      If value Is Nothing Then
+        Me.Entida_Codigo = 0
+      Else
+        Me.Entida_Codigo = value.Entida_Codigo
       End If
     End Set
   End Property
@@ -1155,6 +1175,27 @@ Public Class FichaMedicaList
       .AgregarParametro("@Entida_Codigo", _Contrato.Entida_Codigo)
       .AgregarParametro("@Patron_Codigo", _Contrato.Patron_Codigo)
       .AgregarParametro("@Contra_Secuencia", _Contrato.Contra_Secuencia)
+      .Procedimiento = "proc_FichaMedica"
+      bReturn = .Ejecutar(ds)
+      .LimpiarParametros()
+    End With
+    If bReturn AndAlso ds IsNot Nothing AndAlso ds.Rows.Count > 0 Then
+      For Each _dr As DataRow In ds.Rows
+        Dim _fila As New FichaMedica(_OperadorDatos, False)
+        _fila.MapearDataRowaObjeto(_dr)
+        oResult.Add(_fila)
+      Next
+    End If
+    Return oResult
+  End Function
+
+  Public Shared Function ObtenerLista(ByVal _OperadorDatos As OperadorDatos, _Empleado As Empleado) As FichaMedicaList
+    Dim oResult As FichaMedicaList = New FichaMedicaList
+    Dim bReturn As Boolean
+    Dim ds As DataTable = Nothing
+    With _OperadorDatos
+      .AgregarParametro("@Accion", "FE")
+      .AgregarParametro("@Entida_Codigo", _Empleado.Entida_Codigo)
       .Procedimiento = "proc_FichaMedica"
       bReturn = .Ejecutar(ds)
       .LimpiarParametros()

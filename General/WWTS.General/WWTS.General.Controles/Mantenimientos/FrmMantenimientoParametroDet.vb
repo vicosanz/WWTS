@@ -32,7 +32,6 @@ Public Class FrmMantenimientoParametroDet
       If MyBase.ListBindingSource.DataSource Is Nothing Then
         Dim _ParametroDets As New WWTSParametroDetList
         _ParametroDets.Add(mParametroDet)
-        MyBase.ListBindingSource.DataSource = GetType(Infoware.Reglas.General.ParametroDet)
         MyBase.ListBindingSource.DataSource = _ParametroDets
       End If
     End Set

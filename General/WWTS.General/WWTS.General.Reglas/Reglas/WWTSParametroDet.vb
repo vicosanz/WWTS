@@ -102,6 +102,14 @@ Public Class WWTSParametroDet
     EsNuevo = _EsNuevo
   End Sub
 
+  Public Sub New(ByVal _OperadorDatos As OperadorDatos, ByVal _Parame_Codigo As Integer, ByVal _PardetPadre As WWTSParametroDet, ByVal _EsNuevo As Boolean)
+    MyBase.New()
+    OperadorDatos = _OperadorDatos
+    Parame_Codigo = _Parame_Codigo
+    PardetPadre = _PardetPadre
+    EsNuevo = _EsNuevo
+  End Sub
+
   Public Sub New(ByVal _OperadorDatos As OperadorDatos, ByVal _Parame_Codigo As Integer, ByVal _Pardet_Secuencia As Integer)
     Me.New(_OperadorDatos, _Parame_Codigo, False)
     Pardet_Secuencia = _Pardet_Secuencia

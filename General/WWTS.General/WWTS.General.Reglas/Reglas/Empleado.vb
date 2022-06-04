@@ -674,7 +674,9 @@ Public Class Empleado
     With Me.OperadorDatos
       .AgregarParametro("@accion", "CA")
       .AgregarParametro("@Entida_Codigo", Entida_Codigo)
-      .AgregarParametro("@Patron_Codigo", _patrono.Patron_Codigo)
+      If _patrono IsNot Nothing Then
+        .AgregarParametro("@Patron_Codigo", _patrono.Patron_Codigo)
+      End If
       .Procedimiento = "proc_Contrato"
       bResult = .Ejecutar(dsResult)
       .LimpiarParametros()

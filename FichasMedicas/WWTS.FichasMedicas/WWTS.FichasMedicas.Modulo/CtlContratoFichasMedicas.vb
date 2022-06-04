@@ -179,6 +179,8 @@ Public Class CtlContratoFichasMedicas
     End If
   End Sub
 
+  Public Event DespuesContratoSeleccionado As EventHandler
+
   Private Sub tvcontratos_AfterSelect(sender As System.Object, ByVal e As System.Windows.Forms.TreeViewEventArgs) Handles tvcontratos.AfterSelect
     If Not e.Node Is Nothing Then
       If tvcontratos.SelectedNode.Text = "[Nuevo]" Then
@@ -209,6 +211,7 @@ Public Class CtlContratoFichasMedicas
       End If
 
       MapearContratoaForma(ContratoSeleccionado)
+      RaiseEvent DespuesContratoSeleccionado(Me, Nothing)
     End If
   End Sub
 

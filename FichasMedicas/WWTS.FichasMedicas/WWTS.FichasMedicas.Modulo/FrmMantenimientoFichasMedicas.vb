@@ -64,8 +64,15 @@ Public Class FrmMantenimientoFichasMedicas
     End If
 
     mEmpleado = Empleados.Current
+    Me.CtlFichasMedicasPreocupacionales1.Contrato = Nothing
+    Me.CtlFichasMedicasPreocupacionales1.Empleado = mEmpleado
+    Me.CtlFichasMedicasPreocupacionales1.Enabled = True
     Me.CtlContrato1.Empleado = mEmpleado
     'Me.CtlContrato1.HeaderStrip1.Enabled = True
+  End Sub
+
+  Private Sub CtlContrato1_DespuesContratoSeleccionado(sender As Object, e As EventArgs) Handles CtlContrato1.DespuesContratoSeleccionado
+    Me.CtlFichasMedicasPreocupacionales1.Contrato = Me.CtlContrato1.ContratoSeleccionado()
   End Sub
 
   Sub mapear_datos()
@@ -126,5 +133,13 @@ Public Class FrmMantenimientoFichasMedicas
 
   Private Sub FrmMantenimientoEmpleado_Actualizar(sender As Object, e As EventArgs) Handles ListBindingSource.CurrentChanged
     llenar_datos()
+  End Sub
+
+  Private Sub CtlContrato1_Load(sender As Object, e As EventArgs)
+
+  End Sub
+
+  Private Sub CtlFichasMedicasPreocupacionales1_DespuesAjuntaraContrato(sender As Object, e As EventArgs) Handles CtlFichasMedicasPreocupacionales1.DespuesAjuntaraContrato
+    CtlContrato1.llenar_datos()
   End Sub
 End Class

@@ -260,9 +260,9 @@ Public Class CtlUbicacion
         Dim fprovincia As New FrmMantenimientoParametroDet(Sistema, Enumerados.EnumOpciones.Personal)
         Select Case CType(_pardetactual.Parame_Codigo, Enumerados.EnumParametros)
           Case Enumerados.EnumParametros.Provincia
-            fprovincia.ParametroDet = New WWTS.General.Reglas.WWTSParametroDet(Op, _pardetactual.PardetPadre.Parame_Codigo, True)
+            fprovincia.ParametroDet = New WWTS.General.Reglas.WWTSParametroDet(Op, _pardetactual.Parame_Codigo, _pardetactual.PardetPadre, True)
           Case Enumerados.EnumParametros.Pais
-            fprovincia.ParametroDet = New WWTS.General.Reglas.WWTSParametroDet(Op, _pardetactual.Parame_Codigo, True)
+            fprovincia.ParametroDet = New WWTS.General.Reglas.WWTSParametroDet(Op, Enumerados.EnumParametros.Provincia, _pardetactual, True)
         End Select
         fprovincia.ShowDialog()
         llenar_datos()
@@ -270,9 +270,9 @@ Public Class CtlUbicacion
         Dim fcanton As New FrmMantenimientoParametroDet(Sistema, Enumerados.EnumOpciones.Personal)
         Select Case CType(_pardetactual.Parame_Codigo, Enumerados.EnumParametros)
           Case Enumerados.EnumParametros.Ciudad
-            fcanton.ParametroDet = New WWTS.General.Reglas.WWTSParametroDet(Op, _pardetactual.PardetPadre.Parame_Codigo, True)
+            fcanton.ParametroDet = New WWTS.General.Reglas.WWTSParametroDet(Op, _pardetactual.Parame_Codigo, _pardetactual.PardetPadre, True)
           Case Enumerados.EnumParametros.Provincia
-            fcanton.ParametroDet = New WWTS.General.Reglas.WWTSParametroDet(Op, _pardetactual.Parame_Codigo, True)
+            fcanton.ParametroDet = New WWTS.General.Reglas.WWTSParametroDet(Op, Enumerados.EnumParametros.Ciudad, _pardetactual, True)
         End Select
         fcanton.ShowDialog()
         llenar_datos()
@@ -280,9 +280,9 @@ Public Class CtlUbicacion
         Dim fparroquia As New FrmMantenimientoParametroDet(Sistema, Enumerados.EnumOpciones.Personal)
         Select Case CType(_pardetactual.Parame_Codigo, Enumerados.EnumParametros)
           Case Enumerados.EnumParametros.Parroquia
-            fparroquia.ParametroDet = New WWTS.General.Reglas.WWTSParametroDet(Op, _pardetactual.PardetPadre.Parame_Codigo, True)
+            fparroquia.ParametroDet = New WWTS.General.Reglas.WWTSParametroDet(Op, _pardetactual.Parame_Codigo, _pardetactual.PardetPadre, True)
           Case Enumerados.EnumParametros.Ciudad
-            fparroquia.ParametroDet = New WWTS.General.Reglas.WWTSParametroDet(Op, _pardetactual.Parame_Codigo, True)
+            fparroquia.ParametroDet = New WWTS.General.Reglas.WWTSParametroDet(Op, Enumerados.EnumParametros.Parroquia, _pardetactual, True)
         End Select
         fparroquia.ShowDialog()
         llenar_datos()

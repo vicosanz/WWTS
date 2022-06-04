@@ -193,6 +193,9 @@ Public Class Entidad
         Try
           Dim imagen() As Byte
           imagen = Entida_ImagenStream
+          If imagen Is Nothing Then
+            Return mEntida_Imagen
+          End If
           Dim ms As New MemoryStream
           ms.Write(imagen, 0, imagen.GetUpperBound(0) + 1)
           mEntida_Imagen = System.Drawing.Image.FromStream(ms)

@@ -76,6 +76,12 @@
     <Compile Include="Controles\CtlFichasMedicas.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Controles\CtlFichasMedicasPreocupacionales.Designer.vb">
+      <DependentUpon>CtlFichasMedicasPreocupacionales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtlFichasMedicasPreocupacionales.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Mantenimiento\CtlAccidentesTrabajo.Designer.vb">
       <DependentUpon>CtlAccidentesTrabajo.vb</DependentUpon>
     </Compile>
@@ -251,6 +257,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Controles\CtlFichasMedicas.resx">
       <DependentUpon>CtlFichasMedicas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\CtlFichasMedicasPreocupacionales.resx">
+      <DependentUpon>CtlFichasMedicasPreocupacionales.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento\CtlAccidentesTrabajo.resx">
       <DependentUpon>CtlAccidentesTrabajo.vb</DependentUpon>

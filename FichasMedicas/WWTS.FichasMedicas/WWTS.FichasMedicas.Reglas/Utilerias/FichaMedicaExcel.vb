@@ -200,22 +200,23 @@ Public Class FichaMedicaExcel
         .Cells(1, 178).value = "AFOTROS"
         .Cells(1, 179).value = "AFDESCRIP"
 
-
-        .Cells(2, 1).value = _objeto.Contrato.Patrono.NombreCompleto
-        .Cells(2, 2).value = _objeto.Contrato.Patrono.Ruc
-        .Cells(2, 3).value = _objeto.Contrato.Patrono.Ciudad.Descripcion
+        If (Not _objeto.Contrato Is Nothing) Then
+          .Cells(2, 1).value = _objeto.Contrato.Patrono.NombreCompleto
+          .Cells(2, 2).value = _objeto.Contrato.Patrono.Ruc
+          .Cells(2, 3).value = _objeto.Contrato.Patrono.Ciudad.Descripcion
+        End If
         .Cells(2, 4).value = _objeto.PardetClinica.Pardet_Descripcion
         .Cells(2, 5).value = _objeto.PardetClinica.Pardet_DatoStr1
         .Cells(2, 6).value = _objeto.Ficha_ArchivoNum
-        .Cells(2, 7).value = _objeto.Contrato.Empleado.Entidadnatural.Entnat_Apellidopaterno
-        .Cells(2, 8).value = _objeto.Contrato.Empleado.Entidadnatural.Entnat_Apellidomaterno
-        Dim nombre1 As String = _objeto.Contrato.Empleado.Entidadnatural.Entnat_Nombres.Trim().Split(" ").FirstOrDefault()
-        Dim nombre2 As String = _objeto.Contrato.Empleado.Entidadnatural.Entnat_Nombres.Trim()
+        .Cells(2, 7).value = _objeto.Empleado.Entidadnatural.Entnat_Apellidopaterno
+        .Cells(2, 8).value = _objeto.Empleado.Entidadnatural.Entnat_Apellidomaterno
+        Dim nombre1 As String = _objeto.Empleado.Entidadnatural.Entnat_Nombres.Trim().Split(" ").FirstOrDefault()
+        Dim nombre2 As String = _objeto.Empleado.Entidadnatural.Entnat_Nombres.Trim()
         nombre2 = nombre2.Remove(0, Len(nombre1)).Trim()
         .Cells(2, 9).value = nombre1
         .Cells(2, 10).value = nombre2
-        .Cells(2, 11).value = _objeto.Contrato.Empleado.Entidadnatural.PardetSexoString
-        .Cells(2, 12).value = _objeto.Contrato.Empleado.Entidadnatural.Edad
+        .Cells(2, 11).value = _objeto.Empleado.Entidadnatural.PardetSexoString
+        .Cells(2, 12).value = _objeto.Empleado.Entidadnatural.Edad
         .Cells(2, 13).value = IIf(_objeto.Pardet_Religion = 1, "X", "")
         .Cells(2, 14).value = IIf(_objeto.Pardet_Religion = 2, "X", "")
         .Cells(2, 15).value = IIf(_objeto.Pardet_Religion = 3, "X", "")
@@ -230,18 +231,20 @@ Public Class FichaMedicaExcel
         .Cells(2, 24).value = IIf(_objeto.Pardet_Genero = 7, "X", "")
         .Cells(2, 25).value = IIf(_objeto.Pardet_Genero = 8, "X", "")
         .Cells(2, 26).value = IIf(_objeto.Pardet_Genero = 9, "X", "")
-        .Cells(2, 27).value = IIf(_objeto.Contrato.Empleado.Emplea_DiscaAuditiva Or _objeto.Contrato.Empleado.Emplea_DiscaFisica Or _objeto.Contrato.Empleado.Emplea_DiscaIntelectual Or _objeto.Contrato.Empleado.Emplea_DiscaLenguaje Or _objeto.Contrato.Empleado.Emplea_DiscaPsicologica Or _objeto.Contrato.Empleado.Emplea_DiscaVisual, "X", "")
-        .Cells(2, 28).value = IIf(_objeto.Contrato.Empleado.Emplea_DiscaAuditiva Or _objeto.Contrato.Empleado.Emplea_DiscaFisica Or _objeto.Contrato.Empleado.Emplea_DiscaIntelectual Or _objeto.Contrato.Empleado.Emplea_DiscaLenguaje Or _objeto.Contrato.Empleado.Emplea_DiscaPsicologica Or _objeto.Contrato.Empleado.Emplea_DiscaVisual, "", "X")
-        .Cells(2, 29).value = _objeto.Contrato.Empleado.Discapacidad
-        .Cells(2, 30).value = _objeto.Contrato.Empleado.Discapacidad
-        .Cells(2, 31).value = _objeto.Contrato.Contra_Desde.ToString("yyyy/MM/dd")
-        .Cells(2, 32).value = _objeto.Contrato.PardetArea.Pardet_DatoStr1
-        .Cells(2, 33).value = _objeto.Contrato.PardetArea.Descripcion
-        .Cells(2, 34).value = _objeto.Contrato.PardetArea.Descripcion
+        .Cells(2, 27).value = IIf(_objeto.Empleado.Emplea_DiscaAuditiva Or _objeto.Empleado.Emplea_DiscaFisica Or _objeto.Empleado.Emplea_DiscaIntelectual Or _objeto.Empleado.Emplea_DiscaLenguaje Or _objeto.Empleado.Emplea_DiscaPsicologica Or _objeto.Empleado.Emplea_DiscaVisual, "X", "")
+        .Cells(2, 28).value = IIf(_objeto.Empleado.Emplea_DiscaAuditiva Or _objeto.Empleado.Emplea_DiscaFisica Or _objeto.Empleado.Emplea_DiscaIntelectual Or _objeto.Empleado.Emplea_DiscaLenguaje Or _objeto.Empleado.Emplea_DiscaPsicologica Or _objeto.Empleado.Emplea_DiscaVisual, "", "X")
+        .Cells(2, 29).value = _objeto.Empleado.Discapacidad
+        .Cells(2, 30).value = _objeto.Empleado.Discapacidad
+        If (Not _objeto.Contrato Is Nothing) Then
+          .Cells(2, 31).value = _objeto.Contrato.Contra_Desde.ToString("yyyy/MM/dd")
+          .Cells(2, 32).value = _objeto.Contrato.PardetArea.Pardet_DatoStr1
+          .Cells(2, 33).value = _objeto.Contrato.PardetArea.Descripcion
+          .Cells(2, 34).value = _objeto.Contrato.PardetArea.Descripcion
+        End If
         .Cells(2, 35).value = _objeto.Ficha_MotivoConsulta
         .Cells(2, 36).value = _objeto.Ficha_Antecedentes
 
-        If _objeto.Contrato.Empleado.Entidadnatural.Pardet_Sexo = 2 Then 'femenino
+        If _objeto.Empleado.Entidadnatural.Pardet_Sexo = 2 Then 'femenino
           .Cells(2, 37).value = _objeto.Ficha_FecMenarq.ToString("yyyy/MM/dd")
           .Cells(2, 38).value = _objeto.Ficha_Ciclos
           .Cells(2, 39).value = _objeto.Ficha_FUM
@@ -275,7 +278,7 @@ Public Class FichaMedicaExcel
 
 
         End If
-        If _objeto.Contrato.Empleado.Entidadnatural.Pardet_Sexo = 1 Then 'masculino
+        If _objeto.Empleado.Entidadnatural.Pardet_Sexo = 1 Then 'masculino
           .Cells(2, 67).value = IIf(_objeto.Ficha_AntigProst, "X", "")
           .Cells(2, 68).value = IIf(_objeto.Ficha_AntigProst, "", "X")
           .Cells(2, 69).value = IIf(_objeto.Ficha_EcoProst, "X", "")
@@ -1342,21 +1345,25 @@ Public Class FichaMedicaExcel
         .Cells(1, 69).value = "AFOTROS"
         .Cells(1, 70).value = "AFDESCRIP"
 
-        .Cells(2, 1).value = _objeto.Contrato.Patrono.NombreCompleto
-        .Cells(2, 2).value = _objeto.Contrato.Patrono.Ruc
-        .Cells(2, 3).value = _objeto.Contrato.Patrono.Ciudad.Descripcion
+        If (Not _objeto.Contrato Is Nothing) Then
+          .Cells(2, 1).value = _objeto.Contrato.Patrono.NombreCompleto
+          .Cells(2, 2).value = _objeto.Contrato.Patrono.Ruc
+          .Cells(2, 3).value = _objeto.Contrato.Patrono.Ciudad.Descripcion
+        End If
         .Cells(2, 4).value = _objeto.PardetClinica.Pardet_Descripcion
         .Cells(2, 5).value = _objeto.PardetClinica.Pardet_DatoStr1
         .Cells(2, 6).value = _objeto.Ficha_ArchivoNum
-        .Cells(2, 7).value = _objeto.Contrato.Empleado.Entidadnatural.Entnat_Apellidopaterno
-        .Cells(2, 8).value = _objeto.Contrato.Empleado.Entidadnatural.Entnat_Apellidomaterno
-        Dim nombre1 As String = _objeto.Contrato.Empleado.Entidadnatural.Entnat_Nombres.Trim().Split(" ").FirstOrDefault()
-        Dim nombre2 As String = _objeto.Contrato.Empleado.Entidadnatural.Entnat_Nombres.Trim()
+        .Cells(2, 7).value = _objeto.Empleado.Entidadnatural.Entnat_Apellidopaterno
+        .Cells(2, 8).value = _objeto.Empleado.Entidadnatural.Entnat_Apellidomaterno
+        Dim nombre1 As String = _objeto.Empleado.Entidadnatural.Entnat_Nombres.Trim().Split(" ").FirstOrDefault()
+        Dim nombre2 As String = _objeto.Empleado.Entidadnatural.Entnat_Nombres.Trim()
         nombre2 = nombre2.Remove(0, Len(nombre1)).Trim()
         .Cells(2, 9).value = nombre1
         .Cells(2, 10).value = nombre2
-        .Cells(2, 11).value = _objeto.Contrato.Empleado.Entidadnatural.PardetSexoString
-        .Cells(2, 12).value = _objeto.Contrato.PardetArea.Pardet_DatoStr1
+        .Cells(2, 11).value = _objeto.Empleado.Entidadnatural.PardetSexoString
+        If (Not _objeto.Contrato Is Nothing) Then
+          .Cells(2, 12).value = _objeto.Contrato.PardetArea.Pardet_DatoStr1
+        End If
         .Cells(2, 13).value = _objeto.Ficha_MotivoConsulta
         .Cells(2, 14).value = _objeto.Ficha_Antecedentes
         .Cells(2, 15).value = IIf(_objeto.Ficha_Tabaco, "X", "")
@@ -2395,28 +2402,31 @@ Public Class FichaMedicaExcel
         .Cells(1, 101).value = "APTOREUBIC"
         .Cells(1, 102).value = "TRATAMEINTDESCRIP"
 
-
-        .Cells(2, 1).value = _objeto.Contrato.Patrono.NombreCompleto
-        .Cells(2, 2).value = _objeto.Contrato.Patrono.Ruc
-        .Cells(2, 3).value = _objeto.Contrato.Patrono.Ciudad.Descripcion
+        If (Not _objeto.Contrato Is Nothing) Then
+          .Cells(2, 1).value = _objeto.Contrato.Patrono.NombreCompleto
+          .Cells(2, 2).value = _objeto.Contrato.Patrono.Ruc
+          .Cells(2, 3).value = _objeto.Contrato.Patrono.Ciudad.Descripcion
+        End If
         .Cells(2, 4).value = _objeto.PardetClinica.Pardet_Descripcion
         .Cells(2, 5).value = _objeto.PardetClinica.Pardet_DatoStr1
         .Cells(2, 6).value = _objeto.Ficha_ArchivoNum
-        .Cells(2, 7).value = _objeto.Contrato.Empleado.Entidadnatural.Entnat_Apellidopaterno
-        .Cells(2, 8).value = _objeto.Contrato.Empleado.Entidadnatural.Entnat_Apellidomaterno
-        Dim nombre1 As String = _objeto.Contrato.Empleado.Entidadnatural.Entnat_Nombres.Trim().Split(" ").FirstOrDefault()
-        Dim nombre2 As String = _objeto.Contrato.Empleado.Entidadnatural.Entnat_Nombres.Trim()
+        .Cells(2, 7).value = _objeto.Empleado.Entidadnatural.Entnat_Apellidopaterno
+        .Cells(2, 8).value = _objeto.Empleado.Entidadnatural.Entnat_Apellidomaterno
+        Dim nombre1 As String = _objeto.Empleado.Entidadnatural.Entnat_Nombres.Trim().Split(" ").FirstOrDefault()
+        Dim nombre2 As String = _objeto.Empleado.Entidadnatural.Entnat_Nombres.Trim()
         nombre2 = nombre2.Remove(0, Len(nombre1)).Trim()
 
         .Cells(2, 9).value = nombre1
         .Cells(2, 10).value = nombre2
-        .Cells(2, 11).value = _objeto.Contrato.Empleado.Entidadnatural.PardetSexoString
-        .Cells(2, 12).value = _objeto.Contrato.Empleado.Entidadnatural.Edad
-        .Cells(2, 13).value = _objeto.Contrato.PardetArea.Descripcion
-        .Cells(2, 14).value = _objeto.Contrato.Contra_Hasta
-        .Cells(2, 15).value = _objeto.Contrato.Contra_Hasta
-        .Cells(2, 16).value = _objeto.Contrato.Diastrabajados
-        .Cells(2, 17).value = _objeto.Contrato.Contra_MotivoSalida
+        .Cells(2, 11).value = _objeto.Empleado.Entidadnatural.PardetSexoString
+        .Cells(2, 12).value = _objeto.Empleado.Entidadnatural.Edad
+        If (Not _objeto.Contrato Is Nothing) Then
+          .Cells(2, 13).value = _objeto.Contrato.PardetArea.Descripcion
+          .Cells(2, 14).value = _objeto.Contrato.Contra_Hasta
+          .Cells(2, 15).value = _objeto.Contrato.Contra_Hasta
+          .Cells(2, 16).value = _objeto.Contrato.Diastrabajados
+          .Cells(2, 17).value = _objeto.Contrato.Contra_MotivoSalida
+        End If
         .Cells(2, 18).value = _objeto.Ficha_MotivoConsulta
         .Cells(2, 19).value = _objeto.Ficha_EnfActual
         .Cells(2, 20).value = _objeto.Ficha_ConstVitPresArt
@@ -2668,24 +2678,28 @@ Public Class FichaMedicaExcel
         .Cells(1, 108).value = "APTOOBSER"
         .Cells(1, 109).value = "TRATAMEINTDESCRIP"
 
-        .Cells(2, 1).value = _objeto.Contrato.Patrono.NombreCompleto
-        .Cells(2, 2).value = _objeto.Contrato.Patrono.Ruc
-        .Cells(2, 3).value = _objeto.Contrato.Patrono.Ciudad.Descripcion
+        If (Not _objeto.Contrato Is Nothing) Then
+          .Cells(2, 1).value = _objeto.Contrato.Patrono.NombreCompleto
+          .Cells(2, 2).value = _objeto.Contrato.Patrono.Ruc
+          .Cells(2, 3).value = _objeto.Contrato.Patrono.Ciudad.Descripcion
+        End If
         .Cells(2, 4).value = _objeto.PardetClinica.Pardet_Descripcion
         .Cells(2, 5).value = _objeto.PardetClinica.Pardet_DatoStr1
         .Cells(2, 6).value = _objeto.Ficha_ArchivoNum
-        .Cells(2, 7).value = _objeto.Contrato.Empleado.Entidadnatural.Entnat_Apellidopaterno
-        .Cells(2, 8).value = _objeto.Contrato.Empleado.Entidadnatural.Entnat_Apellidomaterno
-        Dim nombre1 As String = _objeto.Contrato.Empleado.Entidadnatural.Entnat_Nombres.Trim().Split(" ").FirstOrDefault()
-        Dim nombre2 As String = _objeto.Contrato.Empleado.Entidadnatural.Entnat_Nombres.Trim()
+        .Cells(2, 7).value = _objeto.Empleado.Entidadnatural.Entnat_Apellidopaterno
+        .Cells(2, 8).value = _objeto.Empleado.Entidadnatural.Entnat_Apellidomaterno
+        Dim nombre1 As String = _objeto.Empleado.Entidadnatural.Entnat_Nombres.Trim().Split(" ").FirstOrDefault()
+        Dim nombre2 As String = _objeto.Empleado.Entidadnatural.Entnat_Nombres.Trim()
         nombre2 = nombre2.Remove(0, Len(nombre1)).Trim()
         .Cells(2, 9).value = nombre1
         .Cells(2, 10).value = nombre2
-        .Cells(2, 11).value = _objeto.Contrato.Empleado.Entidadnatural.PardetSexoString
-        .Cells(2, 12).value = _objeto.Contrato.FechaDesdeString
-        .Cells(2, 13).value = _objeto.Contrato.Contra_Hasta
-        .Cells(2, 14).value = _objeto.Contrato.Diastrabajados / 30
-        .Cells(2, 15).value = _objeto.Contrato.PardetArea.Descripcion
+        .Cells(2, 11).value = _objeto.Empleado.Entidadnatural.PardetSexoString
+        If (Not _objeto.Contrato Is Nothing) Then
+          .Cells(2, 12).value = _objeto.Contrato.FechaDesdeString
+          .Cells(2, 13).value = _objeto.Contrato.Contra_Hasta
+          .Cells(2, 14).value = _objeto.Contrato.Diastrabajados / 30
+          .Cells(2, 15).value = _objeto.Contrato.PardetArea.Descripcion
+        End If
         .Cells(2, 16).value = _objeto.Ficha_FactRieActividad1
         .Cells(2, 17).value = _objeto.Ficha_FactRieActividad2
         .Cells(2, 18).value = _objeto.Ficha_FactRieActividad3

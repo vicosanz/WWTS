@@ -89,10 +89,10 @@ Public Class FrmMantenimientoFichaMedica
       CtlMotivoConsulta1.Visible = True
       CtlAntecedentesPersonales1.Visible = True
 
-      If mFichaMedica.Contrato.Empleado.Entidadnatural.Pardet_Sexo = Enumerados.EnumSexo.Femenino Then
+      If mFichaMedica.Empleado.Entidadnatural.Pardet_Sexo = Enumerados.EnumSexo.Femenino Then
         CtlAntecedentesGinecoobstetricos1.Visible = True
       End If
-      If mFichaMedica.Contrato.Empleado.Entidadnatural.Pardet_Sexo = Enumerados.EnumSexo.Masculino Then
+      If mFichaMedica.Empleado.Entidadnatural.Pardet_Sexo = Enumerados.EnumSexo.Masculino Then
         CtlAntecedentesReprodMasculinos1.Visible = True
       End If
       CtlHabitosToxicos1.Visible = True
@@ -242,28 +242,43 @@ Public Class FrmMantenimientoFichaMedica
     InitSistema(_Sistema, _OpcionActual)
   End Sub
 
-    Private Sub FrmMantenimientoFichaMedica_AntesAceptar(sender As Object, e As CancelEventArgs) Handles Me.AntesAceptar
-        Try
-            Select Case mDireccion
-                Case IMantenimiento.Accion.Ingreso, IMantenimiento.Accion.Modificacion
-                    Mapear()
-                    Dim nuevo As Boolean = mFichaMedica.EsNuevo
+  Private Sub FrmMantenimientoFichaMedica_AntesAceptar(sender As Object, e As CancelEventArgs) Handles Me.AntesAceptar
+    Try
+      Select Case mDireccion
+        Case IMantenimiento.Accion.Ingreso, IMantenimiento.Accion.Modificacion
+          Mapear()
+          Dim nuevo As Boolean = mFichaMedica.EsNuevo
 
-                    If Not mFichaMedica.Guardar() Then
-                        Throw New Exception(mFichaMedica.OperadorDatos.MsgError)
-                    End If
-                    Auditoria.Registrar_Auditoria(Restriccion, Enumerados.enumTipoAccion.Modificacion, String.Format("{3}.{4}.{5} {0} Ficha {1} {2}", IIf(nuevo, "Creó", "Modificó"), mFichaMedica.Contrato.EmpleadoString, mFichaMedica.PardetTipoFicha.Descripcion, mFichaMedica.Contrato.Entida_Codigo, mFichaMedica.Contrato.Patron_Codigo, mFichaMedica.Contrato.Contra_Secuencia))
+          If Not mFichaMedica.Guardar() Then
+            Throw New Exception(mFichaMedica.OperadorDatos.MsgError)
+          End If
+          If mFichaMedica.Contrato Is Nothing Then
+            Auditoria.Registrar_Auditoria(Restriccion, Enumerados.enumTipoAccion.Modificacion,
+                      String.Format("{3} {0} Ficha {1} {2}", IIf(nuevo, "Creó", "Modificó"), mFichaMedica.Empleado.NombreCompleto, mFichaMedica.PardetTipoFicha.Descripcion,
+                          mFichaMedica.Entida_Codigo))
+          Else
+            Auditoria.Registrar_Auditoria(Restriccion, Enumerados.enumTipoAccion.Modificacion,
+                      String.Format("{3}.{4}.{5} {0} Ficha {1} {2}", IIf(nuevo, "Creó", "Modificó"), mFichaMedica.Empleado.NombreCompleto, mFichaMedica.PardetTipoFicha.Descripcion,
+                          mFichaMedica.Entida_Codigo, mFichaMedica.Contrato.Patron_Codigo, mFichaMedica.Contrato.Contra_Secuencia))
+          End If
 
-                Case IMantenimiento.Accion.Eliminacion
-                    If Not mFichaMedica.Eliminar() Then
-                        Throw New Exception(mFichaMedica.OperadorDatos.MsgError)
-                    End If
-                    Auditoria.Registrar_Auditoria(Restriccion, Enumerados.enumTipoAccion.Eliminacion, String.Format("{2}.{3}.{4} Eliminó Ficha {0} {1}", mFichaMedica.Contrato.EmpleadoString, mFichaMedica.PardetTipoFicha.Descripcion, mFichaMedica.Contrato.Entida_Codigo, mFichaMedica.Contrato.Patron_Codigo, mFichaMedica.Contrato.Contra_Secuencia))
-            End Select
-        Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
-            e.Cancel = True
-        End Try
-    End Sub
+        Case IMantenimiento.Accion.Eliminacion
+          If Not mFichaMedica.Eliminar() Then
+            Throw New Exception(mFichaMedica.OperadorDatos.MsgError)
+          End If
+          If mFichaMedica.Contrato Is Nothing Then
+            Auditoria.Registrar_Auditoria(Restriccion, Enumerados.enumTipoAccion.Eliminacion,
+                      String.Format("{2} Eliminó Ficha {0} {1}", mFichaMedica.Empleado.NombreCompleto, mFichaMedica.PardetTipoFicha.Descripcion, mFichaMedica.Entida_Codigo))
+          Else
+            Auditoria.Registrar_Auditoria(Restriccion, Enumerados.enumTipoAccion.Eliminacion,
+                      String.Format("{2}.{3}.{4} Eliminó Ficha {0} {1}", mFichaMedica.Empleado.NombreCompleto, mFichaMedica.PardetTipoFicha.Descripcion, mFichaMedica.Entida_Codigo,
+                          mFichaMedica.Contrato.Patron_Codigo, mFichaMedica.Contrato.Contra_Secuencia))
+          End If
+      End Select
+    Catch ex As Exception
+      MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
+      e.Cancel = True
+    End Try
+  End Sub
 #End Region
 End Class
