@@ -35,29 +35,52 @@ Public Class FrmMantenimientoFichaMedica
 
   Public Sub Refrescar_forma() Implements IMantenimiento.Refrescar_forma
     CtlClinica1.Visible = False
+    CtlClinica1.Enabled = False
     CtlDatosUsuario1.Visible = False
+    CtlDatosUsuario1.Enabled = False
     CtlMotivoConsulta1.Visible = False
+    CtlMotivoConsulta1.Enabled = False
     CtlAntecedentesPersonales1.Visible = False
+    CtlAntecedentesPersonales1.Enabled = False
     CtlHabitosToxicos1.Visible = False
+    CtlHabitosToxicos1.Enabled = False
     CtlAntecedentesTrabajosAnteriores2.Visible = False
+    CtlAntecedentesTrabajosAnteriores2.Enabled = False
     CtlAccidentesTrabajo1.Visible = False
+    CtlAccidentesTrabajo1.Enabled = False
     CtlAntecedentesFamiliares1.Visible = False
+    CtlAntecedentesFamiliares1.Enabled = False
     CtlFactoresRiesgoTrabajoActual1.Visible = False
+    CtlFactoresRiesgoTrabajoActual1.Enabled = False
     CtlActividadesExtraLaborales1.Visible = False
+    CtlActividadesExtraLaborales1.Enabled = False
     CtlEnfermedadActual1.Visible = False
+    CtlEnfermedadActual1.Enabled = False
     CtlRevisionOrganosSistemas1.Visible = False
+    CtlRevisionOrganosSistemas1.Enabled = False
     CtlConstantesVitales1.Visible = False
+    CtlConstantesVitales1.Enabled = False
     CtlExamenFisicoRegional1.Visible = False
+    CtlExamenFisicoRegional1.Enabled = False
     CtlResultadosExamenes1.Visible = False
+    CtlResultadosExamenes1.Enabled = False
     CtlDiagnostico1.Visible = False
+    CtlDiagnostico1.Enabled = False
     CtlAptitudMedica1.Visible = False
+    CtlAptitudMedica1.Enabled = False
     CtlRecomendacionesTratamientos1.Visible = False
+    CtlRecomendacionesTratamientos1.Enabled = False
     CtlAntecedentesGinecoobstetricos1.Visible = False
+    CtlAntecedentesGinecoobstetricos1.Enabled = False
     CtlAntecedentesReprodMasculinos1.Visible = False
+    CtlAntecedentesReprodMasculinos1.Enabled = False
 
     CtlActividadesFactoresRiesgo1.Visible = False
+    CtlActividadesFactoresRiesgo1.Enabled = False
     CtlCausaSalida1.Visible = False
+    CtlCausaSalida1.Enabled = False
     CtlEvaluacionMedicaRetiro1.Visible = False
+    CtlEvaluacionMedicaRetiro1.Enabled = False
 
     CtlClinica1.FichaMedica = mFichaMedica
     CtlDatosUsuario1.FichaMedica = mFichaMedica
@@ -85,142 +108,198 @@ Public Class FrmMantenimientoFichaMedica
     CtlEvaluacionMedicaRetiro1.FichaMedica = mFichaMedica
     If mFichaMedica.Pardet_TipoFicha = Enumerados.TiposFichasMedicas.Preocupacional Then
       CtlClinica1.Visible = True
+      CtlClinica1.Enabled = True
       CtlDatosUsuario1.Visible = True
+      CtlDatosUsuario1.Enabled = True
       CtlMotivoConsulta1.Visible = True
+      CtlMotivoConsulta1.Enabled = True
       CtlAntecedentesPersonales1.Visible = True
+      CtlAntecedentesPersonales1.Enabled = True
 
       If mFichaMedica.Empleado.Entidadnatural.Pardet_Sexo = Enumerados.EnumSexo.Femenino Then
         CtlAntecedentesGinecoobstetricos1.Visible = True
+        CtlAntecedentesGinecoobstetricos1.Enabled = True
       End If
       If mFichaMedica.Empleado.Entidadnatural.Pardet_Sexo = Enumerados.EnumSexo.Masculino Then
         CtlAntecedentesReprodMasculinos1.Visible = True
+        CtlAntecedentesReprodMasculinos1.Enabled = True
       End If
       CtlHabitosToxicos1.Visible = True
+      CtlHabitosToxicos1.Enabled = True
       CtlAntecedentesTrabajosAnteriores2.Visible = True
+      CtlAntecedentesTrabajosAnteriores2.Enabled = True
       CtlAccidentesTrabajo1.Visible = True
+      CtlAccidentesTrabajo1.Enabled = True
       CtlAntecedentesFamiliares1.Visible = True
+      CtlAntecedentesFamiliares1.Enabled = True
       CtlFactoresRiesgoTrabajoActual1.Visible = True
+      CtlFactoresRiesgoTrabajoActual1.Enabled = True
       CtlActividadesExtraLaborales1.Visible = True
+      CtlActividadesExtraLaborales1.Enabled = True
       CtlEnfermedadActual1.Visible = True
+      CtlEnfermedadActual1.Enabled = True
       CtlRevisionOrganosSistemas1.Visible = True
+      CtlRevisionOrganosSistemas1.Enabled = True
       CtlConstantesVitales1.Visible = True
+      CtlConstantesVitales1.Enabled = True
       CtlExamenFisicoRegional1.Visible = True
+      CtlExamenFisicoRegional1.Enabled = True
       CtlResultadosExamenes1.Visible = True
+      CtlResultadosExamenes1.Enabled = True
       CtlDiagnostico1.Visible = True
+      CtlDiagnostico1.Enabled = True
       CtlAptitudMedica1.Visible = True
+      CtlAptitudMedica1.Enabled = True
       CtlRecomendacionesTratamientos1.Visible = True
-
+      CtlRecomendacionesTratamientos1.Enabled = True
     End If
     If mFichaMedica.Pardet_TipoFicha = Enumerados.TiposFichasMedicas.Ocupacional Then
       CtlClinica1.Visible = True
+      CtlClinica1.Enabled = True
       CtlMotivoConsulta1.Visible = True
+      CtlMotivoConsulta1.Enabled = True
       CtlAntecedentesPersonales1.Visible = True
+      CtlAntecedentesPersonales1.Enabled = True
       CtlHabitosToxicos1.Visible = True
+      CtlHabitosToxicos1.Enabled = True
       CtlAccidentesTrabajo1.Visible = True
+      CtlAccidentesTrabajo1.Enabled = True
       CtlAntecedentesFamiliares1.Visible = True
+      CtlAntecedentesFamiliares1.Enabled = True
       CtlFactoresRiesgoTrabajoActual1.Visible = True
+      CtlFactoresRiesgoTrabajoActual1.Enabled = True
       CtlEnfermedadActual1.Visible = True
+      CtlEnfermedadActual1.Enabled = True
       CtlRevisionOrganosSistemas1.Visible = True
+      CtlRevisionOrganosSistemas1.Enabled = True
       CtlConstantesVitales1.Visible = True
+      CtlConstantesVitales1.Enabled = True
       CtlExamenFisicoRegional1.Visible = True
+      CtlExamenFisicoRegional1.Enabled = True
       CtlResultadosExamenes1.Visible = True
+      CtlResultadosExamenes1.Enabled = True
       CtlDiagnostico1.Visible = True
+      CtlDiagnostico1.Enabled = True
       CtlAptitudMedica1.Visible = True
+      CtlAptitudMedica1.Enabled = True
       CtlRecomendacionesTratamientos1.Visible = True
+      CtlRecomendacionesTratamientos1.Enabled = True
     End If
     If mFichaMedica.Pardet_TipoFicha = Enumerados.TiposFichasMedicas.Reingreso Then
       CtlClinica1.Visible = True
+      CtlClinica1.Enabled = True
       CtlCausaSalida1.Visible = True
+      CtlCausaSalida1.Enabled = True
       CtlMotivoConsulta1.Visible = True
+      CtlMotivoConsulta1.Enabled = True
       CtlEnfermedadActual1.Visible = True
+      CtlEnfermedadActual1.Enabled = True
       CtlConstantesVitales1.Visible = True
+      CtlConstantesVitales1.Enabled = True
       CtlExamenFisicoRegional1.Visible = True
+      CtlExamenFisicoRegional1.Enabled = True
       CtlResultadosExamenes1.Visible = True
+      CtlResultadosExamenes1.Enabled = True
       CtlDiagnostico1.Visible = True
+      CtlDiagnostico1.Enabled = True
       CtlAptitudMedica1.Visible = True
+      CtlAptitudMedica1.Enabled = True
       CtlRecomendacionesTratamientos1.Visible = True
+      CtlRecomendacionesTratamientos1.Enabled = True
     End If
     If mFichaMedica.Pardet_TipoFicha = Enumerados.TiposFichasMedicas.Retiro Then
       CtlClinica1.Visible = True
+      CtlClinica1.Enabled = True
       CtlCausaSalida1.Visible = True
+      CtlCausaSalida1.Enabled = True
       CtlActividadesFactoresRiesgo1.Visible = True
+      CtlActividadesFactoresRiesgo1.Enabled = True
       CtlMotivoConsulta1.Visible = True
+      CtlMotivoConsulta1.Enabled = True
       CtlAntecedentesPersonales1.Visible = True
+      CtlAntecedentesPersonales1.Enabled = True
       CtlAccidentesTrabajo1.Visible = True
+      CtlAccidentesTrabajo1.Enabled = True
       CtlConstantesVitales1.Visible = True
+      CtlConstantesVitales1.Enabled = True
       CtlExamenFisicoRegional1.Visible = True
+      CtlExamenFisicoRegional1.Enabled = True
       CtlResultadosExamenes1.Visible = True
+      CtlResultadosExamenes1.Enabled = True
       CtlDiagnostico1.Visible = True
+      CtlDiagnostico1.Enabled = True
       CtlEvaluacionMedicaRetiro1.Visible = True
+      CtlEvaluacionMedicaRetiro1.Enabled = True
       CtlRecomendacionesTratamientos1.Visible = True
+      CtlRecomendacionesTratamientos1.Enabled = True
     End If
   End Sub
 
   Public Sub Mapear()
-    If CtlClinica1.Visible Then
+    If CtlClinica1.Enabled Then
       CtlClinica1.Mapear()
     End If
-    If CtlDatosUsuario1.Visible Then
+    If CtlDatosUsuario1.Enabled Then
       CtlDatosUsuario1.Mapear()
     End If
-    If CtlMotivoConsulta1.Visible Then
+    If CtlMotivoConsulta1.Enabled Then
       CtlMotivoConsulta1.Mapear()
     End If
-    If CtlAntecedentesPersonales1.Visible Then
+    If CtlAntecedentesPersonales1.Enabled Then
       CtlAntecedentesPersonales1.Mapear()
     End If
-    If CtlHabitosToxicos1.Visible Then
+    If CtlHabitosToxicos1.Enabled Then
       CtlHabitosToxicos1.Mapear()
     End If
-    If CtlAntecedentesTrabajosAnteriores2.Visible Then
+    If CtlAntecedentesTrabajosAnteriores2.Enabled Then
       CtlAntecedentesTrabajosAnteriores2.Mapear()
     End If
-    If CtlAccidentesTrabajo1.Visible Then
+    If CtlAccidentesTrabajo1.Enabled Then
       CtlAccidentesTrabajo1.Mapear()
     End If
-    If CtlAntecedentesFamiliares1.Visible Then
+    If CtlAntecedentesFamiliares1.Enabled Then
       CtlAntecedentesFamiliares1.Mapear()
     End If
-    If CtlFactoresRiesgoTrabajoActual1.Visible Then
+    If CtlFactoresRiesgoTrabajoActual1.Enabled Then
       CtlFactoresRiesgoTrabajoActual1.Mapear()
     End If
-    If CtlActividadesExtraLaborales1.Visible Then
+    If CtlActividadesExtraLaborales1.Enabled Then
       CtlActividadesExtraLaborales1.Mapear()
     End If
-    If CtlEnfermedadActual1.Visible Then
+    If CtlEnfermedadActual1.Enabled Then
       CtlEnfermedadActual1.Mapear()
     End If
-    If CtlRevisionOrganosSistemas1.Visible Then
+    If CtlRevisionOrganosSistemas1.Enabled Then
       CtlRevisionOrganosSistemas1.Mapear()
     End If
-    If CtlConstantesVitales1.Visible Then
+    If CtlConstantesVitales1.Enabled Then
       CtlConstantesVitales1.Mapear()
     End If
-    If CtlExamenFisicoRegional1.Visible Then
+    If CtlExamenFisicoRegional1.Enabled Then
       CtlExamenFisicoRegional1.Mapear()
     End If
-    If CtlResultadosExamenes1.Visible Then
+    If CtlResultadosExamenes1.Enabled Then
       CtlResultadosExamenes1.Mapear()
     End If
-    If CtlDiagnostico1.Visible Then
+    If CtlDiagnostico1.Enabled Then
       CtlDiagnostico1.Mapear()
     End If
-    If CtlAptitudMedica1.Visible Then
+    If CtlAptitudMedica1.Enabled Then
       CtlAptitudMedica1.Mapear()
     End If
-    If CtlRecomendacionesTratamientos1.Visible Then
+    If CtlRecomendacionesTratamientos1.Enabled Then
       CtlRecomendacionesTratamientos1.Mapear()
     End If
-    If CtlAntecedentesGinecoobstetricos1.Visible Then
+    If CtlAntecedentesGinecoobstetricos1.Enabled Then
       CtlAntecedentesGinecoobstetricos1.Mapear()
     End If
-    If CtlAntecedentesReprodMasculinos1.Visible Then
+    If CtlAntecedentesReprodMasculinos1.Enabled Then
       CtlAntecedentesReprodMasculinos1.Mapear()
     End If
-    If CtlActividadesFactoresRiesgo1.Visible Then
+    If CtlActividadesFactoresRiesgo1.Enabled Then
       CtlActividadesFactoresRiesgo1.Mapear()
     End If
-    If CtlCausaSalida1.Visible Then
+    If CtlCausaSalida1.Enabled Then
       CtlCausaSalida1.Mapear()
     End If
   End Sub
