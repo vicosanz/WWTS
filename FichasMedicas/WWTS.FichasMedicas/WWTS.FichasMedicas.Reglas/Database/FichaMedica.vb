@@ -25,6 +25,7 @@ Partial Public Class FichaMedica
   Private mParame_TipoFicha As Integer = 0
   Private mPardet_TipoFicha As Integer = 0
   Private mFicha_FechaRegistro As DateTime = Now
+  Private mFicha_FechaModificacion As DateTime = Now
   Private mEntida_Codigo As Integer = 0
   Private mPatron_Codigo As Integer = 0
   Private mContra_Secuencia As Integer = 0
@@ -551,6 +552,16 @@ Partial Public Class FichaMedica
     End Get
     Set(value As DateTime)
       mFicha_FechaRegistro = value
+    End Set
+  End Property
+
+  <XmlAttribute()>
+  Public Overridable Property Ficha_FechaModificacion() As DateTime
+    Get
+      Return mFicha_FechaModificacion
+    End Get
+    Set(value As DateTime)
+      mFicha_FechaModificacion = value
     End Set
   End Property
 

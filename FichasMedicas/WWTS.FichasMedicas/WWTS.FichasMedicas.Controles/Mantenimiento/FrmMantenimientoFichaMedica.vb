@@ -327,7 +327,7 @@ Public Class FrmMantenimientoFichaMedica
         Case IMantenimiento.Accion.Ingreso, IMantenimiento.Accion.Modificacion
           Mapear()
           Dim nuevo As Boolean = mFichaMedica.EsNuevo
-
+          mFichaMedica.Ficha_FechaModificacion = Now
           If Not mFichaMedica.Guardar() Then
             Throw New Exception(mFichaMedica.OperadorDatos.MsgError)
           End If

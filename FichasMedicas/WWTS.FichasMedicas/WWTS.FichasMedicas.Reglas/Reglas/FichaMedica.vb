@@ -120,6 +120,13 @@ Public Class FichaMedica
     End Get
   End Property
 
+  <Infoware.Reportes.CampoReporteAtributo("Fecha modificación", CampoReporteAtributo.EnumTipoDato.Fecha, 150, True)>
+  Public ReadOnly Property FechaModificacionString() As DateTime
+    Get
+      Return Ficha_FechaModificacion
+    End Get
+  End Property
+
   Public Sub New(ByVal _OperadorDatos As OperadorDatos, ByVal _EsNuevo As Boolean)
     MyBase.New()
     OperadorDatos = _OperadorDatos
@@ -140,6 +147,11 @@ Public Class FichaMedica
     Parame_TipoFicha = CInt(Fila("Parame_TipoFicha"))
     Pardet_TipoFicha = CInt(Fila("Pardet_TipoFicha"))
     Ficha_FechaRegistro = CDate(Fila("Ficha_FechaRegistro"))
+    Try
+      Ficha_FechaModificacion = CDate(Fila("Ficha_FechaModificacion"))
+    Catch ex As Exception
+      Ficha_FechaModificacion = Nothing
+    End Try
     Entida_Codigo = CInt(Fila("Entida_Codigo"))
     Patron_Codigo = CInt(Fila("Patron_Codigo"))
     Contra_Secuencia = CInt(Fila("Contra_Secuencia"))
@@ -655,6 +667,7 @@ Public Class FichaMedica
     OperadorDatos.AgregarParametro("@Parame_TipoFicha", Parame_TipoFicha)
     OperadorDatos.AgregarParametro("@Pardet_TipoFicha", Pardet_TipoFicha)
     OperadorDatos.AgregarParametro("@Ficha_FechaRegistro", Ficha_FechaRegistro)
+    OperadorDatos.AgregarParametro("@Ficha_FechaModificacion", Ficha_FechaModificacion)
     OperadorDatos.AgregarParametro("@Entida_Codigo", Entida_Codigo)
     OperadorDatos.AgregarParametro("@Patron_Codigo", Patron_Codigo)
     OperadorDatos.AgregarParametro("@Contra_Secuencia", Contra_Secuencia)
