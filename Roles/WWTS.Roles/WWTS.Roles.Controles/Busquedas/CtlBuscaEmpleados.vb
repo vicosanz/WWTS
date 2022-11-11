@@ -170,6 +170,7 @@ Public Class CtlBuscaEmpleados
         Else
           ExcelReporte.ContratoReporte.ExportarExcel(mContratos, chkincsueldos.Checked)
         End If
+        llenar_datos(1)
     End Select
     mDeshabSelect = False
   End Sub

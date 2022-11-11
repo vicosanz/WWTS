@@ -2673,9 +2673,9 @@ Public Class FichaMedicaExcel
         .Cells(1, 103).value = "DIAGNOSTICODEF1"
         .Cells(1, 104).value = "DIAGNOSTICODEF2"
         .Cells(1, 105).value = "DIAGNOSTICODEF3"
-        .Cells(1, 106).value = "APTOSI"
-        .Cells(1, 107).value = "NOAPTO"
-        .Cells(1, 108).value = "APTOOBSER"
+        .Cells(1, 106).value = "EVALUACIONRETIROSI"
+        .Cells(1, 107).value = "EVALUACIONRETIRONO"
+        .Cells(1, 108).value = "EVALUACIONRETIROOBSER"
         .Cells(1, 109).value = "TRATAMEINTDESCRIP"
 
         If (Not _objeto.Contrato Is Nothing) Then
@@ -2791,9 +2791,9 @@ Public Class FichaMedicaExcel
         .Cells(2, 103).value = IIf(_objeto.Ficha_DiagDef2, "", "X")
         .Cells(2, 104).value = IIf(_objeto.Ficha_DiagDef3, "X", "")
         .Cells(2, 105).value = IIf(_objeto.Ficha_DiagDef3, "", "X")
-        .Cells(2, 106).value = IIF(_objeto.Ficha_AptMedApto, "X", "")
-        .Cells(2, 107).value = IIf(_objeto.Ficha_AptMedNoApto, "X", "")
-        .Cells(2, 108).value = _objeto.Ficha_AptMedObservacion
+        .Cells(2, 106).value = IIf(_objeto.Ficha_EvMedRetiro, "X", "")
+        .Cells(2, 107).value = IIf(_objeto.Ficha_EvMedRetiro, "", "X")
+        .Cells(2, 108).value = _objeto.Ficha_EvMedRetiroObservacion
         .Cells(2, 109).value = _objeto.Ficha_RecomTratamiento
 
       End With

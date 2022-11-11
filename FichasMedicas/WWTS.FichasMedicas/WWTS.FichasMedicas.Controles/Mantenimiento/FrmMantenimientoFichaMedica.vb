@@ -302,6 +302,9 @@ Public Class FrmMantenimientoFichaMedica
     If CtlCausaSalida1.Enabled Then
       CtlCausaSalida1.Mapear()
     End If
+    If CtlEvaluacionMedicaRetiro1.Enabled Then
+      CtlEvaluacionMedicaRetiro1.Mapear()
+    End If
   End Sub
 
 #Region "New"
