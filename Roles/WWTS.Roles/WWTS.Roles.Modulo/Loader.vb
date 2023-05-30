@@ -4,6 +4,8 @@ Imports WWTS.General.Reglas
 Imports WWTS.General.Controles
 Imports WWTS.General.Modulo
 Imports WeifenLuo.WinFormsUI.Docking
+Imports Infoware.Reporteador
+Imports CrystalDecisions.CrystalReports.Engine
 
 Public Class Loader
 
@@ -120,6 +122,8 @@ Public Class Loader
               '  _opciones.Add(New Opcion(_restriccion, AddressOf CargarQuincena))
             Case Enumerados.EnumOpciones.Nomina
               _opciones.Add(New Opcion(_restriccion, AddressOf CargarNomina))
+            Case Enumerados.EnumOpciones.ReporteNominaCargo
+              _opciones.Add(New Opcion(_restriccion, AddressOf CargarReporteNominaDetalle))
             Case Enumerados.EnumOpciones.CuentaBancaria
               _opciones.Add(New Opcion(_restriccion, AddressOf CargarCuentasBancarias))
             Case Enumerados.EnumOpciones.RubrosxBeneficio
@@ -261,6 +265,90 @@ Public Class Loader
     f.Reporte = _reporte
     Return f
   End Function
+
+  Function CargarReporteNominaDetalle(ByVal _Sistema As Sistema, ByVal _Restriccion As Restriccion, ByVal _Opcion As Opcion) As IDockContent
+    Dim f As New Infoware.Reporteador.FrmListaReporte(_Sistema, Enumerados.EnumOpciones.ReportesRoles)
+    Dim _reporte As New Infoware.Reporteador.Reporte(_Sistema.OperadorDatos, "REPR_Roles$Nomina_Detalles")
+    _reporte.ValidarReporte(_Sistema.UsuarioString)
+    f.Reporte = _reporte
+    f.objLlenar_Reporte = AddressOf LlenarReporteNominaCargo
+    Return f
+  End Function
+
+  Private Sub LlenarReporteNominaCargo(reporte As FrmListaReporte)
+    Try
+      Dim patron_Codigo As Integer = 0
+      Dim pardet_TipoRubro As Integer = 0
+      Dim tipcon_Codigo As Integer = 0
+      Dim pardet_seccion As Integer = 0
+      Dim pardet_formaPago As Integer = 0
+      Dim fechaPeriodo As DateTime = DateTime.Now.Date
+
+      For Each param As ParametroReporte In reporte.Reporte.Parametros
+        If TypeOf (param.Valor) IsNot DBNull Then
+          If param.NombreParametro = "@cbo_Patrono" Then
+            patron_Codigo = param.Valor
+          End If
+          If param.NombreParametro = "@cbo_Tipo_Rubro" Then
+            pardet_TipoRubro = param.Valor
+          End If
+          If param.NombreParametro = "@cba_Tipo_Contrato" Then
+            tipcon_Codigo = param.Valor
+          End If
+          If param.NombreParametro = "@cbo_Seccion" Then
+            pardet_seccion = param.Valor
+          End If
+          If param.NombreParametro = "@cbo_Forma_de_pago" Then
+            pardet_formaPago = param.Valor
+          End If
+          If param.NombreParametro = "@cba_Fecha_de_pago" Then
+            fechaPeriodo = param.Valor
+          End If
+        End If
+      Next
+
+
+      Dim info As New ReportDocument
+      info = New crpNominaDetalle1
+
+      Dim tipoRubro As New ParametroDet(reporte.Reporte.OperadorDatos, Enumerados.EnumParametros.TipoRubro, pardet_TipoRubro)
+      Dim titulo As String = String.Format("Reporte de nómina {0}", tipoRubro.Pardet_Descripcion)
+      reporte.Titulo = titulo
+
+      info.DataDefinition.FormulaFields("titulo").Text = String.Format("'{0}'", titulo)
+
+      If pardet_formaPago = 0 Then
+        info.DataDefinition.FormulaFields("formapago").Text = "'TODOS'"
+      Else
+        Dim formaPago As New ParametroDet(reporte.Reporte.OperadorDatos, Enumerados.EnumParametros.FormaPagoRol, pardet_formaPago)
+        info.DataDefinition.FormulaFields("formapago").Text = String.Format("'{0}'", formaPago.Pardet_Descripcion)
+      End If
+
+      If pardet_seccion = 0 Then
+        info.DataDefinition.FormulaFields("seccion").Text = "'TODOS'"
+      Else
+        Dim seccion As New ParametroDet(reporte.Reporte.OperadorDatos, Enumerados.EnumParametros.Seccion, pardet_seccion)
+        info.DataDefinition.FormulaFields("seccion").Text = String.Format("'{0}'", seccion.Pardet_Descripcion)
+      End If
+
+      info.DataDefinition.FormulaFields("fechapago").Text = String.Format("'{0}'", fechaPeriodo.ToShortDateString)
+
+      Dim patrono As New Patrono(reporte.Reporte.OperadorDatos, patron_Codigo)
+      info.DataDefinition.FormulaFields("patrono").Text = "'" & patrono.NombreCompleto & "'"
+
+      Dim tipoContrato As New TipoContrato(reporte.Reporte.OperadorDatos, patron_Codigo, tipcon_Codigo)
+      info.DataDefinition.FormulaFields("tipocontrato").Text = String.Format("'{0}'", tipoContrato.TipCon_Descripcion)
+
+      Dim ds As New dsNominaDetalle
+      ds = reporte.Reporte.RetornarDataSetTyped(Of dsNominaDetalle)("vw_NominaDetalle")
+
+      info.SetDataSource(ds)
+      info.PrintOptions.PaperSize = CrystalDecisions.Shared.PaperSize.PaperA4
+      reporte.ReporteDatos = info
+    Catch Ex As Exception
+      MsgBox(Ex.Message, MsgBoxStyle.Critical, "Error")
+    End Try
+  End Sub
 
   Function CargarReporteIESSVariacionExtras(ByVal _Sistema As Sistema, ByVal _Restriccion As Restriccion, ByVal _Opcion As Opcion) As IDockContent
     Dim f As New Infoware.Reporteador.FrmLista(_Sistema, Enumerados.EnumOpciones.ReportesRoles)

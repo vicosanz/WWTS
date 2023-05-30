@@ -55,6 +55,7 @@
             // 
             // MenuStrip1
             // 
+            this.MenuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.MenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.MenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ArchivoToolStripMenuItem,
@@ -62,7 +63,8 @@
             this.AyudaToolStripMenuItem});
             this.MenuStrip1.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip1.Name = "MenuStrip1";
-            this.MenuStrip1.Size = new System.Drawing.Size(924, 28);
+            this.MenuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            this.MenuStrip1.Size = new System.Drawing.Size(1040, 33);
             this.MenuStrip1.TabIndex = 4;
             this.MenuStrip1.Text = "MenuStrip1";
             // 
@@ -75,7 +77,7 @@
             this.CerrarToolStripMenuItem});
             this.ArchivoToolStripMenuItem.MergeAction = System.Windows.Forms.MergeAction.MatchOnly;
             this.ArchivoToolStripMenuItem.Name = "ArchivoToolStripMenuItem";
-            this.ArchivoToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
+            this.ArchivoToolStripMenuItem.Size = new System.Drawing.Size(88, 29);
             this.ArchivoToolStripMenuItem.Text = "&Archivo";
             // 
             // ImprimirToolStripMenuItem
@@ -86,7 +88,7 @@
             this.ImprimirToolStripMenuItem.Name = "ImprimirToolStripMenuItem";
             this.ImprimirToolStripMenuItem.ShortcutKeyDisplayString = "";
             this.ImprimirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.ImprimirToolStripMenuItem.Size = new System.Drawing.Size(297, 26);
+            this.ImprimirToolStripMenuItem.Size = new System.Drawing.Size(359, 34);
             this.ImprimirToolStripMenuItem.Text = "&Imprimir";
             this.ImprimirToolStripMenuItem.Click += new System.EventHandler(this.ImprimirToolStripMenuItem_Click);
             // 
@@ -97,7 +99,7 @@
             this.ExportarToolStripMenuItem.MergeIndex = 2;
             this.ExportarToolStripMenuItem.Name = "ExportarToolStripMenuItem";
             this.ExportarToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
-            this.ExportarToolStripMenuItem.Size = new System.Drawing.Size(297, 26);
+            this.ExportarToolStripMenuItem.Size = new System.Drawing.Size(359, 34);
             this.ExportarToolStripMenuItem.Text = "&Exportar a Acrobat PDF";
             this.ExportarToolStripMenuItem.Click += new System.EventHandler(this.ExportarToolStripMenuItem_Click);
             // 
@@ -106,13 +108,13 @@
             this.ToolStripMenuItem3.MergeAction = System.Windows.Forms.MergeAction.MatchOnly;
             this.ToolStripMenuItem3.Name = "ToolStripMenuItem3";
             this.ToolStripMenuItem3.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never;
-            this.ToolStripMenuItem3.Size = new System.Drawing.Size(294, 6);
+            this.ToolStripMenuItem3.Size = new System.Drawing.Size(356, 6);
             // 
             // CerrarToolStripMenuItem
             // 
             this.CerrarToolStripMenuItem.MergeAction = System.Windows.Forms.MergeAction.Remove;
             this.CerrarToolStripMenuItem.Name = "CerrarToolStripMenuItem";
-            this.CerrarToolStripMenuItem.Size = new System.Drawing.Size(297, 26);
+            this.CerrarToolStripMenuItem.Size = new System.Drawing.Size(359, 34);
             this.CerrarToolStripMenuItem.Text = "&Cerrar";
             this.CerrarToolStripMenuItem.Click += new System.EventHandler(this.CerrarToolStripMenuItem_Click);
             // 
@@ -121,7 +123,7 @@
             this.EdicionToolStripMenuItem.MergeAction = System.Windows.Forms.MergeAction.Replace;
             this.EdicionToolStripMenuItem.MergeIndex = 1;
             this.EdicionToolStripMenuItem.Name = "EdicionToolStripMenuItem";
-            this.EdicionToolStripMenuItem.Size = new System.Drawing.Size(72, 24);
+            this.EdicionToolStripMenuItem.Size = new System.Drawing.Size(85, 29);
             this.EdicionToolStripMenuItem.Text = "&Edición";
             // 
             // AyudaToolStripMenuItem
@@ -131,7 +133,7 @@
             this.AyudaToolStripMenuItem.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.AyudaToolStripMenuItem.MergeIndex = 5;
             this.AyudaToolStripMenuItem.Name = "AyudaToolStripMenuItem";
-            this.AyudaToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
+            this.AyudaToolStripMenuItem.Size = new System.Drawing.Size(79, 29);
             this.AyudaToolStripMenuItem.Text = "Ay&uda";
             // 
             // AyudaDinamicaToolStripMenuItem
@@ -140,7 +142,7 @@
             this.AyudaDinamicaToolStripMenuItem.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.AyudaDinamicaToolStripMenuItem.MergeIndex = 1;
             this.AyudaDinamicaToolStripMenuItem.Name = "AyudaDinamicaToolStripMenuItem";
-            this.AyudaDinamicaToolStripMenuItem.Size = new System.Drawing.Size(199, 26);
+            this.AyudaDinamicaToolStripMenuItem.Size = new System.Drawing.Size(241, 34);
             this.AyudaDinamicaToolStripMenuItem.Text = "&Ayuda dinámica";
             this.AyudaDinamicaToolStripMenuItem.Click += new System.EventHandler(this.AyudaDinamicaToolStripMenuItem_Click);
             // 
@@ -152,9 +154,9 @@
             this.btnexportar,
             this.ToolStripSeparator2,
             this.ToolStripButtonAyuda});
-            this.ToolStrip1.Location = new System.Drawing.Point(0, 28);
+            this.ToolStrip1.Location = new System.Drawing.Point(0, 33);
             this.ToolStrip1.Name = "ToolStrip1";
-            this.ToolStrip1.Size = new System.Drawing.Size(924, 27);
+            this.ToolStrip1.Size = new System.Drawing.Size(1040, 29);
             this.ToolStrip1.TabIndex = 5;
             this.ToolStrip1.Text = "ToolStrip1";
             // 
@@ -164,7 +166,7 @@
             this.btnimprimir.Image = global::Infoware.Consola.Base.Properties.Resources.print;
             this.btnimprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnimprimir.Name = "btnimprimir";
-            this.btnimprimir.Size = new System.Drawing.Size(29, 24);
+            this.btnimprimir.Size = new System.Drawing.Size(34, 24);
             this.btnimprimir.Text = "Imprimir";
             this.btnimprimir.Click += new System.EventHandler(this.btnimprimir_Click);
             // 
@@ -174,14 +176,14 @@
             this.btnexportar.Image = global::Infoware.Consola.Base.Properties.Resources.acrobat;
             this.btnexportar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnexportar.Name = "btnexportar";
-            this.btnexportar.Size = new System.Drawing.Size(29, 24);
+            this.btnexportar.Size = new System.Drawing.Size(34, 24);
             this.btnexportar.Text = "Exportar";
             this.btnexportar.Click += new System.EventHandler(this.btnexportar_Click);
             // 
             // ToolStripSeparator2
             // 
             this.ToolStripSeparator2.Name = "ToolStripSeparator2";
-            this.ToolStripSeparator2.Size = new System.Drawing.Size(6, 27);
+            this.ToolStripSeparator2.Size = new System.Drawing.Size(6, 29);
             // 
             // ToolStripButtonAyuda
             // 
@@ -189,7 +191,7 @@
             this.ToolStripButtonAyuda.Image = global::Infoware.Consola.Base.Properties.Resources.help;
             this.ToolStripButtonAyuda.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ToolStripButtonAyuda.Name = "ToolStripButtonAyuda";
-            this.ToolStripButtonAyuda.Size = new System.Drawing.Size(29, 24);
+            this.ToolStripButtonAyuda.Size = new System.Drawing.Size(34, 24);
             this.ToolStripButtonAyuda.Text = "Ayuda dinámica";
             this.ToolStripButtonAyuda.Click += new System.EventHandler(this.ToolStripButtonAyuda_Click);
             // 
@@ -204,24 +206,24 @@
             this.ToolStriptitulo});
             this.headerStrip1.Location = new System.Drawing.Point(0, 0);
             this.headerStrip1.Name = "headerStrip1";
-            this.headerStrip1.Size = new System.Drawing.Size(924, 32);
+            this.headerStrip1.Size = new System.Drawing.Size(1040, 36);
             this.headerStrip1.TabIndex = 6;
             this.headerStrip1.Text = "headerStrip1";
             // 
             // ToolStriptitulo
             // 
             this.ToolStriptitulo.Name = "ToolStriptitulo";
-            this.ToolStriptitulo.Size = new System.Drawing.Size(0, 29);
+            this.ToolStriptitulo.Size = new System.Drawing.Size(0, 31);
             // 
             // Panel1
             // 
             this.Panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Panel1.Location = new System.Drawing.Point(0, 32);
-            this.Panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.Panel1.Location = new System.Drawing.Point(0, 36);
+            this.Panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Panel1.Name = "Panel1";
-            this.Panel1.Padding = new System.Windows.Forms.Padding(7, 5, 7, 5);
-            this.Panel1.Size = new System.Drawing.Size(924, 81);
+            this.Panel1.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.Panel1.Size = new System.Drawing.Size(1040, 101);
             this.Panel1.TabIndex = 7;
             // 
             // crystalReportViewer1
@@ -230,10 +232,12 @@
             this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 113);
+            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 137);
+            this.crystalReportViewer1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(924, 345);
+            this.crystalReportViewer1.Size = new System.Drawing.Size(1040, 442);
             this.crystalReportViewer1.TabIndex = 8;
+            this.crystalReportViewer1.ToolPanelWidth = 225;
             // 
             // pnlcuerpo
             // 
@@ -241,19 +245,21 @@
             this.pnlcuerpo.Controls.Add(this.Panel1);
             this.pnlcuerpo.Controls.Add(this.headerStrip1);
             this.pnlcuerpo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlcuerpo.Location = new System.Drawing.Point(0, 55);
+            this.pnlcuerpo.Location = new System.Drawing.Point(0, 62);
+            this.pnlcuerpo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlcuerpo.Name = "pnlcuerpo";
-            this.pnlcuerpo.Size = new System.Drawing.Size(924, 458);
+            this.pnlcuerpo.Size = new System.Drawing.Size(1040, 579);
             this.pnlcuerpo.TabIndex = 9;
             // 
             // FrmReporteBase
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(924, 513);
+            this.ClientSize = new System.Drawing.Size(1040, 641);
             this.Controls.Add(this.pnlcuerpo);
             this.Controls.Add(this.ToolStrip1);
             this.Controls.Add(this.MenuStrip1);
+            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "FrmReporteBase";
             this.MenuStrip1.ResumeLayout(false);
             this.MenuStrip1.PerformLayout();

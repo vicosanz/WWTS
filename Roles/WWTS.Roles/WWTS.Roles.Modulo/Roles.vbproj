@@ -122,7 +122,9 @@
     <Reference Include="Squirrel, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\squirrel.windows.2.0.1\lib\Net45\Squirrel.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Deployment" />
@@ -441,6 +443,12 @@
     <Compile Include="Modulos\FrmTestxArea.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Modulos\Reportes\crpNominaDetalle1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crpNominaDetalle1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Modulos\Reportes\crpprestamoHQ.vb">
       <DependentUpon>crpprestamoHQ.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -486,6 +494,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DSlistaprestquirog.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Reportes\dsNominaDetalle.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsNominaDetalle.xsd</DependentUpon>
     </Compile>
     <Compile Include="Modulos\Reportes\DSPrestamosHQ.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -869,6 +882,10 @@
     <EmbeddedResource Include="Modulos\FrmTestxArea.resx">
       <DependentUpon>FrmTestxArea.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Reportes\crpNominaDetalle1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpNominaDetalle1.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modulos\Reportes\crpprestamoHQ.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crpprestamoHQ.vb</LastGenOutput>
@@ -992,6 +1009,17 @@
     </None>
     <None Include="Emergentes\DSlisfaltasmes.xss">
       <DependentUpon>DSlisfaltasmes.xsd</DependentUpon>
+    </None>
+    <None Include="Modulos\Reportes\dsNominaDetalle.xsc">
+      <DependentUpon>dsNominaDetalle.xsd</DependentUpon>
+    </None>
+    <None Include="Modulos\Reportes\dsNominaDetalle.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsNominaDetalle.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Modulos\Reportes\dsNominaDetalle.xss">
+      <DependentUpon>dsNominaDetalle.xsd</DependentUpon>
     </None>
     <None Include="Modulos\Reportes\DSPrestamosHQ.xsc">
       <DependentUpon>DSPrestamosHQ.xsd</DependentUpon>

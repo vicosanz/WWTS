@@ -116,6 +116,21 @@ Public Class CtlFichasMedicasPreocupacionales
     abrir_ficha()
   End Sub
 #End Region
+
+#Region "Duplicar"
+  Private Sub Btnduplicar_Click(sender As Object, e As EventArgs) Handles btnduplicar.Click
+    If Me.BSFichas.Current Is Nothing Then
+      Exit Sub
+    End If
+
+    Dim fichaactual As FichaMedica = BSFichas.Current
+    Dim nuevo As FichaMedica = fichaactual.Clone()
+    BSFichas.Add(nuevo)
+    BSFichas.MoveLast()
+    abrir_ficha()
+  End Sub
+#End Region
+
 #Region "Nueva"
   Private Sub NuevaFicha(TipoFicha As Enumerados.TiposFichasMedicas)
     Dim nuevo As New FichaMedica(Sistema.OperadorDatos, True) With {
@@ -241,6 +256,5 @@ Public Class CtlFichasMedicasPreocupacionales
     RaiseEvent DespuesAjuntaraContrato(Me, Nothing)
 
   End Sub
-
 #End Region
 End Class

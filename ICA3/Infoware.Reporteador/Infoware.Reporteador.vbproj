@@ -50,6 +50,9 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Office.Interop.Outlook, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
@@ -58,6 +61,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=3.0.6.0, Culture=neutral, PublicKeyToken=5cded1a1a0a7b481, processorArchitecture=MSIL">
@@ -75,6 +79,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clases\Programacion.vb" />
+    <Compile Include="FrmListaReporte.designer.vb">
+      <DependentUpon>FrmListaReporte.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmListaReporte.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmLista.designer.vb">
       <DependentUpon>FrmLista.vb</DependentUpon>
     </Compile>
@@ -118,6 +128,9 @@
     <Compile Include="Reporte.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FrmListaReporte.resx">
+      <DependentUpon>FrmListaReporte.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLista.resx">
       <DependentUpon>FrmLista.vb</DependentUpon>
     </EmbeddedResource>

@@ -131,25 +131,64 @@ Public Class CuracionDetalle
         End Get
     End Property
 
-    <Infoware.Reportes.CampoReporteAtributo("PRE-EST", Infoware.Reportes.CampoReporteAtributo.EnumTipoDato.Numero, 50, True)>
-    Public ReadOnly Property PreEst() As Integer
-        Get
-            Return Curdet_preest
-        End Get
-    End Property
 
-    <Infoware.Reportes.CampoReporteAtributo("Reviza", Infoware.Reportes.CampoReporteAtributo.EnumTipoDato.Texto, 150, True)>
-    Public Property Reviza() As String
-        Get
-            Return Curdet_reviza
-        End Get
-        Set(ByVal value As String)
-            Curdet_reviza = value
-            EsModificado = True
-        End Set
-    End Property
+  <Infoware.Reportes.CampoReporteAtributo("ON", Infoware.Reportes.CampoReporteAtributo.EnumTipoDato.Logico, 50, True)>
+  Public Property HornoON() As Boolean
+    Get
+      Return Curdet_on
+    End Get
+    Set(ByVal value As Boolean)
+      Curdet_on = value
+      EsModificado = True
+    End Set
+  End Property
 
-    <Infoware.Reportes.CampoReporteAtributo("Observación", Infoware.Reportes.CampoReporteAtributo.EnumTipoDato.Texto, 250, True)>
+  <Infoware.Reportes.CampoReporteAtributo("WF", Infoware.Reportes.CampoReporteAtributo.EnumTipoDato.Logico, 50, True)>
+  Public Property WF() As Boolean
+    Get
+      Return Curdet_wf
+    End Get
+    Set(ByVal value As Boolean)
+      Curdet_wf = value
+      EsModificado = True
+    End Set
+  End Property
+
+  <Infoware.Reportes.CampoReporteAtributo("OW", Infoware.Reportes.CampoReporteAtributo.EnumTipoDato.Numero, 50, True)>
+  Public Property OW() As Integer
+    Get
+      Return Curdet_ow
+    End Get
+    Set(ByVal value As Integer)
+      If value = 25 Or value = 50 Or value = 100 Or value = 0 Then
+        Curdet_ow = value
+        EsModificado = True
+      Else
+        Throw New Exception("Valor inválido, digite 0, 25, 50 o 100")
+      End If
+
+    End Set
+  End Property
+
+  '<Infoware.Reportes.CampoReporteAtributo("PRE-EST", Infoware.Reportes.CampoReporteAtributo.EnumTipoDato.Numero, 50, True)>
+  Public ReadOnly Property PreEst() As Integer
+    Get
+      Return Curdet_preest
+    End Get
+  End Property
+
+  '<Infoware.Reportes.CampoReporteAtributo("Reviza", Infoware.Reportes.CampoReporteAtributo.EnumTipoDato.Texto, 150, True)>
+  Public Property Reviza() As String
+    Get
+      Return Curdet_reviza
+    End Get
+    Set(ByVal value As String)
+      Curdet_reviza = value
+      EsModificado = True
+    End Set
+  End Property
+
+  <Infoware.Reportes.CampoReporteAtributo("Observación", Infoware.Reportes.CampoReporteAtributo.EnumTipoDato.Texto, 250, True)>
     Public Property Observacion() As String
         Get
             Return Curdet_observacion
@@ -233,9 +272,16 @@ Public Class CuracionDetalle
         mCurdet_observacion = CStr(Fila("curdet_observacion"))
         mCurdet_preest = CInt(Fila("curdet_preest"))
         mCurdet_reviza = CStr(Fila("curdet_reviza"))
-    End Sub
+    If TypeOf Fila("curdet_on") Is DBNull Then
+      mCurdet_on = False
+    Else
+      mCurdet_on = CBool(Fila("curdet_on"))
+    End If
+    mCurdet_wf = CBool(Fila("curdet_wf"))
+    mCurdet_ow = CInt(Fila("curdet_ow"))
+  End Sub
 
-    Public Function Guardar() As Boolean
+  Public Function Guardar() As Boolean
         Dim dsResult As New DataSet
         Dim bReturn As Boolean
         Dim sAccion As String = String.Empty
@@ -255,8 +301,11 @@ Public Class CuracionDetalle
             .AgregarParametro("@curdet_observacion", mCurdet_observacion)
             .AgregarParametro("@curdet_preest", mCurdet_preest)
             .AgregarParametro("@curdet_reviza", mCurdet_reviza)
-            .Procedimiento = _Procedimiento
-            bReturn = .Ejecutar(dsResult)
+      .AgregarParametro("@curdet_on", mCurdet_on)
+      .AgregarParametro("@curdet_wf", mCurdet_wf)
+      .AgregarParametro("@curdet_ow", mCurdet_ow)
+      .Procedimiento = _Procedimiento
+      bReturn = .Ejecutar(dsResult)
             .LimpiarParametros()
             If bReturn Then
                 Me.mCurdet_hr = CInt(dsResult.Tables(0).Rows(0)(0))

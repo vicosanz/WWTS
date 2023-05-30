@@ -115,7 +115,9 @@
     <Reference Include="Squirrel, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\squirrel.windows.2.0.1\lib\Net45\Squirrel.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
@@ -377,6 +379,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Reportes\crpCuracionTarjeta.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crpCuracionTarjeta.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reportes\crpDisponibilidadCujes1.vb">
       <DependentUpon>crpDisponibilidadCujes.rpt</DependentUpon>
       <SubType>Component</SubType>
@@ -412,6 +420,11 @@
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reportes\dsCuracionTarjeta.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCuracionTarjeta.xsd</DependentUpon>
     </Compile>
     <Compile Include="Reportes\DSdispocujes1.Designer.vb">
       <DependentUpon>DSdispocujes.xsd</DependentUpon>
@@ -576,6 +589,10 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\crpCuracionTarjeta.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpCuracionTarjeta.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\crpDisponibilidadCujes.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crpDisponibilidadCujes1.vb</LastGenOutput>
@@ -632,6 +649,17 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="packages.config" />
+    <None Include="Reportes\dsCuracionTarjeta.xsc">
+      <DependentUpon>dsCuracionTarjeta.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\dsCuracionTarjeta.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCuracionTarjeta.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Reportes\dsCuracionTarjeta.xss">
+      <DependentUpon>dsCuracionTarjeta.xsd</DependentUpon>
+    </None>
     <None Include="Reportes\DSdispocujes.xsc">
       <DependentUpon>DSdispocujes.xsd</DependentUpon>
     </None>
@@ -802,6 +830,9 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

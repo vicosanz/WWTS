@@ -32,12 +32,15 @@ Partial Public Class CuracionDetalle
     Private mCurdet_observacion As String = String.Empty
     Private mCurdet_preest As Integer = 0
     Private mCurdet_reviza As String = String.Empty
+  Private mCurdet_on As Boolean = False
+  Private mCurdet_wf As Boolean = False
+  Private mCurdet_ow As Integer = 0
 
 #End Region
 
 #Region "Propiedades públicas de la clase"
 
-    <XmlAttribute()>
+  <XmlAttribute()>
     Public Overridable Property Cur_numero() As Integer
         Get
             Return mCur_numero
@@ -126,10 +129,40 @@ Partial Public Class CuracionDetalle
             mCurdet_reviza = value
         End Set
     End Property
+
+  <XmlAttribute()>
+  Public Overridable Property Curdet_on As Boolean
+    Get
+      Return mCurdet_on
+    End Get
+    Set(value As Boolean)
+      mCurdet_on = value
+    End Set
+  End Property
+
+  <XmlAttribute()>
+  Public Overridable Property Curdet_wf As Boolean
+    Get
+      Return mCurdet_wf
+    End Get
+    Set(value As Boolean)
+      mCurdet_wf = value
+    End Set
+  End Property
+
+  <XmlAttribute()>
+  Public Overridable Property Curdet_ow As Integer
+    Get
+      Return mCurdet_ow
+    End Get
+    Set(value As Integer)
+      mCurdet_ow = value
+    End Set
+  End Property
 #End Region
 
 #Region "Constructores de la clase"
-    Public Sub New()
+  Public Sub New()
         MyBase.New()
     End Sub
 #End Region

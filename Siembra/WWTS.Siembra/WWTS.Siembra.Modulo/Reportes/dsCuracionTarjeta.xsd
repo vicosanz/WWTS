@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsCuracionTarjeta" targetNamespace="http://tempuri.org/dsCuracionTarjeta.xsd" xmlns:mstns="http://tempuri.org/dsCuracionTarjeta.xsd" xmlns="http://tempuri.org/dsCuracionTarjeta.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="domus2amecaConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="domus2amecaConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Siembra.My.MySettings.GlobalReference.Default.domus2amecaConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsCuracionTarjeta" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsCuracionTarjeta" msprop:Generator_UserDSName="dsCuracionTarjeta">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vw_curaciontarjeta" msprop:Generator_TableClassName="vw_curaciontarjetaDataTable" msprop:Generator_TableVarName="tablevw_curaciontarjeta" msprop:Generator_RowChangedName="vw_curaciontarjetaRowChanged" msprop:Generator_TablePropName="vw_curaciontarjeta" msprop:Generator_RowDeletingName="vw_curaciontarjetaRowDeleting" msprop:Generator_RowChangingName="vw_curaciontarjetaRowChanging" msprop:Generator_RowEvHandlerName="vw_curaciontarjetaRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_curaciontarjetaRowDeleted" msprop:Generator_RowClassName="vw_curaciontarjetaRow" msprop:Generator_UserTableName="vw_curaciontarjeta" msprop:Generator_RowEvArgName="vw_curaciontarjetaRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cur_numero" msprop:Generator_ColumnVarNameInTable="columncur_numero" msprop:Generator_ColumnPropNameInRow="cur_numero" msprop:Generator_ColumnPropNameInTable="cur_numeroColumn" msprop:Generator_UserColumnName="cur_numero" type="xs:int" />
+              <xs:element name="zaf_descripcion" msprop:Generator_ColumnVarNameInTable="columnzaf_descripcion" msprop:Generator_ColumnPropNameInRow="zaf_descripcion" msprop:Generator_ColumnPropNameInTable="zaf_descripcionColumn" msprop:Generator_UserColumnName="zaf_descripcion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="18" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cur_fecha" msprop:Generator_ColumnVarNameInTable="columncur_fecha" msprop:Generator_ColumnPropNameInRow="cur_fecha" msprop:Generator_ColumnPropNameInTable="cur_fechaColumn" msprop:Generator_UserColumnName="cur_fecha" type="xs:dateTime" />
+              <xs:element name="hor_descripcion" msprop:Generator_ColumnVarNameInTable="columnhor_descripcion" msprop:Generator_ColumnPropNameInRow="hor_descripcion" msprop:Generator_ColumnPropNameInTable="hor_descripcionColumn" msprop:Generator_UserColumnName="hor_descripcion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="18" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sem_nombre" msprop:Generator_ColumnVarNameInTable="columnsem_nombre" msprop:Generator_ColumnPropNameInRow="sem_nombre" msprop:Generator_ColumnPropNameInTable="sem_nombreColumn" msprop:Generator_UserColumnName="sem_nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sec_codigo" msprop:Generator_ColumnVarNameInTable="columnsec_codigo" msprop:Generator_ColumnPropNameInRow="sec_codigo" msprop:Generator_ColumnPropNameInTable="sec_codigoColumn" msprop:Generator_UserColumnName="sec_codigo" type="xs:int" />
+              <xs:element name="lot_codigo" msprop:Generator_ColumnVarNameInTable="columnlot_codigo" msprop:Generator_ColumnPropNameInRow="lot_codigo" msprop:Generator_ColumnPropNameInTable="lot_codigoColumn" msprop:Generator_UserColumnName="lot_codigo" type="xs:int" />
+              <xs:element name="trr_nombre" msprop:Generator_ColumnVarNameInTable="columntrr_nombre" msprop:Generator_ColumnPropNameInRow="trr_nombre" msprop:Generator_ColumnPropNameInTable="trr_nombreColumn" msprop:Generator_UserColumnName="trr_nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="18" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cur_fechaingreso" msprop:Generator_ColumnVarNameInTable="columncur_fechaingreso" msprop:Generator_ColumnPropNameInRow="cur_fechaingreso" msprop:Generator_ColumnPropNameInTable="cur_fechaingresoColumn" msprop:Generator_UserColumnName="cur_fechaingreso" type="xs:dateTime" />
+              <xs:element name="TipoTabaco" msprop:Generator_ColumnVarNameInTable="columnTipoTabaco" msprop:Generator_ColumnPropNameInRow="TipoTabaco" msprop:Generator_ColumnPropNameInTable="TipoTabacoColumn" msprop:Generator_UserColumnName="TipoTabaco">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tarjeta1" msprop:Generator_ColumnVarNameInTable="columntarjeta1" msprop:Generator_ColumnPropNameInRow="tarjeta1" msprop:Generator_ColumnPropNameInTable="tarjeta1Column" msprop:Generator_UserColumnName="tarjeta1" type="xs:int" minOccurs="0" />
+              <xs:element name="cujes1" msprop:Generator_ColumnVarNameInTable="columncujes1" msprop:Generator_ColumnPropNameInRow="cujes1" msprop:Generator_ColumnPropNameInTable="cujes1Column" msprop:Generator_UserColumnName="cujes1" type="xs:int" minOccurs="0" />
+              <xs:element name="corte1" msprop:Generator_ColumnVarNameInTable="columncorte1" msprop:Generator_ColumnPropNameInRow="corte1" msprop:Generator_ColumnPropNameInTable="corte1Column" msprop:Generator_UserColumnName="corte1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tarjeta2" msprop:Generator_ColumnVarNameInTable="columntarjeta2" msprop:Generator_ColumnPropNameInRow="tarjeta2" msprop:Generator_ColumnPropNameInTable="tarjeta2Column" msprop:Generator_UserColumnName="tarjeta2" type="xs:int" minOccurs="0" />
+              <xs:element name="cujes2" msprop:Generator_ColumnVarNameInTable="columncujes2" msprop:Generator_ColumnPropNameInRow="cujes2" msprop:Generator_ColumnPropNameInTable="cujes2Column" msprop:Generator_UserColumnName="cujes2" type="xs:int" minOccurs="0" />
+              <xs:element name="corte2" msprop:Generator_ColumnVarNameInTable="columncorte2" msprop:Generator_ColumnPropNameInRow="corte2" msprop:Generator_ColumnPropNameInTable="corte2Column" msprop:Generator_UserColumnName="corte2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dia" msprop:Generator_ColumnVarNameInTable="columndia" msprop:Generator_ColumnPropNameInRow="dia" msprop:Generator_ColumnPropNameInTable="diaColumn" msprop:Generator_UserColumnName="dia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="34" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="curdet_hora" msprop:Generator_ColumnVarNameInTable="columncurdet_hora" msprop:Generator_ColumnPropNameInRow="curdet_hora" msprop:Generator_ColumnPropNameInTable="curdet_horaColumn" msprop:Generator_UserColumnName="curdet_hora" type="xs:int" />
+              <xs:element name="curdet_db" msprop:Generator_ColumnVarNameInTable="columncurdet_db" msprop:Generator_ColumnPropNameInRow="curdet_db" msprop:Generator_ColumnPropNameInTable="curdet_dbColumn" msprop:Generator_UserColumnName="curdet_db" type="xs:int" />
+              <xs:element name="curdet_wb" msprop:Generator_ColumnVarNameInTable="columncurdet_wb" msprop:Generator_ColumnPropNameInRow="curdet_wb" msprop:Generator_ColumnPropNameInTable="curdet_wbColumn" msprop:Generator_UserColumnName="curdet_wb" type="xs:int" />
+              <xs:element name="curdet_hr" msprop:Generator_ColumnVarNameInTable="columncurdet_hr" msprop:Generator_ColumnPropNameInRow="curdet_hr" msprop:Generator_ColumnPropNameInTable="curdet_hrColumn" msprop:Generator_UserColumnName="curdet_hr" type="xs:int" />
+              <xs:element name="isOff" msprop:Generator_ColumnVarNameInTable="columnisOff" msprop:Generator_ColumnPropNameInRow="isOff" msprop:Generator_ColumnPropNameInTable="isOffColumn" msprop:Generator_UserColumnName="isOff" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ison" msprop:Generator_ColumnVarNameInTable="columnison" msprop:Generator_ColumnPropNameInRow="ison" msprop:Generator_ColumnPropNameInTable="isonColumn" msprop:Generator_UserColumnName="ison" type="xs:boolean" minOccurs="0" />
+              <xs:element name="curdet_wf" msprop:Generator_ColumnVarNameInTable="columncurdet_wf" msprop:Generator_ColumnPropNameInRow="curdet_wf" msprop:Generator_ColumnPropNameInTable="curdet_wfColumn" msprop:Generator_UserColumnName="curdet_wf" type="xs:boolean" />
+              <xs:element name="ow25" msprop:Generator_ColumnVarNameInTable="columnow25" msprop:Generator_ColumnPropNameInRow="ow25" msprop:Generator_ColumnPropNameInTable="ow25Column" msprop:Generator_UserColumnName="ow25" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ow50" msprop:Generator_ColumnVarNameInTable="columnow50" msprop:Generator_ColumnPropNameInRow="ow50" msprop:Generator_ColumnPropNameInTable="ow50Column" msprop:Generator_UserColumnName="ow50" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ow100" msprop:Generator_ColumnVarNameInTable="columnow100" msprop:Generator_ColumnPropNameInRow="ow100" msprop:Generator_ColumnPropNameInTable="ow100Column" msprop:Generator_UserColumnName="ow100" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

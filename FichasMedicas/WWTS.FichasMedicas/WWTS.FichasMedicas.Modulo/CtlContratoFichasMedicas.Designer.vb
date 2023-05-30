@@ -455,13 +455,14 @@ Partial Class CtlContratoFichasMedicas
         Me.tvcontratos.HideSelection = False
         Me.tvcontratos.ImageIndex = 0
         Me.tvcontratos.ImageList = Me.ilestadocontrato
-        Me.tvcontratos.Location = New System.Drawing.Point(0, 21)
+        Me.tvcontratos.Location = New System.Drawing.Point(0, 32)
+        Me.tvcontratos.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.tvcontratos.Name = "tvcontratos"
         Me.tvcontratos.SelectedImageIndex = 0
         Me.tvcontratos.ShowLines = False
         Me.tvcontratos.ShowPlusMinus = False
         Me.tvcontratos.ShowRootLines = False
-        Me.tvcontratos.Size = New System.Drawing.Size(120, 211)
+        Me.tvcontratos.Size = New System.Drawing.Size(178, 325)
         Me.tvcontratos.TabIndex = 0
         '
         'ilestadocontrato
@@ -476,19 +477,21 @@ Partial Class CtlContratoFichasMedicas
         Me.tb.Controls.Add(Me.TabDatos)
         Me.tb.Controls.Add(Me.TabRubros)
         Me.tb.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.tb.Location = New System.Drawing.Point(120, 21)
+        Me.tb.Location = New System.Drawing.Point(178, 32)
+        Me.tb.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.tb.Name = "tb"
         Me.tb.SelectedIndex = 0
-        Me.tb.Size = New System.Drawing.Size(784, 211)
+        Me.tb.Size = New System.Drawing.Size(1178, 325)
         Me.tb.TabIndex = 1
         '
         'TabDatos
         '
         Me.TabDatos.Controls.Add(Me.pnldatos)
-        Me.TabDatos.Location = New System.Drawing.Point(4, 22)
+        Me.TabDatos.Location = New System.Drawing.Point(4, 29)
+        Me.TabDatos.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TabDatos.Name = "TabDatos"
-        Me.TabDatos.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
-        Me.TabDatos.Size = New System.Drawing.Size(776, 185)
+        Me.TabDatos.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TabDatos.Size = New System.Drawing.Size(1170, 292)
         Me.TabDatos.TabIndex = 1
         Me.TabDatos.Text = "Datos"
         Me.TabDatos.UseVisualStyleBackColor = True
@@ -499,9 +502,10 @@ Partial Class CtlContratoFichasMedicas
         Me.pnldatos.Controls.Add(Me.Panel1)
         Me.pnldatos.Controls.Add(Me.Panel3)
         Me.pnldatos.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnldatos.Location = New System.Drawing.Point(3, 3)
+        Me.pnldatos.Location = New System.Drawing.Point(4, 5)
+        Me.pnldatos.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.pnldatos.Name = "pnldatos"
-        Me.pnldatos.Size = New System.Drawing.Size(770, 179)
+        Me.pnldatos.Size = New System.Drawing.Size(1162, 282)
         Me.pnldatos.TabIndex = 4
         '
         'pnlcierre
@@ -513,32 +517,36 @@ Partial Class CtlContratoFichasMedicas
         Me.pnlcierre.Controls.Add(Me.cbotiposalida)
         Me.pnlcierre.Dock = System.Windows.Forms.DockStyle.Top
         Me.pnlcierre.Enabled = False
-        Me.pnlcierre.Location = New System.Drawing.Point(216, 58)
+        Me.pnlcierre.Location = New System.Drawing.Point(324, 89)
+        Me.pnlcierre.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.pnlcierre.Name = "pnlcierre"
-        Me.pnlcierre.Size = New System.Drawing.Size(554, 50)
+        Me.pnlcierre.Size = New System.Drawing.Size(838, 77)
         Me.pnlcierre.TabIndex = 2
         '
         'lblfeccierre
         '
         Me.lblfeccierre.AutoSize = True
-        Me.lblfeccierre.Location = New System.Drawing.Point(6, 4)
+        Me.lblfeccierre.Location = New System.Drawing.Point(9, 6)
+        Me.lblfeccierre.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblfeccierre.Name = "lblfeccierre"
-        Me.lblfeccierre.Size = New System.Drawing.Size(69, 13)
+        Me.lblfeccierre.Size = New System.Drawing.Size(101, 20)
         Me.lblfeccierre.TabIndex = 0
         Me.lblfeccierre.Text = "Fecha cierre:"
         '
         'dtfechasta
         '
         Me.dtfechasta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtfechasta.Location = New System.Drawing.Point(108, 2)
+        Me.dtfechasta.Location = New System.Drawing.Point(162, 3)
+        Me.dtfechasta.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.dtfechasta.Name = "dtfechasta"
-        Me.dtfechasta.Size = New System.Drawing.Size(96, 20)
+        Me.dtfechasta.Size = New System.Drawing.Size(142, 26)
         Me.dtfechasta.TabIndex = 1
         '
         'cbotipoliq
         '
         Me.cbotipoliq.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbotipoliq.Location = New System.Drawing.Point(108, 24)
+        Me.cbotipoliq.Location = New System.Drawing.Point(162, 37)
+        Me.cbotipoliq.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.cbotipoliq.Name = "cbotipoliq"
         Me.cbotipoliq.OperadorDatos = Nothing
         Me.cbotipoliq.Parametro = WWTS.General.Reglas.Enumerados.EnumParametros.TipoEntidad
@@ -547,22 +555,24 @@ Partial Class CtlContratoFichasMedicas
         Me.cbotipoliq.PuedeEliminar = True
         Me.cbotipoliq.PuedeModificar = True
         Me.cbotipoliq.PuedeNuevo = True
-        Me.cbotipoliq.Size = New System.Drawing.Size(140, 21)
+        Me.cbotipoliq.Size = New System.Drawing.Size(208, 28)
         Me.cbotipoliq.TabIndex = 3
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(6, 28)
+        Me.Label4.Location = New System.Drawing.Point(9, 43)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(56, 13)
+        Me.Label4.Size = New System.Drawing.Size(82, 20)
         Me.Label4.TabIndex = 2
         Me.Label4.Text = "Liquidado:"
         '
         'cbotiposalida
         '
         Me.cbotiposalida.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbotiposalida.Location = New System.Drawing.Point(254, 24)
+        Me.cbotiposalida.Location = New System.Drawing.Point(381, 37)
+        Me.cbotiposalida.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.cbotiposalida.Name = "cbotiposalida"
         Me.cbotiposalida.OperadorDatos = Nothing
         Me.cbotiposalida.Parametro = WWTS.General.Reglas.Enumerados.EnumParametros.TipoEntidad
@@ -571,7 +581,7 @@ Partial Class CtlContratoFichasMedicas
         Me.cbotiposalida.PuedeEliminar = True
         Me.cbotiposalida.PuedeModificar = True
         Me.cbotiposalida.PuedeNuevo = True
-        Me.cbotiposalida.Size = New System.Drawing.Size(205, 21)
+        Me.cbotiposalida.Size = New System.Drawing.Size(306, 28)
         Me.cbotiposalida.TabIndex = 5
         '
         'Panel1
@@ -583,17 +593,19 @@ Partial Class CtlContratoFichasMedicas
         Me.Panel1.Controls.Add(Me.Cerrado)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Enabled = False
-        Me.Panel1.Location = New System.Drawing.Point(216, 0)
+        Me.Panel1.Location = New System.Drawing.Point(324, 0)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(554, 58)
+        Me.Panel1.Size = New System.Drawing.Size(838, 89)
         Me.Panel1.TabIndex = 1
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(6, 6)
+        Me.Label1.Location = New System.Drawing.Point(9, 9)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(88, 13)
+        Me.Label1.Size = New System.Drawing.Size(128, 20)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Tipo de contrato:"
         '
@@ -602,7 +614,8 @@ Partial Class CtlContratoFichasMedicas
         Me.CtlTipoContrato1.AbriralEntrar = False
         Me.CtlTipoContrato1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CtlTipoContrato1.FormattingEnabled = True
-        Me.CtlTipoContrato1.Location = New System.Drawing.Point(108, 3)
+        Me.CtlTipoContrato1.Location = New System.Drawing.Point(162, 5)
+        Me.CtlTipoContrato1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.CtlTipoContrato1.Name = "CtlTipoContrato1"
         Me.CtlTipoContrato1.Op = Nothing
         Me.CtlTipoContrato1.Patrono = Nothing
@@ -610,25 +623,27 @@ Partial Class CtlContratoFichasMedicas
         Me.CtlTipoContrato1.PuedeEliminar = True
         Me.CtlTipoContrato1.PuedeModificar = True
         Me.CtlTipoContrato1.PuedeNuevo = True
-        Me.CtlTipoContrato1.Size = New System.Drawing.Size(140, 21)
+        Me.CtlTipoContrato1.Size = New System.Drawing.Size(208, 28)
         Me.CtlTipoContrato1.TabIndex = 1
         Me.CtlTipoContrato1.TipoContrato = Nothing
         '
         'Label24
         '
         Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(6, 32)
+        Me.Label24.Location = New System.Drawing.Point(9, 49)
+        Me.Label24.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(82, 13)
+        Me.Label24.Size = New System.Drawing.Size(121, 20)
         Me.Label24.TabIndex = 7
         Me.Label24.Text = "Fecha contrato:"
         '
         'dtfecdesde
         '
         Me.dtfecdesde.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtfecdesde.Location = New System.Drawing.Point(108, 29)
+        Me.dtfecdesde.Location = New System.Drawing.Point(162, 45)
+        Me.dtfecdesde.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.dtfecdesde.Name = "dtfecdesde"
-        Me.dtfecdesde.Size = New System.Drawing.Size(96, 20)
+        Me.dtfecdesde.Size = New System.Drawing.Size(142, 26)
         Me.dtfecdesde.TabIndex = 8
         '
         'Cerrado
@@ -637,9 +652,10 @@ Partial Class CtlContratoFichasMedicas
         Me.Cerrado.Checked = True
         Me.Cerrado.CheckState = System.Windows.Forms.CheckState.Checked
         Me.Cerrado.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.Cerrado.Location = New System.Drawing.Point(210, 31)
+        Me.Cerrado.Location = New System.Drawing.Point(315, 48)
+        Me.Cerrado.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Cerrado.Name = "Cerrado"
-        Me.Cerrado.Size = New System.Drawing.Size(91, 18)
+        Me.Cerrado.Size = New System.Drawing.Size(135, 25)
         Me.Cerrado.TabIndex = 9
         Me.Cerrado.Text = "&Fecha cierre"
         '
@@ -660,16 +676,18 @@ Partial Class CtlContratoFichasMedicas
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel3.Enabled = False
         Me.Panel3.Location = New System.Drawing.Point(0, 0)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(216, 179)
+        Me.Panel3.Size = New System.Drawing.Size(324, 282)
         Me.Panel3.TabIndex = 0
         '
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(8, 31)
+        Me.Label17.Location = New System.Drawing.Point(12, 48)
+        Me.Label17.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(50, 13)
+        Me.Label17.Size = New System.Drawing.Size(74, 20)
         Me.Label17.TabIndex = 12
         Me.Label17.Text = "C. Costo:"
         '
@@ -677,7 +695,8 @@ Partial Class CtlContratoFichasMedicas
         '
         Me.cboSubCentroCosto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboSubCentroCosto.FormattingEnabled = True
-        Me.cboSubCentroCosto.Location = New System.Drawing.Point(60, 28)
+        Me.cboSubCentroCosto.Location = New System.Drawing.Point(90, 43)
+        Me.cboSubCentroCosto.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.cboSubCentroCosto.Name = "cboSubCentroCosto"
         Me.cboSubCentroCosto.OperadorDatos = Nothing
         Me.cboSubCentroCosto.Parametro = WWTS.General.Reglas.Enumerados.EnumParametros.TipoEntidad
@@ -686,7 +705,7 @@ Partial Class CtlContratoFichasMedicas
         Me.cboSubCentroCosto.PuedeEliminar = True
         Me.cboSubCentroCosto.PuedeModificar = True
         Me.cboSubCentroCosto.PuedeNuevo = True
-        Me.cboSubCentroCosto.Size = New System.Drawing.Size(153, 21)
+        Me.cboSubCentroCosto.Size = New System.Drawing.Size(228, 28)
         Me.cboSubCentroCosto.TabIndex = 11
         '
         'CtlPatronoCombo1
@@ -694,7 +713,8 @@ Partial Class CtlContratoFichasMedicas
         Me.CtlPatronoCombo1.AbriralEntrar = False
         Me.CtlPatronoCombo1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CtlPatronoCombo1.FormattingEnabled = True
-        Me.CtlPatronoCombo1.Location = New System.Drawing.Point(60, 6)
+        Me.CtlPatronoCombo1.Location = New System.Drawing.Point(90, 9)
+        Me.CtlPatronoCombo1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.CtlPatronoCombo1.Name = "CtlPatronoCombo1"
         Me.CtlPatronoCombo1.Op = Nothing
         Me.CtlPatronoCombo1.Patrono = Nothing
@@ -702,16 +722,17 @@ Partial Class CtlContratoFichasMedicas
         Me.CtlPatronoCombo1.PuedeEliminar = True
         Me.CtlPatronoCombo1.PuedeModificar = True
         Me.CtlPatronoCombo1.PuedeNuevo = True
-        Me.CtlPatronoCombo1.Size = New System.Drawing.Size(153, 21)
+        Me.CtlPatronoCombo1.Size = New System.Drawing.Size(228, 28)
         Me.CtlPatronoCombo1.TabIndex = 10
         Me.CtlPatronoCombo1.Usuario = Nothing
         '
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(8, 100)
+        Me.Label15.Location = New System.Drawing.Point(12, 154)
+        Me.Label15.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(33, 13)
+        Me.Label15.Size = New System.Drawing.Size(48, 20)
         Me.Label15.TabIndex = 4
         Me.Label15.Text = "Dpto:"
         '
@@ -720,7 +741,8 @@ Partial Class CtlContratoFichasMedicas
         Me.cboDepartamento.AbriralEntrar = False
         Me.cboDepartamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboDepartamento.FormattingEnabled = True
-        Me.cboDepartamento.Location = New System.Drawing.Point(60, 97)
+        Me.cboDepartamento.Location = New System.Drawing.Point(90, 149)
+        Me.cboDepartamento.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.cboDepartamento.Name = "cboDepartamento"
         Me.cboDepartamento.OperadorDatos = Nothing
         Me.cboDepartamento.Parametro = WWTS.General.Reglas.Enumerados.EnumParametros.TipoEntidad
@@ -729,7 +751,7 @@ Partial Class CtlContratoFichasMedicas
         Me.cboDepartamento.PuedeEliminar = True
         Me.cboDepartamento.PuedeModificar = True
         Me.cboDepartamento.PuedeNuevo = True
-        Me.cboDepartamento.Size = New System.Drawing.Size(153, 21)
+        Me.cboDepartamento.Size = New System.Drawing.Size(228, 28)
         Me.cboDepartamento.TabIndex = 5
         '
         'CtlArea1
@@ -739,7 +761,8 @@ Partial Class CtlContratoFichasMedicas
         Me.CtlArea1.Departamento = Nothing
         Me.CtlArea1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CtlArea1.FormattingEnabled = True
-        Me.CtlArea1.Location = New System.Drawing.Point(60, 119)
+        Me.CtlArea1.Location = New System.Drawing.Point(90, 183)
+        Me.CtlArea1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.CtlArea1.Name = "CtlArea1"
         Me.CtlArea1.Op = Nothing
         Me.CtlArea1.PuedeActualizar = True
@@ -747,7 +770,7 @@ Partial Class CtlContratoFichasMedicas
         Me.CtlArea1.PuedeModificar = True
         Me.CtlArea1.PuedeNuevo = True
         Me.CtlArea1.Seccion = Nothing
-        Me.CtlArea1.Size = New System.Drawing.Size(153, 21)
+        Me.CtlArea1.Size = New System.Drawing.Size(228, 28)
         Me.CtlArea1.TabIndex = 7
         '
         'cboSeccion
@@ -755,7 +778,8 @@ Partial Class CtlContratoFichasMedicas
         Me.cboSeccion.AbriralEntrar = False
         Me.cboSeccion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboSeccion.FormattingEnabled = True
-        Me.cboSeccion.Location = New System.Drawing.Point(60, 75)
+        Me.cboSeccion.Location = New System.Drawing.Point(90, 115)
+        Me.cboSeccion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.cboSeccion.Name = "cboSeccion"
         Me.cboSeccion.OperadorDatos = Nothing
         Me.cboSeccion.Parametro = WWTS.General.Reglas.Enumerados.EnumParametros.Seccion
@@ -764,7 +788,7 @@ Partial Class CtlContratoFichasMedicas
         Me.cboSeccion.PuedeEliminar = True
         Me.cboSeccion.PuedeModificar = True
         Me.cboSeccion.PuedeNuevo = True
-        Me.cboSeccion.Size = New System.Drawing.Size(153, 21)
+        Me.cboSeccion.Size = New System.Drawing.Size(228, 28)
         Me.cboSeccion.TabIndex = 3
         '
         'CtlCargo1
@@ -774,59 +798,65 @@ Partial Class CtlContratoFichasMedicas
         Me.CtlCargo1.Cargo = Nothing
         Me.CtlCargo1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CtlCargo1.FormattingEnabled = True
-        Me.CtlCargo1.Location = New System.Drawing.Point(60, 141)
+        Me.CtlCargo1.Location = New System.Drawing.Point(90, 217)
+        Me.CtlCargo1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.CtlCargo1.Name = "CtlCargo1"
         Me.CtlCargo1.Op = Nothing
         Me.CtlCargo1.PuedeActualizar = True
         Me.CtlCargo1.PuedeEliminar = True
         Me.CtlCargo1.PuedeModificar = True
         Me.CtlCargo1.PuedeNuevo = True
-        Me.CtlCargo1.Size = New System.Drawing.Size(153, 21)
+        Me.CtlCargo1.Size = New System.Drawing.Size(228, 28)
         Me.CtlCargo1.TabIndex = 9
         '
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(8, 122)
+        Me.Label14.Location = New System.Drawing.Point(12, 188)
+        Me.Label14.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(32, 13)
+        Me.Label14.Size = New System.Drawing.Size(47, 20)
         Me.Label14.TabIndex = 6
         Me.Label14.Text = "Área:"
         '
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(8, 78)
+        Me.Label13.Location = New System.Drawing.Point(12, 120)
+        Me.Label13.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(49, 13)
+        Me.Label13.Size = New System.Drawing.Size(70, 20)
         Me.Label13.TabIndex = 2
         Me.Label13.Text = "Sección:"
         '
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(8, 145)
+        Me.Label12.Location = New System.Drawing.Point(12, 223)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(38, 13)
+        Me.Label12.Size = New System.Drawing.Size(56, 20)
         Me.Label12.TabIndex = 8
         Me.Label12.Text = "Cargo:"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(8, 9)
+        Me.Label3.Location = New System.Drawing.Point(12, 14)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(47, 13)
+        Me.Label3.Size = New System.Drawing.Size(69, 20)
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "&Patrono:"
         '
         'TabRubros
         '
         Me.TabRubros.Controls.Add(Me.CtlFichasMedicas1)
-        Me.TabRubros.Location = New System.Drawing.Point(4, 22)
+        Me.TabRubros.Location = New System.Drawing.Point(4, 29)
+        Me.TabRubros.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TabRubros.Name = "TabRubros"
-        Me.TabRubros.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
-        Me.TabRubros.Size = New System.Drawing.Size(776, 185)
+        Me.TabRubros.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TabRubros.Size = New System.Drawing.Size(1170, 292)
         Me.TabRubros.TabIndex = 4
         Me.TabRubros.Text = "Fichas médicas"
         Me.TabRubros.UseVisualStyleBackColor = True
@@ -835,11 +865,10 @@ Partial Class CtlContratoFichasMedicas
         '
         Me.CtlFichasMedicas1.Contrato = Nothing
         Me.CtlFichasMedicas1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.CtlFichasMedicas1.Location = New System.Drawing.Point(3, 3)
-        Me.CtlFichasMedicas1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.CtlFichasMedicas1.Location = New System.Drawing.Point(4, 5)
         Me.CtlFichasMedicas1.ModoenSeleccion = False
         Me.CtlFichasMedicas1.Name = "CtlFichasMedicas1"
-        Me.CtlFichasMedicas1.Size = New System.Drawing.Size(770, 179)
+        Me.CtlFichasMedicas1.Size = New System.Drawing.Size(1162, 282)
         Me.CtlFichasMedicas1.TabIndex = 0
         '
         'DataGridViewTextBoxColumn380
@@ -3456,21 +3485,21 @@ Partial Class CtlContratoFichasMedicas
         Me.HeaderStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel6, Me.ToolStripSeparator1})
         Me.HeaderStrip1.Location = New System.Drawing.Point(0, 0)
         Me.HeaderStrip1.Name = "HeaderStrip1"
-        Me.HeaderStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
-        Me.HeaderStrip1.Size = New System.Drawing.Size(904, 21)
+        Me.HeaderStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 3, 0)
+        Me.HeaderStrip1.Size = New System.Drawing.Size(1356, 32)
         Me.HeaderStrip1.TabIndex = 2
         Me.HeaderStrip1.Text = "Opciones"
         '
         'ToolStripLabel6
         '
         Me.ToolStripLabel6.Name = "ToolStripLabel6"
-        Me.ToolStripLabel6.Size = New System.Drawing.Size(59, 18)
+        Me.ToolStripLabel6.Size = New System.Drawing.Size(90, 27)
         Me.ToolStripLabel6.Text = "Contratos"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 21)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 32)
         '
         'DataGridViewTextBoxColumn34
         '
@@ -3572,13 +3601,14 @@ Partial Class CtlContratoFichasMedicas
         '
         'CtlContratoFichasMedicas
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.tb)
         Me.Controls.Add(Me.tvcontratos)
         Me.Controls.Add(Me.HeaderStrip1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "CtlContratoFichasMedicas"
-        Me.Size = New System.Drawing.Size(904, 232)
+        Me.Size = New System.Drawing.Size(1356, 357)
         Me.tb.ResumeLayout(False)
         Me.TabDatos.ResumeLayout(False)
         Me.pnldatos.ResumeLayout(False)

@@ -231,6 +231,31 @@ Public Class Reporte
     Return ds
   End Function
 
+  Public Function RetornarDataSetTyped(Of T As {New, DataSet})(tabla As String) As T
+    Dim bReturn As Boolean = False
+    Dim dsResult As New T
+
+    With mOperadorDatos
+      For Each _param As ParametroReporte In Me.Parametros
+        .AgregarParametro(_param.NombreParametro, _param.Valor)
+      Next
+      .Procedimiento = Me.NombreProcedimiento
+      .Comando.CommandText = .Procedimiento
+      .Comando.Connection = .Conexion
+
+      Dim DataAdapter As SqlDataAdapter
+      DataAdapter = New SqlDataAdapter(.Comando)
+      Try
+        DataAdapter.Fill(dsResult, tabla)
+      Catch ex As Exception
+        bReturn = False
+      End Try
+      .LimpiarParametros()
+    End With
+
+    Return dsResult
+  End Function
+
   Public Function RetornarInfoExcelSubtotales() As DataTable
     Dim bReturn As Boolean = False
     Dim ds As New DataTable

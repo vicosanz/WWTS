@@ -83,6 +83,7 @@ Public Class Enumerados
     Quincena = 723
     'pedro
     Nomina = 724
+    ReporteNominaCargo = 722
     CuentaBancaria = 725
     'pedro
     RubrosxBeneficio = 726

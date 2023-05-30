@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.headerStrip1 = new Infoware.Consola.Base.HeaderStrip();
             this.ToolStriptitulo = new System.Windows.Forms.ToolStripLabel();
             this.Panel1 = new System.Windows.Forms.Panel();
@@ -55,9 +54,9 @@
             this.EditToolStripMenuItem = new Infoware.Consola.Base.MenuEditarHelper();
             this.AyudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AyudaDinamicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.Timer1 = new System.Windows.Forms.Timer(this.components);
-            this.Timer2 = new System.Windows.Forms.Timer(this.components);
-            this.BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Timer1 = new System.Windows.Forms.Timer();
+            this.Timer2 = new System.Windows.Forms.Timer();
+            this.BindingSource = new System.Windows.Forms.BindingSource();
             this.headerStrip1.SuspendLayout();
             this.pnlcuerpo.SuspendLayout();
             this.ToolStrip1.SuspendLayout();
@@ -76,25 +75,25 @@
             this.ToolStriptitulo});
             this.headerStrip1.Location = new System.Drawing.Point(0, 0);
             this.headerStrip1.Name = "headerStrip1";
-            this.headerStrip1.Size = new System.Drawing.Size(924, 32);
+            this.headerStrip1.Size = new System.Drawing.Size(1040, 36);
             this.headerStrip1.TabIndex = 6;
             this.headerStrip1.Text = "headerStrip1";
             // 
             // ToolStriptitulo
             // 
             this.ToolStriptitulo.Name = "ToolStriptitulo";
-            this.ToolStriptitulo.Size = new System.Drawing.Size(124, 29);
+            this.ToolStriptitulo.Size = new System.Drawing.Size(148, 35);
             this.ToolStriptitulo.Text = "Reporte de";
             // 
             // Panel1
             // 
             this.Panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Panel1.Location = new System.Drawing.Point(0, 32);
-            this.Panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.Panel1.Location = new System.Drawing.Point(0, 36);
+            this.Panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Panel1.Name = "Panel1";
-            this.Panel1.Padding = new System.Windows.Forms.Padding(7, 5, 7, 5);
-            this.Panel1.Size = new System.Drawing.Size(924, 81);
+            this.Panel1.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.Panel1.Size = new System.Drawing.Size(1040, 101);
             this.Panel1.TabIndex = 7;
             // 
             // pnlcuerpo
@@ -104,28 +103,29 @@
             this.pnlcuerpo.Controls.Add(this.Panel1);
             this.pnlcuerpo.Controls.Add(this.headerStrip1);
             this.pnlcuerpo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlcuerpo.Location = new System.Drawing.Point(0, 58);
+            this.pnlcuerpo.Location = new System.Drawing.Point(0, 62);
+            this.pnlcuerpo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlcuerpo.Name = "pnlcuerpo";
-            this.pnlcuerpo.Size = new System.Drawing.Size(924, 455);
+            this.pnlcuerpo.Size = new System.Drawing.Size(1040, 579);
             this.pnlcuerpo.TabIndex = 9;
             // 
             // TabControl1
             // 
             this.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TabControl1.Location = new System.Drawing.Point(0, 147);
-            this.TabControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.TabControl1.Location = new System.Drawing.Point(0, 179);
+            this.TabControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TabControl1.Name = "TabControl1";
             this.TabControl1.SelectedIndex = 0;
-            this.TabControl1.Size = new System.Drawing.Size(924, 308);
+            this.TabControl1.Size = new System.Drawing.Size(1040, 400);
             this.TabControl1.TabIndex = 8;
             // 
             // Panel2
             // 
             this.Panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Panel2.Location = new System.Drawing.Point(0, 113);
-            this.Panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.Panel2.Location = new System.Drawing.Point(0, 137);
+            this.Panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Panel2.Name = "Panel2";
-            this.Panel2.Size = new System.Drawing.Size(924, 34);
+            this.Panel2.Size = new System.Drawing.Size(1040, 42);
             this.Panel2.TabIndex = 9;
             this.Panel2.Visible = false;
             // 
@@ -141,9 +141,9 @@
             this.ToolStripProgressBar1,
             this.btnenviomails,
             this.ToolStripButtonAyuda});
-            this.ToolStrip1.Location = new System.Drawing.Point(0, 28);
+            this.ToolStrip1.Location = new System.Drawing.Point(0, 33);
             this.ToolStrip1.Name = "ToolStrip1";
-            this.ToolStrip1.Size = new System.Drawing.Size(924, 30);
+            this.ToolStrip1.Size = new System.Drawing.Size(1040, 29);
             this.ToolStrip1.TabIndex = 11;
             this.ToolStrip1.Text = "ToolStrip1";
             // 
@@ -154,7 +154,7 @@
             this.btnexportar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnexportar.MergeIndex = 0;
             this.btnexportar.Name = "btnexportar";
-            this.btnexportar.Size = new System.Drawing.Size(29, 27);
+            this.btnexportar.Size = new System.Drawing.Size(34, 24);
             this.btnexportar.Text = "Exportar a Microsoft Excel";
             this.btnexportar.Click += new System.EventHandler(this.Exportar_Click);
             // 
@@ -164,7 +164,7 @@
             this.btncorreo.Image = global::Infoware.Consola.Base.Properties.Resources.attach;
             this.btncorreo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btncorreo.Name = "btncorreo";
-            this.btncorreo.Size = new System.Drawing.Size(29, 27);
+            this.btncorreo.Size = new System.Drawing.Size(34, 24);
             this.btncorreo.Text = "Enviar por correo";
             this.btncorreo.Click += new System.EventHandler(this.Correo_Click);
             // 
@@ -174,7 +174,7 @@
             this.btnword.Image = global::Infoware.Consola.Base.Properties.Resources.docword;
             this.btnword.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnword.Name = "btnword";
-            this.btnword.Size = new System.Drawing.Size(29, 27);
+            this.btnword.Size = new System.Drawing.Size(34, 31);
             this.btnword.Text = "Enviar a Microsoft Word";
             this.btnword.Visible = false;
             this.btnword.Click += new System.EventHandler(this.Word_Click);
@@ -186,7 +186,7 @@
             this.btnimprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnimprimir.MergeIndex = 0;
             this.btnimprimir.Name = "btnimprimir";
-            this.btnimprimir.Size = new System.Drawing.Size(29, 27);
+            this.btnimprimir.Size = new System.Drawing.Size(34, 24);
             this.btnimprimir.Text = "Imprimir";
             this.btnimprimir.Click += new System.EventHandler(this.Imprimir_Click);
             // 
@@ -194,12 +194,12 @@
             // 
             this.ToolStripSeparator2.MergeIndex = 99;
             this.ToolStripSeparator2.Name = "ToolStripSeparator2";
-            this.ToolStripSeparator2.Size = new System.Drawing.Size(6, 30);
+            this.ToolStripSeparator2.Size = new System.Drawing.Size(6, 29);
             // 
             // ToolStripProgressBar1
             // 
             this.ToolStripProgressBar1.Name = "ToolStripProgressBar1";
-            this.ToolStripProgressBar1.Size = new System.Drawing.Size(133, 27);
+            this.ToolStripProgressBar1.Size = new System.Drawing.Size(150, 31);
             this.ToolStripProgressBar1.Visible = false;
             // 
             // btnenviomails
@@ -207,7 +207,7 @@
             this.btnenviomails.Image = global::Infoware.Consola.Base.Properties.Resources.attach;
             this.btnenviomails.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnenviomails.Name = "btnenviomails";
-            this.btnenviomails.Size = new System.Drawing.Size(271, 27);
+            this.btnenviomails.Size = new System.Drawing.Size(320, 29);
             this.btnenviomails.Text = "No se ha definido envío automático";
             this.btnenviomails.ToolTipText = "Clic aquí para iniciar el envío manualmente";
             this.btnenviomails.Visible = false;
@@ -219,12 +219,13 @@
             this.ToolStripButtonAyuda.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ToolStripButtonAyuda.MergeIndex = 99;
             this.ToolStripButtonAyuda.Name = "ToolStripButtonAyuda";
-            this.ToolStripButtonAyuda.Size = new System.Drawing.Size(29, 27);
+            this.ToolStripButtonAyuda.Size = new System.Drawing.Size(34, 24);
             this.ToolStripButtonAyuda.Text = "Ayuda dinámica";
             this.ToolStripButtonAyuda.Click += new System.EventHandler(this.Ayuda_Click);
             // 
             // MenuStrip1
             // 
+            this.MenuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.MenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.MenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ArchivoToolStripMenuItem,
@@ -232,7 +233,8 @@
             this.AyudaToolStripMenuItem});
             this.MenuStrip1.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip1.Name = "MenuStrip1";
-            this.MenuStrip1.Size = new System.Drawing.Size(924, 28);
+            this.MenuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            this.MenuStrip1.Size = new System.Drawing.Size(1040, 33);
             this.MenuStrip1.TabIndex = 10;
             this.MenuStrip1.Text = "MenuStrip1";
             // 
@@ -247,7 +249,7 @@
             this.CerrarToolStripMenuItem});
             this.ArchivoToolStripMenuItem.MergeAction = System.Windows.Forms.MergeAction.MatchOnly;
             this.ArchivoToolStripMenuItem.Name = "ArchivoToolStripMenuItem";
-            this.ArchivoToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
+            this.ArchivoToolStripMenuItem.Size = new System.Drawing.Size(88, 29);
             this.ArchivoToolStripMenuItem.Text = "&Archivo";
             // 
             // ExportarToolStripMenuItem
@@ -257,7 +259,7 @@
             this.ExportarToolStripMenuItem.MergeIndex = 1;
             this.ExportarToolStripMenuItem.Name = "ExportarToolStripMenuItem";
             this.ExportarToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.ExportarToolStripMenuItem.Size = new System.Drawing.Size(261, 26);
+            this.ExportarToolStripMenuItem.Size = new System.Drawing.Size(317, 34);
             this.ExportarToolStripMenuItem.Text = "&Exportar a Excel";
             this.ExportarToolStripMenuItem.Click += new System.EventHandler(this.Exportar_Click);
             // 
@@ -268,7 +270,7 @@
             this.CorreoToolStripMenuItem1.MergeIndex = 2;
             this.CorreoToolStripMenuItem1.Name = "CorreoToolStripMenuItem1";
             this.CorreoToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M)));
-            this.CorreoToolStripMenuItem1.Size = new System.Drawing.Size(261, 26);
+            this.CorreoToolStripMenuItem1.Size = new System.Drawing.Size(317, 34);
             this.CorreoToolStripMenuItem1.Text = "En&viar por correo";
             this.CorreoToolStripMenuItem1.Click += new System.EventHandler(this.Correo_Click);
             // 
@@ -278,7 +280,7 @@
             this.WordToolStripMenuItem1.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.WordToolStripMenuItem1.MergeIndex = 2;
             this.WordToolStripMenuItem1.Name = "WordToolStripMenuItem1";
-            this.WordToolStripMenuItem1.Size = new System.Drawing.Size(261, 26);
+            this.WordToolStripMenuItem1.Size = new System.Drawing.Size(317, 34);
             this.WordToolStripMenuItem1.Text = "Enviar por &Word";
             this.WordToolStripMenuItem1.Visible = false;
             this.WordToolStripMenuItem1.Click += new System.EventHandler(this.Word_Click);
@@ -291,7 +293,7 @@
             this.ImprimirToolStripMenuItem.Name = "ImprimirToolStripMenuItem";
             this.ImprimirToolStripMenuItem.ShortcutKeyDisplayString = "";
             this.ImprimirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.ImprimirToolStripMenuItem.Size = new System.Drawing.Size(261, 26);
+            this.ImprimirToolStripMenuItem.Size = new System.Drawing.Size(317, 34);
             this.ImprimirToolStripMenuItem.Text = "&Imprimir";
             this.ImprimirToolStripMenuItem.Click += new System.EventHandler(this.Imprimir_Click);
             // 
@@ -300,13 +302,13 @@
             this.ToolStripMenuItem3.MergeAction = System.Windows.Forms.MergeAction.MatchOnly;
             this.ToolStripMenuItem3.Name = "ToolStripMenuItem3";
             this.ToolStripMenuItem3.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never;
-            this.ToolStripMenuItem3.Size = new System.Drawing.Size(258, 6);
+            this.ToolStripMenuItem3.Size = new System.Drawing.Size(314, 6);
             // 
             // CerrarToolStripMenuItem
             // 
             this.CerrarToolStripMenuItem.MergeAction = System.Windows.Forms.MergeAction.Remove;
             this.CerrarToolStripMenuItem.Name = "CerrarToolStripMenuItem";
-            this.CerrarToolStripMenuItem.Size = new System.Drawing.Size(261, 26);
+            this.CerrarToolStripMenuItem.Size = new System.Drawing.Size(317, 34);
             this.CerrarToolStripMenuItem.Text = "&Cerrar";
             this.CerrarToolStripMenuItem.Click += new System.EventHandler(this.Cerrar_Click);
             // 
@@ -315,7 +317,7 @@
             this.EditToolStripMenuItem.MergeAction = System.Windows.Forms.MergeAction.Replace;
             this.EditToolStripMenuItem.MergeIndex = 1;
             this.EditToolStripMenuItem.Name = "EditToolStripMenuItem";
-            this.EditToolStripMenuItem.Size = new System.Drawing.Size(72, 24);
+            this.EditToolStripMenuItem.Size = new System.Drawing.Size(85, 29);
             this.EditToolStripMenuItem.Text = "&Edición";
             // 
             // AyudaToolStripMenuItem
@@ -324,7 +326,7 @@
             this.AyudaDinamicaToolStripMenuItem});
             this.AyudaToolStripMenuItem.MergeAction = System.Windows.Forms.MergeAction.Replace;
             this.AyudaToolStripMenuItem.Name = "AyudaToolStripMenuItem";
-            this.AyudaToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
+            this.AyudaToolStripMenuItem.Size = new System.Drawing.Size(79, 29);
             this.AyudaToolStripMenuItem.Text = "Ay&uda";
             // 
             // AyudaDinamicaToolStripMenuItem
@@ -333,7 +335,7 @@
             this.AyudaDinamicaToolStripMenuItem.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.AyudaDinamicaToolStripMenuItem.MergeIndex = 1;
             this.AyudaDinamicaToolStripMenuItem.Name = "AyudaDinamicaToolStripMenuItem";
-            this.AyudaDinamicaToolStripMenuItem.Size = new System.Drawing.Size(199, 26);
+            this.AyudaDinamicaToolStripMenuItem.Size = new System.Drawing.Size(241, 34);
             this.AyudaDinamicaToolStripMenuItem.Text = "&Ayuda dinámica";
             this.AyudaDinamicaToolStripMenuItem.Click += new System.EventHandler(this.Ayuda_Click);
             // 
@@ -352,12 +354,13 @@
             // 
             // FrmListaSimpleBase
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(924, 513);
+            this.ClientSize = new System.Drawing.Size(1040, 641);
             this.Controls.Add(this.pnlcuerpo);
             this.Controls.Add(this.ToolStrip1);
             this.Controls.Add(this.MenuStrip1);
+            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "FrmListaSimpleBase";
             this.headerStrip1.ResumeLayout(false);
             this.headerStrip1.PerformLayout();
