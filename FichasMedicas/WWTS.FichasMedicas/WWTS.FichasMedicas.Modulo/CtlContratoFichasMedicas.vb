@@ -568,4 +568,13 @@ Public Class CtlContratoFichasMedicas
     End If
   End Sub
 
+  Private Sub CtlFichasMedicas1_IrAContractoActual(sender As Object, e As EventArgs) Handles CtlFichasMedicas1.IrAContractoActual
+    If tvcontratos.Nodes.Count > 0 Then
+      For Each nodo As TreeNode In tvcontratos.Nodes
+        If CType(nodo.Tag, Contrato).Activo Then
+          Me.tvcontratos.SelectedNode = nodo
+        End If
+      Next
+    End If
+  End Sub
 End Class

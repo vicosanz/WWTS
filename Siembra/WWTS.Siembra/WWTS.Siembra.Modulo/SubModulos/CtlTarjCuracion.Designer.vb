@@ -88,10 +88,10 @@ Partial Class CtlTarjCuracion
         Me.Panel1.Controls.Add(Me.GroupBox2)
         Me.Panel1.Controls.Add(Me.Panel3)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(3, 3)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Panel1.Location = New System.Drawing.Point(4, 4)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(828, 185)
+        Me.Panel1.Size = New System.Drawing.Size(1013, 222)
         Me.Panel1.TabIndex = 0
         '
         'GroupBox2
@@ -99,11 +99,11 @@ Partial Class CtlTarjCuracion
         Me.GroupBox2.Controls.Add(Me.pn1)
         Me.GroupBox2.Controls.Add(Me.pn3)
         Me.GroupBox2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GroupBox2.Location = New System.Drawing.Point(250, 0)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.GroupBox2.Location = New System.Drawing.Point(306, 0)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.GroupBox2.Size = New System.Drawing.Size(578, 185)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.GroupBox2.Size = New System.Drawing.Size(707, 222)
         Me.GroupBox2.TabIndex = 0
         Me.GroupBox2.TabStop = False
         '
@@ -111,27 +111,27 @@ Partial Class CtlTarjCuracion
         '
         Me.pn1.Controls.Add(Me.txtNumEns)
         Me.pn1.Controls.Add(Me.Label1)
-        Me.pn1.Location = New System.Drawing.Point(16, 25)
-        Me.pn1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.pn1.Location = New System.Drawing.Point(20, 30)
+        Me.pn1.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.pn1.Name = "pn1"
-        Me.pn1.Size = New System.Drawing.Size(344, 40)
+        Me.pn1.Size = New System.Drawing.Size(420, 48)
         Me.pn1.TabIndex = 0
         '
         'txtNumEns
         '
-        Me.txtNumEns.Location = New System.Drawing.Point(144, 5)
-        Me.txtNumEns.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtNumEns.Location = New System.Drawing.Point(176, 6)
+        Me.txtNumEns.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.txtNumEns.Name = "txtNumEns"
-        Me.txtNumEns.Size = New System.Drawing.Size(180, 26)
+        Me.txtNumEns.Size = New System.Drawing.Size(219, 29)
         Me.txtNumEns.TabIndex = 1
         '
         'Label1
         '
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(0, 8)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(0, 10)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(144, 25)
+        Me.Label1.Size = New System.Drawing.Size(176, 30)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Num. Curación"
         '
@@ -145,35 +145,35 @@ Partial Class CtlTarjCuracion
         Me.pn3.Controls.Add(Me.Label3)
         Me.pn3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pn3.Enabled = False
-        Me.pn3.Location = New System.Drawing.Point(4, 24)
-        Me.pn3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.pn3.Location = New System.Drawing.Point(5, 28)
+        Me.pn3.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.pn3.Name = "pn3"
-        Me.pn3.Size = New System.Drawing.Size(570, 156)
+        Me.pn3.Size = New System.Drawing.Size(697, 188)
         Me.pn3.TabIndex = 1
         '
         'CtlZafra1
         '
         Me.CtlZafra1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CtlZafra1.FormattingEnabled = True
-        Me.CtlZafra1.Location = New System.Drawing.Point(156, 42)
-        Me.CtlZafra1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.CtlZafra1.Location = New System.Drawing.Point(191, 50)
+        Me.CtlZafra1.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.CtlZafra1.Name = "CtlZafra1"
         Me.CtlZafra1.Op = Nothing
         Me.CtlZafra1.PuedeActualizar = True
         Me.CtlZafra1.PuedeEliminar = True
         Me.CtlZafra1.PuedeModificar = True
         Me.CtlZafra1.PuedeNuevo = True
-        Me.CtlZafra1.Size = New System.Drawing.Size(180, 28)
+        Me.CtlZafra1.Size = New System.Drawing.Size(219, 32)
         Me.CtlZafra1.TabIndex = 1
         Me.CtlZafra1.Zafra = Nothing
         '
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(12, 46)
-        Me.Label14.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label14.Location = New System.Drawing.Point(15, 55)
+        Me.Label14.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(47, 20)
+        Me.Label14.Size = New System.Drawing.Size(57, 25)
         Me.Label14.TabIndex = 0
         Me.Label14.Text = "Zafra"
         '
@@ -181,7 +181,8 @@ Partial Class CtlTarjCuracion
         '
         Me.cboTipoTabaco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboTipoTabaco.FormattingEnabled = True
-        Me.cboTipoTabaco.Location = New System.Drawing.Point(156, 117)
+        Me.cboTipoTabaco.Location = New System.Drawing.Point(191, 140)
+        Me.cboTipoTabaco.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cboTipoTabaco.Name = "cboTipoTabaco"
         Me.cboTipoTabaco.OperadorDatos = Nothing
         Me.cboTipoTabaco.Parametro = WWTS.General.Reglas.Enumerados.EnumParametros.TipoEntidad
@@ -190,33 +191,33 @@ Partial Class CtlTarjCuracion
         Me.cboTipoTabaco.PuedeEliminar = True
         Me.cboTipoTabaco.PuedeModificar = True
         Me.cboTipoTabaco.PuedeNuevo = True
-        Me.cboTipoTabaco.Size = New System.Drawing.Size(180, 28)
+        Me.cboTipoTabaco.Size = New System.Drawing.Size(219, 32)
         Me.cboTipoTabaco.TabIndex = 5
         '
         'dtpFecha
         '
         Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFecha.Location = New System.Drawing.Point(156, 80)
-        Me.dtpFecha.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dtpFecha.Location = New System.Drawing.Point(191, 96)
+        Me.dtpFecha.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.dtpFecha.Name = "dtpFecha"
-        Me.dtpFecha.Size = New System.Drawing.Size(180, 26)
+        Me.dtpFecha.Size = New System.Drawing.Size(219, 29)
         Me.dtpFecha.TabIndex = 3
         '
         'Label12
         '
-        Me.Label12.Location = New System.Drawing.Point(12, 120)
-        Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label12.Location = New System.Drawing.Point(15, 144)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(144, 25)
+        Me.Label12.Size = New System.Drawing.Size(176, 30)
         Me.Label12.TabIndex = 4
         Me.Label12.Text = "Tipo de tabaco"
         '
         'Label3
         '
-        Me.Label3.Location = New System.Drawing.Point(12, 86)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(15, 103)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(144, 25)
+        Me.Label3.Size = New System.Drawing.Size(176, 30)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Fecha Curación"
         '
@@ -227,18 +228,18 @@ Partial Class CtlTarjCuracion
         Me.Panel3.Controls.Add(Me.ToolStrip2)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel3.Location = New System.Drawing.Point(0, 0)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(250, 185)
+        Me.Panel3.Size = New System.Drawing.Size(306, 222)
         Me.Panel3.TabIndex = 23
         '
         'nuevo
         '
         Me.nuevo.Image = CType(resources.GetObject("nuevo.Image"), System.Drawing.Image)
-        Me.nuevo.Location = New System.Drawing.Point(90, 83)
-        Me.nuevo.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.nuevo.Location = New System.Drawing.Point(110, 100)
+        Me.nuevo.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.nuevo.Name = "nuevo"
-        Me.nuevo.Size = New System.Drawing.Size(60, 49)
+        Me.nuevo.Size = New System.Drawing.Size(73, 59)
         Me.nuevo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.nuevo.TabIndex = 28
         Me.nuevo.TabStop = False
@@ -246,10 +247,10 @@ Partial Class CtlTarjCuracion
         'grabar
         '
         Me.grabar.Image = CType(resources.GetObject("grabar.Image"), System.Drawing.Image)
-        Me.grabar.Location = New System.Drawing.Point(90, 83)
-        Me.grabar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.grabar.Location = New System.Drawing.Point(110, 100)
+        Me.grabar.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.grabar.Name = "grabar"
-        Me.grabar.Size = New System.Drawing.Size(60, 49)
+        Me.grabar.Size = New System.Drawing.Size(73, 59)
         Me.grabar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.grabar.TabIndex = 27
         Me.grabar.TabStop = False
@@ -260,8 +261,8 @@ Partial Class CtlTarjCuracion
         Me.ToolStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnnuevo, Me.btneli, Me.btnguardar, Me.btnImprimir})
         Me.ToolStrip2.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip2.Name = "ToolStrip2"
-        Me.ToolStrip2.Padding = New System.Windows.Forms.Padding(0, 0, 3, 0)
-        Me.ToolStrip2.Size = New System.Drawing.Size(250, 33)
+        Me.ToolStrip2.Padding = New System.Windows.Forms.Padding(0, 0, 4, 0)
+        Me.ToolStrip2.Size = New System.Drawing.Size(306, 44)
         Me.ToolStrip2.TabIndex = 26
         Me.ToolStrip2.Text = "ToolStrip2"
         '
@@ -271,7 +272,7 @@ Partial Class CtlTarjCuracion
         Me.btnnuevo.Image = Global.Siembra.My.Resources.Resources.nuevo
         Me.btnnuevo.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnnuevo.Name = "btnnuevo"
-        Me.btnnuevo.Size = New System.Drawing.Size(34, 28)
+        Me.btnnuevo.Size = New System.Drawing.Size(40, 38)
         Me.btnnuevo.Text = "Nueva tarjeta"
         '
         'btneli
@@ -280,7 +281,7 @@ Partial Class CtlTarjCuracion
         Me.btneli.Image = Global.Siembra.My.Resources.Resources.eliminar
         Me.btneli.ImageTransparentColor = System.Drawing.Color.White
         Me.btneli.Name = "btneli"
-        Me.btneli.Size = New System.Drawing.Size(34, 28)
+        Me.btneli.Size = New System.Drawing.Size(40, 38)
         Me.btneli.Text = "Eliminar tarjeta"
         '
         'btnguardar
@@ -289,7 +290,7 @@ Partial Class CtlTarjCuracion
         Me.btnguardar.Image = Global.Siembra.My.Resources.Resources.save16
         Me.btnguardar.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnguardar.Name = "btnguardar"
-        Me.btnguardar.Size = New System.Drawing.Size(34, 28)
+        Me.btnguardar.Size = New System.Drawing.Size(40, 38)
         Me.btnguardar.Text = "Guardar cambios"
         '
         'btnImprimir
@@ -298,7 +299,7 @@ Partial Class CtlTarjCuracion
         Me.btnImprimir.Image = Global.Siembra.My.Resources.Resources.print
         Me.btnImprimir.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnImprimir.Name = "btnImprimir"
-        Me.btnImprimir.Size = New System.Drawing.Size(34, 28)
+        Me.btnImprimir.Size = New System.Drawing.Size(40, 38)
         Me.btnImprimir.Text = "Imprimir"
         '
         'GroupBox1
@@ -311,30 +312,30 @@ Partial Class CtlTarjCuracion
         Me.GroupBox1.Controls.Add(Me.Label11)
         Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Top
         Me.GroupBox1.Enabled = False
-        Me.GroupBox1.Location = New System.Drawing.Point(3, 188)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.GroupBox1.Location = New System.Drawing.Point(4, 226)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.GroupBox1.Size = New System.Drawing.Size(828, 251)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.GroupBox1.Size = New System.Drawing.Size(1013, 301)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
         'CtlSeccionHorno1
         '
-        Me.CtlSeccionHorno1.Location = New System.Drawing.Point(537, 17)
-        Me.CtlSeccionHorno1.Margin = New System.Windows.Forms.Padding(6)
+        Me.CtlSeccionHorno1.Location = New System.Drawing.Point(656, 20)
+        Me.CtlSeccionHorno1.Margin = New System.Windows.Forms.Padding(7, 7, 7, 7)
         Me.CtlSeccionHorno1.Name = "CtlSeccionHorno1"
         Me.CtlSeccionHorno1.Op = Nothing
         Me.CtlSeccionHorno1.SeccionHorno = Nothing
-        Me.CtlSeccionHorno1.Size = New System.Drawing.Size(279, 228)
+        Me.CtlSeccionHorno1.Size = New System.Drawing.Size(341, 274)
         Me.CtlSeccionHorno1.TabIndex = 7
         '
         'CtlSemilla1
         '
         Me.CtlSemilla1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CtlSemilla1.FormattingEnabled = True
-        Me.CtlSemilla1.Location = New System.Drawing.Point(124, 140)
-        Me.CtlSemilla1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.CtlSemilla1.Location = New System.Drawing.Point(152, 168)
+        Me.CtlSemilla1.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.CtlSemilla1.Name = "CtlSemilla1"
         Me.CtlSemilla1.Op = Nothing
         Me.CtlSemilla1.PuedeActualizar = True
@@ -342,70 +343,70 @@ Partial Class CtlTarjCuracion
         Me.CtlSemilla1.PuedeModificar = True
         Me.CtlSemilla1.PuedeNuevo = True
         Me.CtlSemilla1.Semilla = Nothing
-        Me.CtlSemilla1.Size = New System.Drawing.Size(248, 28)
+        Me.CtlSemilla1.Size = New System.Drawing.Size(302, 32)
         Me.CtlSemilla1.TabIndex = 3
         '
         'CtlLote1
         '
-        Me.CtlLote1.Location = New System.Drawing.Point(124, 17)
+        Me.CtlLote1.Location = New System.Drawing.Point(152, 20)
         Me.CtlLote1.Lote = Nothing
-        Me.CtlLote1.Margin = New System.Windows.Forms.Padding(6)
+        Me.CtlLote1.Margin = New System.Windows.Forms.Padding(7, 7, 7, 7)
         Me.CtlLote1.Name = "CtlLote1"
         Me.CtlLote1.Op = Nothing
-        Me.CtlLote1.Size = New System.Drawing.Size(250, 115)
+        Me.CtlLote1.Size = New System.Drawing.Size(306, 138)
         Me.CtlLote1.TabIndex = 1
         '
         'Label5
         '
-        Me.Label5.Location = New System.Drawing.Point(404, 17)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(494, 20)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(120, 31)
+        Me.Label5.Size = New System.Drawing.Size(147, 37)
         Me.Label5.TabIndex = 6
         Me.Label5.Text = "Horno/Sección:"
         '
         'Label10
         '
-        Me.Label10.Location = New System.Drawing.Point(12, 145)
-        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label10.Location = New System.Drawing.Point(15, 174)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(102, 31)
+        Me.Label10.Size = New System.Drawing.Size(125, 37)
         Me.Label10.TabIndex = 2
         Me.Label10.Text = "Semilla:"
         '
         'Label11
         '
-        Me.Label11.Location = New System.Drawing.Point(12, 17)
-        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label11.Location = New System.Drawing.Point(15, 20)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(102, 31)
+        Me.Label11.Size = New System.Drawing.Size(125, 37)
         Me.Label11.TabIndex = 0
         Me.Label11.Text = "Lote:"
         '
         'dtpFechaInicio
         '
         Me.dtpFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaInicio.Location = New System.Drawing.Point(124, 622)
-        Me.dtpFechaInicio.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dtpFechaInicio.Location = New System.Drawing.Point(152, 746)
+        Me.dtpFechaInicio.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.dtpFechaInicio.Name = "dtpFechaInicio"
-        Me.dtpFechaInicio.Size = New System.Drawing.Size(180, 26)
+        Me.dtpFechaInicio.Size = New System.Drawing.Size(219, 29)
         Me.dtpFechaInicio.TabIndex = 5
         '
         'Label2
         '
-        Me.Label2.Location = New System.Drawing.Point(7, 623)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(9, 748)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(104, 25)
+        Me.Label2.Size = New System.Drawing.Size(127, 30)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Fecha inicio"
         '
         'btnDetalles
         '
-        Me.btnDetalles.Location = New System.Drawing.Point(315, 620)
-        Me.btnDetalles.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnDetalles.Location = New System.Drawing.Point(385, 744)
+        Me.btnDetalles.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.btnDetalles.Name = "btnDetalles"
-        Me.btnDetalles.Size = New System.Drawing.Size(182, 35)
+        Me.btnDetalles.Size = New System.Drawing.Size(222, 42)
         Me.btnDetalles.TabIndex = 8
         Me.btnDetalles.Text = "Generar detalles"
         Me.btnDetalles.UseVisualStyleBackColor = True
@@ -420,11 +421,11 @@ Partial Class CtlTarjCuracion
         Me.DGDetalles.AutoGenerateColumns = False
         Me.DGDetalles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGDetalles.DataSource = Me.BSDetalles
-        Me.DGDetalles.Location = New System.Drawing.Point(2, 665)
-        Me.DGDetalles.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.DGDetalles.Location = New System.Drawing.Point(2, 798)
+        Me.DGDetalles.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.DGDetalles.Name = "DGDetalles"
         Me.DGDetalles.RowHeadersWidth = 62
-        Me.DGDetalles.Size = New System.Drawing.Size(832, 340)
+        Me.DGDetalles.Size = New System.Drawing.Size(1017, 408)
         Me.DGDetalles.TabIndex = 10
         '
         'BSDetalles
@@ -436,11 +437,11 @@ Partial Class CtlTarjCuracion
         Me.grpCortes.Controls.Add(Me.DGCortes)
         Me.grpCortes.Controls.Add(Me.TSCortes)
         Me.grpCortes.Dock = System.Windows.Forms.DockStyle.Top
-        Me.grpCortes.Location = New System.Drawing.Point(3, 439)
-        Me.grpCortes.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.grpCortes.Location = New System.Drawing.Point(4, 527)
+        Me.grpCortes.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.grpCortes.Name = "grpCortes"
-        Me.grpCortes.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.grpCortes.Size = New System.Drawing.Size(828, 182)
+        Me.grpCortes.Padding = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.grpCortes.Size = New System.Drawing.Size(1013, 218)
         Me.grpCortes.TabIndex = 1
         Me.grpCortes.TabStop = False
         Me.grpCortes.Text = "Cortes"
@@ -452,11 +453,11 @@ Partial Class CtlTarjCuracion
         Me.DGCortes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGCortes.DataSource = Me.BSCortes
         Me.DGCortes.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DGCortes.Location = New System.Drawing.Point(4, 57)
-        Me.DGCortes.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.DGCortes.Location = New System.Drawing.Point(5, 72)
+        Me.DGCortes.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.DGCortes.Name = "DGCortes"
         Me.DGCortes.RowHeadersWidth = 62
-        Me.DGCortes.Size = New System.Drawing.Size(820, 120)
+        Me.DGCortes.Size = New System.Drawing.Size(1003, 140)
         Me.DGCortes.TabIndex = 10
         '
         'BSCortes
@@ -468,10 +469,10 @@ Partial Class CtlTarjCuracion
         Me.TSCortes.Enabled = False
         Me.TSCortes.ImageScalingSize = New System.Drawing.Size(24, 24)
         Me.TSCortes.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnnuevocorte, Me.btneliminarcorte})
-        Me.TSCortes.Location = New System.Drawing.Point(4, 24)
+        Me.TSCortes.Location = New System.Drawing.Point(5, 28)
         Me.TSCortes.Name = "TSCortes"
-        Me.TSCortes.Padding = New System.Windows.Forms.Padding(0, 0, 3, 0)
-        Me.TSCortes.Size = New System.Drawing.Size(820, 33)
+        Me.TSCortes.Padding = New System.Windows.Forms.Padding(0, 0, 4, 0)
+        Me.TSCortes.Size = New System.Drawing.Size(1003, 44)
         Me.TSCortes.TabIndex = 27
         Me.TSCortes.Text = "ToolStrip1"
         '
@@ -481,7 +482,7 @@ Partial Class CtlTarjCuracion
         Me.btnnuevocorte.Image = Global.Siembra.My.Resources.Resources.nuevo
         Me.btnnuevocorte.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnnuevocorte.Name = "btnnuevocorte"
-        Me.btnnuevocorte.Size = New System.Drawing.Size(34, 28)
+        Me.btnnuevocorte.Size = New System.Drawing.Size(40, 38)
         Me.btnnuevocorte.Text = "Nuevo corte"
         '
         'btneliminarcorte
@@ -490,7 +491,7 @@ Partial Class CtlTarjCuracion
         Me.btneliminarcorte.Image = Global.Siembra.My.Resources.Resources.eliminar
         Me.btneliminarcorte.ImageTransparentColor = System.Drawing.Color.White
         Me.btneliminarcorte.Name = "btneliminarcorte"
-        Me.btneliminarcorte.Size = New System.Drawing.Size(34, 28)
+        Me.btneliminarcorte.Size = New System.Drawing.Size(40, 38)
         Me.btneliminarcorte.Text = "Eliminar corte"
         '
         'TabControl1
@@ -499,9 +500,10 @@ Partial Class CtlTarjCuracion
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
+        Me.TabControl1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(842, 1046)
+        Me.TabControl1.Size = New System.Drawing.Size(1029, 1255)
         Me.TabControl1.TabIndex = 11
         '
         'TabPage1
@@ -513,10 +515,11 @@ Partial Class CtlTarjCuracion
         Me.TabPage1.Controls.Add(Me.GroupBox1)
         Me.TabPage1.Controls.Add(Me.Label2)
         Me.TabPage1.Controls.Add(Me.Panel1)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 29)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 33)
+        Me.TabPage1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(834, 1013)
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabPage1.Size = New System.Drawing.Size(1021, 1218)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Tarjeta"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -524,10 +527,11 @@ Partial Class CtlTarjCuracion
         'TabPage2
         '
         Me.TabPage2.Controls.Add(Me.crpTarjeta)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 29)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 33)
+        Me.TabPage2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(834, 1013)
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabPage2.Size = New System.Drawing.Size(1021, 1218)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Vista previa"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -538,20 +542,21 @@ Partial Class CtlTarjCuracion
         Me.crpTarjeta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.crpTarjeta.Cursor = System.Windows.Forms.Cursors.Default
         Me.crpTarjeta.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.crpTarjeta.Location = New System.Drawing.Point(3, 3)
+        Me.crpTarjeta.Location = New System.Drawing.Point(4, 4)
+        Me.crpTarjeta.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.crpTarjeta.Name = "crpTarjeta"
-        Me.crpTarjeta.Size = New System.Drawing.Size(828, 1007)
+        Me.crpTarjeta.Size = New System.Drawing.Size(1013, 1210)
         Me.crpTarjeta.TabIndex = 0
         '
         'CtlTarjCuracion
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.Controls.Add(Me.TabControl1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.Name = "CtlTarjCuracion"
-        Me.Size = New System.Drawing.Size(842, 1046)
+        Me.Size = New System.Drawing.Size(1029, 1255)
         Me.Panel1.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.pn1.ResumeLayout(False)

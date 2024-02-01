@@ -36,7 +36,10 @@ Partial Class CtlFichasMedicas
         Me.FichaOcupacionalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FichaDeReintegroToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FichaDeRetiroToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.btnduplicar = New System.Windows.Forms.ToolStripButton()
+        Me.btnduplicar = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.DuplicarEnEsteContratoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.CrearCopiaEnContratoActivoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.btnabrirficha = New System.Windows.Forms.ToolStripButton()
         Me.btneliminarficha = New System.Windows.Forms.ToolStripButton()
@@ -58,9 +61,9 @@ Partial Class CtlFichasMedicas
         Me.pnlfichas.Controls.Add(Me.HeaderStrip2)
         Me.pnlfichas.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pnlfichas.Location = New System.Drawing.Point(0, 0)
-        Me.pnlfichas.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.pnlfichas.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.pnlfichas.Name = "pnlfichas"
-        Me.pnlfichas.Size = New System.Drawing.Size(873, 292)
+        Me.pnlfichas.Size = New System.Drawing.Size(1164, 365)
         Me.pnlfichas.TabIndex = 3
         '
         'DataGridView3
@@ -71,12 +74,12 @@ Partial Class CtlFichasMedicas
         Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView3.DataSource = Me.BSFichas
         Me.DataGridView3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridView3.Location = New System.Drawing.Point(0, 32)
-        Me.DataGridView3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.DataGridView3.Location = New System.Drawing.Point(0, 38)
+        Me.DataGridView3.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.DataGridView3.Name = "DataGridView3"
         Me.DataGridView3.RowHeadersVisible = False
         Me.DataGridView3.RowHeadersWidth = 51
-        Me.DataGridView3.Size = New System.Drawing.Size(873, 260)
+        Me.DataGridView3.Size = New System.Drawing.Size(1164, 327)
         Me.DataGridView3.TabIndex = 1
         '
         'HeaderStrip2
@@ -90,21 +93,21 @@ Partial Class CtlFichasMedicas
         Me.HeaderStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel2, Me.ToolStripSeparator3, Me.btnnuevaficha, Me.btnduplicar, Me.ToolStripSeparator1, Me.btnabrirficha, Me.btneliminarficha, Me.ToolStripSeparator2, Me.btnimprimirficha})
         Me.HeaderStrip2.Location = New System.Drawing.Point(0, 0)
         Me.HeaderStrip2.Name = "HeaderStrip2"
-        Me.HeaderStrip2.Padding = New System.Windows.Forms.Padding(0, 0, 3, 0)
-        Me.HeaderStrip2.Size = New System.Drawing.Size(873, 32)
+        Me.HeaderStrip2.Padding = New System.Windows.Forms.Padding(0, 0, 4, 0)
+        Me.HeaderStrip2.Size = New System.Drawing.Size(1164, 38)
         Me.HeaderStrip2.TabIndex = 0
         Me.HeaderStrip2.Text = "Opciones"
         '
         'ToolStripLabel2
         '
         Me.ToolStripLabel2.Name = "ToolStripLabel2"
-        Me.ToolStripLabel2.Size = New System.Drawing.Size(130, 27)
+        Me.ToolStripLabel2.Size = New System.Drawing.Size(174, 32)
         Me.ToolStripLabel2.Text = "Fichas médicas"
         '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 32)
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 38)
         '
         'btnnuevaficha
         '
@@ -113,46 +116,64 @@ Partial Class CtlFichasMedicas
         Me.btnnuevaficha.Image = Global.WWTS.FichasMedicas.Controles.My.Resources.Resources._new
         Me.btnnuevaficha.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnnuevaficha.Name = "btnnuevaficha"
-        Me.btnnuevaficha.Size = New System.Drawing.Size(38, 27)
+        Me.btnnuevaficha.Size = New System.Drawing.Size(42, 32)
         Me.btnnuevaficha.Text = "Nuevo"
         '
         'FichaPreocupacionalToolStripMenuItem
         '
         Me.FichaPreocupacionalToolStripMenuItem.Name = "FichaPreocupacionalToolStripMenuItem"
-        Me.FichaPreocupacionalToolStripMenuItem.Size = New System.Drawing.Size(280, 34)
+        Me.FichaPreocupacionalToolStripMenuItem.Size = New System.Drawing.Size(374, 44)
         Me.FichaPreocupacionalToolStripMenuItem.Text = "Ficha preocupacional"
         '
         'FichaOcupacionalToolStripMenuItem
         '
         Me.FichaOcupacionalToolStripMenuItem.Name = "FichaOcupacionalToolStripMenuItem"
-        Me.FichaOcupacionalToolStripMenuItem.Size = New System.Drawing.Size(280, 34)
+        Me.FichaOcupacionalToolStripMenuItem.Size = New System.Drawing.Size(374, 44)
         Me.FichaOcupacionalToolStripMenuItem.Text = "Ficha ocupacional"
         '
         'FichaDeReintegroToolStripMenuItem
         '
         Me.FichaDeReintegroToolStripMenuItem.Name = "FichaDeReintegroToolStripMenuItem"
-        Me.FichaDeReintegroToolStripMenuItem.Size = New System.Drawing.Size(280, 34)
+        Me.FichaDeReintegroToolStripMenuItem.Size = New System.Drawing.Size(374, 44)
         Me.FichaDeReintegroToolStripMenuItem.Text = "Ficha de reintegro"
         '
         'FichaDeRetiroToolStripMenuItem
         '
         Me.FichaDeRetiroToolStripMenuItem.Name = "FichaDeRetiroToolStripMenuItem"
-        Me.FichaDeRetiroToolStripMenuItem.Size = New System.Drawing.Size(280, 34)
+        Me.FichaDeRetiroToolStripMenuItem.Size = New System.Drawing.Size(374, 44)
         Me.FichaDeRetiroToolStripMenuItem.Text = "Ficha de retiro"
         '
         'btnduplicar
         '
         Me.btnduplicar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.btnduplicar.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DuplicarEnEsteContratoToolStripMenuItem, Me.ToolStripMenuItem1, Me.CrearCopiaEnContratoActivoToolStripMenuItem})
         Me.btnduplicar.Image = Global.WWTS.FichasMedicas.Controles.My.Resources.Resources.copy
         Me.btnduplicar.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnduplicar.Name = "btnduplicar"
-        Me.btnduplicar.Size = New System.Drawing.Size(34, 27)
+        Me.btnduplicar.Size = New System.Drawing.Size(42, 32)
         Me.btnduplicar.Text = "Duplicar"
+        '
+        'DuplicarEnEsteContratoToolStripMenuItem
+        '
+        Me.DuplicarEnEsteContratoToolStripMenuItem.Name = "DuplicarEnEsteContratoToolStripMenuItem"
+        Me.DuplicarEnEsteContratoToolStripMenuItem.Size = New System.Drawing.Size(469, 44)
+        Me.DuplicarEnEsteContratoToolStripMenuItem.Text = "Duplicar en este contrato"
+        '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(466, 6)
+        '
+        'CrearCopiaEnContratoActivoToolStripMenuItem
+        '
+        Me.CrearCopiaEnContratoActivoToolStripMenuItem.Name = "CrearCopiaEnContratoActivoToolStripMenuItem"
+        Me.CrearCopiaEnContratoActivoToolStripMenuItem.Size = New System.Drawing.Size(469, 44)
+        Me.CrearCopiaEnContratoActivoToolStripMenuItem.Text = "Crear copia en contrato activo"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 32)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 38)
         '
         'btnabrirficha
         '
@@ -160,7 +181,7 @@ Partial Class CtlFichasMedicas
         Me.btnabrirficha.Image = Global.WWTS.FichasMedicas.Controles.My.Resources.Resources.open
         Me.btnabrirficha.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnabrirficha.Name = "btnabrirficha"
-        Me.btnabrirficha.Size = New System.Drawing.Size(34, 27)
+        Me.btnabrirficha.Size = New System.Drawing.Size(46, 32)
         Me.btnabrirficha.Text = "Abrir"
         '
         'btneliminarficha
@@ -169,13 +190,13 @@ Partial Class CtlFichasMedicas
         Me.btneliminarficha.Image = Global.WWTS.FichasMedicas.Controles.My.Resources.Resources.delete
         Me.btneliminarficha.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btneliminarficha.Name = "btneliminarficha"
-        Me.btneliminarficha.Size = New System.Drawing.Size(34, 27)
+        Me.btneliminarficha.Size = New System.Drawing.Size(46, 32)
         Me.btneliminarficha.Text = "Eliminar"
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 32)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 38)
         '
         'btnimprimirficha
         '
@@ -184,25 +205,25 @@ Partial Class CtlFichasMedicas
         Me.btnimprimirficha.Image = Global.WWTS.FichasMedicas.Controles.My.Resources.Resources.print
         Me.btnimprimirficha.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnimprimirficha.Name = "btnimprimirficha"
-        Me.btnimprimirficha.Size = New System.Drawing.Size(38, 27)
+        Me.btnimprimirficha.Size = New System.Drawing.Size(42, 32)
         Me.btnimprimirficha.Text = "Imprimir"
         '
         'btnpag1
         '
         Me.btnpag1.Name = "btnpag1"
-        Me.btnpag1.Size = New System.Drawing.Size(181, 34)
+        Me.btnpag1.Size = New System.Drawing.Size(239, 44)
         Me.btnpag1.Text = "Página 1"
         '
         'btnpag2
         '
         Me.btnpag2.Name = "btnpag2"
-        Me.btnpag2.Size = New System.Drawing.Size(181, 34)
+        Me.btnpag2.Size = New System.Drawing.Size(239, 44)
         Me.btnpag2.Text = "Página 2"
         '
         'btnpag3
         '
         Me.btnpag3.Name = "btnpag3"
-        Me.btnpag3.Size = New System.Drawing.Size(181, 34)
+        Me.btnpag3.Size = New System.Drawing.Size(239, 44)
         Me.btnpag3.Text = "Página 3"
         '
         'DataGridViewTextBoxColumn383
@@ -214,12 +235,12 @@ Partial Class CtlFichasMedicas
         '
         'CtlFichasMedicas
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.pnlfichas)
-        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "CtlFichasMedicas"
-        Me.Size = New System.Drawing.Size(873, 292)
+        Me.Size = New System.Drawing.Size(1164, 365)
         Me.pnlfichas.ResumeLayout(False)
         CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BSFichas, System.ComponentModel.ISupportInitialize).EndInit()
@@ -248,6 +269,9 @@ Partial Class CtlFichasMedicas
   Friend WithEvents btnpag2 As ToolStripMenuItem
   Friend WithEvents btnpag3 As ToolStripMenuItem
   Friend WithEvents BSFichas As BindingSource
-    Friend WithEvents btnduplicar As ToolStripButton
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
+    Friend WithEvents btnduplicar As ToolStripDropDownButton
+    Friend WithEvents DuplicarEnEsteContratoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem1 As ToolStripSeparator
+    Friend WithEvents CrearCopiaEnContratoActivoToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -96,13 +96,33 @@ Public Class CtlFichasMedicas
   End Sub
 #End Region
 #Region "Duplicar"
-  Private Sub Btnduplicar_Click(sender As Object, e As EventArgs) Handles btnduplicar.Click
+  Private Sub DuplicarEnEsteContratoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DuplicarEnEsteContratoToolStripMenuItem.Click
     If Me.BSFichas.Current Is Nothing Then
       Exit Sub
     End If
 
     Dim fichaactual As FichaMedica = BSFichas.Current
     Dim nuevo As FichaMedica = fichaactual.Clone()
+    BSFichas.Add(nuevo)
+    BSFichas.MoveLast()
+    abrir_ficha()
+  End Sub
+
+  Public Event IrAContractoActual As EventHandler
+
+  Private Sub CrearCopiaEnContratoActivoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CrearCopiaEnContratoActivoToolStripMenuItem.Click
+    If Me.BSFichas.Current Is Nothing Then
+      Exit Sub
+    End If
+
+    Dim fichaactual As FichaMedica = BSFichas.Current
+    Dim nuevo As FichaMedica = fichaactual.Clone()
+
+    If Not mContrato.Activo Then
+      RaiseEvent IrAContractoActual(Me, Nothing)
+    End If
+
+    nuevo.Contrato = Contrato
     BSFichas.Add(nuevo)
     BSFichas.MoveLast()
     abrir_ficha()
@@ -213,5 +233,6 @@ Public Class CtlFichasMedicas
     End Select
 
   End Sub
+
 #End Region
 End Class
