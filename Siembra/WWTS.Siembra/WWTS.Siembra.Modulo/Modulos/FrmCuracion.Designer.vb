@@ -47,22 +47,22 @@ Partial Class FrmCuracion
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControl1.Location = New System.Drawing.Point(0, 25)
+        Me.TabControl1.Location = New System.Drawing.Point(0, 41)
         Me.TabControl1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(1126, 780)
+        Me.TabControl1.Size = New System.Drawing.Size(1126, 764)
         Me.TabControl1.TabIndex = 3
         '
         'TabPage1
         '
         Me.TabPage1.Controls.Add(Me.CtlTarjCuracion1)
         Me.TabPage1.Controls.Add(Me.CtlBuscaTarjetaCuracion1)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 33)
         Me.TabPage1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TabPage1.Size = New System.Drawing.Size(1118, 754)
+        Me.TabPage1.Size = New System.Drawing.Size(1118, 727)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Tarjeta de curación"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -76,7 +76,7 @@ Partial Class FrmCuracion
         Me.CtlTarjCuracion1.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.CtlTarjCuracion1.Name = "CtlTarjCuracion1"
         Me.CtlTarjCuracion1.Op = Nothing
-        Me.CtlTarjCuracion1.Size = New System.Drawing.Size(842, 744)
+        Me.CtlTarjCuracion1.Size = New System.Drawing.Size(842, 717)
         Me.CtlTarjCuracion1.TabIndex = 1
         '
         'CtlBuscaTarjetaCuracion1
@@ -87,7 +87,7 @@ Partial Class FrmCuracion
         Me.CtlBuscaTarjetaCuracion1.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.CtlBuscaTarjetaCuracion1.Name = "CtlBuscaTarjetaCuracion1"
         Me.CtlBuscaTarjetaCuracion1.Op = Nothing
-        Me.CtlBuscaTarjetaCuracion1.Size = New System.Drawing.Size(268, 744)
+        Me.CtlBuscaTarjetaCuracion1.Size = New System.Drawing.Size(268, 717)
         Me.CtlBuscaTarjetaCuracion1.TabIndex = 0
         '
         'HeaderStrip1
@@ -96,23 +96,23 @@ Partial Class FrmCuracion
         Me.HeaderStrip1.Font = New System.Drawing.Font("Arial", 12.75!, System.Drawing.FontStyle.Bold)
         Me.HeaderStrip1.ForeColor = System.Drawing.Color.White
         Me.HeaderStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
+        Me.HeaderStrip1.ImageScalingSize = New System.Drawing.Size(28, 28)
         Me.HeaderStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1})
         Me.HeaderStrip1.Location = New System.Drawing.Point(0, 0)
         Me.HeaderStrip1.Name = "HeaderStrip1"
-        Me.HeaderStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
-        Me.HeaderStrip1.Size = New System.Drawing.Size(1126, 25)
+        Me.HeaderStrip1.Size = New System.Drawing.Size(1126, 41)
         Me.HeaderStrip1.TabIndex = 2
         Me.HeaderStrip1.Text = "HeaderStrip1"
         '
         'ToolStripLabel1
         '
         Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(80, 22)
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(145, 35)
         Me.ToolStripLabel1.Text = "Curación"
         '
         'FrmCuracion
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1126, 805)
         Me.Controls.Add(Me.PnlCuerpo)
