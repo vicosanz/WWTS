@@ -385,7 +385,7 @@ Public Class CtlAsistencia
     Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {DataGridViewTextBoxColumn1})
   End Sub
 
-  Private Sub llenar_datos(Optional ByVal _actualizarsueldos As Boolean = False, Optional ByVal _actualizarhoras As Boolean = False)
+  Private Sub llenar_datos(Optional ByVal _actualizarsueldos As Boolean = False, Optional ByVal _actualizarhoras As Boolean = False, Optional Area As WWTSParametroDet = Nothing, Optional Lote As WWTSParametroDet = Nothing)
     Me.Enabled = False
     If mPatrono Is Nothing Then
       Exit Sub
@@ -483,6 +483,13 @@ Public Class CtlAsistencia
       fecha = mPeriodo.PerPag_FechaDesdeMarcacion.AddDays(t - 1)
       Dim diasem As System.DayOfWeek = fecha.DayOfWeek
 
+      If Area IsNot Nothing Then
+        diaasis.PardetArea = Area
+      End If
+      If Lote IsNot Nothing Then
+        diaasis.PardetLote = Lote
+      End If
+
       If (mAsistencia.EsNuevo And Not mAsistencia.Contrato Is Nothing) AndAlso (diaasis.DiaAsi_Fecha.CompareTo(mAsistencia.Contrato.Contra_Desde) < 0) Then
         diaasis.Pardet_EstadoDiaEnum = Enumerados.enumEstadoModeloLabor.NoRegistra
         diaasis.DiaAsi_Asistencia = False
@@ -539,6 +546,7 @@ Public Class CtlAsistencia
               diaasis.DiaAsi_Sobret100aux = dml.DeMoLa_Sobre100
               diaasis.DiaAsi_Sobret100baux = 0 'dml.DeMoLa_Sobre100b
               diaasis.DiaAsi_integrales = 0
+
             End If
           End If
 
@@ -757,9 +765,9 @@ Public Class CtlAsistencia
     Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {DataGridViewTextBoxColumn1})
   End Sub
 
-  Public Sub Generar()
+  Public Sub Generar(Optional Area As WWTSParametroDet = Nothing, Optional Lote As WWTSParametroDet = Nothing)
     'btnrecalcular_Click(Me, Nothing)
-    llenar_datos() 'False, True
+    llenar_datos(False, False, Area, Lote) 'False, True
     mostrarcalculo()
     Guardar()
   End Sub

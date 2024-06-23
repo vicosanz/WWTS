@@ -38,7 +38,7 @@ Public Class FrmAsistencias
   End Sub
 
   Private Sub CtlBuscaEmpleadosPeriodo1_Generar(ByVal sender As Object, ByVal e As System.EventArgs) Handles CtlBuscaEmpleadosPeriodo1.GenerarAsistencia
-		Dim contratos As ContratoList
+    Dim contratos As ContratoList
     contratos = CType(sender, ContratoList)
     If contratos Is Nothing Then
       MsgBox("Seleccione al menos un empleado", MsgBoxStyle.Information, "Información")
@@ -52,6 +52,29 @@ Public Class FrmAsistencias
       Me.CtlAsistencia1.Asistencia = _asist
       Me.CtlAsistencia1.Generar()
     Next
+  End Sub
+
+  Private Sub CtlBuscaEmpleadosPeriodo1_GenerarAsistenciaAreaLote(ByVal sender As Object, ByVal e As System.EventArgs) Handles CtlBuscaEmpleadosPeriodo1.GenerarAsistenciaAreaLote
+    Dim contratos As ContratoList
+    contratos = CType(sender, ContratoList)
+    If contratos Is Nothing Then
+      MsgBox("Seleccione al menos un empleado", MsgBoxStyle.Information, "Información")
+      Exit Sub
+    End If
+    Dim f As New FrmCambiarAreaLote(Sistema, Enumerados.EnumOpciones.RegistrarAsistencias)
+
+    If f.ShowDialog = DialogResult.OK Then
+      For Each _contrato As Contrato In contratos
+        Dim _asist As Asistencia
+        _asist = New Asistencia(Sistema.OperadorDatos, _contrato, Me.CtlBuscaEmpleadosPeriodo1.Periodo)
+        _asist.Recargar()
+        _asist.Calcular(True, True)
+        Me.CtlAsistencia1.Asistencia = _asist
+        Me.CtlAsistencia1.Generar(f.Area, f.Lote)
+      Next
+    End If
+
+
   End Sub
 #End Region
 

@@ -45,6 +45,7 @@ Public Class CtlBuscaEmpleadosMarcacion
   Public Event CambioEmpleado As EventHandler
   Public Event CambioTipoContrato As EventHandler
   Public Event GenerarAsistencia As EventHandler
+  Public Event GenerarAsistenciaAreaLote As EventHandler
 
   Dim cambiarlistcheck As Boolean = False
   Dim cambiarcheck As Boolean = False
@@ -439,8 +440,10 @@ Public Class CtlBuscaEmpleadosMarcacion
 
     If chktodos.Checked Then
       Me.mnugenerar.Enabled = True
+      Me.mnugenerararealote.Enabled = True
     Else
       Me.mnugenerar.Enabled = False
+      Me.mnugenerararealote.Enabled = False
     End If
     Me.tvEmpleados.Refresh()
     cambiarcheck = False
@@ -523,11 +526,13 @@ Public Class CtlBuscaEmpleadosMarcacion
     End Select
 
     Me.mnugenerar.Enabled = True
+    Me.mnugenerararealote.Enabled = True
     If sicheck Then
       Me.chktodos.CheckState = CheckState.Checked
     ElseIf nocheck Then
       Me.chktodos.CheckState = CheckState.Unchecked
       Me.mnugenerar.Enabled = False
+      Me.mnugenerararealote.Enabled = False
     Else
       Me.chktodos.Checked = True
       Me.chktodos.CheckState = CheckState.Indeterminate
@@ -552,5 +557,9 @@ Public Class CtlBuscaEmpleadosMarcacion
   Private Sub CtlPatrono1_CambioPatrono() Handles CtlPatrono1.CambioPatrono
     CtlTipoContrato1.Patrono = CtlPatrono1.Patrono
     CtlTipoContrato1.llenar_datos()
+  End Sub
+
+  Private Sub mnugenerararealote_Click(sender As Object, e As EventArgs) Handles mnugenerararealote.Click
+    RaiseEvent GenerarAsistenciaAreaLote(Me.ContratosSeleccionados, System.EventArgs.Empty)
   End Sub
 End Class
