@@ -483,11 +483,13 @@ Public Class CtlAsistencia
       fecha = mPeriodo.PerPag_FechaDesdeMarcacion.AddDays(t - 1)
       Dim diasem As System.DayOfWeek = fecha.DayOfWeek
 
-      If Area IsNot Nothing Then
-        diaasis.PardetArea = Area
-      End If
-      If Lote IsNot Nothing Then
-        diaasis.PardetLote = Lote
+      If diaasis.EsNuevo Then
+        If Area IsNot Nothing Then
+          diaasis.PardetArea = Area
+        End If
+        If Lote IsNot Nothing Then
+          diaasis.PardetLote = Lote
+        End If
       End If
 
       If (mAsistencia.EsNuevo And Not mAsistencia.Contrato Is Nothing) AndAlso (diaasis.DiaAsi_Fecha.CompareTo(mAsistencia.Contrato.Contra_Desde) < 0) Then
@@ -531,7 +533,7 @@ Public Class CtlAsistencia
           Else
             Dim _cargo As Cargo
             _cargo = mContrato.Cargo
-            diaasis.Cargo = _cargo
+            'diaasis.Cargo = _cargo
 
             Dim dml As DetalleModeloLabor = New DetalleModeloLabor(Me.mOp, diasem, _cargo.PardetModeloLabor)
             If dml.EsNuevo Then
@@ -589,7 +591,7 @@ Public Class CtlAsistencia
           If Not _diaweb.EsNuevo Then
             Dim _cargo As Cargo
             _cargo = mContrato.Cargo
-            diaasis.Cargo = _cargo
+            'diaasis.Cargo = _cargo
 
             Dim dml As DetalleModeloLabor = New DetalleModeloLabor(Me.mOp, diasem, _cargo.PardetModeloLabor)
 
@@ -622,7 +624,7 @@ Public Class CtlAsistencia
           Else
             Dim _cargo As Cargo
             _cargo = mContrato.Cargo
-            diaasis.Cargo = _cargo
+            'diaasis.Cargo = _cargo
 
             Dim dml As DetalleModeloLabor = New DetalleModeloLabor(Me.mOp, diasem, _cargo.PardetModeloLabor)
             If dml.EsNuevo Then
@@ -767,7 +769,8 @@ Public Class CtlAsistencia
 
   Public Sub Generar(Optional Area As WWTSParametroDet = Nothing, Optional Lote As WWTSParametroDet = Nothing)
     'btnrecalcular_Click(Me, Nothing)
-    llenar_datos(False, False, Area, Lote) 'False, True
+    llenar_datos(False, True, Area, Lote) 'False, True
+    Calcular(True, True)
     mostrarcalculo()
     Guardar()
   End Sub
