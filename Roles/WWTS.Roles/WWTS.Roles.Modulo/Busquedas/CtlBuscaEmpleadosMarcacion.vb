@@ -45,6 +45,7 @@ Public Class CtlBuscaEmpleadosMarcacion
   Public Event CambioEmpleado As EventHandler
   Public Event CambioTipoContrato As EventHandler
   Public Event GenerarAsistencia As EventHandler
+  Public Event GenerarAsistenciaReset As EventHandler
   Public Event GenerarAsistenciaAreaLote As EventHandler
 
   Dim cambiarlistcheck As Boolean = False
@@ -526,6 +527,7 @@ Public Class CtlBuscaEmpleadosMarcacion
     End Select
 
     Me.mnugenerar.Enabled = True
+    Me.mnugenerarreset.Enabled = True
     Me.mnugenerararealote.Enabled = True
     If sicheck Then
       Me.chktodos.CheckState = CheckState.Checked
@@ -533,6 +535,7 @@ Public Class CtlBuscaEmpleadosMarcacion
       Me.chktodos.CheckState = CheckState.Unchecked
       Me.mnugenerar.Enabled = False
       Me.mnugenerararealote.Enabled = False
+      Me.mnugenerarreset.Enabled = False
     Else
       Me.chktodos.Checked = True
       Me.chktodos.CheckState = CheckState.Indeterminate
@@ -561,5 +564,11 @@ Public Class CtlBuscaEmpleadosMarcacion
 
   Private Sub mnugenerararealote_Click(sender As Object, e As EventArgs) Handles mnugenerararealote.Click
     RaiseEvent GenerarAsistenciaAreaLote(Me.ContratosSeleccionados, System.EventArgs.Empty)
+  End Sub
+
+  Private Sub mnugenerarreset_Click(sender As Object, e As EventArgs) Handles mnugenerarreset.Click
+    If MsgBox("¿Está seguro que desea sobreescribir las asistencias con el modelo de labor?", MsgBoxStyle.YesNoCancel, "Pregunta") = MsgBoxResult.Yes Then
+      RaiseEvent GenerarAsistenciaReset(Me.ContratosSeleccionados, System.EventArgs.Empty)
+    End If
   End Sub
 End Class

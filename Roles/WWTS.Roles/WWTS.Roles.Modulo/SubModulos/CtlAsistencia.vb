@@ -385,7 +385,7 @@ Public Class CtlAsistencia
     Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {DataGridViewTextBoxColumn1})
   End Sub
 
-  Private Sub llenar_datos(Optional ByVal _actualizarsueldos As Boolean = False, Optional ByVal _actualizarhoras As Boolean = False, Optional Area As WWTSParametroDet = Nothing, Optional Lote As WWTSParametroDet = Nothing)
+  Private Sub llenar_datos(Optional ByVal _actualizarsueldos As Boolean = False, Optional ByVal _actualizarhoras As Boolean = False, Optional Area As WWTSParametroDet = Nothing, Optional Lote As WWTSParametroDet = Nothing, Optional Reset As Boolean = False)
     Me.Enabled = False
     If mPatrono Is Nothing Then
       Exit Sub
@@ -531,24 +531,26 @@ Public Class CtlAsistencia
               diaasis.Pardet_EstadoDiaEnum = Enumerados.enumEstadoModeloLabor.Maternidad
             End If
           Else
-            Dim _cargo As Cargo
-            _cargo = mContrato.Cargo
-            'diaasis.Cargo = _cargo
+            If diaasis.EsNuevo OrElse Reset Then
 
-            Dim dml As DetalleModeloLabor = New DetalleModeloLabor(Me.mOp, diasem, _cargo.PardetModeloLabor)
-            If dml.EsNuevo Then
-              MsgBox("Hubo un error al tratar de recuperar el Modelo de Labor " & dml.PardetModeloLabor.Pardet_Descripcion & " de la labor " & _cargo.Cargo_Descripcion)
-            Else
-              diaasis.Tarea = dml.Tarea
-              diaasis.DiaAsi_Asistencia = dml.DeMoLa_Asistencia
-              diaasis.Pardet_EstadoDiaEnum = dml.Pardet_EstadoDiaEnum
-              diaasis.DiaAsi_Jornadaaux = dml.DeMoLa_Tarea
-              diaasis.DiaAsi_Sobret25aux = dml.DeMoLa_Sobre25
-              diaasis.DiaAsi_Sobret50aux = dml.DeMoLa_Sobre50
-              diaasis.DiaAsi_Sobret100aux = dml.DeMoLa_Sobre100
-              diaasis.DiaAsi_Sobret100baux = 0 'dml.DeMoLa_Sobre100b
-              diaasis.DiaAsi_integrales = 0
+              Dim _cargo As Cargo
+              _cargo = mContrato.Cargo
+              'diaasis.Cargo = _cargo
 
+              Dim dml As DetalleModeloLabor = New DetalleModeloLabor(Me.mOp, diasem, _cargo.PardetModeloLabor)
+              If dml.EsNuevo Then
+                MsgBox("Hubo un error al tratar de recuperar el Modelo de Labor " & dml.PardetModeloLabor.Pardet_Descripcion & " de la labor " & _cargo.Cargo_Descripcion)
+              Else
+                diaasis.Tarea = dml.Tarea
+                diaasis.DiaAsi_Asistencia = dml.DeMoLa_Asistencia
+                diaasis.Pardet_EstadoDiaEnum = dml.Pardet_EstadoDiaEnum
+                diaasis.DiaAsi_Jornadaaux = dml.DeMoLa_Tarea
+                diaasis.DiaAsi_Sobret25aux = dml.DeMoLa_Sobre25
+                diaasis.DiaAsi_Sobret50aux = dml.DeMoLa_Sobre50
+                diaasis.DiaAsi_Sobret100aux = dml.DeMoLa_Sobre100
+                diaasis.DiaAsi_Sobret100baux = 0 'dml.DeMoLa_Sobre100b
+                diaasis.DiaAsi_integrales = 0
+              End If
             End If
           End If
 
@@ -622,23 +624,25 @@ Public Class CtlAsistencia
               diaasis.Pardet_EstadoDiaEnum = Enumerados.enumEstadoModeloLabor.Maternidad
             End If
           Else
-            Dim _cargo As Cargo
-            _cargo = mContrato.Cargo
-            'diaasis.Cargo = _cargo
+            If diaasis.EsNuevo OrElse Reset Then
+              Dim _cargo As Cargo
+              _cargo = mContrato.Cargo
+              'diaasis.Cargo = _cargo
 
-            Dim dml As DetalleModeloLabor = New DetalleModeloLabor(Me.mOp, diasem, _cargo.PardetModeloLabor)
-            If dml.EsNuevo Then
-              MsgBox("Hubo un error al tratar de recuperar el Modelo de Labor " & dml.PardetModeloLabor.Pardet_Descripcion & " de la labor " & _cargo.Cargo_Descripcion)
-            Else
-              diaasis.Tarea = dml.Tarea
-              diaasis.DiaAsi_Asistencia = dml.DeMoLa_Asistencia
-              diaasis.Pardet_EstadoDiaEnum = dml.Pardet_EstadoDiaEnum
-              diaasis.DiaAsi_Jornadaaux = dml.DeMoLa_Tarea
-              diaasis.DiaAsi_Sobret25aux = dml.DeMoLa_Sobre25
-              diaasis.DiaAsi_Sobret50aux = dml.DeMoLa_Sobre50
-              diaasis.DiaAsi_Sobret100aux = dml.DeMoLa_Sobre100
-              diaasis.DiaAsi_Sobret100baux = 0 'dml.DeMoLa_Sobre100b
-              diaasis.DiaAsi_integrales = 0
+              Dim dml As DetalleModeloLabor = New DetalleModeloLabor(Me.mOp, diasem, _cargo.PardetModeloLabor)
+              If dml.EsNuevo Then
+                MsgBox("Hubo un error al tratar de recuperar el Modelo de Labor " & dml.PardetModeloLabor.Pardet_Descripcion & " de la labor " & _cargo.Cargo_Descripcion)
+              Else
+                diaasis.Tarea = dml.Tarea
+                diaasis.DiaAsi_Asistencia = dml.DeMoLa_Asistencia
+                diaasis.Pardet_EstadoDiaEnum = dml.Pardet_EstadoDiaEnum
+                diaasis.DiaAsi_Jornadaaux = dml.DeMoLa_Tarea
+                diaasis.DiaAsi_Sobret25aux = dml.DeMoLa_Sobre25
+                diaasis.DiaAsi_Sobret50aux = dml.DeMoLa_Sobre50
+                diaasis.DiaAsi_Sobret100aux = dml.DeMoLa_Sobre100
+                diaasis.DiaAsi_Sobret100baux = 0 'dml.DeMoLa_Sobre100b
+                diaasis.DiaAsi_integrales = 0
+              End If
             End If
           End If
 
@@ -767,9 +771,9 @@ Public Class CtlAsistencia
     Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {DataGridViewTextBoxColumn1})
   End Sub
 
-  Public Sub Generar(Optional Area As WWTSParametroDet = Nothing, Optional Lote As WWTSParametroDet = Nothing)
+  Public Sub Generar(Optional Reset As Boolean = False, Optional Area As WWTSParametroDet = Nothing, Optional Lote As WWTSParametroDet = Nothing)
     'btnrecalcular_Click(Me, Nothing)
-    llenar_datos(False, True, Area, Lote) 'False, True
+    llenar_datos(False, True, Area, Lote, Reset) 'False, True
     Calcular(True, True)
     mostrarcalculo()
     Guardar()
